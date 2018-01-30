@@ -1,0 +1,22 @@
+{
+    "pages": [
+        "pages/tabBar/index/index"
+    ],
+    "window":
+    {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#3583db",
+        "navigationBarTitleText": "商家中心",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#f7f7f7",
+        "enablePullDownRefresh": false
+    },
+    "networkTimeout":
+    {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": false
+}

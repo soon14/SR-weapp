@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 用户信息 -->
+    <view class="userinfo">
+        <image bindtap="getUserInfo" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+        <view class="userinfobox">
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <button open-type="getPhoneNumber" class="userinfo-telphone" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+        </view>
+    </view>
+    <!-- 用户店铺信息 -->
+    <view class="usershopinfo">
+        <view class="shopinfo">
+            <view class="shopnum">2个</view>
+            <view class="shopname">店铺</view>
+        </view>
+        <view class="shopinfo">
+            <view class="shopnum">30个</view>
+            <view class="shopname">金币</view>
+        </view>
+        <view class="shopinfo">
+            <view class="shopnum">100.00元</view>
+            <view class="shopname">余额</view>
+        </view>
+    </view>
+    <!-- 小程序信息 -->
+    <view class="userapplist">
+        <view class="userapp" bindtap="bindlemohuashiguang">
+            <image class="userappimg" src="/images/lemo_logo.png" mode="aspectFill"></image>
+            <view class="userappname">乐墨花时光</view>
+            <view class="notopen">未开通</view>
+        </view>
+        <view class="userapp" bindtap="bindlemoxuetang">
+            <image class="userappimg" src="/images/lmxt.png" mode="aspectFill"></image>
+            <view class="userappname">乐墨学堂</view>
+            <view class="notopen">未开通</view>
+        </view>
+        <view class="userapp" bindtap="">
+            <image class="userappimg" src="/images/customer_c.png" mode="aspectFill"></image>
+            <view class="userappname">邀请好友</view>
+        </view>
+    </view>
+    <!-- 下载教程 -->
+    <view class="uploadbox">
+        <view class="uploadtext">您还没有开通乐墨花时光小程序店铺</view>
+        <view class="downprogress" wx:if="{{downprogressshow}}">正在下载{{downprogress}}%</view>
+        <view class="upload" bindtap="downloadFile" hidden="{{savedFilePath}}">下载开通教程</view>
+        <view class="upload" bindtap="openDocument" hidden="{{!savedFilePath}}">打开通教程</view>
+    </view>
+</view>
+<!-- 客服 -->
+<button open-type="contact" session-from="weapp" class="contact">
+    <image mode="widthFix" src="/images/customer_c.png"></image>
+    <view class="contacttext">在线咨询</view>
+</button>

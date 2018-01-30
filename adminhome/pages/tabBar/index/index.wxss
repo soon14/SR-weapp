@@ -1,0 +1,173 @@
+/**index.wxss**/
+
+page {
+    height: 100%;
+}
+
+.userinfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3583db;
+}
+
+.userinfobox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {}
+
+.userinfo-telphone {
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0 20rpx;
+    color: #fff;
+    background: #ccc;
+}
+
+
+
+
+
+
+
+/*usershopinfo*/
+
+.usershopinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20rpx 0;
+}
+
+.usershopinfo .shopinfo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/*userapplist*/
+
+.userapplist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20rpx 0;
+    margin-top: 30rpx;
+}
+
+.userapplist .userapp {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.userapplist .userappimg {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.notopen {
+    width: 100rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-radius: 20rpx;
+    background-color: red;
+    color: #fff;
+    font-size: 24rpx;
+    position: absolute;
+    right: 0;
+    top: 40rpx;
+}
+
+.userapplist .userappname {}
+
+
+
+
+/*uploadbox*/
+
+.uploadbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx 0;
+    margin-top: 30rpx;
+}
+
+.uploadbox .upload {
+    margin-top: 30rpx;
+    padding: 10rpx 20rpx;
+    border-radius: 10rpx;
+    border: 1px solid #ccc;
+    background-color: blue;
+    color: #fff;
+}
+
+.uploadbox .downprogress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 28rpx;
+    color: red;
+}
+
+
+
+
+/*contact*/
+
+.contact {
+    width: 100rpx;
+    height: 250rpx;
+    border-radius: 40rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3583db;
+    padding: 20rpx 0;
+    position: absolute;
+    right: 20rpx;
+    bottom: 150rpx;
+}
+
+.contact wx-image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.contacttext {
+    font-size: 24rpx;
+    width: 40rpx;
+    margin-top: 20rpx;
+    line-height: 30rpx;
+    color: #fff;
+}
