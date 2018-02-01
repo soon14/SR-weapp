@@ -1,0 +1,142 @@
+.address {
+  background-color: #dae0ee;
+  color: #666;
+  padding: 30rpx 30rpx 10rpx 30rpx;
+}
+
+.address view {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.orderLi {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  background-color: #fff;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.orderLi input {
+  font-size: 28rpx;
+  color: #888;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.orderLi .tips {
+  font-size: 20rpx;
+}
+
+.phone {
+  padding: 22rpx 30rpx 11rpx 30rpx;
+  background-color: #fff;
+}
+
+.phone input {
+  border: 2rpx solid #cfd5e3;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.code {
+  padding: 22rpx 30rpx;
+  background-color: #fff;
+}
+
+.code input {
+  border: 2rpx solid #cfd5e3;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.codeBtn {
+  width: 173rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  background-color: #cacfdc;
+  color: #656a78;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.bottom {
+  left: 0;
+  right: 0;
+}
+
+.bottom button.nextBtn {
+  width: 220rpx;
+  height: 106rpx;
+  background-color: #f3830e;
+  color: #fff;
+  text-align: center;
+  line-height: 106rpx;
+  font-size: 30rpx;
+  position: absolute;
+  right: 0;
+  border-radius: 0;
+}
+
+.tanchu {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.tanchu-cont {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10rpx;
+  padding: 30rpx;
+  position: absolute;
+  z-index: 2;
+  left: 10%;
+  top: 25%;
+}
+
+.tanchu-cont .tle {
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.code {
+  font-size: 24rpx;
+  color: #037f94;
+  width: 40%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-left: 1rpx solid #eee;
+}
+
+.codes{ 
+ font-size: 24rpx;
+  color: #037f94;
+  width: 60%;
+  height:100%;
+  line-height: 60rpx;
+  text-align: center;
+  border-left: 1rpx solid #eee;
+ }
+.sureBtn {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.inputSite{background-color: #fff; padding:10rpx  25rpx;}

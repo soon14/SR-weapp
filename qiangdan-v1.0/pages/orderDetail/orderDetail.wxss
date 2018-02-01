@@ -1,0 +1,70 @@
+.listLi {
+  padding: 25rpx 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.stateBtn {
+  width: 90rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #fff;
+  background-color: #5bc26e;
+  font-size: 22rpx;
+}
+
+.orderLi {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  background-color: #fff;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.address {
+  background-color: #dae0ee;
+  color: #666;
+  padding: 30rpx 30rpx 10rpx 30rpx;
+}
+
+.address view {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.address view text {
+  display: block;
+}
+
+.tips {
+  color: #ff664e;
+}
+
+.sureBtn {
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+  left: 30rpx;
+  z-index: 999;
+}
+.sureBtn1 {
+  position: absolute;
+  bottom: 320rpx;
+  right: 30rpx;
+  background-color: #ff9900;
+  left: 30rpx;
+  z-index: 999;
+}
+.sureBtn0 {
+  position: absolute;
+  bottom: 180rpx;
+  right: 30rpx;
+  background-color: #ff9900;
+  left: 30rpx;
+  z-index: 999;
+}

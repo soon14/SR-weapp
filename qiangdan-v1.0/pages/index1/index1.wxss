@@ -1,0 +1,34 @@
+/**index.wxss**/
+
+.topBtnbg{background-color: #ffa426; padding:20rpx 30rpx;}
+.topBtnbg .topBtn{color: #fff; border-radius: 10rpx; border: 2rpx solid #f58613; font-size: 26rpx; height: 44rpx; line-height:44rpx; text-align: center;}
+.topBtnbg .btn1{width: 150rpx;}
+.topBtnbg .btn2{width: 110rpx;}
+
+
+.send{border-bottom: 1rpx solid #ebebeb;background-color: #fff;}
+
+.sendLi input{width:100%; height: 138rpx; }
+.send{padding:0 60rpx;}
+
+
+.weight{padding:0 60rpx; background-color: #fff; margin-top:20rpx;border: 1rpx solid #ebebeb;}
+.weight text{margin-top:48rpx; font-size: 28rpx; color: #333;}
+.weightNum{width: 263rpx;height: 60rpx;line-height: 60rpx;padding: 0 30rpx;border-radius: 30rpx; background-color: #e9eff2;border: 1rpx solid #ebebeb; margin-top: 36rpx; margin-left: 50rpx;}
+.weightNum .cut{color: #a4b1b7;font-size: 30rpx; font-weight: bold;}
+.weightNum .add{color: #d3b23d;font-size: 50rpx; }
+.weightNum input{font-size: 28rpx;color: #666;height: 60rpx;line-height: 60rpx; padding: 0 26rpx; text-align: center;}
+
+.bottom{height: 106rpx;padding-left: 50rpx;border-top:1px solid #ebebeb; background-color: #fff;position: absolute;bottom: 0;left: 0; right: 0;}
+.money{font-size: 40rpx; color: #ff664e; margin-top:30rpx;}
+.bottomNum{font-size: 26rpx; color: #666;margin-top:40rpx;}
+.nextBtn{width: 204rpx;height: 106rpx;background-color: #f3830e;color: #fff;text-align: center;line-height: 106rpx; font-size: 40rpx;position: absolute;right:0}
+
+
+.btn {
+  border:none;
+  text-align:left;
+  padding:0;
+  margin:0;
+  line-height:1.5;
+}

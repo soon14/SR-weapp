@@ -1,0 +1,2 @@
+/* pages/shenhezhong/shenhezhong.wxss */
+page text{padding: 30rpx;color: #666; display: block; line-height: 46rpx;}

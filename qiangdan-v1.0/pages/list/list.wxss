@@ -1,0 +1,4 @@
+.listLi{padding: 25rpx 30rpx; background-color: #fff; margin-bottom: 20rpx; color: #666;font-size: 26rpx;}
+.timeSite{color: #a4a4a4; font-size: 20rpx;}
+.timeSite image{width: 24rpx;height: 24rpx; vertical-align: middle; margin-top: 5rpx;}
+.money{margin-top: 0;font-size: 30rpx;}

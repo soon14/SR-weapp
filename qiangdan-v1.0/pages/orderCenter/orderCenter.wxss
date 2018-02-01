@@ -1,0 +1,13 @@
+.order{padding: 0 30rpx;}
+.item{background-color: #fff; margin-top: 20rpx;padding:0 0 10rpx 0;}
+.itemTop{height: 80rpx;line-height: 80rpx; border-bottom: 1rpx solid #e5e5e5; padding: 0 30rpx; font-size: 28rpx;color: #333; margin-bottom: 20rpx;}
+.stateBtn{width: 90rpx;height: 40rpx; line-height: 40rpx; text-align: center; border-radius: 10rpx;color: #fff;  font-size: 22rpx; margin-top: 20rpx;}
+.stateBtn1{background-color: #5bc26e;}
+.stateBtn2{background-color: #f66081;}
+.itemLi{padding: 0 30rpx;font-size: 24rpx;color: #333;  margin-bottom: 20rpx;}
+.itemLi text{line-height: 36rpx;}
+.itemLi .icon{width:36rpx;height: 46rpx; line-height: 46rpx; margin-right: 15rpx;}
+.itemLi .icon image{width:36rpx;height: 46rpx; line-height: 46rpx;vertical-align: middle}
+.moneySite{font-size: 28rpx;color: #ff664e;}
+.moneySite text{font-size: 20rpx;color: #666;}
+.time{font-size: 20rpx;color: #b2b2b2;}

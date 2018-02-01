@@ -1,0 +1,26 @@
+/**app.wxss**/
+page{background-color: #f2f2f2;font-size: 28rpx;}
+.line{width: 100%;height: 1rpx;background-color: #efefef;}
+.flex-wrp{display:flex;}
+.banner image {width: 100%; height: 100%}
+.placeholder{font-size: 28rpx;color: #b2b2b2} 
+.icon{width: 10%;height: 138rpx;line-height:138rpx;}
+.icon image{width: 36rpx;height: 46rpx; vertical-align: middle}
+
+.cOrange{color: #ff664e;}
+
+.mgTop20{margin-top: 20rpx;}
+
+
+
+.bottom{position: fixed;bottom: 0;height: 106rpx;padding-left: 50rpx;border-top:1px solid #ebebeb; background-color: #fff;}
+.money{font-size: 40rpx; color: #ff664e; margin-top:30rpx;}
+.bottomNum{font-size: 26rpx; color: #666;margin-top:40rpx;}
+.nextBtn{width: 204rpx;height: 106rpx;background-color: #f3830e;color: #fff;text-align: center;line-height: 106rpx; font-size: 40rpx;position: absolute;right:0}
+
+
+
+
+
+input{color: #333;font-size: 28rpx;padding: 0 10rpx;}
+

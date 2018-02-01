@@ -1,0 +1,5 @@
+<view class='cityTle'>选择城市：</view>
+
+<view  class='cityList'  >
+   <text wx:for="{{cityList}}" data-city='{{item.city}}' data-citylat='{{item.lat}}'  data-citylon='{{item.lon}}' bindtap='tapCity'>{{item.city}}</text>
+</view>

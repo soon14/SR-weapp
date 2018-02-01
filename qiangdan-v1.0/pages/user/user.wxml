@@ -1,0 +1,84 @@
+<view class="userTop flex-wrp" style="flex-direction:row;justify-content: space-between;">
+  <view class=" flex-wrp" style="flex-direction:row;">
+    <view class='userinfo'>
+      <image src="{{avatarUrl}}" mode='widthFix' />
+    </view>
+    <text>{{nickName}}</text>
+  </view>
+  <!-- <text>15563337272</text> -->
+</view>
+
+<view class='userLi'>
+  <navigator url='/pages/orderCenter/orderCenter' class='flex-wrp' style="flex-direction:row;justify-content: space-between; margin-top:20rpx;">
+    <view>
+      <image src="/images/icon4.png" mode='widthFix' />
+      <text>我的订单</text>
+    </view>
+    <view>
+      <image src="/images/icon7.png" mode='widthFix' />
+    </view>
+  </navigator>
+</view>
+
+<view class='userLi'>
+  <navigator url='/pages/list/list' class='flex-wrp' style="flex-direction:row;justify-content: space-between;">
+    <view>
+      <image src="/images/icon8.png" mode='widthFix' />
+      <text>交易明细</text>
+    </view>
+    <view>
+      <image src="/images/icon7.png" mode='widthFix' />
+    </view>
+  </navigator>
+</view>
+
+<view  wx:if="{{shenqing}}"> 
+<view class='userLi'>
+  <navigator url='/pages/sender/sender' class='flex-wrp' style="flex-direction:row;justify-content: space-between; margin-top:20rpx;">
+    <view>
+      <image src="/images/icon6.png" mode='widthFix' />
+      <text>申请成为配送员</text>
+    </view>
+    <view>
+      <image src="/images/icon7.png" mode='widthFix' />
+    </view>
+  </navigator>
+</view>
+</view>
+
+<view  wx:if="{{shenhe}}"> 
+  <view class='userLi'>
+  <navigator url='/pages/shenhezhong/shenhezhong' class='flex-wrp' style="flex-direction:row;justify-content: space-between; margin-top:20rpx;">
+       <view>
+        <image src="/images/icon6.png" mode='widthFix' />
+        <text>配送员审核中</text>
+      </view>
+       <view>
+        <image src="/images/icon7.png" mode='widthFix' />
+      </view>
+     </navigator>
+   </view>
+</view>
+
+
+<view  wx:if="{{isauth}}"> 
+  <view class='userLi'>
+       <view>
+        <image src="/images/icon6.png" mode='widthFix' />
+        <text>配送员</text>
+      </view>
+      <view>
+        <image src="/images/icon7.png" mode='widthFix' />
+      </view>
+     
+  </view>
+</view>
+ 
+
+<view class='userLi' style="margin-top:20rpx;" bindtap='phone'>
+  <image src="/images/icon9.png" mode='widthFix' />
+  <text>客服电话：0531-82373988</text>
+</view>
+
+
+<!-- <button type="primary" class='outBtn'>退出登录</button> -->

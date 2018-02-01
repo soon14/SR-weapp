@@ -1,0 +1,113 @@
+<view class="address">
+  <view>寄：{{jiAddresss}}</view>
+  <view>收：{{shouAddresss}}</view>
+</view>
+
+<view class='orderLi mgTop20 flex-wrp' style="flex-direction:row;">
+  <input name="jiname" bindinput="jiNames" placeholder='| 寄件人姓名' />
+  <input name="jitel" bindinput="jiTels" placeholder='| 寄件人电话' type='number' />
+</view>
+<view class='orderLi flex-wrp' style="flex-direction:row;">
+  <input name="shouname" bindinput="shouNames" placeholder='| 收件人姓名' />
+  <input name="shoutel" bindinput="shouTels" placeholder='| 收件人电话' type='number' />
+</view>
+
+<view class='orderLi mgTop20 flex-wrp' style="flex-direction:row;">
+  <view style='wigth:200rpx'>
+    物品名称
+    <text class='tips'>（必填）</text>：
+  </view>
+  <input name="goodsname" bindinput="goodsNames" />
+</view>
+<view class='orderLi flex-wrp' style="flex-direction:row; ">
+  <view style='wigth:200rpx'>
+    备注信息
+    <text class='tips'>（选填）</text>：
+  </view>
+  <input name="remark" bindinput="remarks" />
+</view>
+
+<view class='orderLi mgTop20 flex-wrp' style="flex-direction:row;display:none ">
+  <label class="checkbox ">
+    <checkbox-group bindchange="checkboxChange">
+
+      <checkbox value="cb" value='我要加价' />我要加价
+
+    </checkbox-group>
+  </label>
+</view>
+
+<view class='orderLi mgTop20 flex-wrp' style="flex-direction:row; justify-content: space-between;display:none ">
+  <text>余额支付(0元)</text>
+  <text>0元</text>
+</view>
+<view class='orderLi flex-wrp' style="flex-direction:row; justify-content: space-between; ">
+  <text>还需支付</text>
+  <text>{{payprice}}元</text>
+</view>
+
+<!-- <view class='phone mgTop20'>
+  <input placeholder='请输入手机号' placeholder-class="placeholder " type='number' />
+</view>
+<view class='code flex-wrp' style="flex-direction:row; justify-content: space-between; ">
+  <input placeholder='请输入您的验证码' placeholder-class="placeholder " type='number' />
+  <view class='codeBtn'>获取验证码</view>
+</view>  -->
+
+
+
+<view class='bottom flex-wrp' style="flex-direction:row; ">
+  <view class='money'>￥{{payprice}}</view>
+  <view class='bottomNum'>【{{gl}}公里 | {{zl}}公斤】</view>
+  <!-- <navigator url=''>
+  
+  <view class='nextBtn' bindtap='nextBtn'>快捷支付</view
+  
+  </navigator> -->
+ 
+  <form bindsubmit="nextBtn" report-submit='true'>
+    <button form-type="submit" type="default" class='nextBtn' size="mini">快捷支付</button>
+  </form>
+</view>
+
+<!-- 
+<view hidden="{{hiddenmodalput}}">
+  <view bindtap="cancel" class='tanchu'></view>
+  <view class='tanchu-cont'>
+    <view class='tle'>
+      <navigator>{{title}}</navigator>
+    </view>
+    <view class='inputSite'>
+
+      <view class='flex-wrp' style="flex-direction:row; justify-content: space-between;text-align: center;">
+        <input class='codes' placeholder='请输入验证码'></input>
+        <view class='code' bindtap='sendcode'>发送验证码</view>
+
+      </view>
+    </view>
+
+    <button class='sureBtn' bindtap='confirm'>确定</button>
+  </view>
+</view> -->
+
+<view hidden="{{hiddenmodalput}}">
+    <view bindtap="cancel" class='tanchu'></view>
+    <view class='tanchu-cont'>
+      <view class='tle'>
+        <navigator>{{title}}</navigator>
+      </view>
+      <view class='inputSite'>
+        
+         <view class='flex-wrp' style="flex-direction:row; justify-content: space-between;">
+               <input  placeholder='请输入验证码' bindinput="inputCode" style='margin-top:25rpx'></input>
+               <view class='code'style='display:{{second1}}' bindtap='sendcode'>发送验证码</view>
+               <view class='code' style='display:{{second2}}'>{{second}}秒后操作</view>
+
+               
+              </view> 
+      </view>
+    
+      <button class='sureBtn' bindtap='confirm' type="primary">确定</button>
+
+    </view>
+  </view>

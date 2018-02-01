@@ -1,0 +1,14 @@
+<view class='addLi flex-wrp' style="flex-direction:row;">
+  <view class='icon'><image src="/images/icon10.png" mode='widthFix'/></view>
+  <input bindtap='address' bindinput="names" value='{{name}}' placeholder="小区名  大厦名  街道门牌号" placeholder-class="placeholder" />
+  <input   value='{{postion}}' placeholder="小区名  大厦名  街道门牌号" placeholder-class="placeholder" style='display:none' />
+</view>
+
+<view class='addLi flex-wrp' style="flex-direction:row;">
+  <view class='icon'><image src="/images/icon11.png" mode='widthFix'/></view>
+  <input bindinput="detailAddress" placeholder="补充详细信息，如几号楼几单元门牌号" placeholder-class="placeholder" />
+</view>
+
+
+
+<button type="primary" bindtap='submit' class='sureBtn'>确定</button>

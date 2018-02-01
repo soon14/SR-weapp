@@ -1,0 +1,12 @@
+<view wx:for="{{datas}}">
+  <view class="listLi flex-wrp" style="flex-direction:row;justify-content: space-between;">
+    <view>
+      <view>订单号：{{item.orderid}}</view>
+      <view class='timeSite flex-wrp' style="flex-direction:row;">
+        <image src='/images/icon12.png' />
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+    <view class='money'>￥{{item.payprice}}</view>
+  </view>
+</view>
