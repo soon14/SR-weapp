@@ -2,7 +2,7 @@
 // var baseUrl = 'http://192.168.1.103/getorder/public/api/';
 // var ImageUrl = 'http://192.168.1.103/getorder/public/';
 
-// var baseUrl = 'https://xiaochengxu.hemiaoit.com/getorder/public/a';
+// var baseUrl = 'https://xiaochengxu.hemiaoit.com/getorder/public/api';
 var baseUrl = 'https://xxf.ql178.com/getorder/public/api/';
 var ImageUrl = 'https://xxf.ql178.com/getorder/public/';
 

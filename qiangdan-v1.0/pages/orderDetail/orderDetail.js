@@ -34,6 +34,10 @@ Page({
      */
     onLoad: function(options) {
         console.log(options.orderid);
+        this.setData({
+            orderid: options.orderid
+        })
+
         this.getOrderDetail(options.orderid);
     },
     querenQJ: function() {
@@ -151,36 +155,95 @@ Page({
          * 取消订单
          */
         let that = this;
+
+        let orderid = that.data.orderid;
+        that.getOrderDetail(orderid);
+
         let getorder_status = that.data.getorder_status;
+        let order_status = that.data.order_status;
 
         let time = parseInt(that.data.time); //下单时间的时间戳
         let time1 = time + 180; //加三分钟
         let nowTimestamp = Math.round(new Date() / 1000); //当前时间时间戳
+        console.log("弹出提示时候的时间戳", nowTimestamp);
 
-        let _content;
-        if (getorder_status == 1 && nowTimestamp > time1) {
-            _content = '您的订单已经由邻速达骑手接单，取消将扣除5元爽约金';
-        } else {
-            _content = '确定取消订单？';
+        if (order_status == 3) {
+            that.noclose();
+            return;
         }
 
-        wx.showModal({
-            title: '提示',
-            content: _content,
-            cancelText: '暂不取消',
-            cancelColor: '#5c5c5c',
-            confirmText: '确定取消',
-            confirmColor: '#f58515',
-            success: function(res) {
-                if (res.confirm) {
+        if (getorder_status == 1 && nowTimestamp > time1) {
 
-                    that.closeOrder();
+            wx.showModal({
+                title: '提示',
+                content: '您的订单已经由邻速达骑手接单，取消将扣除5元爽约金',
+                cancelText: '暂不取消',
+                cancelColor: '#5c5c5c',
+                confirmText: '确定取消',
+                confirmColor: '#f58515',
+                success: function(res) {
+                    if (res.confirm) {
 
-                } else if (res.cancel) {
-                    console.log('用户点击取消')
+                        that.closeOrder();
+
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
                 }
-            }
-        })
+            })
+
+        } else {
+
+            wx.showModal({
+                title: '提示',
+                content: '确定取消订单？',
+                cancelText: '暂不取消',
+                cancelColor: '#5c5c5c',
+                confirmText: '确定取消',
+                confirmColor: '#f58515',
+                success: function(res) {
+                    if (res.confirm) {
+
+                        that.getOrderDetail(orderid);
+
+                        getorder_status = that.data.getorder_status;
+                        order_status = that.data.order_status;
+
+                        let nowTimestamp1 = Math.round(new Date() / 1000); //当前时间时间戳
+                        console.log("点击确定取消订单时候的时间戳", nowTimestamp1);
+
+                        if (getorder_status == 1 && nowTimestamp1 > time1) {
+
+                            wx.showModal({
+                                title: '提示',
+                                content: '您的订单已经由邻速达骑手接单，取消将扣除5元爽约金',
+                                cancelText: '暂不取消',
+                                cancelColor: '#5c5c5c',
+                                confirmText: '确定取消',
+                                confirmColor: '#f58515',
+                                success: function(res) {
+                                    if (res.confirm) {
+
+                                        that.closeOrder();
+
+                                    } else if (res.cancel) {
+                                        console.log('用户点击取消')
+                                    }
+                                }
+                            })
+                            return;
+                        }
+
+                        that.closeOrder();
+
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
+                }
+            })
+        }
+
+
 
 
     },
@@ -200,7 +263,7 @@ Page({
             method: 'post',
             success: function(res) {
                 console.log(res)
-                if (res.data.code == 0) {
+                if (res.data.code == 1) {
 
                     that.setData({
                         showSuccess: !that.data.showSuccess
@@ -213,7 +276,12 @@ Page({
                     }, 1500)
 
                 } else {
-                    that.noclose();
+                    wx.showModal({
+                        title: '提示',
+                        showCancel: false,
+                        content: res.data.msg,
+                        success: function(res) {}
+                    })
                 }
             },
             fail: function(res) {
