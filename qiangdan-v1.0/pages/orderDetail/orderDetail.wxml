@@ -1,48 +1,60 @@
 <view class="listLi flex-wrp" style="flex-direction:row;justify-content: space-between;">
-  <view>订单号：{{orderId}}</view>
-  <view class='stateBtn' wx:if="{{order_status ==1}}">未支付 </view>
-  <view class='stateBtn' wx:elif="{{order_status ==2}}"> 已支付 </view>
-  <view class='stateBtn' wx:elif="{{order_status==3}}"> 配送中 </view>
-  <view class='stateBtn' wx:else="{{order_status ==4}}"> 已到达 </view>
-
+    <view>订单号：{{orderId}}</view>
+    <view class='stateBtn' wx:if="{{order_status ==1}}">未支付 </view>
+    <view class='stateBtn' wx:elif="{{order_status ==2}}"> 已支付 </view>
+    <view class='stateBtn' wx:elif="{{order_status==3}}"> 配送中 </view>
+    <view class='stateBtn' wx:elif="{{order_status ==4}}"> 已到达 </view>
+    <view class='stateBtn' wx:else="{{order_status ==5}}"> 已退款 </view>
 </view>
-
 <view class="address">
-  <view>寄件人：{{ji_name}} {{ji_tel}}
-    <text>{{ji_address}}</text>
-  </view>
-  <view>收件人：{{shou_name}} {{shou_tel}}
-    <text>{{shou_address}}</text>
-  </view>
+    <view>寄件人：{{ji_name}} {{ji_tel}}
+        <text>{{ji_address}}</text>
+    </view>
+    <view>收件人：{{shou_name}} {{shou_tel}}
+        <text>{{shou_address}}</text>
+    </view>
 </view>
-
-
 <view class='orderLi mgTop20'> 物品名称：{{goodsname}}</view>
 <view class='orderLi'>备注信息：{{remark}}</view>
 <view wx:if="{{isjia ==1}}">
-
-  <view class='orderLi mgTop20'>加价：
-    <text class='tips'>{{jia_price}}元</text>
-  </view>
+    <view class='orderLi mgTop20'>加价：
+        <text class='tips'>{{jia_price}}元</text>
+    </view>
 </view>
 <view class='orderLi mgTop20 flex-wrp' style="flex-direction:row;justify-content: space-between;">
-  <view>【{{gl}}公里 | {{zl}}公斤】</view>
-  <view>支付
-    <text class='tips'>￥{{pay_price}}</text>
-  </view>
+    <view>【{{gl}}公里 | {{zl}}公斤】</view>
+    <view>支付
+        <text class='tips'>￥{{pay_price}}</text>
+    </view>
 </view>
-
-<view   wx:if="{{order_status ==1}}">
-  <button type="primary" class='sureBtn'>立即支付</button>
+<view wx:if="{{order_status ==1}}">
+    <button type="primary" class='sureBtn'>立即支付</button>
 </view>
-<view   wx:if="{{order_status ==2}}">
-  <button type="primary" class='sureBtn1' bindtap='querenQJ' style='background:#ff9900'>确认取件</button>
-  <button type="primary" class='sureBtn0' bindtap='peisongPos'>配送员位置</button>
-
+<view wx:if="{{order_status ==2}}">
+    <button type="primary" class='sureBtn1' bindtap='querenQJ' style='background:#ff9900'>确认取件</button>
+    <button type="primary" class='sureBtn0' bindtap='peisongPos'>配送员位置</button>
+    <button type="primary" class='sureBtn2' bindtap='closeO'>取消订单</button>
 </view>
-<view   wx:if="{{order_status ==3}}">
-  <button type="primary" class='sureBtn1' bindtap='querenSH' style='background:#ff9900'>确认收货</button>
-  <button type="primary" class='sureBtn0' bindtap='peisongPos'>配送员位置</button>
-</view> 
- <view>
- </view>
+<view wx:if="{{order_status ==3}}">
+    <button type="primary" class='sureBtn1' bindtap='querenSH' style='background:#ff9900'>确认收货</button>
+    <button type="primary" class='sureBtn0' bindtap='peisongPos'>配送员位置</button>
+</view>
+<!-- 取消订单提示信息 Start -->
+<view class="promptBox" wx:if="{{noclose}}">
+    <view class="prompt">
+        <view class="notop">
+            <image src="/images/closeimg.png"></image>
+            <view>抱歉！取消订单失败</view>
+            <image src="/images/closex.png"></image>
+        </view>
+        <view class="nocontent">您的订单已在配送中，无法取消</view>
+        <view class="surebtn" bindtap="noclose">确定</view>
+    </view>
+</view>
+<!-- End -->
+<view class="promptBox" wx:if="{{showSuccess}}">
+    <view class="successprompt">
+        <icon type="success" size="55"/>
+        <view class="sutext">取消订单成功</view>
+    </view>
+</view>

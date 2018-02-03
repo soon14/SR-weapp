@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index1/index1",
+    "pages/orderDetail/orderDetail",
     "pages/user/user",
     "pages/address/address",
     "pages/order/order",
@@ -8,7 +9,6 @@
     "pages/getaddress/address",
     "pages/list/list",
     "pages/sender/sender",
-    "pages/orderDetail/orderDetail",
     "pages/city/city",
     "pages/shenhezhong/shenhezhong",
     "pages/peisongyuan/peisongyuan"

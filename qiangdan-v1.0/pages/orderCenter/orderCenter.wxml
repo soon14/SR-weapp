@@ -8,9 +8,8 @@
           <view class='stateBtn stateBtn1' wx:if="{{item.order_status ==1}}">未支付 </view>
           <view class='stateBtn stateBtn1' wx:elif="{{item.order_status ==2}}"> 已支付 </view>
           <view class='stateBtn stateBtn1' wx:elif="{{item.order_status ==3}}"> 配送中 </view>
-          <view class='stateBtn stateBtn1' wx:else="{{item.order_status ==4}}"> 已到达 </view>
-
-
+          <view class='stateBtn stateBtn1' wx:elif="{{item.order_status ==4}}"> 已到达 </view>
+          <view class='stateBtn stateBtn1' wx:else="{{item.order_status ==5}}"> 已退款 </view>
         </view>
         <view class='itemLi flex-wrp' style="flex-direction:row;">
           <view class='icon'>
