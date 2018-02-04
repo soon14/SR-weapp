@@ -165,6 +165,8 @@ Page({
         let time = parseInt(that.data.time); //下单时间的时间戳
         let time1 = time + 180; //加三分钟
         let nowTimestamp = Math.round(new Date() / 1000); //当前时间时间戳
+        console.log("下单时间的时间戳", time);
+        console.log("三分钟", time1);
         console.log("弹出提示时候的时间戳", nowTimestamp);
 
         if (order_status == 3) {
@@ -205,14 +207,16 @@ Page({
                     if (res.confirm) {
 
                         that.getOrderDetail(orderid);
-
                         getorder_status = that.data.getorder_status;
                         order_status = that.data.order_status;
 
                         let nowTimestamp1 = Math.round(new Date() / 1000); //当前时间时间戳
-                        console.log("点击确定取消订单时候的时间戳", nowTimestamp1);
+                        let time2 = parseInt(that.data.time) + 180; //加三分钟
+                        console.log("下单时间的时间戳111", that.data.time);
+                        console.log("三分钟111", time2);
+                        console.log("弹出提示时候的时间戳111", nowTimestamp1);
 
-                        if (getorder_status == 1 && nowTimestamp1 > time1) {
+                        if (getorder_status == 1 && nowTimestamp1 > time2) {
 
                             wx.showModal({
                                 title: '提示',
