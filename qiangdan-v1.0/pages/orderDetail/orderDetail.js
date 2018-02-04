@@ -262,12 +262,14 @@ Page({
             data: params,
             method: 'post',
             success: function(res) {
-                console.log(res)
+                console.log('Order/cancel',res)
                 if (res.data.code == 1) {
 
                     that.setData({
                         showSuccess: !that.data.showSuccess
                     })
+
+                    that.getOrderDetail(_orderId);
 
                     setTimeout(function() {
                         that.setData({
