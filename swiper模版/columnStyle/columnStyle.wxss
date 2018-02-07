@@ -1,0 +1,84 @@
+/*shopColumn.wxss (店铺栏目)*/
+
+page {
+    height: 100%;
+}
+
+.container {
+    width: 690rpx;
+    height: 100%;
+    position: relative;
+    margin: 0 30rpx;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.swiperbox {
+    margin-top: 50rpx;
+    width: 690rpx;
+    height: 998rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roo {
+    width: 30rpx;
+    height: 30rpx;
+    border-top: 8rpx solid #bbbbbb;
+    border-left: 8rpx solid #bbbbbb;
+}
+
+.left {
+    transform: rotate(-45deg);
+}
+
+.right {
+    transform: rotate(135deg);
+}
+
+.swiper {
+    flex: 1;
+    width: 560rpx;
+    height: 998rpx;
+}
+
+.swiper swiper-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper .slide-image {
+    width: 560rpx;
+    height: 998rpx;
+}
+
+
+
+
+
+/*buttonbox*/
+
+.btnbox {
+    height: 100rpx;
+    width: 750rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #4f9dd0;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.btnbox .columnStyletext {
+    flex: 1;
+    height: 100rpx;
+}

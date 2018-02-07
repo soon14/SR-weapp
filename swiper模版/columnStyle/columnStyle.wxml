@@ -1,0 +1,18 @@
+<!-- shopColumn.wxml (店铺栏目) -->
+<view class="container">
+    <view class="swiperbox">
+        <view class="roo left" bindtap="goLeft"></view>
+        <swiper indicator-dots="{{indicatorDots}}" current="{{current}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" bindchange="columnStyleChange" class="swiper">
+            <block wx:for="{{stylelist}}">
+                <swiper-item>
+                    <image src="{{host+item.img}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="roo right" bindtap="goRight"></view>
+    </view>
+    <!-- 按钮 -->
+    <view class="btnbox">
+        <view class="columnStyletext" bindtap="setStyle">{{columnStyletext}}</view>
+    </view>
+</view>
