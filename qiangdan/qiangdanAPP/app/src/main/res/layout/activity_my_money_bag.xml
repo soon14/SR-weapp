@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beij"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/shen15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:text="余额：" />
+
+        <TextView
+            style="@style/qians15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥" />
+
+        <TextView
+            android:id="@+id/Alloney"
+            style="@style/qians15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/qians15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:text="提现明细：" />
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tixian"
+        style="@style/white15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@mipmap/login"
+        android:gravity="center"
+        android:text="提现" />
+</LinearLayout>

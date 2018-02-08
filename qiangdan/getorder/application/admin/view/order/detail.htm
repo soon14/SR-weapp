@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>都市快跑管理后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/top' /}
+
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left' /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">订单管理</a>
+                    </li>
+                    <li>
+                        <a href="{:url('lst')}">订单列表</a>
+                    </li>
+                    <li class="active">订单详情</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">订单详情</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+                                    <form class="form-horizontal" role="form" action="" method="post">
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">订单号</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['orderid']}"
+                                                       id="username" placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                         </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">收货人姓名</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['shou_name']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">收货人地址</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['shou_address']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">收货人电话</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['shou_tel']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">寄货人姓名</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['ji_name']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">寄货人地址</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['ji_address']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">寄货人电话</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['ji_tel']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">是否加价</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['isjia']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">加价金额</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['jia_price']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">货物名称</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['goodsname']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">总金额</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" value="{$orderDetail['payprice']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-sm-2 control-label no-padding-right">订单状态</label>
+                                            <div class="col-sm-6">
+                                                {volist name="status" id="stVO"}
+                                                {if condition="$stVO['id'] eq $orderDetail['order_status'] "}
+
+                                                <input class="form-control" value="{$stVO['name']}"
+                                                       placeholder="" name="username"
+                                                       required="" type="text">
+
+                                                {/if}
+                                                {/volist}
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+
+
+</body>
+</html>

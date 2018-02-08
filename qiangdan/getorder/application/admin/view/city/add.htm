@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>都市快跑管理后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/top' /}
+
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left' /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">城市管理</a>
+                    </li>
+                    <li>
+                        <a href="{:url('lst')}">城市列表</a>
+                    </li>
+                    <li class="active">添加城市</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">新增城市</span>
+                            </div>
+                            <div class="widget-body">
+                                <div id="horizontal-form">
+                                    <form class="form-horizontal" role="form" action="" method="post">
+                                        <div style="display: none" class="form-group">
+                                            <label
+                                                    class="col-sm-2 control-label no-padding-right">经纬度</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="position" placeholder=""
+                                                       name="pos"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label
+                                                    class="col-sm-2 control-label no-padding-right">选择城市</label>
+                                            <div class="col-sm-6">
+                                                <div id="pickerBox">
+                                                    <input id="pickerInput" name="city" placeholder="输入关键字选取城市"/>
+                                                    <div id="poiInfo"></div>
+                                                </div>
+                                                <div id="container" style="height: 500px;width: 700px" class="map"
+                                                     tabindex="0"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-default">保存信息</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+
+
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+<script type="text/javascript" src='http://webapi.amap.com/maps?v=1.4.1&key=93219934f998ce72e180efac46abae17'></script>
+<!-- UI组件库 1.0 -->
+<script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        zoom: 10
+    });
+
+    AMapUI.loadUI(['misc/PoiPicker'], function (PoiPicker) {
+        var poiPicker = new PoiPicker({
+            //city:'北京',
+            input: 'pickerInput'
+        });
+        //初始化poiPicker
+        poiPickerReady(poiPicker);
+    });
+
+    function poiPickerReady(poiPicker) {
+
+        window.poiPicker = poiPicker;
+
+        var marker = new AMap.Marker();
+
+        var infoWindow = new AMap.InfoWindow({
+            offset: new AMap.Pixel(0, -20)
+        });
+
+        //选取了某个POI
+        poiPicker.on('poiPicked', function (poiResult) {
+
+            var source = poiResult.source,
+                poi = poiResult.item,
+                info = {
+                    source: source,
+                    id: poi.id,
+                    name: poi.name,
+                    location: poi.location.toString(),
+                    address: poi.address
+                };
+
+            marker.setMap(map);
+            infoWindow.setMap(map);
+            marker.setPosition(poi.location);
+            infoWindow.setPosition(poi.location);
+
+            infoWindow.setContent('地点信息: <pre>' + JSON.stringify(info, null, 2) + '</pre>');
+            infoWindow.open(map, marker.getPosition());
+            $(" #position ").val(poi.location.toString());
+            $(" #pickerInput ").val(poi.name);
+
+
+            //map.setCenter(marker.getPosition());
+        });
+
+        poiPicker.onCityReady(function () {
+            poiPicker.suggest('美食');
+        });
+    }
+</script>
+
+</body>
+</html>

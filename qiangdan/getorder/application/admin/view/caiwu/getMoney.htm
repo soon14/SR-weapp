@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>都市快跑管理后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/top' /}
+
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left' /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">财务管理</a>
+                    </li>
+                    <li class="active">财务提现审核列表</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <!--<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"-->
+                <!--onClick="javascript:window.location.href = '{:url('add')}'"><i class="fa fa-plus"></i>-->
+                <!--Add-->
+                <!--</button>-->
+                <button type="button" tooltip="添加城市" class="btn btn-sm btn-azure btn-addon"
+                        onClick="javascript:window.location.href = '{:url('add')}'"><i class="fa fa-plus"></i>
+                    Add
+                </button>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">金额</th>
+                                            <th class="text-center">申请人</th>
+                                            <th class="text-center">银行卡号</th>
+                                            <th class="text-center">开户银行</th>
+                                            <th class="text-center">申请时间</th>
+                                            <th class="text-center">操作</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {volist name="list" id="vo"}
+                                        <tr>
+                                            <td id="ids" align="center" width="10%"> {$vo.id}</td>
+                                            <td align="center">{$vo.price}</td>
+                                            <td align="center">{$vo.realname}</td>
+                                            <td align="center">{$vo.cards}</td>
+                                            <td align="center">{$vo.bankName}</td>
+
+                                            <td align="center"><?php echo date("Y-m-d H:i:s",$vo['time']) ?> </td>
+
+                                            <td align="center" width="20%">
+                                                <!--<a href="{:url('edit',array('id'=> $vo['id']))}"-->
+                                                <!--class="btn btn-primary btn-sm shiny">-->
+                                                <!--<i class="fa fa-edit"></i> 编辑-->
+                                                <!--</a>-->
+                                                <!--onClick="warning('确实要删除吗', '{:url('del',array('id'=> $vo['id']))}')"-->
+                                                <a href="##"
+                                                   onClick="warning('是否确认提现申请', '{:url('commits',array('id'=> $vo['id']))}')"
+                                                   class="btn btn-danger btn-sm shiny">
+                                                    <i ></i> 通过
+                                                </a>
+
+                                            </td>
+                                        </tr>
+
+
+                                        {/volist}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+<script src="__ADMIN__/layer/layer.js"></script>
+
+</body>
+</html>

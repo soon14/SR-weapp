@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>都市快跑管理后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/top' /}
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left' /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">订单管理</a>
+                    </li>
+                    <li class="active">订单列表</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <!--<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"-->
+                        <!--onClick="javascript:window.location.href = '{:url('add')}'"><i class="fa fa-plus"></i>-->
+                    <!--Add-->
+                <!--</button>-->
+
+                <!--<select>-->
+                    <!--<option value="">Select a country</option>-->
+                    <!--<option value="FR">France</option>-->
+                    <!--<option value="DE">Germany</option>-->
+                    <!--<option value="IT">Italy</option>-->
+                    <!--<option value="JP">Japan</option>-->
+                    <!--<option value="RU">Russian</option>-->
+                    <!--<option value="US">United State</option>-->
+                    <!--<option value="GB">United Kingdom</option>-->
+                    <!--<option value="other">Other</option>-->
+                <!--</select><i style="display: none;" class="form-control-feedback" data-bv-field="country"></i><i-->
+                    <!--class="form-control-feedback" data-bv-field="country" style="display: none;"></i>-->
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                        <tr>
+                                            <th class="text-center">订单ID</th>
+                                            <th class="text-center">收货人</th>
+                                            <th class="text-center">寄货人</th>
+                                            <th class="text-center">是否加价</th>
+                                            <th class="text-center">加价金额</th>
+                                            <th class="text-center">总金额</th>
+                                            <th class="text-center">订单状态</th>
+                                            <th class="text-center">订单时间</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {volist name="lst" id="vo"}
+                                        <tr>
+                                            <td id="ids" align="center" width="10%"> {$vo.orderid}</td>
+                                            <td align="center">{$vo.shou_name}</td>
+                                            <td align="center">{$vo.ji_name}</td>
+                                            <td align="center">
+                                                {if condition="$vo['isjia'] eq 0 "} 未加价
+                                                {else /} 已加价
+                                                {/if}
+                                            </td>
+                                            <td align="center">{$vo.jia_price}</td>
+                                            <td align="center">{$vo.payprice}</td>
+                                            <td align="center">
+                                                {volist name="status" id="stVO"}
+                                                {if condition="$stVO['id'] eq $vo['order_status'] "}
+                                                {$stVO['name']}
+                                                {/if}
+                                                {/volist}
+                                            </td>
+                                            <td align="center"> <?php echo date("Y-m-d H:i:s",$vo['time']) ?></td>
+
+                                            <td align="center" width="20%">
+                                                <a href="{:url('detail',array('id'=> $vo['id']))}"
+                                                class="btn btn-primary btn-sm shiny">
+                                                <i class="fa fa-eye"></i> 查看
+                                                </a>
+                                                <!--onClick="warning('确实要删除吗', '{:url('del',array('id'=> $vo['id']))}')"-->
+                                                <a href="##"
+                                                   onClick="warning('确实要删除吗', '{:url('del',array('id'=> $vo['id']))}')"
+                                                   class="btn btn-danger btn-sm shiny">
+                                                    <i class="fa fa-trash-o"></i> 删除
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                        {/volist}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div style="margin-top:10px; text-align:right;">
+                                    {$lst->render()}
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+
+
+</body>
+</html>

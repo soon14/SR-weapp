@@ -1,0 +1,79 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+
+    <dimen name="dp10">10dp</dimen>
+
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+
+    <dimen name="dp20">20dp</dimen>
+
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+
+    <dimen name="dp35">35dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp45">45dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp90">90dp</dimen>
+
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp280">280dp</dimen>
+
+    <dimen name="dp300">300dp</dimen>
+    <dimen name="dp350">350dp</dimen>
+
+    <dimen name="dp400">400dp</dimen>
+
+    <dimen name="dp500">500dp</dimen>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="vertical_margin">16dp</dimen>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="normal_text_size">16sp</dimen>
+    <dimen name="vertical_padding">10dp</dimen>
+    <dimen name="horizontal_padding">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!--字体-->
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+
+    <dimen name="sp13">13sp</dimen>
+
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp15">15sp</dimen>
+
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp17">17sp</dimen>
+
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="sp22">22sp</dimen>
+
+    <dimen name="sp26">26sp</dimen>
+    <dimen name="sp50">50sp</dimen>
+    <dimen name="sp70">70sp</dimen>
+</resources>

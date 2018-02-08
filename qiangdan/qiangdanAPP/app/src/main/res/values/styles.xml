@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/jus</item>
+        <item name="colorPrimaryDark">@color/jus</item>
+
+    </style>
+
+    <style name="white12">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp12</item>
+    </style>
+
+    <style name="white15">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp15</item>
+    </style>
+
+    <style name="shen15">
+        <item name="android:textColor">@color/shen</item>
+        <item name="android:textSize">@dimen/sp15</item>
+    </style>
+    <style name="shen18">
+        <item name="android:textColor">@color/shen</item>
+        <item name="android:textSize">@dimen/dp18</item>
+    </style>
+
+    <style name="write18">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp18</item>
+    </style>
+    <style name="qian12">
+        <item name="android:textColor">@color/qian</item>
+        <item name="android:textSize">@dimen/sp12</item>
+    </style>
+    <style name="qians15">
+        <item name="android:textColor">@color/qians</item>
+        <item name="android:textSize">@dimen/sp15</item>
+    </style>
+    <style name="qian">
+        <item name="android:textColor">@color/qian</item>
+        <item name="android:textSize">@dimen/sp13</item>
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FD3736</color>
+    <color name="gray_dark">#666666</color>
+
+    <color name="color_bule">#2F9BFF</color>
+    <color name="color_bule2">#40B3F0</color>
+    <color name="color_bule3">#99ddff</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_dark">#ff000000</color>
+
+    <!--字体颜色-->
+    <color name="moneyNum">#999999</color>
+    <color name="ju">#FC9538</color>
+    <color name="reds">#FD3636</color>
+
+    <color name="lv">#6ECD37</color>
+    <color name="shenSize">#5b5b5d</color>
+    <color name="qianSize">#b7b7b9</color>
+    <color name="beij">#f2f2f2</color>
+    <color name="qians">#ff664e</color>
+
+
+    <color name="meihong">#e42e55</color>
+    <color name="jus">#f58613</color>
+    <color name="text">#333333</color>
+    <color name="texts">#999999</color>
+
+    <color name="allbg">#f7f3f7</color>
+    <color name="line">#dcdcdc</color>
+    <color name="blue">#0081ff</color>
+    <color name="shen">#666666</color>
+    <color name="shen2">#333333</color>
+    <color name="qian">#999999</color>
+    <color name="hong">#dd2d37</color>
+    <color name="hei">#333333</color>
+    <color name="bg">#ebebeb</color>
+
+    <color name="multiple_image_select_primaryDark">#dd2d37</color>
+
+    <!--Zxing相关-->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>

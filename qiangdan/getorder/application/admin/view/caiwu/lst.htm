@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>都市快跑管理后台</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- 头部 -->
+{include file='public/top' /}
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        {include file='public/left' /}
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">系统</a>
+                    </li>
+                    <li class="active">管理员管理</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <div class="widget-main ">
+                                    <div class="tabbable">
+                                        <ul class="nav nav-tabs tabs-flat" id="myTab11">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#home11">
+                                                    订单统计
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#profile11">
+                                                    配送员统计
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                        <div class="tab-content tabs-flat">
+                                            <div id="home11" class="tab-pane in active">
+                                                <div class="col-sm-6">
+                                                    <div style="margin-top:10px; text-align:right;">
+                                                        <h4> 总金额：{$price} 元,订单数：{$ordernum}</h4>
+                                                    </div>
+                                                </div>
+                                                <table class="table table-bordered table-hover">
+                                                    <thead class="">
+                                                    <tr>
+                                                        <th class="text-center">订单ID</th>
+                                                        <th class="text-center">支付金额</th>
+                                                        <th class="text-center">创建时间</th>
+                                                        <th class="text-center">备注</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {volist name="lst" id="vo"}
+
+                                                    <tr>
+                                                        <td align="center" width="10%"> {$vo.id}</td>
+                                                        <td align="center" width="10%"> {$vo.payprice}</td>
+                                                        <td align="center"
+                                                            width="10%"><?php echo date("Y-m-d h:m:s", $vo['time']) ?> </td>
+                                                        <td align="center" width="10%"> {$vo.remark}</td>
+
+                                                    </tr>
+                                                    {/volist}
+                                                    </tbody>
+                                                </table>
+
+
+                                                <div style="margin-top:10px; text-align:right;">
+                                                    <ul class="pagination">
+                                                        <li class="prev disabled"> {$lst->render()}</li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="profile11" class="tab-pane">
+                                                <div class="col-sm-6">
+                                                    <div style="margin-top:10px; text-align:right;">
+                                                        <h4> 配送员数量：{$psNum} 位 </h4>
+                                                    </div>
+                                                </div>
+                                                <table class="table table-bordered table-hover">
+                                                    <thead class="">
+                                                    <tr>
+                                                        <th class="text-center">配送员</th>
+                                                        <th class="text-center">订单数量</th>
+                                                        <th class="text-center">账户金额</th>
+                                                        <th class="text-center">提现金额</th>
+                                                     </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {volist name='psOrder' id='vos'}
+                                                    <tr>
+                                                        <td align="center" width="10%">{$vos.name}</td>
+                                                        <td align="center">{$vos.num}</td>
+                                                        <td align="center">{$vos.money}元</td>
+                                                        <td align="center">{$vos.timoney}元</td>
+
+                                                    </tr>
+                                                    {/volist}
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+
+<!--Basic Scripts-->
+<script src="__ADMIN__/style/jquery_002.js"></script>
+<script src="__ADMIN__/style/bootstrap.js"></script>
+<script src="__ADMIN__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__ADMIN__/style/beyond.js"></script>
+
+
+</body>
+</html>
