@@ -270,7 +270,7 @@ Page({
       // console.log('公斤差' + pr);
       // console.log('原价' + zlsPrice);
 
-      zlsPrice = 15 * 2 + pr * 4;
+      zlsPrice = 15 * 2 + pr * 5;
       // console.log('现价' + zlsPrice);
 
       //console.log(222222);
@@ -286,12 +286,12 @@ Page({
     } else if (distance > 0 && distance <= 15) {
       console.log(15151515);
       var s = distance / 2.5;
-      gls = Math.ceil(s) * 3.5
+      gls = Math.ceil(s) * 5
 
     } else if (distance > 15) {
       console.log(20202020);
       var h = (distance - 15) / 2.5;
-      gls = 21 + Math.ceil(h) * 5
+      gls = 21 + Math.ceil(h) * 8
 
     }
 
