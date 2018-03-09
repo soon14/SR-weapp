@@ -1,0 +1,23 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login"
+    ],
+    "window":
+    {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#3583db",
+        "navigationBarTitleText": "图片上传",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#f7f7f7",
+        "enablePullDownRefresh": false
+    },
+    "networkTimeout":
+    {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": false
+}
