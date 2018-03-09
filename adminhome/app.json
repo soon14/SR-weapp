@@ -1,6 +1,14 @@
 {
     "pages": [
-        "pages/tabBar/index/index"
+        "pages/tabBar/index/index",
+        "pages/common/login/login",
+        "pages/component/invitation/invitation",
+        "pages/component/changebindphone/changebindphone",
+        "pages/component/bindphone/bindphone",
+        "pages/component/myBalance/myBalance",
+        "pages/component/mobicarte/mobicarte",
+        "pages/component/balanceRecord/balanceRecord",
+        "pages/component/recharge/recharge"
     ],
     "window":
     {

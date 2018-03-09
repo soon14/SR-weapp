@@ -1,42 +1,50 @@
 <!--index.wxml-->
 <view class="container">
     <!-- 用户信息 -->
-    <view class="userinfo">
-        <image bindtap="getUserInfo" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
-        <view class="userinfobox">
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            <button open-type="getPhoneNumber" class="userinfo-telphone" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+    <view class="userinfo" bindtap="getUserInfo">
+        <image class="userinfo-avatar" src="{{faceurl}}" mode="aspectFill"></image>
+        <view class="userinfobox" wx:if="{{telphone}}">
+            <text class="userinfo-nickname">{{userName}}</text>
+            <text class="userinfo-telphone">{{telphone}}</text>
+        </view>
+        <view class="userinfobox" wx:if="{{!telphone}}">
+            <button open-type="getPhoneNumber" class="userinfo-telphone" bindgetphonenumber="getPhoneNumber">注册/登陆</button>
         </view>
     </view>
     <!-- 用户店铺信息 -->
     <view class="usershopinfo">
         <view class="shopinfo">
-            <view class="shopnum">2个</view>
+            <view class="shopnum">{{userInfo.shopcount||0}}个</view>
             <view class="shopname">店铺</view>
         </view>
         <view class="shopinfo">
-            <view class="shopnum">30个</view>
+            <view class="shopnum">{{userInfo.allgold||0}}个</view>
             <view class="shopname">金币</view>
         </view>
-        <view class="shopinfo">
-            <view class="shopnum">100.00元</view>
+        <view class="shopinfo" bindtap="goMyBalance">
+            <view class="shopnum">{{userInfo.balance||0.00}}元</view>
             <view class="shopname">余额</view>
         </view>
     </view>
     <!-- 小程序信息 -->
     <view class="userapplist">
-        <view class="userapp" bindtap="bindlemohuashiguang">
-            <image class="userappimg" src="/images/lemo_logo.png" mode="aspectFill"></image>
+        <view class="userapp" bindtap="{{userInfo.shopcount > 0 ? 'bindlemohuashiguang' : ''}}">
+            <view class="userappimg">
+                <image class="userappimg" src="/images/lemo_logo.png" mode="widthFix"></image>
+                <view class="notopen" wx:if="{{userInfo.shopcount==0||!userInfo.shopcount}}">未开通</view>
+            </view>
             <view class="userappname">乐墨花时光</view>
-            <view class="notopen">未开通</view>
         </view>
         <view class="userapp" bindtap="bindlemoxuetang">
-            <image class="userappimg" src="/images/lmxt.png" mode="aspectFill"></image>
+            <view class="userappimg">
+                <image class="userappimg" src="/images/lmxt.png" mode="widthFix"></image>
+            </view>
             <view class="userappname">乐墨学堂</view>
-            <view class="notopen">未开通</view>
         </view>
-        <view class="userapp" bindtap="">
-            <image class="userappimg" src="/images/customer_c.png" mode="aspectFill"></image>
+        <view class="userapp" bindtap="invitation">
+            <view class="userappimg">
+                <image class="userappimg" src="/images/yqhy.png" mode="widthFix"></image>
+            </view>
             <view class="userappname">邀请好友</view>
         </view>
     </view>
@@ -45,11 +53,12 @@
         <view class="uploadtext">您还没有开通乐墨花时光小程序店铺</view>
         <view class="downprogress" wx:if="{{downprogressshow}}">正在下载{{downprogress}}%</view>
         <view class="upload" bindtap="downloadFile" hidden="{{savedFilePath}}">下载开通教程</view>
-        <view class="upload" bindtap="openDocument" hidden="{{!savedFilePath}}">打开通教程</view>
+        <view class="upload" bindtap="openDocument" hidden="{{!savedFilePath}}">打开教程</view>
     </view>
 </view>
 <!-- 客服 -->
 <button open-type="contact" session-from="weapp" class="contact">
-    <image mode="widthFix" src="/images/customer_c.png"></image>
-    <view class="contacttext">在线咨询</view>
+    <image mode="widthFix" src="/images/kefu.png"></image>
 </button>
+<!-- footer -->
+<include src="../../common/template/footer/footer.wxml" />

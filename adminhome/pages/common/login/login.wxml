@@ -1,0 +1,4 @@
+<!-- 获取手机号登陆 -->
+<view class="container">
+    <button open-type="getPhoneNumber" class="userinfo-telphone" bindgetphonenumber="getPhoneNumber">注册/登陆</button>
+</view>

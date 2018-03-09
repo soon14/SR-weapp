@@ -1,0 +1,75 @@
+/*我的余额*/
+
+.mybalancebox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 60rpx 30rpx;
+}
+
+.balanceimg {
+    width: 180rpx;
+    height: 180rpx;
+    background-color: #fce054;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.balanceimg wx-view {
+    width: 150rpx;
+    height: 150rpx;
+    line-height: 150rpx;
+    background-color: #feba4b;
+    border: 1px solid #ffe878;
+    border-radius: 50%;
+    color: #fff284;
+    font-size: 78rpx;
+}
+
+.mybalancetext {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32rpx;
+    line-height: 32rpx;
+    color: #333333;
+    margin-top: 31rpx;
+}
+
+.mybalancenum {
+    font-size: 70rpx;
+    line-height: 70rpx;
+    color: #333333;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30rpx;
+}
+
+
+/*btn*/
+
+.rechargebtn,
+.recordbtn {
+    margin: 15rpx auto;
+    width: 690rpx;
+    height: 100rpx;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    border-radius: 50rpx;
+    text-align: center;
+}
+
+.rechargebtn {
+    margin-top: 80rpx;
+    background-color: #f35e5e;
+    color: #f9f9f9;
+}
+
+.recordbtn {
+    border: 1px solid #f35e5e;
+    color: #f35e5e;
+}

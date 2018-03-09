@@ -50,7 +50,7 @@ function ajaxRequest(url, data, success_callback, fail_callback) {
     let _host = config.host;
     let _timestamp = getTimeStamp();
     let _params = JSON.stringify(data);
-    let _sign = md5.hex_md5(_timestamp + _params + app.shopkey);
+    let _sign = md5.hex_md5(_timestamp + _params + config.shopkey);
 
     //请求服务器
     wx.request({

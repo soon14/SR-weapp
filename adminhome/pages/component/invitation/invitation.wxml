@@ -1,0 +1,73 @@
+<!-- 邀请有礼 -->
+<view class="container">
+    <view class="contentbox">
+        <image mode="widthFix" src="/images/help.png" class="help" catchtap="showHelp"></image>
+        <view class="content">
+            <view class="yxhyyq">
+                <view class="line"></view>
+                <view>邀请好友</view>
+            </view>
+            <view class="yqtext">一起领取金币！</view>
+            <view class="redbox">
+                <image mode="widthFix" src="/images/youhuiquan.png"></image>
+                <view class="redboxcontent">
+                    <view class="redboxprice">
+                        <view class="fhnum">{{myInviteList.basegold_d}}</view>
+                        <text class="fh">金币</text>
+                    </view>
+                </view>
+            </view>
+            <view class="yqhy" bindtap="invitation">邀请好友</view>
+            <view class="textbox">
+                <view>邀请好友使用乐墨花时光，好友开通店铺后</view>
+                <view>您和好友均获得
+                    <text>{{myInviteList.basegold_t}}</text>金币</view>
+            </view>
+        </view>
+        <view class="fengebox">
+            <text class="fengex"></text>
+            <view></view>
+            <view></view>
+        </view>
+        <view class="uselist">
+            <view class="uselisttitle">您已领取
+                <text>{{myInviteList.allgold}}</text>金币</view>
+            <view class="userinfobox">
+                <block wx:for="{{myInviteList.list}}">
+                    <view class="usercolume">
+                        <view class="telphone">{{item.telphone}}</view>
+                        <view class="usestatus">{{item.hasuse?'已使用小程序':'未使用小程序'}}</view>
+                        <view class="tix" wx:if="{{item.hasuse}}">获得
+                            <text>{{item.gold}}</text>金币</view>
+                        <view class="tix" wx:if="{{item.remind==1&&!item.hasuse}}">已提醒</view>
+                        <view class="tixbtn" data-remindid="{{item.id}}" data-nickname="{{item.name}}" bindtap="showRemind" wx:if="{{item.remind==0&&!item.hasuse}}">立即提醒</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="jbzybox" catchtap="showHelp" wx:if="{{showhelp}}">
+    <view class="jbzy">
+        <view>金币的作用？</view>
+        <view>1.抵扣花店小程序服务费；</view>
+        <view>2.抵扣乐墨学堂课程费用；</view>
+        <view>3.其他活动等；</view>
+    </view>
+</view>
+<view class="remindbox" wx:if="{{showRemind}}">
+    <view class="remindcontent">
+        <view class="tishi">提示</view>
+        <view class="remidtext">
+            <view>您的朋友
+                <text>（{{nickname}}）</text>正在使用专为花店</view>
+            <view>设计的小程序「乐墨花时光」推荐你使用</view>
+        </view>
+        <viw class="wangzhi">{{myInviteList.shorturl}}</viw>
+        <input placeholder="{{nickname}} (点击修改昵称)" value="{{inputValue}}" type="text" bindinput="remindinput" class="remindinput" />
+        <view class="btnbox">
+            <view catchtap="close">取消</view>
+            <view catchtap="remind">发送</view>
+        </view>
+    </view>
+</view>

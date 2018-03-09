@@ -2,7 +2,7 @@
 
 page {
     line-height: 1.6;
-    font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+    font-family: PingFang-SC-Regular, -apple-system-font, "Helvetica Neue", sans-serif;
     width:750rpx;
     overflow-x: hidden;
     background-color: #f7f7f7;
@@ -17,4 +17,21 @@ icon {
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
+}
+
+.blanks {
+  text-align: center;
+  padding-top: 70px;
+}
+
+.blanks image {
+  width: 163px;
+  height: 127px;
+}
+
+.blanks text {
+  color: #bbb;
+  font-size: 17px;
+  display: block;
+  padding: 10px 0;
 }

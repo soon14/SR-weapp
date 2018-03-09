@@ -7,6 +7,7 @@ var config = {
     host: 'https://ilearnmore.net/',
     // 图片资源host
     cdnhost: 'http://img.ilearnmore.net/',
+    shopkey: 'ilearnmore',
     //乐墨学堂小程序appid
     lmxtAppId: 'wx300052d4386d2758',
     //乐墨花时光小程序appid
