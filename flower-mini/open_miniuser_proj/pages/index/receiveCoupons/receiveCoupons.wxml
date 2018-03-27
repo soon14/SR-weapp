@@ -1,0 +1,55 @@
+<!-- receiveCoupons.wxml -->
+<view class="receiveCouponsBox" wx:if="{{couponlist}}">
+    <block wx:for="{{couponlist}}">
+        <view class="coupon" data-id="{{item.id}}" bindtap="saveCoupon">
+            <view class="cpleft">
+                <view class="leftborder">
+                    <view class="leftyuanbox">
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                        <view class="leftyuan"></view>
+                    </view>
+                </view>
+                <view class="lefttext">
+                    <view class="pricebox">
+                        <view class="fh">¥</view>
+                        <view class="price">{{item.value}}</view>
+                    </view>
+                    <view class="manj" wx:if="{{item.uselimit==0}}">无门槛使用</view>
+                    <view class="manj" wx:if="{{item.uselimit==1}}">满{{item.min_consumption}}元可用</view>
+                </view>
+            </view>
+            <view class="cpright">
+                <view class="cprighttitle">{{item.title}}</view>
+                <view class="cprighttime">{{item.start_time_e}}至{{item.end_time_e}}</view>
+            </view>
+            <view class="cprightuse" wx:if="{{item.saveinfo.savenum==0}}">
+                <text>领</text>
+                <text>取</text>
+            </view>
+            <view class="cprightuse cprightuse-act" wx:if="{{item.saveinfo.savenum>0}}">
+                <text>已</text>
+                <text>领</text>
+                <text>取</text>
+            </view>
+        </view>
+    </block>
+</view>
+<view wx:else class="blanks weui-tab__content nolist">
+    <image src="/images/noorder.png"></image>
+    <text>暂时没有可领取的优惠券</text>
+</view>

@@ -1,0 +1,85 @@
+<!-- 商品管理( 下架中 选项卡) -->
+<view class="topnavbar {{topNavbarData.currentTab == 2}}:'topnavbar_2':''">
+    <navigator url="/pages/index/products/products" open-type="redirect" class="item">上架中({{allsalecount || 0}})</navigator>
+    <navigator url="/pages/index/products/sellOut/sellOut" open-type="redirect" class="item">售罄({{saleoutcount || 0}})</navigator>
+    <text class="item active" bindtap="Refresh">下架中({{unsalecount || 0}})</text>
+</view>
+<!--下架中-->
+<view class="navbarContent">
+    <view class="container">
+        <!-- 全部分类 -->
+        <view class="qbflbox">
+            <view class="qbfl">
+                <view class="qbfl_access" wx:if="{{!fenleishow}}" bindtap="ishowChange">{{catetitle}}</view>
+                <view class="fenleishow" wx:if="{{fenleishow}}">
+                    <view class="qbfl_access_title" data-cateid="0" data-catetitle="全部分类" bindtap="ishowChange">全部分类</view>
+                    <view class="qbfl_access_content" bindtap="ishowChange">
+                        <block wx:for="{{cates}}" wx:if="{{cates}}">
+                            <text data-cateid="{{item.id}}" data-catetitle="{{item.title}}">{{item.title}}</text>
+                        </block>
+                        <text wx:if="{{!cates}}">还没有分类快去添加吧</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="content">
+            <block wx:for="{{list}}">
+                <view class="productsBox">
+                    <view class="productscontent">
+                        <navigator url="/pages/index/products/addproduct/addproduct?id={{item.id}}" class="products">
+                            <view class="products_left" data-id="{{item.id}}">
+                                <image mode="aspectFill" src="{{host+item.mainpic}}" data-id="{{item.id}}" />
+                                <block wx:if="{{item.is_useticket == '2'}}">
+                                    <view class="tejia"></view>
+                                    <text class="tejia_text">特</text>
+                                </block>
+                            </view>
+                            <view class="products_right" data-id="{{item.id}}">
+                                <view class="products_right_title" data-id="{{item.id}}">{{item.title}}
+                                </view>
+                                <view class="products_right_desc price" data-id="{{item.id}}" data-id="{{item.id}}">￥{{item.price}}</view>
+                                <view class="products_right_bottom">
+                                    <text data-id="{{item.id}}">库存：{{item.num}}</text>
+                                    <text data-id="{{item.id}}">销量：{{item.salenum}}</text>
+                                </view>
+                            </view>
+                        </navigator>
+                        <view class="products_bottomcontent">
+                            <view>
+                                <navigator url="/pages/index/products/details/details?id={{item.id}}">
+                                    <image mode="widthFix" src="/images/yl.png"></image>
+                                    <text>预览</text>
+                                </navigator>
+                            </view>
+                            <view wx:if="{{item.state=='0'}}" bindtap="downitem" data-id="{{item.id}}">
+                                <image mode="widthFix" src="/images/xj.png" data-id="{{item.id}}"></image>
+                                <text data-id="{{item.id}}">下架</text>
+                            </view>
+                            <view wx:if="{{item.state=='1'}}" bindtap="upitem" data-id="{{item.id}}">
+                                <image mode="widthFix" src="/images/sj.png" data-id="{{item.id}}"></image>
+                                <text data-id="{{item.id}}">上架</text>
+                            </view>
+                            <view bindtap="delitem" data-id="{{item.id}}">
+                                <image mode="widthFix" src="/images/sc.png" data-id="{{item.id}}"></image>
+                                <text data-id="{{item.id}}">删除</text>
+                            </view>
+                            <view data-id="{{item.id}}" bindtap="toTop">
+                                <image src="/images/zhid.png" data-id="{{item.id}}"></image>
+                                <text data-id="{{item.id}}">置顶</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <text wx:if="{{list.length<1}}" class="noContent">还没有下架中的商品哦</text>
+        </view>
+        <!-- 底部说明 -->
+        <view class="explainbox">
+            <view>{{explainTitle}}</view>
+            <block wx:for="{{explainText}}">
+                <view>{{item.text}}</view>
+            </block>
+        </view>
+        <view class="addbtnbox" bindtap="addnew">新增商品</view>
+    </view>
+</view>

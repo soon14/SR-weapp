@@ -1,0 +1,26 @@
+<view class="weui-navbar" style="background-color:#F8F8F8;">
+  <view class="weui-navbar__item" bindtap="tabClick">
+    <view class="weui-navbar__title">商品管理</view>
+  </view>
+  <view class="weui-navbar__item  weui-bar__item_on">
+    <view class="weui-navbar__title">分类管理</view>
+  </view>
+  <view class="weui-navbar__slider" style="left:375rpx;"></view>
+</view>
+<view class="weui-tab__panel11" style="padding-top:70px;">
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-cells weui-cells_after-title">
+      <block wx:for="{{list}}">
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">{{item.title}}</view>
+          <view class="weui-cell__ft"><navigator url="/pages/input/input?title=编辑分类名称&desc=分类名称&value={{item.title}}&key=editcategory&id={{item.id}}"><text>编辑</text></navigator> | <text data-id="{{item.id}}" class="del" bindtap="delitem">删除</text></view>
+        </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="addnew">新增分类</button>
+  </view>
+</view>

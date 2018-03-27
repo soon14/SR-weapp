@@ -1,0 +1,19 @@
+<!--底部固定导航栏  -->
+<view class="navFixed">
+    <view class="items" data-type="1" bindtap="changeNavbar">
+        <image src="/images/{{type==1?'hot_press':'hot-normal'}}.png"></image>
+        <view class="txt {{type==1?'active':''}}">热门方案</view>
+    </view>
+    <view class="items" data-type="2" bindtap="changeNavbar">
+        <image src="/images/{{type==2?'yigou_press':'yigou_normal'}}.png"></image>
+        <view class="txt {{type==2?'active':''}}">已购方案</view>
+    </view>
+    <navigator class="items" url='/floriculture/pages/myCaseList/myCaseList'>
+        <image src="/images/{{type==3?'fabu_press':'fabu_normal'}}.png"></image>
+        <view class="txt {{type==3?'active':''}}">我的方案</view>
+    </navigator>
+    <navigator class="items" url=''>
+        <image src="/images/{{type==4?'bangzhu_press':'bangzhu_normal'}}.png"></image>
+        <view class="txt {{type==4?'active':''}}">帮助信息</view>
+    </navigator>
+</view>

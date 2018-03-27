@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+@import 'style/weui.wxss';
+
+page {
+    background-color: #f8f8f8;
+    font-family: PingFang-SC-Regular, -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100%;
+    max-width: 750rpx;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.blanks {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.blanks image {
+    width: 163px;
+    height: 127px;
+}
+
+.blanks text {
+    color: #bbb;
+    font-size: 17px;
+    display: block;
+    padding: 10px 0;
+}

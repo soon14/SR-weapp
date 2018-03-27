@@ -1,0 +1,68 @@
+/*customerAnalysis.wxss（客户分析）*/
+
+
+/*canves*/
+
+.canvesbox {
+    width: 750rpx;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.canvesbox .canvesab,
+.canvesbottom {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    font-size: 35rpx;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+
+.canvesbox .canvas {
+    width: 100%;
+    min-height: 440rpx;
+}
+
+.canvesbox .canvesbottom {
+    padding: 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.canvesbox .canvesbottom view {
+    flex: 1;
+}
+
+.canvesbox .canvesbottom .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.canvesbox .canvesbottom .leftcontent {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+    align-items: center;
+}
+
+.canvesbox .left .canveslabel {
+    background-color: #f5f5f5;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    margin-right: 30rpx;
+}

@@ -1,0 +1,337 @@
+page {
+    background: #EDEEF0;
+    font-size: 30rpx;
+    color: #333;
+    padding-bottom: 140rpx;
+}
+
+.editCourse .title {
+    line-height: 90rpx;
+    padding: 0 30rpx;
+}
+
+.editCourse .title text {
+    color: #999;
+    font-size: 28rpx;
+    padding-left: 12rpx;
+}
+
+.editCourse .txtArea {
+    background: #fff;
+    padding: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.editCourse .txtArea textarea {
+    min-height: 280rpx;
+    line-height: 40rpx;
+    width: 100%;
+}
+
+.editCourse .txtArea .tools .basicT {
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 20rpx;
+    vertical-align: middle;
+    border-radius: 14rpx;
+}
+
+.editCourse .txtArea .txtStyle {
+    position: relative;
+}
+
+.editCourse .txtArea .txtStyle-tool {
+    position: absolute;
+    top: -80rpx;
+    /* width: 552rpx; */
+    left: -80rpx;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editCourse .txtArea .txtStyle-tool image {
+    height: 80rpx;
+    float: left;
+    vertical-align: middle;
+}
+
+.editCourse .txtArea .txtStyle-tool .lAlign,
+.editCourse .txtArea .txtStyle-tool .rAlign {
+    width: 120rpx;
+}
+
+.editCourse .txtArea .txtStyle-tool .cAlign {
+    width: 114rpx;
+}
+
+.editCourse .txtArea .colorStyle {
+    position: relative;
+}
+
+.editCourse .txtArea .colorStyle-tool {
+    position: absolute;
+    top: -80rpx;
+    left: 50%;
+    margin-left: -208rpx;
+    width: 408rpx;
+    z-index: 2;
+    border: 2rpx solid #DCDCDC;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10rpx;
+    height: 40rpx;
+    padding: 15rpx 14rpx;
+}
+
+.editCourse .txtArea .colorStyle-tool .cItem {
+    width: 40rpx;
+    height: 40rpx;
+    float: left;
+    margin: 0 14rpx;
+    border-radius: 6rpx;
+}
+
+.editCourse .txtArea .c1 {
+    background: #333;
+}
+
+.editCourse .txtArea .c2 {
+    background: #808080;
+}
+
+.editCourse .txtArea .c3 {
+    background: #ED2308;
+}
+
+.editCourse .txtArea .c4 {
+    background: #FF8A00;
+}
+
+.editCourse .txtArea .c5 {
+    background: #39B54A;
+}
+
+.editCourse .txtArea .c6 {
+    background: #1564FA;
+}
+
+
+
+.editCourse .rOpeBtn {
+    float: right;
+    padding-top: 16rpx;
+}
+
+.editCourse .rOpeBtn image {
+    float: left;
+    margin-left: 44rpx;
+}
+
+.editCourse .rOpeBtn .up,
+.editCourse .rOpeBtn .down {
+    width: 24rpx;
+    height: 14rpx;
+    margin-top: 10rpx;
+}
+
+.editCourse .rOpeBtn .del {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.lineArea {
+    margin-bottom: 20rpx;
+    padding: 40rpx 30rpx 20rpx 30rpx;
+    background: #fff;
+}
+
+.lineArea .lineStatus {
+    height: 0rpx;
+    border-bottom: 4rpx solid #e5e5e5;
+}
+
+/**/
+
+.lineArea .tools {
+    padding-top: 40rpx;
+}
+
+.lineArea .lineTool {
+    float: left;
+}
+
+.lineTool {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lineArea .lineTool .label {
+    float: left;
+    width: 90rpx;
+    height: 50rpx;
+    border: 2rpx solid #CBCED7;
+    color: #717882;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 50rpx;
+    margin-right: 10rpx;
+    border-radius: 10rpx;
+}
+
+.operate-btn {
+    text-align: center;
+    font-size: 0;
+    padding-top: 20rpx;
+}
+
+.operate-btn button {
+    display: inline-block;
+    width: 164rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    border-radius: 10rpx;
+    font-size: 24rpx;
+    color: #3583db;
+    border: 2rpx solid #3583db;
+    background: transparent;
+    margin: 0 14rpx;
+}
+
+
+/**/
+
+.editCase-fix {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100rpx;
+    display: flex;
+    letter-spacing: 2rpx;
+}
+
+.editCase-fix navigator {
+    flex: 1;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+
+.editCase-fix .pcPublic {
+    background-image: linear-gradient(0deg, rgba(76, 105, 124, 1) 0%, rgba(60, 87, 105, 1) 100%);
+}
+
+.editCase-fix button {
+    flex: 1;
+    font-size: 32rpx;
+    color: #fff;
+    line-height: 100rpx;
+    border-radius: 0;
+}
+
+.editCase-fix .submitBtn {
+    background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+
+.editCase-fix button::after {
+    border: none;
+}
+
+
+/**/
+
+.placeholder_class {
+    margin: auto;
+    padding: 40rpx 0;
+    text-align: center;
+    color: #999999;
+    font-size: 30rpx;
+    line-height: 46rpx;
+}
+
+.image_uploader {
+    padding: 40rpx 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_uploader wx-image {
+    width: 350rpx;
+    height: auto;
+}
+
+
+/*LineStyle*/
+
+.lineTool .radio-group .lineActive {
+    border: 0;
+    background-color: #1564fa;
+    color: #fff;
+}
+
+.lineArea .lineStatus.solidBold {
+    border-bottom: 4rpx solid #e5e5e5;
+}
+
+.lineArea .lineStatus.solidNormal {
+    border-bottom: 2rpx solid #e5e5e5;
+}
+
+.lineArea .lineStatus.dashedBold {
+    border-bottom: 4rpx dashed #e5e5e5;
+}
+
+.lineArea .lineStatus.dashedNormal {
+    border-bottom: 2rpx dashed #e5e5e5;
+}
+
+
+/*LineStyle*/
+
+/*fontStyle*/
+.editCourse .txtArea textarea.font_weight_normal{
+    font-weight: normal;
+}
+.editCourse .txtArea textarea.font_weight_bold{
+    font-weight: bold;
+}
+.editCourse .txtArea textarea.text_align_left{
+    text-align: left;
+}
+.editCourse .txtArea textarea.text_align_center{
+    text-align: center;
+}
+.editCourse .txtArea textarea.text_align_right{
+    text-align: right;
+}
+
+.editCourse .txtArea .color1 {
+    color: #333;
+}
+
+.editCourse .txtArea .color2 {
+    color: #808080;
+}
+
+.editCourse .txtArea .color3 {
+    color: #ED2308;
+}
+
+.editCourse .txtArea .color4 {
+    color: #FF8A00;
+}
+
+.editCourse .txtArea .color5 {
+    color: #39B54A;
+}
+
+.editCourse .txtArea .color6 {
+    color: #1564FA;
+}
+/*fontStyle*/

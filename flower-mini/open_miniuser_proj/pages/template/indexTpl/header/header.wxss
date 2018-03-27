@@ -1,0 +1,15 @@
+/*header.wxss*/
+.banner {
+    width: 750rpx;
+    height: 400rpx;
+    overflow: hidden;
+}
+
+.banner swiper {
+    height: 400rpx;
+}
+
+.banner .slide-image {
+    width: 750rpx;
+    height: 400rpx;
+}

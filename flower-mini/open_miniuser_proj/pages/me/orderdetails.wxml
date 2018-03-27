@@ -1,0 +1,165 @@
+<!--index.wxml-->
+<view class="container page__bd">
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">订单状态</view>
+            <view class="weui-cell__ft {{item.state > 3 ? 'gray' : 'drakred'}}" style="text-align:left;">{{item.statetext}}
+                <text wx:if="{{orderstatus != ''}}">({{orderstatus}})</text>
+            </view>
+        </view>
+        <block wx:if="{{item.state == 3 && item.type!=2}}">
+            <navigator url="/pages/me/expressinfo?id={{item.id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">物流信息</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </block>
+    </view>
+    <block wx:if="{{item.isselftake == 0 && item.type!=2}}">
+        <view class="weui-cells__title">收货信息</view>
+        <view class="page__desc other other2">
+            <text>{{item.fusername}} {{item.ftelphone}}</text>
+            <text>{{item.faddress}}</text>
+        </view>
+    </block>
+    <block wx:if="{{item.isselftake == 0 && item.type!=2}}">
+        <view class="weui-cells__title">配送服务</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">订购人姓名</view>
+                <view class="weui-cell__ft">{{item.username}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">订购人电话</view>
+                <view class="weui-cell__ft">{{item.telphone}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">配送时间</view>
+                <view class="weui-cell__ft">{{item.needsendtime}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{item.type==2}}">
+        <view class="weui-cells__title">报名信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">报名人姓名</view>
+                <view class="weui-cell__ft">{{item.username}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">报名人电话</view>
+                <view class="weui-cell__ft">{{item.telphone}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">活动开始时间</view>
+                <view class="weui-cell__ft">{{item.proinfo.starttimetext}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">活动结束时间</view>
+                <view class="weui-cell__ft">{{item.proinfo.endtimetext}}</view>
+            </view>
+            <!-- map.wxml -->
+            <image src="{{item.proinfo.imgurl}}" mode="aspectFill" class="mapimg" bindtap="markertap"></image>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">活动地点</view>
+                <view class="weui-cell__ft">{{item.proinfo.address}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{item.isselftake == 1 && item.type!=2}}">
+        <view class="weui-cells__title">取花人信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">取花人姓名</view>
+                <view class="weui-cell__ft">{{item.username}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">取花人电话</view>
+                <view class="weui-cell__ft">{{item.telphone}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">取花时间</view>
+                <view class="weui-cell__ft">{{item.needsendtime}}</view>
+            </view>
+        </view>
+    </block>
+    <view class="weui-cells" wx:if="{{item.type!=2}}">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">我要送给</view>
+            <view class="weui-cell__ft">{{item.purpose}}</view>
+        </view>
+    </view>
+    <block wx:if="{{item.needcard == 1 && item.type!=2}}">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">我需要一张卡片</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd" style="min-width:90px;">卡片留言</view>
+                <view class="weui-cell__ft">{{item.cardwords}}</view>
+            </view>
+        </view>
+    </block>
+    <view class="weui-cells__title">商品信息</view>
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd">
+            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" mode="aspectFill" src="{{item.proinfo.mainpic}}" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{item.proinfo.title}}</view>
+                    <view class="weui-media-box__desc">￥{{item.productprice}}
+                        <text>X{{item.productnum}}</text>
+                    </view>
+                </view>
+            </navigator>
+            <block wx:if="{{item.isselftake == 0}}">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">快递运费</view>
+                    <view class="weui-cell__ft">￥{{item.postage}}</view>
+                </view>
+            </block>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">商品总价</view>
+                <view class="weui-cell__ft">￥{{totalprice}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">优惠券减免</view>
+            <view class="weui-cell__ft">{{item.couponinfo.value ? '￥'+item.couponinfo.value : '无'}}</view>
+        </view>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">订单支付金额</view>
+            <view class="weui-cell__ft">￥{{item.orderprice}}</view>
+        </view>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__bd" style="min-width:90px;">买家备注</view>
+            <view class="weui-cell__ft">{{item.note}}</view>
+        </view>
+    </view>
+    <view class="weui-cells" wx:if="{{item.state == 6}}">
+        <view class="weui-cell">
+            <view class="weui-cell__bd" style="min-width:90px;">>拒单原因</view>
+            <view class="weui-cell__ft">{{item.reason}}</view>
+        </view>
+    </view>
+    <view class="page__desc other" style="margin-bottom:70px;">
+        <text class="cotent2" bindtap="copyno" data-no="{{item.no}}">订单编号 {{item.no}}</text>
+        <text class="cotent2">下单时间 {{orderaddtimestr}}</text>
+        <text class="cotent2">付款时间 {{item.paytime > 0 ? paytimestr : '未付款'}}</text>
+        <text class="cotent2">接单时间 {{item.accepttime > 0 ? accepttimestr : '未接单'}}</text>
+        <text class="cotent2">发货时间 {{item.sendtime > 0 ? sendtimestr : '未发货'}}</text>
+    </view>
+    <view class="basebutton" wx:if="{{item.state < 2 || item.state == 3}}">
+        <button class="weui-btn btnleft" wx:if="{{item.state == 0}}" bindtap="cancelorder" type="default">取消订单</button>
+        <button class="weui-btn btnright" wx:if="{{item.state == 0}}" bindtap="pay" type="primary">立即付款</button>
+        <button class="weui-btn" wx:if="{{item.state == 1}}" bindtap="cancelorder" type="default">取消订单</button>
+        <button class="weui-btn" wx:if="{{item.state == 3}}" bindtap="confirmorder" type="primary">确认收货</button>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.btn-blue{
+    color: #fff;
+    text-align: center;
+    background-color: #3583db;
+    margin:10rpx auto;
+    width:300rpx;
+}
+.btn-red{
+    color: #fff;
+    text-align: center;
+    background-color: #ff2e2b;
+    margin:10rpx auto;
+    width:300rpx;
+}
+
+.btn-green{
+    background-color: #57c44c;
+    color: #FFFFFF;
+    text-align: center;
+    margin:10rpx auto;
+    width: 300rpx;
+}
+
+.userface{
+    width:150rpx;
+    height:150rpx;
+}

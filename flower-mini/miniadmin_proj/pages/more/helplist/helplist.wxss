@@ -1,0 +1,8 @@
+.main{
+  padding:40px 20px;
+}
+.main text{
+  padding:2px 0;
+  line-height:30px;
+  display: block;
+}

@@ -1,0 +1,67 @@
+/*share.wxss*/
+
+.sharebox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sharebox wx-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.sharebox button::after {
+    content: "";
+    border: none;
+    border-radius: 0;
+}
+
+.sharebox .sharebtnbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+.sharebox .sharebtnbox .sharecolume {
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    color: #333;
+    font-size: 32rpx;
+    text-align: center;
+    border-top: 1rpx solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sharebox .sharebtnbox .sharecolume .colume {
+    font-size: 32rpx;
+    color: #333;
+}
+
+.sharebox .sharebtnbox .sharecolume .explain {
+    font-size:28rpx;
+    color:#999;
+}
+
+.sharebox .sharebtnbox .close {
+    margin-top: 20rpx;
+    border-top: none;
+}

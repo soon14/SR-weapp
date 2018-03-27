@@ -1,0 +1,77 @@
+/*账户设置*/
+
+.contentbox {
+    width: 750rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+}
+
+.contentbox .contentcoulme {
+    width: 690rpx;
+    padding: 0 30rpx;
+    font-size: 32rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ebebeb;
+}
+
+.contentbox .noneborder {
+    border: 0;
+}
+
+.sj {
+    width: 20rpx;
+    height: 20rpx;
+    border-right: 4rpx solid #999999;
+    border-top: 4rpx solid #999999;
+    transform: rotate(45deg);
+}
+
+.bindphone {
+    display: flex;
+    justify-content: center;
+    color: #999999;
+    align-items: center;
+}
+
+
+
+/*getusertel获取手机号弹出框*/
+
+.getusertelbox {
+    width: 750rpx;
+    height: 1334rpx;
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getusertelbox .getusertel {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getusertelbox .getusertel wx-button {
+    line-height: 84rpx;
+    background-color: #ff5238;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+}

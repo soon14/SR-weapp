@@ -1,0 +1,30 @@
+<!-- indexTemplate -->
+<view class="weui-tab" id="tpl4">
+    <!-- 对应内容 -->
+    <view class="newlistbox">
+        <block wx:for="{{catelist}}" wx:for-index="idx" wx:for-item="item">
+            <view class="catelisttitle" wx:if="{{item.prolist.length>0}}">
+                <view class="titleline"></view>
+                <view class="titletext">{{item.title}}</view>
+                <view class="titleline"></view>
+            </view>
+            <block wx:for="{{item.prolist}}" wx:for-item="item2" wx:if="{{item.prolist.length>0}}">
+                <navigator url="{{item2.has_group==1?has_group_Url:is_useticket_Url}}?index={{index}}&id={{item2.id}}">
+                    <image mode="aspectFill" src="{{host + item2.mainpic}}" class="tablistleft"></image>
+                    <image mode="widthFix" src="/images/v2.2.0/tuan.png" class="sjimg" wx:if="{{item2.has_group==1}}"></image>
+                    <image mode="widthFix" src="/images/v2.2.0/te.png" class="sjimg" wx:if="{{item2.is_useticket==2&&tem2.has_group!=1}}"></image>
+                    <view class="tablistright">
+                        <view class="protitle">{{item2.title}}</view>
+                        <view class="propricebox">
+                            <view class="proprice">
+                                <text>￥{{item2.price}}</text>
+                                <!-- <view class="delprice">￥{{item2.price}}</view> -->
+                            </view>
+                            <button class="buybnt">购买</button>
+                        </view>
+                    </view>
+                </navigator>
+            </block>
+        </block>
+    </view>
+</view>

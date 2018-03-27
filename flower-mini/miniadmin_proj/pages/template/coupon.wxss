@@ -1,0 +1,106 @@
+/*coupon.wxss*/
+
+.coupon {
+    width: 640rpx;
+    height: 230rpx;
+    border-top: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    border-radius: 6rpx;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.coupon .cpleft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.coupon .cpleft .leftborder {
+    width: 14rpx;
+    height: 230rpx;
+    overflow: hidden;
+    border-radius: 5rpx;
+    background-color: #ff2e2b;
+    position: relative;
+}
+
+.coupon .cpleft .leftyuanbox {
+    position: absolute;
+    right: -5rpx;
+    top: 4rpx;
+    height: 222rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coupon .cpleft .leftyuan {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.coupon .cpleft .lefttext {
+    width: 215rpx;
+    height: 220rpx;
+    overflow: hidden;
+    border-right: 1px dashed #d8d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coupon .cpleft .pricebox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ff2e2b;
+}
+
+.coupon .cpleft .fh {
+    font-size: 30rpx;
+    line-height: 86rpx;
+    margin-right: 8rpx;
+}
+
+.coupon .cpleft .price {
+    font-size: 70rpx;
+}
+
+.coupon .cpleft .manj {
+    font-size: 24rpx;
+    color: #666666;
+}
+
+.coupon .cpright {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 50rpx;
+    color: #999999;
+    margin-left: 30rpx;
+}
+
+.coupon .cpright .cprighttitle {
+    font-size: 32rpx;
+    color: #666666;
+}
+
+.coupon .cpright .cprighttime {
+    font-size: 24rpx;
+}
+
+.coupon .cpright .cprightuse {
+    font-size: 24rpx;
+}

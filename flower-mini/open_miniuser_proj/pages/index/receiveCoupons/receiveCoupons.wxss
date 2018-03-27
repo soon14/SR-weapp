@@ -1,0 +1,124 @@
+/*receiveCoupons.wxss*/
+
+.receiveCouponsBox {
+    width: 750rpx;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.coupon {
+    height: 184rpx;
+    border-radius: 6rpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.coupon .cpleft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.coupon .cpleft .leftborder {
+    width: 14rpx;
+    height: 184rpx;
+    overflow: hidden;
+    border-radius: 5rpx;
+    background-color: #ff2e2b;
+    position: relative;
+}
+
+.coupon .cpleft .leftyuanbox {
+    position: absolute;
+    right: -5rpx;
+    top: 4rpx;
+    height: 177rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coupon .cpleft .leftyuan {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.coupon .cpleft .lefttext {
+    width: 178rpx;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1rpx dashed #d8d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coupon .cpleft .pricebox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ff2e2b;
+}
+
+.coupon .cpleft .fh {
+    font-size: 22rpx;
+    line-height: 86rpx;
+    margin-right: 8rpx;
+}
+
+.coupon .cpleft .price {
+    font-size: 56rpx;
+}
+
+.coupon .cpleft .manj {
+    font-size: 22rpx;
+    color: #666666;
+}
+
+.coupon .cpright {
+    width: 300rpx;
+    padding: 0 10rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 50rpx;
+    color: #999999;
+}
+
+.coupon .cpright .cprighttitle {
+    font-size: 28rpx;
+    color: #666666;
+}
+
+.coupon .cpright .cprighttime {
+    font-size: 24rpx;
+}
+
+.coupon .cprightuse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 24rpx;
+    width: 80rpx;
+    height: 100%;
+    background-color: #ff2e2b;
+}
+
+.coupon .cprightuse-act{
+    background-color: #ccc;
+}

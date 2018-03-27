@@ -1,0 +1,163 @@
+/*财务管理*/
+
+page {
+    background-color: #f7f7f7;
+    color: #666666;
+    font-size: 32rpx;
+    line-height: 46rpx;
+}
+
+.searchbox {
+    background-color: #fff;
+    height: 50px;
+    width: 750rpx;
+}
+
+.searchbox wx-icon {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+}
+
+.searchbox .weui-search-bar__form {
+    border-radius: 0;
+    border: 1rpx solid #ebebeb;
+}
+
+.searchbox .weui-icon-clear {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 7px 8px;
+    font-size: 0;
+}
+
+
+.searchbox wx-input {
+    height: 50px;
+    line-height: 50px;
+    font-size: 30rpx;
+}
+
+.searchbtn {
+    background-color: #4f9dd0;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+    text-align: center;
+    color: #fff;
+    width: 690rpx;
+    border-radius: 50rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+    margin-bottom: 37rpx;
+}
+
+
+
+
+
+
+
+/*content*/
+
+.contentbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+/*操作记录*/
+
+.szjl {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    padding: 0 30rpx;
+    font-size: 32rpx;
+    color: #333333;
+    align-items: center;
+    margin: 17rpx 0;
+}
+
+.szjl wx-view {
+    width: 6rpx;
+    height: 26rpx;
+    background-color: #4f9dd0;
+    margin-right: 15rpx;
+}
+
+
+
+
+
+
+
+/*title*/
+
+.title,
+.content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #bdbdbd;
+    font-size: 26rpx;
+    background-color: #fff;
+    padding: 0 30rpx;
+    border-top: 1px solid #ebebeb;
+}
+
+.title wx-view,
+.content wx-view {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content wx-view:nth-of-type(2) {
+    min-width: 260rpx;
+}
+
+.title wx-view:nth-of-type(1),
+.content wx-view:nth-of-type(1) {
+    text-align: left;
+}
+
+.title wx-view:nth-of-type(3),
+.content wx-view:nth-of-type(3) {
+    text-align: right;
+}
+
+.content {
+    color: #666666;
+}
+
+.content wx-view:nth-of-type(3) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.content wx-view:nth-of-type(3) wx-text {
+    flex: 1;
+    height: 50rpx;
+    line-height: 50rpx;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.content wx-view:nth-of-type(3) wx-text:nth-of-type(1) {
+    color: #333;
+}

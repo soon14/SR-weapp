@@ -1,0 +1,35 @@
+/*tpl6.wxss*/
+
+#tpl6 .weui-navbar {
+    border: none;
+}
+
+#tpl6 .catelisttitle {
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-size: 30rpx;
+    color: #555555;
+}
+
+#tpl6 .catelisttitle .titleline {
+    width: 40rpx;
+    height: 2rpx;
+    background-color: #555;
+}
+
+#tpl6 .titletext {
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    margin: 0 20rpx;
+    font-size: 30rpx;
+    color: #555555;
+    background: #f8f8f8;
+}

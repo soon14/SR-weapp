@@ -1,0 +1,568 @@
+.top {
+    width: 750rpx;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.top swiper {
+    width: 100%;
+    height: 330px;
+}
+
+.top swiper image {
+    width: 100%;
+    height: 330px;
+}
+
+.top .top-title {
+    width: 718rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 36rpx;
+    padding: 16rpx;
+}
+
+.top-title-text{
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+
+
+
+
+/*分享*/
+
+.sharebtn {
+    width:50rpx;
+    height: 56rpx;
+    padding-top: 17rpx;
+    margin-right: 14rpx;
+    margin-left: 14rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shereb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sharebtn wx-image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.sharebtn wx-text {
+    color: #555555;
+    font-size: 24rpx;
+}
+
+
+
+
+/**/
+
+.top .top-price {
+    color: #ff322f;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.price {
+    font-size: 34rpx;
+    color: #ff322f;
+}
+
+.main {
+    width: 750rpx;
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.titlebox {
+    height: 100rpx;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 690rpx;
+    margin: 0 30rpx;
+    height: 2rpx;
+    background-color: #d7d7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title wx-text {
+    font-size: 25rpx;
+    color: #888888;
+    background-color: #fff;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+.alerttextview {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.alerttextview wx-text {
+    min-width: 80rpx;
+}
+
+.hdimg {
+    width: 30rpx;
+    min-width: 30rpx;
+    height: 33rpx;
+    margin: 15rpx 0;
+    margin-right: 20rpx;
+}
+
+.main .huacai,
+.main .huayi,
+.main .intro,
+.main .shouhou {
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    padding-left: 20px;
+}
+
+.main .huacai image,
+.main .huayi image,
+.main .intro image,
+.main .shouhou image {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.main .intro image {
+    width: 13px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.main .huacai-content,
+.main .huayi-content,
+.main .intro-content,
+.main .shouhou-content {
+    font-size: 15px;
+    line-height: 20px;
+    color: #666;
+    padding: 10px;
+    text-align: center;
+}
+
+.main .video {
+    line-height: 30px;
+    padding: 10px;
+}
+
+.main .video video {
+    width: 100%;
+}
+
+.main .piclist {
+    padding: 10px;
+}
+
+.main .piclist image {
+    width: 100%;
+}
+
+.buy {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 49px;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buy .right button {
+    border-radius: 0px;
+    height: 49px;
+    line-height: 49px;
+    background-color: #ff4a36;
+}
+
+.buy .right button:hover {
+    background-color: #ff4a36;
+}
+
+.buy .left {
+    width: 320rpx;
+    height:49px;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top:1px solid rgba(0, 0, 0, .10);
+}
+
+
+
+
+.buy .left .leftcolume{
+    flex: 1;
+    height:49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.buy .left button.leftcolume{
+    border:0;
+    height:49px;
+    border-left:1px solid rgba(0, 0, 0, .10);
+    flex: 1;
+    border-radius: 0;
+    padding: 0;
+    margin:0;
+}
+
+.buy .left button.leftcolume::after ,.buy .right button::after{
+    border-radius: 0;
+    border:0;
+}
+
+.buy .left .leftcolume image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.buy .left .leftcolume text {
+    color: #333;
+    display: block;
+    font-size: 20rpx;
+    line-height: 20rpx;
+    margin-top: 15rpx;
+}
+
+.buy .right {
+    flex: 1;
+    float: right;
+    border-top: 1px solid #ff4a36;
+}
+
+.weui-footer__link {
+    color: #cccccc;
+}
+
+.weui-footer__link image {
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    padding-bottom: 4px;
+}
+
+.specifications {
+    width: 690rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 30rpx;
+    background-color: #fff;
+    margin: 20rpx auto;
+    font-size: 30rpx;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.rightsj {
+    position: absolute;
+    right: 30rpx;
+    top: 34rpx;
+    height: 20rpx;
+    width: 20rpx;
+    border-top: 4rpx solid #bdbdbd;
+    border-right: 4rpx solid #bdbdbd;
+    transform: rotate(45deg);
+}
+
+.specifications .specificationscontent {
+    text-align: right;
+    color: #999;
+    margin-right: 30rpx;
+}
+
+.specificationscontent1 {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*弹出层*/
+
+.alertcolumebox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 1334rpx;
+    width: 750rpx;
+    z-index: 10000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.alertcolumeboxtop {
+    height: 834rpx;
+    width: 750rpx;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.alertcolume {
+    width: 750rpx;
+    padding-bottom: 110rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.alertcolumebtn {
+    position: absolute;
+    bottom: 10rpx;
+    left: 0;
+    right: 0;
+    margin: 20rpx auto;
+    width: 690rpx;
+    height: 80rpx;
+    background: linear-gradient(to right, #ff663d, #ff4e37);
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 34rpx;
+    border-radius: 8rpx;
+    color: #fff;
+}
+
+.alertcolumeimg {
+    width: 160rpx;
+    height: 160rpx;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.alertcolumecontent {
+    width: 690rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30rpx;
+}
+
+.borderbox {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 30rpx;
+}
+
+.alertcolumedetail {
+    display: flex;
+    height: 160rpx;
+    max-width: 410rpx;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 30rpx;
+    text-align: left;
+}
+
+.alertcolumedetail wx-view:nth-of-type(1) {
+    color: #555555;
+    font-size: 32rpx;
+    height:100rpx;
+    overflow:hidden;
+}
+
+.alertcolumecolor {
+    color: #f35e5e;
+}
+
+.alerttextbox {
+    padding: 50rpx 0;
+    padding-top: 0;
+}
+
+.alerttext {
+    width: 690rpx;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    color: #555;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.closealertcolume {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22rpx;
+    height: 22rpx;
+    padding: 30rpx;
+}
+
+.alertspecifications {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.alertspecifications .checkbox {
+    padding: 0 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin: 10rpx 15rpx;
+    background-color: #f8f8f8;
+    border-radius: 8rpx;
+    color: #555555;
+    font-size: 26rpx;
+}
+
+.alertspecifications .checkboxactive {
+    color: #fff;
+    background: linear-gradient(to right, #ff663d, #ff4e37);
+}
+
+.inputbox,
+.inputbox1 {
+    width: 690rpx;
+    padding: 15rpx;
+    font-size: 26rpx;
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputbox wx-picker,
+.inputbox .picker {
+    width: 490rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.inputbox .picker {
+    padding: 0;
+}
+
+.inputbox .inputboxtext {
+    font-size: 28rpx;
+    color: #555;
+}
+
+.inputbox .inpt {
+    overflow: hidden;
+    height: 60rpx;
+    line-height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputbox .inpt wx-input {
+    background-color: #f4f4f4;
+    text-align: center;
+    width: 80rpx;
+    height: 60rpx;
+    color: #333333;
+    font-size: 34rpx;
+    margin: 0 4rpx;
+}
+
+.inputbox .inpt .inptleft,
+.inputbox .inpt .inptright {
+    width: 60rpx;
+    height: 60rpx;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 8rpx;
+    color: #adadad;
+}
+
+.inputbox1 .inpt {
+    flex: 1;
+    overflow: hidden;
+    margin-left: 30rpx;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.inputbox1 .inpt wx-input,
+.inputbox .inpt wx-input {
+    flex: 1;
+    padding: 0 20rpx;
+}
+
+.mapimg {
+    display: block;
+    width: 690rpx;
+    height: 324rpx;
+    margin: 0 auto;
+}
+
+.boderno {
+    border: 0;
+}
+
+
+
+/*sharebtnbox*/
+
+@import '../template/share/share.wxss';

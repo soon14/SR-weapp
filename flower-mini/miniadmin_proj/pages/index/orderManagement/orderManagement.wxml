@@ -1,0 +1,191 @@
+<!-- (订单管理) -->
+<view class="container">
+    <!-- 顶部导航 -->
+    <include src="/pages/template/header_navbar.wxml" />
+    <!-- 搜索栏 -->
+    <view class="searchlabel">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="输入订单号、姓名或手机号搜索" value="{{inputVal}}" confirm-type="search" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="search" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn" bindtap="search">搜索</view>
+    </view>
+    <!-- 引入栏目模版以及样式 -->
+    <import src="/pages/template/orderManagementTemplate.wxml" />
+    <view class="databox" wx:if="{{!searchProductsShouw}}">
+        <!--导航条(选项卡)-->
+        <view class="topnavbar" wx:if="{{type==1}}">
+            <block wx:for="{{topNavbarData.navbar}}">
+                <view data-id="{{item.id}}" data-state="{{item.state}}" class="item {{topNavbarData.currentTab==item.id ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item.name}}
+                    <text wx:if="{{item.num}}" class="numlist {{item.num > 9?'yuandian':''}}">{{item.num > 9 ? '':item.num}}</text>
+                </view>
+            </block>
+            <view class="item item_more {{topNavbarData.currentTab == moreIdActive ? 'active' : ''}}">
+                <text class="numlist2 {{kyuan?'yuandian':''}}"></text>
+                <text catchtap="bindMoreShow">{{moreId?moreData[moreId].name:'更多状态'}}</text>
+                <text class="{{!moreShow?'triangle-down':'triangle-up'}}"></text>
+                <view class="moredata" hidden="{{!moreShow}}">
+                    <view class="moredatatriangle"></view>
+                    <block wx:for="{{moreData}}">
+                        <view class="moreitem" data-index="{{index}}" data-id="{{item.id}}" data-state="{{item.state}}" catchtap="bindchangemore">{{item.name}}
+                            <text wx:if="{{item.num!=0}}" class="numlist1 {{item.num > 9?'yuandian2':''}}">{{item.num > 9 ? '':item.num}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="topnavbar" wx:if="{{type==2}}">
+            <block wx:for="{{topNavbar_active_Data.navbar}}">
+                <view data-id="{{item.id}}" data-state="{{item.state}}" class="item {{topNavbar_active_Data.currentTab==item.id ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item.name}}
+                    <text wx:if="{{item.num}}" class="numlist {{item.num > 9?'yuandian':''}}">{{item.num > 9 ? '':item.num}}</text>
+                </view>
+            </block>
+            <view class="item item_more {{topNavbar_active_Data.currentTab == moreIdActive ? 'active' : ''}}">
+                <text class="numlist2"></text>
+                <text catchtap="bindMoreShow">{{moreId?more_active_Data[moreId].name:'更多状态'}}</text>
+                <text class="{{!moreShow?'triangle-down':'triangle-up'}}"></text>
+                <view class="moredata" hidden="{{!moreShow}}">
+                    <view class="moredatatriangle"></view>
+                    <block wx:for="{{more_active_Data}}">
+                        <view class="moreitem" data-index="{{index}}" data-id="{{item.id}}" data-state="{{item.state}}" catchtap="bindchangemore">{{item.name}}
+                            <text wx:if="{{item.num!=0}}" class="numlist1 {{item.num > 9?'yuandian2':''}}">{{item.num > 9 ? '':item.num}}</text>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <!-- 无商品显示 -->
+        <block wx:if="{{list.length < 1}}">
+            <view class="noshoppro">
+                <image mode="widthFix" src="/images/sad_icon.png"></image>
+                <text>花都开了，你却还没有订单</text>
+            </view>
+        </block>
+        <!-- 普通订单 -->
+        <block wx:if="{{type==1}}">
+            <!--待付款-->
+            <view wx:if="{{topNavbarData.currentTab == 0}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="pendingPayment" data="{{...item}}" />
+                </block>
+            </view>
+            <!--待接单-->
+            <view wx:if="{{topNavbarData.currentTab == 1}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="waitingList" data="{{...item}}" />
+                </block>
+            </view>
+            <!--待发货-->
+            <view wx:if="{{topNavbarData.currentTab == 2}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="pendingShipment" data="{{...item}}" />
+                </block>
+            </view>
+            <!--已关闭-->
+            <view wx:if="{{topNavbarData.currentTab == 3}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="closed" data="{{...item}}" />
+                </block>
+            </view>
+            <!--待收货-->
+            <view wx:if="{{topNavbarData.currentTab == 4}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="goodsReceived" data="{{...item}}" />
+                </block>
+            </view>
+            <!--待退款-->
+            <view wx:if="{{topNavbarData.currentTab == 5}}" class="navbarContent">
+                <view class="explain">
+                    <text>自有微信支付订单，无法直接在乐墨花时光进行退款，需要登录pay.weixin.qq.com进行退款，再标记退款</text>
+                </view>
+                <block wx:for="{{list}}">
+                    <template is="pendingRefund" data="{{...item}}" />
+                </block>
+            </view>
+            <!--已完成-->
+            <view wx:if="{{topNavbarData.currentTab == 6}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="completed" data="{{...item}}" />
+                </block>
+            </view>
+        </block>
+        <!-- 活动订单 -->
+        <block wx:if="{{type==2}}">
+            <!--待付款-->
+            <view wx:if="{{topNavbarData.currentTab == 0}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="pendingPayment" data="{{...item}}" />
+                </block>
+            </view>
+            <!--已报名-->
+            <view wx:if="{{topNavbarData.currentTab == 1}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="goodsReceived" data="{{...item}}" />
+                </block>
+            </view>
+            <!--待退款-->
+            <view wx:if="{{topNavbarData.currentTab == 2}}" class="navbarContent">
+                <view class="explain">
+                    <text>自有微信支付订单，无法直接在乐墨花时光进行退款，需要登录pay.weixin.qq.com进行退款，再标记退款</text>
+                </view>
+                <block wx:for="{{list}}">
+                    <template is="pendingRefund" data="{{...item}}" />
+                </block>
+            </view>
+            <!--已完成-->
+            <view wx:if="{{topNavbarData.currentTab == 3}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="completed" data="{{...item}}" />
+                </block>
+            </view>
+            <!--已关闭-->
+            <view wx:if="{{topNavbarData.currentTab == 4}}" class="navbarContent">
+                <block wx:for="{{list}}">
+                    <template is="closed" data="{{...item}}" />
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="databox" wx:if="{{searchProductsShouw}}">
+        <block wx:for="{{list}}">
+            <view wx:if="{{item.state==0}}">
+                <template is="pendingPayment" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==1}}">
+                <template is="waitingList" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==2}}">
+                <template is="pendingShipment" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==7}}">
+                <template is="closed" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==3}}">
+                <template is="goodsReceived" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==8}}">
+                <template is="pendingRefund" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==3}}">
+                <template is="waitingForClass" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==5}}">
+                <template is="completed" data="{{...item}}" />
+            </view>
+            <view wx:if="{{item.state==4 || item.state==6 ||item.state== 9}}">
+                <template is="closePayment" data="{{...item}}" />
+            </view>
+        </block>
+        <block wx:if="{{list.length<1}}">
+            <view class="noshoppro">
+                <image mode="widthFix" src="/images/sad_icon.png"></image>
+                <text>未找到相关订单</text>
+            </view>
+        </block>
+    </view>
+</view>

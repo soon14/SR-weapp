@@ -1,0 +1,18 @@
+<!-- banner.wxml -->
+<view class="banner" wx:if="{{!imglist}}">
+    <image src="{{cdnhost+imgdefault}}" mode="aspectFill" class="slide-image" />
+</view>
+<view class="banner" wx:if="{{imglist}}">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-color="#fff" indicator-active-color="#ff322f" bindchange="swiperChange">
+        <block wx:for="{{imglist}}">
+            <swiper-item>
+                <navigator url="/pages/details/details?index={{index}}&id={{item.productid}}" wx:if="{{item.productid}}">
+                    <image src="{{cdnhost+item.pic}}" class="slide-image" mode="aspectFill" />
+                </navigator>
+                <view wx:if="{{!item.productid}}">
+                    <image src="{{cdnhost+item.pic}}" class="slide-image" mode="aspectFill" />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

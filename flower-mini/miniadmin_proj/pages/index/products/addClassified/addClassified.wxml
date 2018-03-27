@@ -1,0 +1,22 @@
+<view class="content">
+    <form bindsubmit="formSubmit">
+        <view class="formSubmit_input">
+            <input class="weui-input" type="text" focus="true" placeholder="请输入分类名称" name="inputtext" placeholder-class="formSubmit_input-placeholder-class" value="{{value}}" />
+        </view>
+        <!-- <view class="classnamebox">
+            <view class="classtitle">请选择分类图标</view>
+            <view class="classbox">
+                <block wx:for="{{list}}">
+                    <view>
+                        <image mode="aspectFill" src="{{host+item.pic}}" data-id="{{item.id}}" bindtap="checkicon"></image>
+                        <icon type="success" size="25" wx:if="{{checkId==item.id}}" />
+                    </view>
+                </block>
+            </view>
+        </view> -->
+        <view class="btnbox">
+            <button class="addbtn" formType="submit" type="primary">保存</button>
+            <view class="backbtn" bindtap="back">返回</view>
+        </view>
+    </form>
+</view>

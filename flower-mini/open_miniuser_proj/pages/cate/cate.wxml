@@ -1,0 +1,41 @@
+<!--logs.wxml-->
+<!-- <view class="weui-cells weui-cells_after-title">
+    <block wx:for="{{list}}">
+        <navigator url="/pages/catelist/catelist?id={{item.id}}&name={{item.title}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">{{item.title}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </block>
+    <view wx:if="{{item.procount == 0}}" class="blanks weui-tab__content" hidden="{{activeIndex != idx}}">
+        <image src="/images/noorder.png"></image>
+        <text>有人很懒，还没上架商品</text>
+    </view>
+</view> -->
+<view class="classificationbox">
+    <!-- 分类名 -->
+    <view class="classification">
+        <block wx:if="{{titlelist}}" wx:for="{{titlelist}}">
+            <view class="classname {{item.id == cateid ? 'classactive' : ''}}" data-id="{{item.id}}" bindtap="navbarTap">
+                <view>{{item.title}}</view>
+            </view>
+        </block>
+    </view>
+    <!-- 分类内容 -->
+    <view class="classificationcontentbox">
+        <block wx:if="{{contentlist}}" wx:for="{{contentlist}}">
+            <view class="classificationcontent" data-id="{{item.id}}" bindtap="goUrl">
+                <image mode="aspectFill" src="{{cdnhost+item.mainpic}}" class="cicleft"></image>
+                <view class="cicright">
+                    <view class="contenttitle">{{item.title}}</view>
+                    <view class="contentprice">{{item.price}}</view>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{contentlist.length < 1}}">
+            <view class="blanks weui-tab__content" hidden="{{activeIndex != idx}}">
+                <image src="/images/noorder.png"></image>
+                <text>该分类暂无上架商品</text>
+            </view>
+        </block>
+    </view>
+</view>

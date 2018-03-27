@@ -1,0 +1,20 @@
+<!-- 首页栏目模版 -->
+<template name="column">
+    <view class="column">
+        <view class="columnname">
+            <text class="lsbj"></text>
+            <text>{{columnname}}</text>
+        </view>
+        <view class="columncontent">
+            <block wx:for="{{columns}}" wx:key="key">
+                <navigator url="{{item.goUrl}}" open-type="{{item.openType}}" bindtap="{{item.bindtap||''}}">
+                    <view class="item" data-name="{{item.columntext}}" bindtap="goUrl">
+                        <view class="dcldd" wx:if="{{item.type == 'order'&&item.num!=0}}">{{item.num}}</view>
+                        <image src="{{item.imgUrl}}" mode="widthFix"></image>
+                        <text class="{{item.columntext == '云花艺' ? 'yhy' : ''}}">{{item.columntext}}</text>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</template>

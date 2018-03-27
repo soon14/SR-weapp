@@ -1,0 +1,81 @@
+<!-- 推广(优惠券) -->
+<form bindsubmit="bindFormSubmit">
+    <view class="section">
+        <view class="section__title">主题名称</view>
+        <input name="title" data-name="title" placeholder="请输入主题名称" value="{{title}}" type="text" placeholder-style="custom-placeholder-style" bindinput="bindTitleInput" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" />
+    </view>
+    <view class="section_top_text">
+        <view class="">券信息</view>
+    </view>
+    <view class="section">
+        <view class="section__title">优惠金额</view>
+        <input name="value" data-name="value" placeholder="优惠券可抵用的金额" value="{{yhmzValue}}" type="digit" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" bindinput="bindValueInput" />
+    </view>
+    <view class="section margin_top_0">
+        <view class="section__title">使用门槛</view>
+        <input name="min_consumption" data-name="min_consumption" placeholder="不填则为无门槛优惠券" value="{{min_consumption}}" type="digit" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" bindinput="bindMinConsumptionInput" />
+    </view>
+    <view class="pickerbox">
+        <view class="pickerbox_left">每人限领</view>
+        <view class="pickerbox_right">
+            <picker bindchange="bindLimitCollarChange" disabled="{{disabled}}" name="max_limit" value="{{limitCollarIndex}}" range="{{limitCollar}}" wx:if="{{limitCollar.length > 0}}">
+                <view class="pickerbox_right_select">{{max_limit}}张</view>
+            </picker>
+        </view>
+    </view>
+    <view class="section_top_text">
+        <view class="">有效期</view>
+    </view>
+    <view class="pickerbox">
+        <view class="pickerbox_left">开始时间</view>
+        <view class="pickerbox_right" data-timeType="start_time" bindtap="{{!disabled?'time_picker_show':''}}">
+            <input name="start_time" value="{{start_time}}" hidden/>
+            <view class="pickerbox_right_select" data-timeType="start_time">
+                {{start_time?start_time:"请选择开始时间"}}
+            </view>
+        </view>
+    </view>
+    <view class="pickerbox margin_top_0">
+        <view class="pickerbox_left">结束时间</view>
+        <view class="pickerbox_right" data-timeType="end_time" bindtap="{{!disabled?'time_picker_show':''}}">
+            <input name="end_time" value="{{end_time}}" hidden/>
+            <view class="pickerbox_right_select" data-timeType="end_time">
+                {{end_time?end_time:"请选择结束时间"}}
+            </view>
+        </view>
+    </view>
+    <view class="section_top_text">
+        <view class="">使用说明</view>
+    </view>
+    <view class="section_explan" hidden="{{time_picker_show}}">
+        <textarea bindblur="bindRemarkBlur" disabled="{{disabled}}" name="remark" maxlength="-1" auto-height placeholder="{{remark}}" value="{{remark}}" />
+    </view>
+    <!-- 底部说明 -->
+    <view class="explainbox">
+        <view>{{explainTitle}}</view>
+        <block wx:for="{{explainText}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+    <button form-type="submit" class="savebtn" wx:if="{{sourceType==0}}">保存</button>
+    <view class="btnbox" wx:if="{{sourceType==1}}">
+        <button bindtap="createImage">生成优惠券海报</button>
+        <button bindtap="disableCoupon">使优惠券失效</button>
+    </view>
+</form>
+<!--日期 -->
+<picker-view indicator-style="height: 100rpx;" value="{{value}}" bindchange="bindChange" class="time_picker" hidden="{{!time_picker_show}}">
+    <view class="time_picker_head">
+        <view catchtap="time_picker_hide">取消</view>
+        <view class="green" data-timeType="{{timetype}}" catchtap="returnTime">确定</view>
+    </view>
+    <picker-view-column>
+        <view wx:for="{{timelist}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{hourslist}}">{{item}}</view>
+    </picker-view-column>
+</picker-view>

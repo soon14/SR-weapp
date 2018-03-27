@@ -1,0 +1,37 @@
+<!--财务管理-->
+<!-- 搜索栏 -->
+<view class="searchbox">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="number" class="weui-search-bar__input" placeholder="请输入客户手机号" value="{{inputVal}}" confirm-type="search" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="search" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="searchbtn" bindtap="goUrl">确定</view>
+<!-- 内容区 -->
+<view class="contentbox">
+    <view class="szjl">
+        <view class=""></view>
+        <text class="">操作记录</text>
+    </view>
+    <!-- title -->
+    <view class="title">
+        <view>客户</view>
+        <view>操作时间</view>
+        <view>操作记录</view>
+    </view>
+    <block wx:for="{{list}}">
+        <view class="content">
+            <view>{{item.wxuser_name}}</view>
+            <view>{{item.createTime}}</view>
+            <view>
+                <text>{{item.title}}</text>
+                <text>{{item.change}}</text>
+            </view>
+        </view>
+    </block>
+</view>

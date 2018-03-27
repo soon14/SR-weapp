@@ -1,0 +1,8 @@
+<!--collectionAccount.wxml 信息提示页(收款账户)-->
+<view class="group" style="height: {{windowHeight}}">
+    <view>
+        <text> {{textData.text}} </text>
+        <text class="urlcolor"> {{textData.text1}} </text>
+    </view>
+    <text> {{textData.text2}} </text>
+</view>

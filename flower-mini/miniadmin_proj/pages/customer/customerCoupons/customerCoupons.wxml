@@ -1,0 +1,22 @@
+<!-- 客户优惠券 -->
+<!-- 引入模版 -->
+<import src="../../template/coupon.wxml" />
+<!-- 优惠券列表 -->
+<view class="couponsbox" wx:if="{{list.length>0}}" >
+    <block wx:for="{{list}}">
+        <template is="coupon" data="{{...item}}" />
+    </block>
+</view>
+
+<view style="margin:30rpx;display: flex;justify-content: flex-start;align-items: center;flex-direction: column;"  wx:else>
+    <image mode="widthFix" src="/images/sad_icon.png" style="width: 330rpx;height: 330rpx;"></image>
+    <text style="text-align: center;color: #bbb;font-size: 34rpx;margin-top: 30rpx;">这个客户还没有领过优惠券</text>
+</view>
+
+<!-- btn -->
+<view class="btnbox" bindtap="gouGift">
+	<view class="btn">
+		<view class="jia">+</view>
+		<view class="zstext">赠送优惠券</view>
+	</view>
+</view>

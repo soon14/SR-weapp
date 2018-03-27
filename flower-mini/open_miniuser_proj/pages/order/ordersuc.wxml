@@ -1,0 +1,23 @@
+<view>
+  <view class="top">
+    <icon type="success" size="70" color="green"></icon>
+    <text class="title">订单交易成功</text>
+  </view>
+  <view class="body">
+    <view>
+      <text class="left">下单时间</text>
+      <text class="right">{{addtimestr}}</text>
+    </view>
+     <view>
+      <text class="left">支付时间</text>
+      <text class="right">{{paytimestr}}</text>
+    </view>
+    <view>
+      <text class="left">订 单 号</text>
+      <text class="right">{{item.no}}</text>
+    </view>
+  </view>
+  <view class="button">
+    <button class="weui-btn" bindtap="gotoorder" type="default">查看订单</button>
+  </view>
+</view>

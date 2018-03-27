@@ -1,0 +1,51 @@
+<!-- 订购人信息 -->
+<form bindsubmit="formSubmit">
+    <view class="cotentbox">
+        <view class="toptitle">
+            <view class="centerline"></view>
+            <view class="contentcoulmebox">
+                <view class="contentcoulmeactive">
+                    <text>订购人</text>
+                    <text>信息</text>
+                </view>
+                <view>
+                    <text>收花人</text>
+                    <text>信息</text>
+                </view>
+                <view>
+                    <text>订单</text>
+                    <text>信息</text>
+                </view>
+            </view>
+        </view>
+        <view class="centercontent">
+            <view class="centercontentcolume psfs">
+                <view>配送方式</view>
+                <input name="isselftake" value="{{isselftake}}" hidden />
+                <view class="ps" bindtap="bindDistributionMode">
+                    <view data-isselftake="1" class="{{isselftake=='1'?'psactive':''}}">到店自提</view>
+                    <view data-isselftake="0" class="{{isselftake=='0'?'psactive':''}}">花店配送</view>
+                </view>
+            </view>
+            <view class="centercontentcolume dgrname">
+                <view>订购人姓名</view>
+                <input placeholder="请输入订购人姓名" name="username" value="" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="" />
+            </view>
+            <view class="centercontentcolume dgrname">
+                <view>订购人电话</view>
+                <input placeholder="请输入订购人电话" name="telphone" value="" type="number " placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" maxlength="11" bindinput="" />
+            </view>
+            <view class="centercontentcolume tellname" wx:if="{{isselftake=='0'}}">
+                <view>是否告诉收花人你的名字</view>
+                <picker bindchange="bindPickerChange" value="{{tellIndex}}" range="{{tellArray}}">
+                    <input name="isanonymous" value="{{tellIndex}}" hidden />
+                    <view class="picker">
+                        {{tellArray[tellIndex]}}
+                        <view class="arrow-right"></view>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <button formType="submit" class="btn">下一步</button>
+    </view>
+</form>

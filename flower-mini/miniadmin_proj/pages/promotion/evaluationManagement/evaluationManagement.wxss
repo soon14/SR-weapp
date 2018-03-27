@@ -1,0 +1,165 @@
+/*推广(评价管理)*/
+
+.header {
+    width: 750rpx;
+    height: 100rpx;
+    background-color: #3583db;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    line-height: 86rpx;
+    color: #fff;
+    font-size: 28rpx;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.header>wx-view {
+    margin-bottom: 10rpx;
+}
+
+.active {
+    border-bottom: 4rpx solid #f7f7f7;
+    border-radius: 2rpx;
+}
+
+
+/*content*/
+
+.content {
+    margin-top: 100rpx;
+    width: 750rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.previewimage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30rpx;
+    width: 690rpx;
+}
+
+.evaluateContent {
+    width: 750rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+
+.evaluateheader {
+    padding: 0 30rpx;
+    padding-top: 30rpx;
+    width: 690rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userinfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userinfo wx-image {
+    width: 58rpx;
+    height: 58rpx;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+}
+
+.username {
+    font-size: 26rpx;
+    color: #667494;
+    margin-left: 12rpx;
+}
+
+
+
+
+
+
+/**/
+
+.evaluatetext {
+    width: 100%;
+    font-size: 28rpx;
+    color: #222222;
+    line-height: 36rpx;
+    margin: 30rpx 0;
+    text-align: left;
+}
+
+
+
+
+
+
+/**/
+
+.evaluateimgs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.evaluateimgs .evaluateimgmore {
+    width: 220rpx;
+    height: 220rpx;
+    margin-bottom: 15rpx;
+    margin-left: 15rpx;
+    background-color: #eeeeee;
+}
+
+.evaluateimgs .evaluateimgmore:nth-of-type(1){
+    margin-left: 0;
+}
+
+.evaluateimgs .evaluateimg {
+    width: 350rpx;
+    height: 350rpx;
+    margin-bottom: 20rpx;
+    background-color: #eeeeee;
+}
+
+
+/*operation*/
+
+.operation {
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.operation .operationcolume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operationcolume wx-image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+}

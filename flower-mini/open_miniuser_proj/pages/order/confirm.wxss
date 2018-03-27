@@ -1,0 +1,75 @@
+.top{
+	width:750rpx;
+	height:330px;
+	background-color:#fff;
+	
+}
+
+.top image{
+	width:100%;
+	height:330px;
+}
+
+.weui-cell_link2{
+	color:#000;
+	border-top:1rpx solid #D9D9D9;
+	font-size:14px;	
+}
+
+.weui-cell_link2 text{
+    float:left;
+    padding-top:5px;
+}
+.weui-cell_link2 .right{
+    float:right;
+}
+.weui-cell_link2 .right input{
+    float:left;
+    width:30px;
+    height:30px;
+    margin:2px 5px 0px;
+    text-align:center;
+}
+.weui-cell_link2 .right view{
+    width:30px;
+    height:30px;
+    border-radius:30px;
+    line-height:30px;
+    float:left;
+    text-align:center;
+    background-color:#eee;
+    font-size:12px;
+    border: 1px solid #D9D9D9;
+}
+
+.buy{
+	position: fixed;
+	bottom:0px;
+	width:100%;
+    height:50px;
+	background-color:#fff;
+	border-top: 1px solid #D9D9D9;
+    z-index:999;
+}
+
+.buy button{
+    border-radius:0px;
+    height:50px;
+    line-height:50px;
+
+}
+.buy .left{
+    width:48%;
+    float:left;
+    line-height:50px;
+font-size:15px;
+padding-left:2%;
+
+}
+.buy .left text{
+    color:darkred;
+}
+.buy .right{
+    width:50%;
+    float:right;
+}

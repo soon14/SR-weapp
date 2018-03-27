@@ -1,0 +1,87 @@
+/*付款成功*/
+
+page {
+    background-color: #fff;
+}
+
+.cotentbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content_top {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100rpx;
+}
+
+.content_top wx-image {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.content_top wx-text {
+    font-size: 32rpx;
+    text-align: center;
+    color: #f35e5e;
+}
+
+.moneynum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46rpx;
+    color: #333;
+}
+
+.moneynum wx-text {
+    font-size: 100rpx;
+}
+
+.skrbox {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30rpx;
+    margin-top: 150rpx;
+}
+
+.skrbox wx-view {
+    font-size: 32rpx;
+    line-height: 100rpx;
+    color: #999999;
+}
+
+
+
+
+
+/*btn*/
+
+.btnbox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 150rpx;
+    left: 0;
+    right: 0;
+}
+
+.btn {
+    border: 1px solid #f35e5e;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 60rpx;
+    height: 60rpx;
+    width: 300rpx;
+    font-size: 32rpx;
+    color: #f35e5e;
+}

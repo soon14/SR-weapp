@@ -1,0 +1,53 @@
+<!-- 店铺装修 -->
+<view class="phonebox">
+    <view class="top">
+        <view class="dian"></view>
+        <view class="tiao"></view>
+    </view>
+    <view class="phoneview">
+        <!-- banner -->
+        <view class="banner" bindtap="goBanner">
+            <view class="pen">
+                <view>
+                    <image src="/images/v2.2.0/pen1.png" />
+                    <text>编辑轮播图</text>
+                </view>
+            </view>
+            <image src="{{cdnhost+list.sliderpic}}" class="slide-image" mode="aspectFill" />
+        </view>
+        <!-- column -->
+        <view class="navbarbox" bindtap="goNavbar">
+            <view class="pen pen1">
+                <view>
+                    <image src="/images/v2.2.0/pen1.png" />
+                    <text>编辑栏目</text>
+                </view>
+            </view>
+            <view class="navbar_item_box">
+                <block wx:for="{{list.column}}">
+                    <text data-id="{{item.id}}" class="navbar_item {{index == 0 ? 'navbar_item_active' : ''}}">{{item.title}}</text>
+                </block>
+            </view>
+        </view>
+        <!--  -->
+        <view class="contentimg" bindtap="goTpl">
+            <view class="pen">
+                <view>
+                    <image src="/images/v2.2.0/pen1.png" />
+                    <text>编辑商品区</text>
+                </view>
+            </view>
+            <image src="{{cdnhost + list.styleimg}}" mode="widthFix" class="styleimg"></image>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="yuanbtn"></view>
+    </view>
+</view>
+<!-- 说明 -->
+<view class="explainbox">
+    <view>{{explainTitle}}</view>
+    <block wx:for="{{explainText}}">
+        <view>{{item.text}}</view>
+    </block>
+</view>

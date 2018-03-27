@@ -1,0 +1,28 @@
+<!-- carouselFigureSet.wxml (轮播图设置) -->
+<view class="container">
+    <!-- 内容区 -->
+    <view class="contentbox">
+        <view class="img" wx:if="{{!userSlideImgs}}">
+            <image mode="aspectFill" src="{{host + defaultSlideImg}}"></image>
+        </view>
+        <view class="" wx:if="{{userSlideImgs}}">
+            <block wx:for="{{userSlideImgs}}">
+                <view class="img">
+                    <image mode="aspectFill" src="/images/del.png" bindtap="delimg" data-id="{{item.id}}" class="del"></image>
+                    <image mode="aspectFill" src="{{host + item.pic}}"></image>
+                </view>
+            </block>
+        </view>
+    </view>
+    <button bindtap="goUrl" formType="submit" class="{{userSlideImgs.length == 3 ? 'overbutton' : '' }}">
+        <text wx:if="{{userSlideImgs.length < 3}}">+</text>
+        <view>{{userSlideImgs.length == 3 ? "最多添加三张轮播图" : "新增轮播图"}}</view>
+    </button>
+    <!-- 底部说明 -->
+    <view class="explainbox">
+        <view>{{explainTitle}}</view>
+        <block wx:for="{{explainText}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,112 @@
+<form report-submit bindsubmit="formSubmit">
+    <view class="editCourse">
+        <view class="title">教程
+            <text>其他人购买方案后才可以查看</text>
+        </view>
+        <block wx:for="{{formarry}}">
+            <!--文本区域  -->
+            <view class="txtArea" wx:if="{{item.type==1}}">
+                <textarea value="{{item.content}}" placeholder='请输入内容...' data-index="{{index}}" bindinput="bindtextareainput" class="{{item.jiacu?'font_weight_bold':'font_weight_normal'}} {{item.txtalign}} {{item.color}}" disabled="{{yulanShow}}"></textarea>
+                <view class="tools clr" hidden="{{yulanShow}}">
+                    <!--粗体  -->
+                    <view class="bold fl" data-index="{{index}}" bindtap="jiacu">
+                        <image src="/images/{{item.jiacu?'jiacu_press':'jiacu'}}.png" class="basicT"></image>
+                    </view>
+                    <!-- 居中  -->
+                    <view class="txtStyle fl">
+                        <view class='box' data-index="{{index}}" bindtap="changetxtStyle">
+                            <image src="/images/{{item.txtStyleShow?'duiqi_press':'duiqi_normal'}}.png" class="basicT"></image>
+                        </view>
+                        <view class="txtStyle-tool" wx:if="{{item.txtStyleShow}}">
+                            <image src="/images/{{item.txtalign!='text_align_left'?'left_normal':'left_press'}}.png" data-txtalign="text_align_left" data-index="{{index}}" class="lAlign" bindtap="changetxtAlign"></image>
+                            <image src="/images/{{item.txtalign!='text_align_center'?'middle_normal':'middle_press'}}.png" data-txtalign="text_align_center" data-index="{{index}}" class="cAlign" bindtap="changetxtAlign"></image>
+                            <image src="/images/{{item.txtalign!='text_align_right'?'right_normal':'right_press'}}.png" data-txtalign="text_align_right" data-index="{{index}}" class="rAlign" bindtap="changetxtAlign"></image>
+                        </view>
+                    </view>
+                    <!--色值  -->
+                    <view class="colorStyle fl">
+                        <image src="{{item.txtcolor?'':'/images/colour_normal.png'}}" class="basicT {{item.txtcolor?item.txtcolor:''}}" data-index="{{index}}" bindtap="changecolorStyle"></image>
+                        <view class="colorStyle-tool" wx:if="{{item.colorStyleShow}}">
+                            <view class="cItem c1" data-index="{{index}}" data-txtcolor="c1" bindtap="changeTxtColor"></view>
+                            <view class="cItem c2" data-index="{{index}}" data-txtcolor="c2" bindtap="changeTxtColor"></view>
+                            <view class="cItem c3" data-index="{{index}}" data-txtcolor="c3" bindtap="changeTxtColor"></view>
+                            <view class="cItem c4" data-index="{{index}}" data-txtcolor="c4" bindtap="changeTxtColor"></view>
+                            <view class="cItem c5" data-index="{{index}}" data-txtcolor="c5" bindtap="changeTxtColor"></view>
+                            <view class="cItem c6" data-index="{{index}}" data-txtcolor="c6" bindtap="changeTxtColor"></view>
+                        </view>
+                    </view>
+                    <view class="rOpeBtn fr">
+                        <image src='/images/up.png' class="up" data-index="{{index}}" bindtap="goUp"></image>
+                        <image src='/images/down.png' class="down" data-index="{{index}}" bindtap="goDown"></image>
+                        <image src='/images/close.png' class="del" data-index="{{index}}" bindtap="delete"></image>
+                    </view>
+                </view>
+            </view>
+            <!--文本区域  -->
+            <!--图片区域 -->
+            <view class="lineArea" wx:if="{{item.type==2}}">
+                <view class="placeholder_class" hidden="{{item.content}}" data-index="{{index}}" bindtap="chooseImage">点击上传图片缩略图</view>
+                <view class="image_uploader" hidden="{{!item.content}}">
+                    <image src="{{host + item.content}}" mode="widthFix" />
+                </view>
+                <view class="clr" hidden="{{yulanShow}}">
+                    <view class="rOpeBtn fr">
+                        <image src='/images/up.png' class="up" data-index="{{index}}" bindtap="goUp"></image>
+                        <image src='/images/down.png' class="down" data-index="{{index}}" bindtap="goDown"></image>
+                        <image src='/images/close.png' class="del" data-index="{{index}}" bindtap="delete"></image>
+                    </view>
+                </view>
+            </view>
+            <!--图片区域  -->
+            <!--分割线区域  -->
+            <view class="lineArea" wx:if="{{item.type==3}}">
+                <view class="lineStatus solidBold" hidden="{{item.css!='solidBold'}}"></view>
+                <view class="lineStatus dashedBold" hidden="{{item.css!='dashedBold'}}"></view>
+                <view class="lineStatus solidNormal" hidden="{{item.css!='solidNormal'}}"></view>
+                <view class="lineStatus dashedNormal" hidden="{{item.css!='dashedNormal'}}"></view>
+                <view class="tools clr" hidden="{{yulanShow}}">
+                    <view class="lineTool">
+                        <radio-group class="radio-group" data-index="{{index}}" bindchange="radioSolidChange">
+                            <label class="label {{item.lineStyle=='solid'?'lineActive':''}}">
+                                <radio value="solid" hidden/>
+                                <view>实线</view>
+                            </label>
+                            <label class="label {{item.lineStyle=='dashed'?'lineActive':''}}">
+                                <radio value="dashed" hidden/>
+                                <view>虚线</view>
+                            </label>
+                        </radio-group>
+                        <radio-group class="radio-group" data-index="{{index}}" bindchange="radioBoldChange">
+                            <label class="label {{item.lineWidth=='bold'?'lineActive':''}}">
+                                <radio value="bold" hidden/>
+                                <view>1px</view>
+                            </label>
+                            <label class="label {{item.lineWidth=='normal'?'lineActive':''}}">
+                                <radio value="normal" hidden/>
+                                <view>0.5px</view>
+                            </label>
+                        </radio-group>
+                    </view>
+                    <view class="rOpeBtn fr">
+                        <image src='/images/up.png' class="up" data-index="{{index}}" bindtap="goUp"></image>
+                        <image src='/images/down.png' class="down" data-index="{{index}}" bindtap="goDown"></image>
+                        <image src='/images/close.png' class="del" data-index="{{index}}" bindtap="delete"></image>
+                    </view>
+                </view>
+            </view>
+            <!--分割线区域  -->
+        </block>
+        <view class="operate-btn clr" hidden="{{yulanShow}}">
+            <button data-type='3' bindtap="addObj">新增分割线</button>
+            <button data-type='1' bindtap="addObj">新增文字</button>
+            <button data-type='2' bindtap="addObj">新增图片</button>
+        </view>
+    </view>
+    <view class='editCase-fix' hidden="{{yulanShow}}">
+        <button class="pcPublic" bindtap="yulan">预览</button>
+        <button form-type='submit' class="submitBtn">保存</button>
+    </view>
+    <view class='editCase-fix' hidden="{{!yulanShow}}">
+        <button class="pcPublic" bindtap="yulan">返回</button>
+    </view>
+</form>

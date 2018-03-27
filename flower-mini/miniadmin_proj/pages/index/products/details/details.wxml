@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="top">
+        <swiper indicator-dots="true" autoplay="false">
+            <block wx:for="{{headlist}}">
+                <swiper-item>
+                    <image src="{{host + item}}" data-src="{{host + item}}" bindtap="preimg2" mode="aspectFill" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="top-title">
+            <text>{{list.title}}</text>
+        </view>
+        <view class="top-price">
+            <text>￥{{list.price}}</text>
+        </view>
+    </view>
+    <view class="specifications" bindtap="gotobuy" wx:if="{{list.type == 1}}">
+        <view class="rightsj"></view>
+        <view class="specificationsname">选择：规格 配送方式 用途</view>
+    </view>
+    <view class="title">商品详情</view>
+    <view class="main" style="padding-bottom:60px">
+        <block wx:if="{{list.type==2 }}">
+            <view class="alerttextbox">
+                <view class="alerttext">开始时间：{{list.starttime}}</view>
+                <view class="alerttext">结束时间：{{list.endtime}}</view>
+                <view class="alerttext">活动地点：{{list.address}}</view>
+            </view>
+        </block>
+        <block wx:if="{{ moredetail }}" wx:for="{{moredetail}}">
+            <view class="intro-content" wx:if="{{item.type==1}}">
+                <text>{{item.content}}</text>
+            </view>
+            <view class="piclist" wx:if="{{item.type==2}}">
+                <image src="{{host + item.content}}" data-src="{{host + item.content}}" mode="widthFix" bindtap="preimg"></image>
+            </view>
+        </block>
+        <!-- <view class="huacai" wx:if="{{item.huacai != '' && item.huacai != null}}">
+            <image src="/images/di1.png"></image> 花材</view>
+        <view class="huacai-content" wx:if="{{item.huacai != '' && item.huacai != null}}">
+            <text>{{item.huacai}}</text>
+        </view>
+        <view class="huayi" wx:if="{{item.linian != '' && item.linian != null}}">
+            <image src="/images/di2.png"></image> 花艺师设计理念</view>
+        <view class="huayi-content" wx:if="{{item.linian != '' && item.linian != null}}">
+            <text>{{item.linian}}</text>
+        </view>
+        <view class="intro" wx:if="{{item.details != '' && item.details != null}}">
+            <image src="/images/di4.png"></image> 产品介绍</view>
+        <view class="intro-content" wx:if="{{item.details != '' && item.details != null}}">
+            <text>{{item.details}}</text>
+        </view> -->
+        <!-- <view class="piclist">
+            <block wx:for="{{detaillist}}">
+                <image src="{{host + item}}" data-src="{{host + item}}" mode="widthFix" bindtap="preimg"></image>
+            </block>
+        </view> -->
+        <view class="shouhou" wx:if="{{aftersell != ''}}">
+            <image src="/images/di3.png"></image> 售后服务</view>
+        <view class="shouhou-content" style="text-align: left;">
+            <text>{{aftersell}}</text>
+        </view>
+        <view class="weui-footer">
+            <view class="weui-footer__links">
+                <view class="weui-footer__link">
+                    <image src="/images/logo.png"></image> 乐墨花时光 技术支持</view>
+            </view>
+        </view>
+    </view>
+    <view class="buy button">
+        <view bindtap="gotohome" class="left">
+            <image src="/images/home_icon.png"></image>
+            <text>首页</text>
+        </view>
+        <view class="right">
+            <button class="weui-btn" type="primary" bindtap="gotobuy">{{gotobuytitle}}</button>
+        </view>
+    </view>
+</view>

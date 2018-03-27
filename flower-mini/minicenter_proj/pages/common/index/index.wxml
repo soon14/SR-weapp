@@ -1,0 +1,30 @@
+<!--
+ 获取用户信息可以从app.globalData.userInfo中获取。
+ -->
+
+
+<view class="container">
+    <text class="">用户名：{{name}}</text>
+    <text class="">真实姓名：{{userName}}</text>
+    <text class="">手机号：{{telphone}}</text>
+    <text class="">身份证：{{identityCardNo}}</text>
+    <text class="">MSession:</text>
+    <text class="">{{msession}}</text>
+    <text class="">UnionId:</text>
+    <text class="">{{unionid}}</text>
+    <image class="userface" src="{{faceurl}}"></image>
+
+    <button class="btn-red" bindtap="viewUserInfo">获取用户信息</button>
+
+    <navigator url="/pages/common/index/index">
+        <button class="btn-green">绑定手机号</button>
+    </navigator>
+    <navigator url="/pages/common/index/index">
+        <button class="btn-green">修改个人资料</button>
+    </navigator>
+
+    <navigator url="/pages/me/recharge/recharge">
+        <button class="btn-green">充值</button>
+    </navigator>
+
+</view>

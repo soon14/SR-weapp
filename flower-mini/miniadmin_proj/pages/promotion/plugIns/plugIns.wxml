@@ -1,0 +1,34 @@
+<!-- 插件购买 -->
+<view class="contentbox">
+    <view class="contentbox-title">
+        <view class="contentbox-title-top">
+            <view class="contentbox-title-top-left">
+                <image mode="widthFix" src="/images/v2.2.0/pintuan.png"></image>
+            </view>
+            <view class="contentbox-title-top-right">
+                <view class="contentbox-title-top-right-top">多人拼团</view>
+                <view class="contentbox-title-top-right-bottom">【拉新】 鼓励客户发起拼团，邀请好友优惠 购买，裂变传播带来新客
+                </view>
+            </view>
+        </view>
+        <view class="contentbox-title-bottom">服务价格
+            <text>¥399.00/年</text>
+        </view>
+    </view>
+    <view class="scroll" >
+        <view class="scroll-colume">
+            <image src=""></image>
+        </view>
+        <view class="scroll-colume">
+            <image src=""></image>
+        </view>
+        <view class="scroll-colume">
+            <image src=""></image>
+        </view>
+    </view>
+    <view class="explain">
+        <view class="explain-title">功能介绍</view>
+        <view class="explain-content">这里显示的是功能介绍文字这里显示的是功能介绍文字这里显示的是功能介绍</view>
+    </view>
+    <view class="btnbox" bindtap="goUrl">立即订购</view>
+</view>

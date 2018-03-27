@@ -1,0 +1,109 @@
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-navbar__slider {
+  width: 375rpx;
+}
+
+.weui-tab__panel {
+  padding-bottom: 80px;
+}
+
+.buy {
+  position: fixed;
+  bottom: 0px;
+  width: 750rpx;
+  height: 50px;
+  background-color: #fff;
+  
+  z-index:999999;
+}
+
+.weui-cell2 {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: top;
+  -webkit-align-items: top;
+          align-items: top;
+}
+.weui-cell2:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #D9D9D9;
+  color: #D9D9D9;
+  left: 15px;
+}
+.buy button {
+  border-radius: 0px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ff4a36;
+}
+.buy button:hover{
+  background-color: #ff4a36;
+}
+.buy .left {
+  width: 48%;
+  float: left;
+  line-height: 50px;
+  font-size: 15px;
+  padding-left: 2%;
+  border-top: 1px solid #d9d9d9;
+}
+
+.buy .left text {
+  color: #ff322f;
+}
+
+.buy .right {
+  width: 50%;
+  float: right;
+  border-top: 1px solid #ff4a36;
+}
+
+.weui-media-box__desc text {
+  float: right;
+}
+
+.other {
+  background-color: #fff;
+  padding: 10px 15px;
+}
+
+.other text {
+  display: block;
+  color: #999;
+  font-size: 15px;
+}
+
+.other2 text {
+  color: #000;
+  font-size: 16px;
+}
+
+.other {
+  margin: 20rpx 0;
+}
+
+.weui-textarea {
+  height: 6.6em;
+  margin: 10px 0;
+}
+.weui-navbar__item.weui-bar__item_on{
+  color:#ff322f;
+}
+.weui-navbar__slider{
+  background-color:#ff322f;
+}

@@ -1,0 +1,19 @@
+<!--评价管理-->
+<view class="container">
+    <view class="contentbox">
+        <textarea value="" placeholder="{{placeholder}}" placeholder-style="color:#aaaaaa;font-size:30rpx" maxlength="500" auto-height bindinput="bindinputextareat" class="textarea" />
+        <view class="imguploadbox">
+            <block wx:for="{{imgs}}">
+                <view class="imgs">
+                    <image mode="aspectFill" src="{{cdnhost+item.src}}" class="img_upload"></image>
+                    <image src="/images/v2.2.0/close1.png" class="imgsclose" data-index="{{index}}" bindtap="delimg"></image>
+                    <progress percent="{{item.progress}}" class="progress" wx:if="{{item.progress>0&&item.progress<100}}" />
+                </view>
+            </block>
+            <view class="upload" bindtap="chooseImage" wx:if="{{imgs.length<3}}">
+                <image src="/images/v2.2.0/sczp.png" class="upload"></image>
+            </view>
+        </view>
+    </view>
+    <view class="save" bindtap="save">发布</view>
+</view>

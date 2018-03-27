@@ -1,0 +1,26 @@
+<!-- customerAnalysis.wxml（客户分析） -->
+<view class="canvesbox">
+    <view class="canvesab">
+        <canvas canvas-id="ringCanvas" class="canvas"></canvas>
+    </view>
+    <view class="canvesab">
+        <canvas canvas-id="ringCanvas3" class="canvas"></canvas>
+    </view>
+    <view class="canvesab">
+        <canvas canvas-id="ringCanvas2" class="canvas"></canvas>
+    </view>
+    <view class="canvesab">
+        <canvas canvas-id="ringCanvas4" class="canvas"></canvas>
+    </view>
+    <view class="canvesbottom">
+        <view class="left">
+            <block wx:for="{{ canvesbottomData }}" wx:key="canveskey">
+                <view class="leftcontent">
+                    <view class="canveslabel">{{item.name}}</view>
+                    <text>¥{{item.data}}</text>
+                </view>
+            </block>
+        </view>
+        <view wx:if="{{ canvesbottomData }}" class="right">成交标签</view>
+    </view>
+</view>

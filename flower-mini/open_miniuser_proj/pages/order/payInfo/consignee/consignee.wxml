@@ -1,0 +1,54 @@
+<!-- 收花人信息 -->
+<form bindsubmit="formSubmit">
+    <view class="cotentbox">
+        <view class="toptitle">
+            <view class="centerline"></view>
+            <view class="contentcoulmebox">
+                <view class="contentcoulmeactive">
+                    <text>订购人</text>
+                    <text>信息</text>
+                </view>
+                <view class="contentcoulmeactive">
+                    <text>收花人</text>
+                    <text>信息</text>
+                </view>
+                <view>
+                    <text>订单</text>
+                    <text>信息</text>
+                </view>
+            </view>
+        </view>
+        <view class="centercontent">
+            <view wx:if="{{checkisselftake=='0'}}" class="centercontentcolume psfs" bindtap="selectaddress">
+                <view>收花人地址</view>
+                <input name="address" value="{{address}}" hidden />
+                <view class="address" wx:if="{{hasaddress}}">{{address}}</view>
+                <view class="arrow-right"></view>
+            </view>
+            <view class="centercontentcolume dgrname">
+                <view>我要送给</view>
+                <picker bindchange="bindPurposeChange" value="{{purposeIndex}}" range="{{purposes}}">
+                    <input name="purpose" value="{{purposes[purposeIndex]}}" hidden />
+                    <view class="picker">
+                        {{purposes[purposeIndex]}}
+                        <view class="arrow-right"></view>
+                    </view>
+                </picker>
+            </view>
+            <view class="centercontentcolume dgrname">
+                <view>是否需要卡片</view>
+                <picker bindchange="bindNeedCardChange" name="needcard" value="{{needCardIndex}}" range="{{needCard}}">
+                    <view class="picker">
+                        {{needCard[needCardIndex]}}
+                        <view class="arrow-right"></view>
+                    </view>
+                </picker>
+            </view>
+            <view class="centercontentcolume dgrname" wx:if="{{needCardIndex==1}}">
+                <view>卡片留言</view>
+                <input placeholder="写一段留言" name="cardwords" value="" type="text " placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="" />
+            </view>
+        </view>
+        <button formType="submit" class="btn">下一步</button>
+    </view>
+</form>

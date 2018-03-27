@@ -1,0 +1,110 @@
+<view class="container">
+    <!-- 热门方案 -->
+    <view class="caseList" wx:if="{{type==1}}">
+        <view class="item">
+            <view class="name">
+                <image src='http://temp.im/60x60'></image>
+                <text>周周花艺师</text>
+            </view>
+            <navigator class='title'>
+                相恋LOVE每周一花的小幸福
+            </navigator>
+            <view class="picVideo">
+                <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></video>
+            </view>
+            <view class="msg">
+                <view class='attenPeople'>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                </view>
+                <view class="pariseBtn">
+                    <image src='/images/press.png'></image>
+                    <text>645</text>
+                </view>
+                <view class="saleNum">已售258</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="name">
+                <image src='http://temp.im/60x60'></image>
+                <text>周周花艺师</text>
+            </view>
+            <navigator class='title'>
+                相恋LOVE每周一花的小幸福
+            </navigator>
+            <view class="picVideo">
+                <image src='http://temp.im/690x690'></image>
+            </view>
+            <view class="msg">
+                <view class='attenPeople'>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                    <image src='http://temp.im/44x44'></image>
+                </view>
+                <view class="pariseBtn">
+                    <image src='/images/press.png'></image>
+                    <text>645</text>
+                </view>
+                <view class="saleNum">已售258</view>
+            </view>
+        </view>
+    </view>
+    <!-- 已购方案 -->
+    <view class="buyedCase" wx:if="{{type==2}}">
+        <view class="title">
+            <text>店铺</text>
+            <navigator>全部商店
+                <image src='/images/rArrow.png'></image>
+            </navigator>
+        </view>
+        <view class="list clr">
+            <view class="item">
+                <navigator>
+                    <view class="box">
+                        <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></video>
+                    </view>
+                    <view class="hdTit">
+                        相恋Love每周一花小世界相恋Love每周一花小世界
+                    </view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator>
+                    <view class="box">
+                        <image src='http://temp.im/360x360'></image>
+                    </view>
+                    <view class="hdTit">
+                        相恋Love每周一花小世界
+                    </view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator>
+                    <view class="box">
+                        <image src='http://temp.im/360x360'></image>
+                    </view>
+                    <view class="hdTit">
+                        相恋Love每周一花小世界
+                    </view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator>
+                    <view class="box">
+                        <image src='http://temp.im/360x360'></image>
+                    </view>
+                    <view class="hdTit">
+                        相恋Love每周一花小世界
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- footer -->
+    <include src="../../template/footer/footer.wxml" />
+</view>

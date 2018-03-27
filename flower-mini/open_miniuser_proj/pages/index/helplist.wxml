@@ -1,0 +1,27 @@
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/index/helpdetails" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">1.如何申请退款维权？</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/index/helpdetails" class="weui-cell weui-cell_access" bindtap="openset" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">2.我已经付款了，商家怎么还不发货？</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/index/helpdetails" class="weui-cell weui-cell_access" bindtap="openset" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">3.订单信息填写错了，如何修改？</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/index/helpdetails" class="weui-cell weui-cell_access" bindtap="openset" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">4.订单已经退款，钱还没收到？</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/index/helpdetails" class="weui-cell weui-cell_access" bindtap="openset" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">5.找不到换货的地方，怎么办？</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="" class="weui-footer__link">电话客服：0755-12548751</navigator>
+  </view>
+</view>

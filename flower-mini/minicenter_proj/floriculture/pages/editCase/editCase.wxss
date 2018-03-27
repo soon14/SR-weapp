@@ -1,0 +1,179 @@
+page {
+    background: #EDEEF0;
+    font-size: 30rpx;
+    color: #333;
+    padding-bottom: 140rpx;
+}
+
+.mb20 {
+    margin-bottom: 20rpx;
+}
+
+.editCase .viewPart {
+    padding: 0 30rpx;
+    background: #fff;
+}
+
+.editCase .title {
+    line-height: 90rpx;
+    background: #EDEEF0;
+    padding: 0 30rpx;
+}
+
+.editCase .section,
+.editCase .item {
+    padding: 20rpx 0rpx;
+    display: flex;
+    line-height: 50rpx;
+    height: 50rpx;
+    border-bottom: 2rpx solid #E5E5E5;
+}
+
+.editCase .section text {
+    display: inline-block;
+    width: 165rpx;
+}
+
+.editCase .section input {
+    flex: 1;
+    color: #666;
+}
+
+.editCase .addImgs {
+    background: #fff;
+    padding: 20rpx 0 0 0;
+    border-bottom: 2rpx solid #E5E5E5;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.addBtn {
+    margin: 0 20rpx 20rpx 0;
+}
+
+.editCase .addImgs image,
+.addBtn {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.imgcolue {
+    width: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 20rpx 20rpx 0;
+}
+
+.imgprogress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100rpx;
+}
+
+.editCase .item:last-child {
+    border-bottom: 0;
+}
+
+.editCase .item text {
+    float: left;
+}
+
+.editCase .item navigator {
+    flex: 1;
+    text-align: right;
+    color: #aaa;
+}
+
+.editCase .item navigator image {
+    width: 14rpx;
+    height: 24rpx;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+.editCase .tips {
+    padding: 25rpx 30rpx;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 40rpx;
+}
+
+.editCase .item picker {
+    position: relative;
+    flex: 1;
+    text-align: right;
+}
+
+.editCase .item picker .picker {
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-right: 34rpx;
+    color: #666;
+}
+
+.editCase .item picker .arrow {
+    position: absolute;
+    right: 0;
+    top: 8rpx;
+    width: 14rpx;
+    height: 24rpx;
+}
+
+.editCase .itemSwitch {
+    height: 62rpx;
+    line-height: 62rpx;
+    padding: 14rpx 0rpx;
+}
+
+.editCase .item switch {
+    flex: 1;
+    text-align: right;
+    height: 62rpx;
+    color: #3583DB;
+}
+
+.editCase-fix {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100rpx;
+    display: flex;
+    letter-spacing: 2rpx;
+}
+
+.editCase-fix navigator {
+    flex: 1;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+
+.editCase-fix .pcPublic {
+    background-image: linear-gradient(0deg, rgba(76, 105, 124, 1) 0%, rgba(60, 87, 105, 1) 100%);
+}
+
+.editCase-fix button {
+    flex: 1;
+    font-size: 32rpx;
+    color: #fff;
+    line-height: 100rpx;
+    border-radius: 0;
+}
+
+.editCase-fix .submitBtn {
+    background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+
+.editCase-fix button::after {
+    border: none;
+}

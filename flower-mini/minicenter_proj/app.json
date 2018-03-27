@@ -1,0 +1,47 @@
+{
+    "pages": [
+
+        "pages/tabBar/home/index",
+        "pages/component/register/register",
+        "floriculture/pages/editCase/editCourse/editCourse",
+        "pages/component/notice/notice",
+        "floriculture/pages/editCase/editCase",
+        "floriculture/pages/editCase/productDetails/productDetails",
+        "floriculture/pages/editCase/writeRemark/writeRemark",
+        "floriculture/pages/case/case",
+        "floriculture/pages/myCaseList/myCaseList",
+        "floriculture/pages/caseDetail/caseDetail",
+
+
+
+
+        "pages/tabBar/index/index",
+        "pages/common/index/index",
+        "pages/common/login/login",
+        "pages/component/invitation/invitation",
+        "pages/component/changebindphone/changebindphone",
+        "pages/component/bindphone/bindphone",
+        "pages/component/myBalance/myBalance",
+        "pages/component/mobicarte/mobicarte",
+        "pages/component/balanceRecord/balanceRecord",
+        "pages/component/recharge/recharge"
+    ],
+
+    "window":
+    {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#3583db",
+        "navigationBarTitleText": "商家中心",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#f7f7f7",
+        "enablePullDownRefresh": false
+    },
+    "networkTimeout":
+    {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": false
+}

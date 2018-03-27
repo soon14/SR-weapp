@@ -1,0 +1,29 @@
+<!-- 查看拼团成员 -->
+<view class="container">
+    <view class="topbox">
+        <icon type="search" size="14" />
+        <input placeholder="通过手机号搜索" value="" type="number" bindconfirm placeholder-style="color:#888888;font-size:26rpx;line-height: 60rpx;" bindinput="search" />
+    </view>
+    <view class="middlebox">拼团成员</view>
+    <view class="bottombox" wx:if="{{list.length>0}}">
+        <view class="bottombox-colume">
+            <view class="qhr">取货人</view>
+            <view class="num">数量</view>
+            <view class="phone">联系电话</view>
+            <view class="act">状态</view>
+        </view>
+        <block wx:for="{{list}}">
+            <view class="bottombox-colume bottombox-colume-content">
+                <view class="qhr">{{item.fusername}}</view>
+                <view class="num">{{item.productnum}}</view>
+                <view class="phone">{{item.ftelphone}}</view>
+                <view class="act" wx:if="{{item.state==5}}">已取货</view>
+                <view class="act acted" wx:if="{{item.state!=5}}" data-id="{{item.id}}" bindtap="confirmOrder">取货</view>
+            </view>
+        </block>
+    </view>
+    <view class="blanks" wx:else>
+        <image src="/images/noorder.png"></image>
+        <text>该团暂无成员</text>
+    </view>
+</view>

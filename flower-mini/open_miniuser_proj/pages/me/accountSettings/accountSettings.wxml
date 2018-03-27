@@ -1,0 +1,19 @@
+<!-- 账户设置 -->
+<view class="contentbox">
+    <view class="contentcoulme noneborder" bindtap="openset">
+        <text>授权设置</text>
+        <view class="sj"></view>
+    </view>
+    <navigator url="/pages/me/bindphone" class="contentcoulme">
+        <text>绑定手机号</text>
+        <view class="bindphone">
+            <text>{{isbind ? telphone : '未绑定'}}</text>
+            <view class="sj"></view>
+        </view>
+    </navigator>
+</view>
+<view class="getusertelbox" wx:if="{{getUserTel}}">
+    <view class="getusertel">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号</button>
+    </view>
+</view>

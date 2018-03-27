@@ -1,0 +1,167 @@
+
+
+/* pages/more/more.wxss */
+
+.content {
+    width: 750rpx;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.userinfobox {
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    padding: 0 30rpx;
+}
+
+.userbox {
+    height: 140rpx;
+    width: 690rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.sj {
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #b5b5b5;
+    border-right: 4rpx solid #b5b5b5;
+    transform: rotate(45deg);
+}
+
+.userboxtop {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userbox wx-image {
+    width: 80rpx;
+    height: 80rpx;
+    background-color: #d0d0d0;
+    border-radius: 8rpx;
+    overflow: hidden;
+}
+
+.user {
+    min-height: 80rpx;
+    margin-left: 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.username {
+    color: #333333;
+    font-size: 32rpx;
+    text-align: left;
+    line-height: 40rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.username wx-text {
+    margin-left: 10rpx;
+    color: #999999;
+    font-size: 28rpx;
+    text-align: left;
+}
+
+.usertellphone {
+    color: #999999;
+    font-size: 28rpx;
+    text-align: left;
+    line-height: 40rpx;
+}
+
+.colume,
+.shopnamebox {
+    height: 100rpx;
+    width: 690rpx;
+    background-color: #fff;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopnameleft {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20rpx;
+}
+
+.columename {
+    font-size: 28rpx;
+    color: #666666;
+}
+
+.shopnameactve {
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.columeleft {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20rpx;
+}
+
+.columeleft wx-image {
+    width: 36rpx;
+    min-height: 26rpx;
+    max-height: 46rpx;
+}
+
+.columeleft .columename {
+    margin-left: 30rpx;
+    color: #333333;
+    font-size: 30rp;
+}
+
+.columebox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 30rpx;
+    margin-bottom: 20rpx;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.columebox .colume {
+    border-top: 1px solid #ebebeb;
+}
+
+.columebox .colume:nth-of-type(1) {
+    border: 0;
+}
+
+
+
+/*客服按钮*/
+
+.kf_button {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    padding: 0;
+}
+
+.kf_button::after {
+    border: 0px;
+}

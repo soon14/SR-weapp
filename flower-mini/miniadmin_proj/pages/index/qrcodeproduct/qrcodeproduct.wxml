@@ -1,0 +1,7 @@
+<view>
+    <canvas style="width:{{width}}px; height:{{height}}px;" bindtap="preimg" canvas-id="firstCanvas"></canvas>
+
+    <view class="basebutton">
+    <button class="weui-btn btnright" bindtap="save" type="primary">保存至本地</button>
+  </view>
+</view>

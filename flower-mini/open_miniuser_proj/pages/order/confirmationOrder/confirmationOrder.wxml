@@ -1,0 +1,179 @@
+<!-- 订单结算 -->
+<form report-submit="true" bindsubmit="formSubmit">
+    <view class="cotentbox">
+        <view class="selectaddress" style="border-image:url('/images/xian.png') 30 30 round;" bindtap="selectaddress" wx:if="{{isselftake == 0}}">
+            <image mode="widthFix" src="/images/dizhi.png" class="dizhiimag"></image>
+            <input placeholder="{{isselftake == 0?'请选择收花人地址':'请选择地址'}}" value="{{address}}" name="address" placeholder-style="color:#333;font-size:30rpx;" disabled hidden="{{address.length>0}}" class="address" />
+            <view wx:if="{{address.length>0}}" class="address addressfelx">
+                <text>{{fusername}} {{ftelphone}}</text>
+                <text>{{address}}</text>
+            </view>
+            <view class="arrow-right"></view>
+        </view>
+        <view class="alerttextbox" wx:if="{{isyt == 1}}">
+            <view class="alerttext">赠送对象</view>
+            <input value="{{purposes[purposeIndex]}}" name="purpose" hidden />
+            <view class="alertspecifications" catchtap="bindPurposeChange">
+                <block wx:for="{{purposes}}">
+                    <view class="checkbox {{purposeIndex == index ? 'checkboxactive' : ''}}" data-index="{{index}}" data-value="{{item}}">{{item}}</view>
+                </block>
+            </view>
+        </view>
+        <!-- 实物商品 -->
+        <block wx:if="{{type == 1}}">
+            <view class="alerttextbox margin_top" wx:if="{{isselftake == 0 && isyt == 1}}">
+                <view class="inputbox1">
+                    <view>订购人姓名</view>
+                    <view class="inpt">
+                        <input placeholder="请输入订购人姓名" name="username" value="{{username}}" type="text" bindinput="bindusername" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+            <view class="alerttextbox" wx:if="{{isselftake == 0 && isyt == 1}}">
+                <view class="inputbox1">
+                    <view>订购人电话</view>
+                    <view class="inpt">
+                        <input placeholder="请输入订购人电话" name="telphone" value="{{telphone}}" type="number" bindinput="bindtelphone" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+            <view class="alerttextbox margin_top" wx:if="{{isselftake == 1}}">
+                <view class="inputbox1">
+                    <view>取花人姓名</view>
+                    <view class="inpt">
+                        <input placeholder="请输入取花人姓名" name="fusername" value="{{fusername}}" type="text" bindinput="bindfusername" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+            <view class="alerttextbox" wx:if="{{isselftake == 1}}">
+                <view class="inputbox1">
+                    <view>取花人电话</view>
+                    <view class="inpt">
+                        <input placeholder="请输入取花人电话" name="ftelphone" value="{{ftelphone}}" type="number" bindinput="bindftelphone" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+            <view class="alerttextbox margin_top">
+                <view class="inputbox">
+                    <view>{{isselftake==1?'取货':'配送'}}时间</view>
+                    <input value="{{songdate}}" name="needsendtime" hidden />
+                    <picker mode="date" start="{{startdata}}" placeholder="请选择配送日期" bindchange="bindDateChange" name="needsendtime" placeholder-style="color:#999999;">
+                        <view class="picker">
+                            {{songdate}}
+                            <view class="arrow-right"></view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+        </block>
+        <!-- 活动 -->
+        <block wx:if="{{type == 2}}">
+            <view class="alerttextbox margin_top">
+                <view class="inputbox1">
+                    <view>报名人姓名</view>
+                    <input value="{{username}}" name="username" hidden />
+                    <view class="inpt">
+                        <input placeholder="请输入报名人姓名" name="username" value="{{username}}" type="text" bindinput="bindusername" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+            <view class="alerttextbox">
+                <view class="inputbox1">
+                    <view>报名人电话</view>
+                    <input value="{{telphone}}" name="telphone" hidden />
+                    <view class="inpt">
+                        <input placeholder="请输入报名人电话" name="telphone" value="{{telphone}}" type="number" bindinput="bindtelphone" placeholder-style="color:#999999;" />
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="centercontent margin_top">
+            <view class="centercontentcolume topimageinfo psfs" style="height: 220rpx;">
+                <view class="leftimag">
+                    <image src="{{propic}}" mode="aspectFill"></image>
+                    <view class="imgname">
+                        <div class="maxtitle">{{title}}</div>
+                        <text>￥{{price}}</text>
+                        <text style="text-align: right;">x{{productnum}}</text>
+                    </view>
+                </view>
+            </view>
+            <navigator url="{{is_useticket==1 ? '/pages/order/payInfo/clipCoupons/clipCoupons' : ''}}" wx:if="{{discount}}">
+                <view class="centercontentcolume dgrname">
+                    <view>优惠</view>
+                    <view class="picker">
+                        -￥{{discount}}
+                        <view class="arrow-right"></view>
+                    </view>
+                </view>
+            </navigator>
+            <view class="centercontentcolume dgrname" wx:if="{{isselftake==0}}">
+                <view>配送费用</view>
+                <input value="{{postage}}" name="postage" hidden />
+                <view class="picker">
+                    ￥{{postage}}
+                </view>
+            </view>
+            <view class="centercontentcolume dgrname">
+                <view>商品合计</view>
+                <view class="picker" style="color:#ff322f;">
+                    ￥{{commodityAggregate}}
+                </view>
+            </view>
+        </view>
+        <view class="centercontent margintop" wx:if="{{type == 1}}">
+            <view class="centercontentcolume dgrname psfs">
+                <view>{{needcard == 1 ? '需要卡片' : '不需要卡片'}}</view>
+                <input name="needcard" value="{{needcard}}" hidden />
+                <switch bindchange="switchneedcardChange" />
+            </view>
+            <view class="centercontentcolume dgrname" wx:if="{{needcard==1}}">
+                <view>卡片留言</view>
+                <input placeholder="写一段留言" name="cardwords" value="" type="text " placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="" />
+            </view>
+            <view class="centercontentcolume dgrname tellname" wx:if="{{isyt == 1 && isselftake !=1}}">
+                <view hidden="{{isyt == 1 && isselftake ==1}}">{{isanonymous == 1 ? '不告诉收花人我的名字' : '告诉收花人我的名字'}}</view>
+                <input name="isanonymous" value="{{isanonymous}}" hidden />
+                <switch bindchange="switchisanonymousChange" checked/>
+            </view>
+        </view>
+        <view class="beizhu">
+            <view>买家备注</view>
+            <input placeholder="若有其他需求请备注" name="note" value="" type="text " placeholder-style="color:#999999;" bindinput="" />
+        </view>
+        <view class="selectaddresstitle">选择支付方式</view>
+        <view class="centercontent psfs">
+            <radio-group bindchange="checkboxChange" class="peytypeList">
+                <label class="centercontentcolume dgrname">
+                    <text>{{peytypeList[0].name}}</text>
+                    <text>{{nowbalance >= totalprice ? '可用余额¥'+nowbalance : '余额不足'}}</text>
+                    <navigator url="/pages/me/recharge/recharge" class="recharge" wx:if="{{nowbalance <totalprice}}">去充值</navigator>
+                    <radio value="{{peytypeList[0].id}}" checked="{{isbalancepay == peytypeList[0].id ? true : false}}" disabled="{{nowbalance < totalprice ? true : false}}" />
+                </label>
+                <label class="centercontentcolume dgrname">
+                    <text>{{peytypeList[1].name}}</text>
+                    <radio value="{{peytypeList[1].id}}" checked="{{isbalancepay == peytypeList[1].id ? true : false}}" disabled="{{canusewxpay==0 ? true : false}}" />
+                </label>
+            </radio-group>
+        </view>
+        <view class="buy">
+            <!-- <view class="left" wx:if="{{isbalancepay == 3}}">
+                {{nowbalance >= totalprice ? '应付：' : '总价：'}}
+                <text>{{nowbalance >= totalprice ? '0' : '¥'+totalprice}}</text>
+                <text wx:if="{{nowbalance >= totalprice}}">（余额抵扣 -¥{{totalprice}}）</text>
+            </view>
+            <view class="left" wx:if="{{isbalancepay != 3}}">
+                总价：
+                <text>¥{{totalprice}}</text>
+            </view>
+ -->
+            <view class="left">
+                总价：
+                <text>¥{{totalprice}}</text>
+            </view>
+            <view class="right">
+                <button class="weui-btn" formType="submit" type="primary">立即购买</button>
+            </view>
+        </view>
+    </view>
+</form>

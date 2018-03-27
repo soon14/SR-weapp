@@ -1,0 +1,84 @@
+.container {
+    padding-bottom: 100rpx;
+}
+
+.other {
+    background-color: #fff;
+    padding: 20rpx 30rpx;
+}
+
+.other text {
+    display: block;
+    color: #999;
+    font-size: 30rpx;
+}
+
+.other2 text {
+    color: #000;
+    font-size: 32rpx;
+}
+
+.other {
+    margin: 20rpx 0;
+}
+
+.button {
+    padding: 20rpx 30rpx;
+}
+
+.weui-media-box__desc text {
+    float: right;
+}
+
+.drakred {
+    color: darkred;
+}
+
+.gray {
+    color: #999;
+}
+
+.drakred text {
+    font-size: 30rpx;
+    color: #999;
+}
+
+.gray text {
+    font-size: 30rpx;
+    color: #999;
+}
+
+.basebutton {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #f9f9f9;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    z-index: 100;
+}
+
+.basebutton wx-button {
+    flex: 1;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #4f9dd0;
+    color: #f9f9f9;
+}
+
+.basebutton wx-button.nth1 {
+    background-color: #3c5769;
+}
+
+.weui-cell__ft {
+    flex: 2;
+}

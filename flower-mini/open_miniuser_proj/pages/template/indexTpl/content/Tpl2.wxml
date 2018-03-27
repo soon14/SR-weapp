@@ -1,0 +1,34 @@
+<!-- indexTemplate -->
+<view class="weui-tab" id="tpl">
+    <!-- 导航栏 -->
+    <include src="./navbar.wxml" />
+    <!-- 对应内容 -->
+    <view class="weui-tab__panel newlist">
+        <block wx:for="{{catelist}}" wx:for-index="idx" wx:for-item="item">
+            <block wx:for="{{item.prolist}}" wx:for-item="item2">
+                <view class="weui-tab__content" hidden="{{activeIndex != idx}}">
+                    <navigator url="{{item2.has_group==1?has_group_Url:is_useticket_Url}}?index={{index}}&id={{item2.id}}">
+                        <view class="proitem proitem2">
+                            <image src="{{host + item2.mainpic}}" mode="aspectFill" class="tpl2"></image>
+                            <image mode="widthFix" src="/images/v2.2.0/tuan.png" class="sjimg" wx:if="{{item2.has_group==1}}"></image>
+                            <image mode="widthFix" src="/images/v2.2.0/te.png" class="sjimg" wx:if="{{item2.is_useticket==2&&tem2.has_group!=1}}"></image>
+                            <view class="top">{{item2.title}}</view>
+                            <view class="bottom">
+                                <view class="proprice">
+                                    <text>￥{{item2.price}}</text>
+                                    <!-- <view class="delprice">￥{{item2.price}}</view> -->
+                                </view>
+                                <button class="buybnt">购买</button>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </block>
+            <!-- 没有商品 -->
+            <view wx:if="{{item.procount == 0}}" class="blanks weui-tab__content nolist" hidden="{{activeIndex != idx}}">
+                <image src="/images/noorder.png"></image>
+                <text>该栏目暂无商品</text>
+            </view>
+        </block>
+    </view>
+</view>

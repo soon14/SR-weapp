@@ -1,0 +1,7 @@
+<!-- 订单备注 -->
+<view class="addtextbox">
+    <form bindsubmit="formSubmit">
+        <textarea placeholder="请详细填写订单备注" value="{{schemeIntro}}" name="schemeIntro" placeholder-style="color:#bdbdbd;" />
+        <button form-type="submit"> 确定 </button>
+    </form>
+</view>

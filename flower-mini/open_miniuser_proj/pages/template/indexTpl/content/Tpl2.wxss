@@ -1,0 +1,13 @@
+/*tpl1.wxss*/
+
+#tpl .newlist .proitem .tpl2 {
+    width: 690rpx!important;
+    height: 690rpx!important;
+}
+
+.proitem.proitem2 {
+    border-radius: 0!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+}

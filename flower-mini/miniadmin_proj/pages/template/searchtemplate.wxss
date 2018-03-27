@@ -1,0 +1,32 @@
+/*searchtemplate.wxss*/
+/*搜索栏*/
+
+.searchlabel {
+    padding: 0 30rpx;
+    margin-top: 40rpx;
+    border: 0;
+    height: 100rpx;
+}
+
+.searchlabel .weui-search-bar__label,
+.searchlabel .weui-search-bar__form {
+    background: #ebebeb;
+    border-radius: 34rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.searchlabel .weui-search-bar__input,
+.searchlabel .weui-search-bar__cancel-btn {
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.searchlabel .searchbar-result {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.searchlabel .searchbar-result:before {
+    display: none;
+}

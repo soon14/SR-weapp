@@ -1,0 +1,92 @@
+<!-- 拼团确认订单 -->
+<view class="container">
+    <form report-submit bindsubmit="formSubmit">
+        <view class="topexplain" wx:if="{{cantuan==1}}">
+            <view class="topexplain-left">!</view>
+            <view class="topexplain-right">
+                <view>拼团成功后，其他团员商品将由团长代收，请注意收货</view>
+            </view>
+        </view>
+        <view class="address" bindtap="selectaddress" wx:if="{{cantuan==0}}">
+            <image src="/images/v2.2.0/xian.png" class="address-line"></image>
+            <!-- 收货地址 -->
+            <view class="addressbox">
+                <image mode="widthFix" src="/images/v2.2.0/dingwei.png" class="addressbox-img"></image>
+                <view class="addressbox-right" wx:if="{{hasaddress}}">
+                    <text>{{fusername}} {{ftelphone}}</text>
+                    <text>{{address}}</text>
+                </view>
+                <view class="addressbox-right" wx:else>收花人地址</view>
+                <view class="select-line"></view>
+            </view>
+        </view>
+        <view class="info" wx:if="{{cantuan==1}}">
+            <view class="info-colume">
+                <view class="info-colume-title">取花人姓名</view>
+                <input placeholder="请输入取花人姓名" name="fusername" value="{{fusername}}" type="text" placeholder-style="font-size: 30rpx;color: #aaaaaa;" />
+            </view>
+            <view class="info-colume">
+                <view class="info-colume-title">取花人电话</view>
+                <input placeholder="请输入取花人电话" name="ftelphone" value="{{ftelphone}}" type="number" placeholder-style="font-size: 30rpx;color: #aaaaaa;" />
+            </view>
+        </view>
+        <view class="contentbox">
+            <view class="contentbox-top">
+                <image src="{{cdnhost+list.mainpic}}" mode="aspectFill" class="contentbox-top-image" />
+                <view class="contentbox-top-text">
+                    <view class="contentbox-top-text-title">{{title}}</view>
+                    <view class="contentbox-top-text-numbox">
+                        <view class="contentbox-top-text-num">¥{{goodsprice}}</view>
+                        <view class="contentbox-top-text-active">
+                            <view class="contentbox-top-text-active-left" bindtap="jiannum">-</view>
+                            <input name="productnum" placeholder="请选择商品数量" value="{{productnum}}" type="number" class="contentbox-top-text-active-middle" bindinput="inputnum" />
+                            <view class="contentbox-top-text-active-right" bindtap="addnum">+</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="proinfo">
+                <view class="proinfo-colume">
+                    <view>商品合计</view>
+                    <view>¥{{pinfo}}</view>
+                </view>
+                <view class="proinfo-colume">
+                    <view>配送费用</view>
+                    <view>¥{{postage}}</view>
+                </view>
+                <view class="proinfo-colume">
+                    <view>合计</view>
+                    <view class="heji">¥{{totalprice}}</view>
+                </view>
+            </view>
+            <view class="remarks">
+                <view class="remarks-title">买家备注</view>
+                <input placeholder="若有其他需求请备注" name="note" value="" type="text" placeholder-style="font-size: 30rpx;color: #aaaaaa;" />
+            </view>
+        </view>
+        <view class="paytypebox">
+            <view class="paytypebox-title">选择支付方式</view>
+            <view class="paytypebox-type">
+                <radio-group bindchange="checkboxChange" class="peytypeList">
+                    <label class="centercontentcolume dgrname">
+                        <text>{{peytypeList[0].name}}</text>
+                        <text>{{usebalance==1 ? '可用余额¥'+nowbalance : '余额不足'}}</text>
+                        <navigator url="/pages/me/recharge/recharge" class="recharge" wx:if="{{usebalance == 0}}">去充值</navigator>
+                        <radio value="{{peytypeList[0].id}}" checked="{{isbalancepay == peytypeList[0].id ? true : false}}" disabled="{{usebalance == 1 ? false : true}}" />
+                    </label>
+                    <label class="centercontentcolume dgrname">
+                        <text>{{peytypeList[1].name}}</text>
+                        <radio value="{{peytypeList[1].id}}" checked="{{isbalancepay == peytypeList[1].id ? true : false}}" disabled="{{canusewxpay==0 ? true : false}}" />
+                    </label>
+                </radio-group>
+            </view>
+            <view class="paytypebox-title">若成团失败，款项会统一退到您的账户余额中</view>
+        </view>
+        <view class="btnbox">
+            <veiw class="btnbox-left">总价：
+                <view>¥{{totalprice}}</view>
+            </veiw>
+            <button formType="submit" class="btnbox-pay">微信支付</button>
+        </view>
+    </form>
+</view>

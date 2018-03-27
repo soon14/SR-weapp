@@ -1,0 +1,67 @@
+<form report-submit class='editCase' bindsubmit="formSubmit">
+    <view class="title">方案</view>
+    <view class="viewPart">
+        <view class="section">
+            <text>名称</text>
+            <input type="text" name="schemeName" placeholder="请输入方案的名称"></input>
+        </view>
+        <view class="addImgs">
+            <block wx:if="{{headlist}}" wx:for="{{headlist}}">
+                <view class="imgcolue">
+                    <image src="{{host+item.src}}" mode="aspectFill"></image>
+                    <progress percent="{{item.progress}}" class="imgprogress" wx:if="{{item.progress<100}}" />
+                </view>
+            </block>
+            <image class="addBtn" src="/images/xuanzhepic.png" bindtap="chooseHeadImage" wx:if="{{headlist.length < maxsize}}"></image>
+        </view>
+        <view class="item">
+            <text>商品详情</text>
+            <navigator url="/floriculture/pages/editCase/productDetails/productDetails">
+                {{addFormInfo.product?'已':'未'}}添加
+                <image src='/images/rArrow.png'></image>
+            </navigator>
+        </view>
+        <view class="item mb20">
+            <text>方案简介</text>
+            <navigator url="/floriculture/pages/editCase/writeRemark/writeRemark">
+                {{addFormInfo.schemeIntro?'已':'未'}}添加
+                <image src='/images/rArrow.png'></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="viewPart">
+        <view class="section">
+            <text>商品价格</text>
+            <input type="digit" name="schemePrice" placeholder="给方案定个好价格"></input>
+        </view>
+        <view class="item">
+            <text>推广费用比例</text>
+            <picker bindchange="bindPickerTGChange" value="{{TGindex}}" range="{{TGArray}}">
+                <view class="picker">{{TGArray[TGindex]}}</view>
+                <input name="promotionPrice" value="{{promotionPrice}}" hidden></input>
+                <image src="/images/rArrow.png" class="arrow"></image>
+            </picker>
+        </view>
+    </view>
+    <view class="tips">
+        推广费用至少10%，将用作会员协助推广的奖励费用
+    </view>
+    <view class="viewPart">
+        <view class="item itemSwitch">
+            <text>{{saveState==1?'不':''}}可以保存到手机</text>
+            <switch checked="{{saveState==1?false:true}}" bindchange="bindSaveState" color="#3583DB" />
+            <input name="saveState" value="{{saveState}}" hidden></input>
+        </view>
+        <view class="item">
+            <text>方案教程</text>
+            <navigator url="/floriculture/pages/editCase/editCourse/editCourse">
+                {{addFormInfo.course?'已':'未'}}添加
+                <image src='/images/rArrow.png'></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="editCase-fix">
+        <button form-type='submit' data-publishState="1" class="pcPublic">保存草稿</button>
+        <button form-type='submit' data-publishState="2" class="submitBtn">正式发布</button>
+    </view>
+</form>

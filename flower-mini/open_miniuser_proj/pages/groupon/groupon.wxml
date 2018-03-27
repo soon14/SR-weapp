@@ -1,0 +1,133 @@
+<!-- 团购详情 -->
+<view class="container">
+    <form report-submit bindsubmit="formSubmit">
+        <view class="proinfo">
+            <view class="proinfo-img">
+                <swiper indicator-dots="true" autoplay="false">
+                    <swiper-item>
+                        <image src="{{cdnhost+list.mainpic}}" data-src="{{cdnhost+list.mainpic}}" bindtap="preimg" mode="aspectFill" class="slide-image" />
+                    </swiper-item>
+                </swiper>
+                <view class="proinfo-img-text">
+                    <view class="proinfo-img-text-top">{{list.group.max_num}}人拼团</view>
+                    <view class="proinfo-img-text-content">
+                        <view class="proinfo-img-text-content-left">
+                            <view>¥{{list.group.price}}</view>
+                            <view class="proinfo-img-text-content-left-te">¥{{list.group.goodsInfo.price}}</view>
+                        </view>
+                        <view class="proinfo-img-text-content-right">
+                            <veiw class="proinfo-img-text-content-right-top">剩余时间</veiw>
+                            <veiw class="proinfo-img-text-content-right-bottom">
+                                <view class="proinfo-img-time-num">{{countDown.days}}</view>
+                                <view class="proinfo-img-time-text">天</view>
+                                <view class="proinfo-img-time-num">{{countDown.hours}}</view>
+                                <view class="proinfo-img-time-text">时</view>
+                                <view class="proinfo-img-time-num">{{countDown.minutes}}</view>
+                                <view class="proinfo-img-time-text">分</view>
+                                <view class="proinfo-img-time-num">{{countDown.seconds}}</view>
+                                <view class="proinfo-img-time-text">秒</view>
+                            </veiw>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="proinfo-text">
+                <view class="proinfo-text-left">{{list.title}}</view>
+                <view class="proinfo-text-right" bindtap="showShare">
+                    <image src="/images/v2.2.0/fenxiang.png"></image>
+                    <view>分享</view>
+                </view>
+            </view>
+            <view class="grouponplay">
+                <view class="grouponplay-title">拼团玩法</view>
+                <view class="grouponplay-content">
+                    <view class="grouponplay-content-top">
+                        <view class="grouponplay-content-top-colume">
+                            <view class="grouponplay-content-top-colume-num">1</view>
+                            <view class="grouponplay-content-top-colume-text">
+                                <view>选择商品</view>
+                                <view>付款开团/参团</view>
+                            </view>
+                        </view>
+                        <view class="grouponplay-content-top-colume">
+                            <view class="grouponplay-content-top-colume-num">2</view>
+                            <view class="grouponplay-content-top-colume-text">
+                                <view>邀请并等待</view>
+                                <view>好友支付参团</view>
+                            </view>
+                        </view>
+                        <view class="grouponplay-content-top-colume">
+                            <view class="grouponplay-content-top-colume-num">3</view>
+                            <view class="grouponplay-content-top-colume-text">
+                                <view>达到人数</view>
+                                <view>顺利成团</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="grouponplay-content-bottom">*成团后货品将由团长代收</view>
+                </view>
+            </view>
+        </view>
+        <view class="detalsbox">
+            <view class="detalsbox-title">
+                <view class="detalsbox-line"></view>
+                <view class="detalsbox-text">活动详情</view>
+            </view>
+            <view class="detalsbox-content">
+                <view class="detalsbox-content-time">
+                    <image mode="widthFix" src="/images/kaishishijian2.png"></image>
+                    <view class="detalsbox-content-time-text">
+                        <view class="detalsbox-content-time-text-title">开始</view>
+                        <view class="detalsbox-content-time-text-num">{{list.group.start_time_txt}}</view>
+                    </view>
+                </view>
+                <view class="detalsbox-content-time">
+                    <image mode="widthFix" src="/images/jieshushijian2.png"></image>
+                    <view class="detalsbox-content-time-text">
+                        <view class="detalsbox-content-time-text-title">结束</view>
+                        <view class="detalsbox-content-time-text-num">{{list.group.end_time_txt}}</view>
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{list.moredetail}}" wx:for="{{list.moredetail}}">
+                <view class="intro-content" wx:if="{{item.type==1}}">
+                    <text>{{item.content}}</text>
+                </view>
+                <view class="piclist" wx:if="{{item.type==2}}">
+                    <image src="{{host + item.content}}" data-src="{{host + item.content}}" mode="widthFix" bindtap="preimg"></image>
+                </view>
+            </block>
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <view class="weui-footer__link">
+                        <image src="/images/logo.png"></image> 乐墨花时光 技术支持</view>
+                </view>
+            </view>
+        </view>
+        <view class="buy">
+            <view class="left">
+                <view class="leftcolume" bindtap="gotohome">
+                    <image src="/images/v2.2.0/home.png" mode="widthFix"></image>
+                    <text>首页</text>
+                </view>
+                <!-- 客服 -->
+                <button open-type="contact" session-from="weapp" class="leftcolume">
+                    <image src="/images/v2.2.0/kf.png" mode="widthFix"></image>
+                    <text>客服</text>
+                </button>
+            </view>
+            <view class="right">
+                <button class="weui-btn btn1" type="primary" bindtap="godetail">
+                    <view class="right-pic">¥{{list.group.goodsInfo.price}}</view>
+                    <view class="right-text">单买</view>
+                </button>
+                <button class="weui-btn btn2" type="primary" formType="submit" bindtap="alertcolumeshow">
+                    <view class="right-pic">¥{{list.group.price}}</view>
+                    <view class="right-text">开团</view>
+                </button>
+            </view>
+        </view>
+    </form>
+</view>
+<!-- share -->
+<include src="../template/share/share.wxml" />

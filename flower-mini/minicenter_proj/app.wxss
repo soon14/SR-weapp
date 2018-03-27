@@ -1,0 +1,58 @@
+page {
+    line-height: 1.6;
+    font-family: PingFang-SC-Regular, -apple-system-font, "Helvetica Neue", sans-serif;
+    width: 750rpx;
+    overflow-x: hidden;
+}
+
+icon {
+    vertical-align: middle;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.blanks {
+    text-align: center;
+    padding-top: 140rpx;
+}
+
+.blanks image {
+    width: 326rpx;
+    height: 254rpx;
+}
+
+.blanks text {
+    color: #bbb;
+    font-size: 34rpx;
+    display: block;
+    padding: 20rpx 0;
+}
+
+
+
+/**/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clr:after {
+    clear: both;
+    content: '\0020';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+.clr {
+    zoom: 1;
+}

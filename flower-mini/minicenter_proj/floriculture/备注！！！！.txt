@@ -1,0 +1,13 @@
+
+
+  pages 
+  index                 1-1_商家首页代理商
+  buyedCase         6-5_花艺方案已购方案
+  caseCraftList      6-8_花艺方案草稿
+  caseEndList        6-11_花艺方案已结束
+  casePublicList    6-10_花艺方案已发布
+  caseDetail          6-1_花艺方案方案详情代理商
+  caseList             6_花艺方案热门
+  editCourse         6-9_编辑方案V3   -  课程
+  editCase            6-9_编辑方案V1   -  草稿
+  register              注册

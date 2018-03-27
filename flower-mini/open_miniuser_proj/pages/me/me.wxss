@@ -1,0 +1,157 @@
+/**index.wxss**/
+
+page {
+    background-color: #f7f7f7;
+}
+
+.backgroundImage {
+    width: 690rpx;
+    height: 320rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30rpx auto;
+    position: relative;
+}
+
+.backgroundImage .background {
+    width: 690rpx;
+    height: 320rpx;
+    border-radius: 20rpx;
+    position: relative;
+}
+
+.backgroundImagecontent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 690rpx;
+    height: 320rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ctop {
+    width: 690rpx;
+    margin-top: 50rpx;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headimg {
+    margin-left: 64rpx;
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nickname {
+    flex: 1;
+    overflow-x: hidden;
+    text-align: left;
+    font-size: 26rpx;
+    color: #ffffff;
+    margin-left: 24rpx;
+}
+
+/**/
+
+.ourcotentboxbottom {
+    width: 690rpx;
+    height: 170rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ourcotentboxbottom .gourl {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    height: 100%;
+}
+
+.ourcotentboxbottom .gourl wx-text:nth-of-type(1) {
+    font-size: 40rpx;
+}
+
+.ourcotentboxbottom .gourl wx-text:nth-of-type(2) {
+    font-size: 26rpx;
+}
+
+.coulmebox {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.centercontentbox {
+    width: 750rpx;
+    height: 180rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.centercontentbox2 {
+    border-top: 1px solid #e5e5e5;
+}
+
+.centercontentbox2 wx-navigator:nth-of-type(2),
+.centercontentbox2 wx-navigator:nth-of-type(3) {}
+
+.centercontentbox wx-navigator {
+    width: 270rpx;
+    height: 140rpx;
+    font-size: 24rpx;
+    padding: 20rpx;
+    color: #555555;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #e5e5e5;
+}
+
+.centercontentbox wx-navigator:nth-of-type(1) {
+    border-left: 0;
+}
+
+.centercontentbox wx-navigator wx-image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+/**/
+
+.fixed_bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 36rpx;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    color: #bdbdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed_bottom image {
+    width: 32rpx;
+    height: 38rpx;
+    margin-right: 20rpx;
+}

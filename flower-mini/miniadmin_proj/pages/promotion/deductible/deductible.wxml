@@ -1,0 +1,86 @@
+<!-- 推广(社交立减金) -->
+<form bindsubmit="bindFormSubmit">
+    <view class="sectionbox">
+        <view class="section border_padding_margin_0">
+            <view class="section__title">主题名称</view>
+            <input name="title" data-name="title" placeholder="请输入主题名称" value="{{title}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindchange="" bindinput="" disabled="{{disabled}}" />
+        </view>
+        <view class="section border_padding_margin_0 border_bottom_0">
+            <view class="section__title">分享数量</view>
+            <radio-group class="radio_group" bindchange="radioChange" name="share_num">
+                <label wx:for="{{numItems}}" class="radio_num {{value_checked==item.num?'radio_num_checked':''}}">
+                    <radio value="{{item.num}}" checked="{{item.checked}}" hidden/>{{item.num}}张
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="sectionbox">
+        <view class="pickerbox">
+            <view class="pickerbox_left">开始时间</view>
+            <view class="pickerbox_right" data-timeType="startTime" bindtap="time_picker_show">
+                <input name="start_time" value="{{startTime}}" hidden/>
+                <view class="pickerbox_right_select" data-timeType="startTime">
+                    {{startTime?startTime:"请选择开始时间"}}
+                </view>
+            </view>
+        </view>
+        <view class="pickerbox border_bottom_0">
+            <view class="pickerbox_left">结束时间</view>
+            <view class="pickerbox_right" data-timeType="endTime" bindtap="time_picker_show">
+                <input name="end_time" value="{{endTime}}" hidden/>
+                <view class="pickerbox_right_select" data-timeType="endTime">
+                    {{endTime?endTime:"请选择结束时间"}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="section_coupon" wx:if="{{list}}">
+        <radio-group class="radio_coupon" bindchange="radioCouponChange" name="coupon_promotion_id">
+            <label wx:for="{{list}}" class="coupon_box">
+                <view class="coupon_content">
+                    <view class="title">
+                        <text>主题：</text>
+                        <text>{{item.title}}</text>
+                    </view>
+                    <view class="time">
+                        <text>时间：</text>
+                        <text>{{item.start_time}}至{{item.end_time}}</text>
+                    </view>
+                    <view class="money">
+                        <text>金额：</text>
+                        <text>{{item.value}}元（满{{item.min_consumption}}元可用）</text>
+                    </view>
+                </view>
+                <radio value="{{item.id}}" checked="{{nowsharecouponid == item.id ? true : false}}" />
+            </label>
+        </radio-group>
+    </view>
+    <!-- 底部说明 -->
+    <view class="explainbox">
+        <view>{{explainTitle}}</view>
+        <block wx:for="{{explainText}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+    <button form-type="submit" class="savebtn" wx:if="{{sourceType==0}}">保存</button>
+    <view class="btnbox" wx:if="{{sourceType==1}}">
+        <button form-type="submit">生成优惠券海报</button>
+        <button form-type="submit">使优惠券失效</button>
+    </view>
+</form>
+<!--日期 -->
+<picker-view indicator-style="height: 100rpx;" value="{{value}}" bindchange="bindChange" class="time_picker" hidden="{{!time_picker_show}}">
+    <view class="time_picker_head">
+        <view catchtap="time_picker_hide">取消</view>
+        <view class="green" data-timeType="{{timetype}}" catchtap="returnTime">确定</view>
+    </view>
+    <picker-view-column>
+        <view wx:for="{{timelist}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{hourslist}}">{{item}}</view>
+    </picker-view-column>
+</picker-view>

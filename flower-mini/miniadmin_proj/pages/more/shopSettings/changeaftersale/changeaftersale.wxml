@@ -1,0 +1,6 @@
+<form report-submit bindsubmit="formSubmit">
+    <view class="container">
+        <textarea name="value" placeholder="请输入" value="{{value}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="" />
+        <button formType="submit" class="addbtn" hover-class="custom-button-hover-class">{{btntext}}</button>
+    </view>
+</form>

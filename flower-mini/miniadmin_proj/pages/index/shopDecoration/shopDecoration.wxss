@@ -1,0 +1,193 @@
+page {
+    width: 750rpx;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.phonebox {
+    width: 600rpx;
+    margin: 30rpx auto;
+    border-radius: 80rpx;
+    border: 8rpx solid #eaf0f4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dian {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #c8d5db;
+    margin-right: 48rpx;
+}
+
+.tiao {
+    width: 96rpx;
+    height: 8rpx;
+    border-radius: 8rpx;
+    background-color: #c8d5db;
+}
+
+.phoneview {
+    margin: 0 auto;
+    width: 540rpx;
+    height: 944rpx;
+    overflow: hidden;
+    border: 6rpx solid #eaf0f4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom {
+    width: 100%;
+    height: 148rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yuanbtn {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 6rpx solid #eaf0f4;
+}
+
+
+
+/*header.wxss*/
+
+.banner {
+    width: 540rpx;
+    height: 300rpx;
+    position: relative;
+}
+
+.banner .slide-image {
+    width: 540rpx;
+    height: 300rpx;
+}
+
+
+
+/*navbar.wxss*/
+
+.navbarbox {
+    width: 540rpx;
+    height: 80rpx;
+    margin-top: 20rpx;
+    line-height: 80rpx;
+    background-color: #fff;
+    color: #666;
+    font-size: 28rpx;
+    position: relative;
+}
+
+.navbar_item_box {
+    display: block;
+    width: 420rpx;
+    height: 80rpx;
+    overflow: hidden;
+}
+
+.navbar_item {
+    margin-left: 50rpx;
+}
+
+.navbar_item_active {
+    color: #ff322f;
+    font-weight: bold;
+    margin-left: 40rpx;
+}
+
+
+/**/
+
+.contentimg {
+    width: 540rpx;
+    margin-top: 20rpx;
+    height: 524rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.contentimg .styleimg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 540rpx;
+}
+
+
+
+/*pen*/
+
+.pen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pen wx-view {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12rpx;
+}
+
+.pen wx-image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+}
+
+.pen wx-text {
+    font-size: 28rpx;
+    color: #fff;
+    margin-right: 10rpx;
+}
+
+
+.pen1 wx-view {
+    padding: 0;
+    padding-right: 12rpx;
+}
+
+
+/**/
+
+.explainbox {
+    width: 690rpx;
+    padding: 30rpx;
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 46rpx;
+    margin-top: 20rpx;
+    margin-bottom: 100rpx;
+}
+
+.explainbox view:nth-of-type(1) {
+    font-size: 30rpx
+}

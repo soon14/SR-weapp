@@ -1,0 +1,10 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="main">
+  <text>乐墨花时光使用教程及技巧，请关注乐墨订阅号 mutiflower了解。</text>
+  
+  <text>有疑问请联络工作人员</text>
+  
+  <text bindtap="phonecall">电话：<text style="display:inline;color:green;">0755-86665949</text></text><text>微信号：lemozhushou</text>
+  
+  </view>
+</view>

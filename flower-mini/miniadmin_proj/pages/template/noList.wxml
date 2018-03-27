@@ -1,0 +1,5 @@
+<!-- noList.wxml -->
+<view style="margin:30rpx;display: flex;justify-content: flex-start;align-items: center;flex-direction: column;">
+    <image mode="widthFix" src="/images/sad_icon.png" style="width: 330rpx;height: 330rpx;"></image>
+    <text style="text-align: center;color: #bbb;font-size: 34rpx;margin-top: 30rpx;">花都开了，你却还没有订单</text>
+</view>

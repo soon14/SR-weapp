@@ -1,0 +1,44 @@
+/*paybox.wxss*/
+
+.paybox {
+    width: 750rpx;
+    overflow-x: hidden;
+    height: 150rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #e5e5e5;
+    background-color: #fff;
+}
+
+.paybox-colume {
+    flex: 1;
+    height: 150rpx;
+    border-left: 1rpx solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paybox-colume:nth-of-type(1) {
+    border-left: 0 solid #e5e5e5;
+}
+
+.paybox-colume-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paybox-colume-image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.paybox-colume-text {
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #555555;
+    text-align: center;
+}

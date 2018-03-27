@@ -1,0 +1,145 @@
+<!-- 推广(优惠券) -->
+<view class="formbox" style="height: {{formHeight}}px">
+    <form report-submit bindsubmit="bindFormSubmit">
+        <view class="section">
+            <view class="section__title">主题名称</view>
+            <input name="title" data-name="title" placeholder="请输入主题名称" value="{{list.title}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" />
+        </view>
+        <view class="section_top_text">
+            <view class="">优惠设置</view>
+        </view>
+        <view class="proinfobox" wx:if="{{disabled}}">
+            <view class="proinfobox-left">
+                <image mode="aspectFill" src="{{cdnhost+list.proinfo.mainpic}}"></image>
+            </view>
+            <view class="proinfobox-right">
+                <view class="proinfobox-right-title">{{list.proinfo.title}}</view>
+                <view class="proinfobox-right-pic">商品原价：
+                    <text> ¥{{list.proinfo.chosen_goods.price}}</text>
+                </view>
+            </view>
+            <view class="proinfobox-select"></view>
+        </view>
+        <block wx:if="{{!disabled}}">
+            <view class="upimgboox" wx:if="{{!chooseGoodsData}}">
+                <image src="/images/v2.3.0/xuanzhepic.png" class="upimgboox-upimg" bindtap="chooseGrouponGoods"></image>
+            </view>
+            <view class="proinfobox" bindtap="chooseGrouponGoods" wx:if="{{chooseGoodsData}}">
+                <view class="proinfobox-left">
+                    <image mode="aspectFill" src="{{cdnhost+chooseGoodsData.mainpic}}"></image>
+                </view>
+                <view class="proinfobox-right">
+                    <view class="proinfobox-right-title">{{chooseGoodsData.title}}</view>
+                    <view class="proinfobox-right-pic">商品原价：
+                        <text> ¥{{chooseGoodsData.goods[chooseGoodsIndex].price}}</text>
+                    </view>
+                </view>
+                <view class="proinfobox-select"></view>
+            </view>
+            <view class="pickerbox margin_top_0" wx:if="{{chooseGoodsData.goods}}">
+                <view class="pickerbox_left">商品规格</view>
+                <view class="pickerbox_right">
+                    <picker bindchange="chooseGoodsChange" value="{{chooseGoodsIndex}}" range="{{chooseGoods}}">
+                        <input type="text" name="goods_id" value="{{chooseGoodsData.goods[chooseGoodsIndex].id}}" hidden />
+                        <view class="pickerbox_right_select">{{chooseGoods[chooseGoodsIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+        </block>
+        <view class="pickerbox margin_top_0" wx:if="{{disabled}}">
+            <view class="pickerbox_left">商品规格</view>
+            <view class="pickerbox_right">
+                <picker bindchange="chooseGoodsChange" value="{{chooseGoodsIndex}}" range="{{chooseGoods}}">
+                    <view class="pickerbox_right_select">{{list.proinfo.chosen_goods.size}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="section margin_top_0">
+            <view class="section__title">团购价格</view>
+            <input name="price" data-name="price" placeholder="设置商品活动价格" value="{{list.price}}" type="digit" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" />
+        </view>
+        <view class="pickerbox margin_top_0" hidden="{{leaderGiscountsIndex==1&&disabled}}">
+            <view class="pickerbox_left">团长优惠</view>
+            <view class="pickerbox_right">
+                <picker bindchange="leaderGiscountsChange" value="{{leaderGiscountsIndex}}" range="{{leaderGiscounts}}" disabled="{{disabled}}">
+                    <view class="pickerbox_right_select">{{leaderGiscounts[leaderGiscountsIndex]}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="section margin_top_0" wx:if="{{leaderGiscountsIndex==1}}">
+            <view class="section__title">团长优惠</view>
+            <input name="leader_price" placeholder="成团后给团长增加的余额" value="{{list.leader_price}}" type="digit" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" />
+        </view>
+        <view class="section_top_text">
+            <view>有效期</view>
+        </view>
+        <view class="pickerbox">
+            <view class="pickerbox_left">开始时间</view>
+            <view class="pickerbox_right" data-timeType="start_time" bindtap="{{!disabled?'time_picker_show':''}}">
+                <input name="start_time" value="{{start_time}}" hidden/>
+                <view class="pickerbox_right_select" data-timeType="start_time">
+                    <block wx:if="{{!disabled}}">
+                        {{start_time?start_time:"请选择开始时间"}}
+                    </block>
+                    <block wx:else>
+                        {{list.start_time}}
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="pickerbox margin_top_0">
+            <view class="pickerbox_left">结束时间</view>
+            <view class="pickerbox_right" data-timeType="end_time" bindtap="{{!disabled?'time_picker_show':''}}">
+                <input name="end_time" value="{{end_time}}" hidden/>
+                <view class="pickerbox_right_select" data-timeType="end_time">
+                    <block wx:if="{{!disabled}}">
+                        {{end_time?end_time:"请选择结束时间"}}
+                    </block>
+                    <block wx:else>
+                        {{list.end_time}}
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="section_top_text">
+            <view class="">活动规则</view>
+        </view>
+        <view class="section">
+            <view class="section__title">参团人数</view>
+            <input name="max_num" data-name="max_num" placeholder="设置成团人数" value="{{list.max_num}}" type="number" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" disabled="{{disabled}}" />
+        </view>
+        <view class="pickerbox margin_top_0 border-bottom_0">
+            <view class="pickerbox_left">每人限购</view>
+            <view class="pickerbox_right">
+                <picker bindchange="limitedChange" value="{{limitedIndex}}" range="{{limited}}" disabled="{{disabled}}">
+                    <input type="text" name="limit" value="{{limitedIndex==0?'0':limited[limitedIndex]}}" hidden />
+                    <view class="pickerbox_right_select" wx:if="{{!disabled}}">{{limited[limitedIndex]}}</view>
+                    <view class="pickerbox_right_select" wx:if="{{disabled}}">{{list.limit==0?'不限购':list.limit}}</view>
+                </picker>
+            </view>
+        </view>
+        <!-- 活动说明 -->
+        <view class="explainbox">*拼团订单仅支持由团长代收</view>
+        <button form-type="submit" class="savebtn" data-state="1" wx:if="{{!disabled}}">保存</button>
+        <view class="btnbox" wx:if="{{disabled}}">
+            <button bindtap="goback">保存</button>
+            <button bindtap="closeGroup" data-state="0">失效</button>
+        </view>
+    </form>
+</view>
+<!--日期 -->
+<picker-view indicator-style="height: 100rpx;" value="{{value}}" bindchange="bindChange" class="time_picker" hidden="{{!time_picker_show}}">
+    <view class="time_picker_head">
+        <view catchtap="time_picker_hide">取消</view>
+        <view class="green" data-timeType="{{timetype}}" catchtap="returnTime">确定</view>
+    </view>
+    <picker-view-column>
+        <view wx:for="{{timelist}}">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{hourslist}}">{{item}}</view>
+    </picker-view-column>
+</picker-view>

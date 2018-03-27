@@ -1,0 +1,41 @@
+<!-- giftcoupon.wxml -->
+<!-- 优惠券模版 -->
+<template name="giftcoupon">
+    <view class="coupon" data-id="{{id}}" bindtap="gift">
+        <view class="cpleft">
+            <view class="leftborder">
+                <view class="leftyuanbox">
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                </view>
+            </view>
+            <view class="lefttext">
+                <view class="pricebox">
+                    <view class="fh">¥</view>
+                    <view class="price">{{value}}</view>
+                </view>
+                <view class="manj">满{{min_consumption}}元可用</view>
+            </view>
+        </view>
+        <view class="cpright">
+            <view class="cprighttitle">{{title}}</view>
+            <view class="cprighttime">{{start_time}}至{{end_time}}</view>
+            <view class="cprightuse">{{statustext}}</view>
+        </view>
+    </view>
+</template>

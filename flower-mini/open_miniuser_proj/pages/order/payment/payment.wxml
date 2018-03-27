@@ -1,0 +1,53 @@
+<!-- 付款 -->
+<view class="cotentbox">
+    <view class="paybox">
+        <view class="headerimg">
+            <image mode="aspectFill" src="{{cdnhost + logo}}"></image>
+        </view>
+        <view class="shopname">
+            向
+            <text>{{shopname}}</text>付款
+        </view>
+        <view class="paynum">
+            <text>请输入付款金额</text>
+            <label class="pay">
+                <text>¥</text>
+                <view class="num">{{inputValue}}</view>
+                <view class="line"></view>
+            </label>
+        </view>
+        <view class="history" bindtap="historicalRecords">查看历史快速买单记录</view>
+    </view>
+    <view class="inputBox">
+        <view id="left">
+            <view class="leftcolumn">
+                <view data-num="1" bindtap="bindInput">1</view>
+                <view data-num="2" bindtap="bindInput">2</view>
+                <view data-num="3" bindtap="bindInput">3</view>
+            </view>
+            <view class="leftcolumn">
+                <view data-num="4" bindtap="bindInput">4</view>
+                <view data-num="5" bindtap="bindInput">5</view>
+                <view data-num="6" bindtap="bindInput">6</view>
+            </view>
+            <view class="leftcolumn">
+                <view data-num="7" bindtap="bindInput">7</view>
+                <view data-num="8" bindtap="bindInput">8</view>
+                <view data-num="9" bindtap="bindInput">9</view>
+            </view>
+            <view class="leftcolumn">
+                <view data-num="0" bindtap="bindInput">0</view>
+                <view data-num="." bindtap="bindInput">.</view>
+            </view>
+        </view>
+        <view id="right">
+            <view bindtap="close" id="close">
+                <image src="/images/close_pay.png"></image>
+            </view>
+            <view bindtap="sendpay">
+                <text>付</text>
+                <text>款</text>
+            </view>
+        </view>
+    </view>
+</view>

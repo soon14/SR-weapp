@@ -1,0 +1,15 @@
+<view class="container" wx:if="{{isshow}}">
+    <!-- header -->
+    <include src="../template/indexTpl/header/header.wxml" />
+    <!-- paybox -->
+    <include src="../template/indexTpl/content/paybox.wxml" />
+    <!-- content -->
+    <include src="../template/indexTpl/content/Tpl1.wxml" wx:if="{{styleid == 0||styleid == 1}}" />
+    <include src="../template/indexTpl/content/Tpl2.wxml" wx:if="{{styleid == 2}}" />
+    <include src="../template/indexTpl/content/Tpl3.wxml" wx:if="{{styleid == 3}}" />
+    <include src="../template/indexTpl/content/Tpl4.wxml" wx:if="{{styleid == 4}}" />
+    <include src="../template/indexTpl/content/Tpl5.wxml" wx:if="{{styleid == 5}}" />
+    <include src="../template/indexTpl/content/Tpl6.wxml" wx:if="{{styleid == 6}}" />
+    <!-- footer -->
+    <include src="../template/indexTpl/footer/footer.wxml" />
+</view>

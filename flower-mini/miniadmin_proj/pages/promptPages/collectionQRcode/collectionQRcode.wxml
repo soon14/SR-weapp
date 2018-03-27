@@ -1,0 +1,19 @@
+<!--collectionQRcode.wxml 信息提示页(收款二维码)-->
+<view class="collectionQRcodebox">
+    <block wx:for="{{ lists }}">
+        <view class="collectionQRcode">
+            <view class="titlebox">
+                <text>来源：</text>
+                <text>{{item.title}}（ID={{item.id}}）</text>
+            </view>
+            <view class="image">
+                <image mode="aspectFill" src="{{cdnhost+item.codepath}}" data-src="{{cdnhost+item.codepath}}" bindtap="preimg"></image>
+            </view>
+            <view class="btn" data-src="{{host+item.codepath}}" bindtap="saveImageToPhotosAlbum">保存收款二维码</view>
+        </view>
+    </block>
+    <view class="addQRbtn" bindtap="goUrl">
+        <text>+</text>
+        <view>添加二维码</view>
+    </view>
+</view>

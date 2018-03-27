@@ -1,0 +1,7 @@
+.weui-textarea{
+  background-color: #fff;
+  height:150px;
+  padding:20rpx;
+  width:710rpx;
+  border-top:1rpx solid #E5E5E5;
+}

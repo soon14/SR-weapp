@@ -1,0 +1,196 @@
+<!--collageOrderDetails.wxml-->
+<!-- 
+    group.status 状态
+    1 未付款
+    2 已付款，待成团
+    3 已成团
+    4 待收货
+    5 已完成
+    6 拼团失败
+ -->
+<view class="container">
+    <!-- 成团状态 -->
+    <view class="topbox">
+        <block wx:if="{{status == 1}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext">未开团</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/yifukuan.png" class="daichengtuan"></image>
+            </view>
+        </block>
+        <block wx:if="{{status == 2}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext">已付款，待成团</view>
+                <view class="topbox-left-bottomtext">拼团需在活动结束前成团，剩余1天21小时32分</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/yifukuan.png" class="daichengtuan"></image>
+            </view>
+        </block>
+        <block wx:if="{{status == 3}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext-yichengtuan">已成团</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/yichengtuan.png" class="yichengtuan"></image>
+            </view>
+        </block>
+        <block wx:if="{{status == 4}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext-daishouhuo">待收货</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/dsh.png" class="daishouhuo"></image>
+            </view>
+        </block>
+        <block wx:if="{{status == 5}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext-yiwancheng">已完成</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/yiwancheng.png" class="yiwancheng"></image>
+            </view>
+        </block>
+        <block wx:if="{{status == 6}}">
+            <view class="topbox-left">
+                <view class="topbox-left-toptext-yiwancheng">拼团失败</view>
+            </view>
+            <view class="topbox-right">
+                <image mode="widthFix" src="/images/v2.2.0/yiwancheng.png" class="yiwancheng"></image>
+            </view>
+        </block>
+    </view>
+    <view class="middlebox">
+        <view class="middlebox-top">
+            <view>买家付款</view>
+            <view wx:if="{{status != 6}}">已成团</view>
+            <view wx:if="{{status != 6}}">商家发货</view>
+            <view wx:if="{{status != 6}}">交易完成</view>
+            <view wx:if="{{status == 6}}">拼团失败</view>
+        </view>
+        <!-- 拼团成功 -->
+        <view class="middlebox-bottom" wx:if="{{status < 6}}">
+            <view class="middlebox-bottom-yuan {{status >= 3?'middlebox-bottom-yuan1':''}}">
+                <image mode="widthFix" src="/images/v2.2.0/jywc.png" class="middlebox-bottom-jywc" wx:if="{{status >= 2}}"></image>
+            </view>
+            <view class="middlebox-bottom-line {{status >= 3?'middlebox-bottom-line1':''}}"></view>
+            <view class="middlebox-bottom-yuan {{status >= 3?'middlebox-bottom-yuan1':''}}">
+                <image mode="widthFix" src="/images/v2.2.0/jywc.png" class="middlebox-bottom-jywc" wx:if="{{status >= 3}}"></image>
+            </view>
+            <view class="middlebox-bottom-line  {{status >= 4?'middlebox-bottom-line1':''}}"></view>
+            <view class="middlebox-bottom-yuan {{status >= 4?'middlebox-bottom-yuan1':''}}">
+                <image mode="widthFix" src="/images/v2.2.0/jywc.png" class="middlebox-bottom-jywc" wx:if="{{status >= 4}}"></image>
+            </view>
+            <view class="middlebox-bottom-line  {{status == 5?'middlebox-bottom-line1':''}}"></view>
+            <view class="middlebox-bottom-yuan {{status == 5?'middlebox-bottom-yuan1':''}}">
+                <image mode="widthFix" src="/images/v2.2.0/jywc.png" class="middlebox-bottom-jywc" wx:if="{{status == 5}}"></image>
+            </view>
+        </view>
+        <!-- 拼图失败 status == 6 -->
+        <view class="middlebox-bottom2" wx:if="{{status == 6}}">
+            <view class="middlebox-bottom-yuan middlebox-bottom-yuan1"></view>
+            <view class="middlebox-bottom-line middlebox-bottom-line2"></view>
+            <view class="middlebox-bottom-yuan middlebox-bottom-yuan1">
+                <image mode="widthFix" src="/images/v2.2.0/jywc.png" class="middlebox-bottom-jywc"></image>
+            </view>
+        </view>
+    </view>
+    <view class="quhuorenbox">
+        <image src="/images/v2.2.0/xian.png" class="quhuorenbox-line"></image>
+        <view class="peisongbox" wx:if="{{status==4}}">
+            <image mode="widthFix" src="/images/v2.2.0/car.png"></image>
+            <view class="peisongbox-content">
+                <block wx:if="{{list.delivery.deliverytype!=1}}">
+                    <view class="peisongbox-content-top">{{list.delivery.express}}</view>
+                    <view class="peisongbox-content-bottom">商家备注：{{list.delivery.expressnotes}}</view>
+                </block>
+                <block wx:if="{{list.delivery.deliverytype==1}}">
+                    <view class="peisongbox-content-kuaidi">
+                        <view>{{list.delivery.express}}</view>
+                        <view wx:if="{{list.delivery.expressnum}}">运单号 {{list.delivery.expressnum}}</view>
+                    </view>
+                    <view class="peisongbox-content-qianshou">
+                        <view>签收：{{list.delivery.deleveryinfo.context}}</view>
+                        <view>{{list.delivery.deleveryinfo.time}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <!-- 收货人 -->
+        <view class="shouhuorenbox" wx:if="{{status==4&&list.is_leader}}">
+            <image mode="widthFix" src="/images/v2.2.0/dingwei.png"></image>
+            <view class="shouhuorenbox-right">
+                <view class="shouhuorenbox-right-top">
+                    <view>收货人: {{list.leaderinfo.fusername}}</view>
+                    <view>{{list.leaderinfo.ftelphone}}</view>
+                </view>
+                <view class="shouhuorenbox-right-bottom">收货地址:{{list.leaderinfo.faddress}}
+                </view>
+            </view>
+        </view>
+        <!-- 取货人 -->
+        <view class="quhuorenbox-content" wx:if="{{status==2||status==3||status==4&&!list.is_leader}}">
+            <view class="quhuorenbox-content-left">
+                <image mode="widthFix" src="/images/v2.2.0/dingwei.png"></image>
+                <view>取货人: {{list.leaderinfo.fusername}}</view>
+            </view>
+            <view class="quhuorenbox-content-right">{{list.leaderinfo.ftelphone}}</view>
+        </view>
+    </view>
+    <view class="bottombox">
+        <view class="bottombox-shopname">
+            <image mode="widthFix" src="/images/v2.2.0/dianpu.png"></image>
+            <view>{{list.shop.name}}</view>
+        </view>
+        <view class="bottombox-proinfo">
+            <image mode="aspectFill" src="{{cdnhost+list.product.mainpic}}"></image>
+            <view class="bottombox-proinfo-text">
+                <view class="bottombox-proinfo-text-title">{{list.product.title}}</view>
+                <view class="bottombox-proinfo-text-price">
+                    <view>¥{{list.productprice}}</view>
+                    <view>X{{list.productnum}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="bottombox-propric">
+            <view class="bottombox-propric-colume">
+                <view class="bottombox-propric-colume-left">商品金额</view>
+                <view class="bottombox-propric-colume-right">¥{{list.totalprice}}</view>
+            </view>
+            <view class="bottombox-propric-colume">
+                <view class="bottombox-propric-colume-left">运费</view>
+                <view class="bottombox-propric-colume-right">+¥{{list.postage}}</view>
+            </view>
+            <view class="bottombox-propric-colume">
+                <view class="bottombox-propric-colume-left">合计</view>
+                <view class="bottombox-propric-colume-right heji">¥{{list.trueprice}}</view>
+            </view>
+        </view>
+        <view class="bottombox-message">买家留言：{{list.note}}</view>
+        <!-- 订单信息 -->
+        <view class="bottombox-orderinfo">
+            <view class="bottombox-orderinfo-colume">
+                <view class="bottombox-orderinfo-colume-left">订单编号：</view>
+                <view class="bottombox-orderinfo-colume-right">{{list.no}}</view>
+            </view>
+            <view class="bottombox-orderinfo-colume">
+                <view class="bottombox-orderinfo-colume-left">创建时间：</view>
+                <view class="bottombox-orderinfo-colume-right">{{list.addtime}}</view>
+            </view>
+            <view class="bottombox-orderinfo-colume" wx:if="{{list.paytime != 0}}">
+                <view class="bottombox-orderinfo-colume-left">付款时间：</view>
+                <view class="bottombox-orderinfo-colume-right heji">{{list.paytime}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 团员 -->
+    <view class="btnbox" wx:if="{{!list.is_leader&&status==4||status==5}}">
+        <view bindtap="makePhoneCall">联系团长</view>
+        <view bindtap="confirmOrder">确认取货</view>
+    </view>
+    <!-- 团长 -->
+    <view class="btnbox1" wx:if="{{list.is_leader&&status==4||status==5}}">
+        <view bindtap="watchGroupMember">查看拼团成员</view>
+    </view>
+</view>

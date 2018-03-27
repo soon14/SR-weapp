@@ -1,0 +1,9 @@
+<!-- navbar.wxml -->
+<!-- 导航栏 -->
+<view class="navbarbox">
+    <scroll-view class="navbar_item_box" scroll-with-animation scroll-x scroll-into-view="{{toView}}">
+        <block wx:for="{{catelist}}" wx:key="{{index}}">
+            <text id="{{toviewlist[index]}}" data-id="{{index}}" class="navbar_item {{index == activeIndex ? 'navbar_item_active' : ''}} {{index == 0 ? 'navbar_item_0' : ''}}" bindtap="tabClick">{{item.title}}</text>
+        </block>
+    </scroll-view>
+</view>

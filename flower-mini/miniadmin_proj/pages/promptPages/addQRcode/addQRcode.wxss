@@ -1,0 +1,41 @@
+/*addQRcode.wxml 信息提示页(添加二维码)*/
+
+page {
+    background-color: #f7f7f7;
+    max-width: 750rpx;
+    overflow-x: hidden;
+}
+
+.toptext {
+    background-color: #fbf7e4;
+    font-size: 26rpx;
+    line-height: 46rpx;
+    text-align: center;
+    color: #ec6320;
+    margin-bottom: 20rpx;
+}
+
+input {
+    width: 690rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #ffffff;
+    font-size: 30rpx;
+    padding: 0 30rpx;
+}
+
+.custom-placeholder-class {
+    color: #bdbdbd;
+}
+
+.addbtn {
+    width: 690rpx;
+    height: 100rpx;
+    background-color: #4f9dd0;
+    text-align: center;
+    color: #fff;
+    border-radius: 50rpx;
+    line-height: 100rpx;
+    margin: 60rpx auto;
+}

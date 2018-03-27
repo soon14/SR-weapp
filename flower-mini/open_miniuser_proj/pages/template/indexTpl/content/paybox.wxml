@@ -1,0 +1,21 @@
+<!-- paybox.wxml -->
+<view class="paybox">
+    <navigator url="/pages/index/receiveCoupons/receiveCoupons" class="paybox-colume">
+        <view class="paybox-colume-center">
+            <image src="/images/v2.2.0/yhq.png" class="paybox-colume-image"></image>
+            <view class="paybox-colume-text">优惠券</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/order/payment/payment" class="paybox-colume">
+        <view class="paybox-colume-center">
+            <image src="/images/v2.2.0/ksmd.png" class="paybox-colume-image"></image>
+            <view class="paybox-colume-text">快速买单</view>
+        </view>
+    </navigator>
+    <navigator url="/pages/me/recharge/recharge" class="paybox-colume" wx:if="{{recharge}}">
+        <view class="paybox-colume-center">
+            <image src="/images/v2.2.0/yecz.png" class="paybox-colume-image"></image>
+            <view class="paybox-colume-text">余额充值</view>
+        </view>
+    </navigator>
+</view>

@@ -1,0 +1,136 @@
+/*tpl.wxss*/
+
+#tpl .weui-tab__panel {
+    padding-top: 0;
+}
+
+#tpl .septxt {
+    text-align: center;
+    padding: 35rpx;
+    font-size: 17px;
+    clear: both;
+}
+
+#tpl .prolist {
+    clear: both;
+    padding: 10rpx;
+}
+
+#tpl .prolist .proitem {
+    width: 345rpx;
+    margin: 0 10rpx 10rpx 10rpx;
+    float: left;
+}
+
+#tpl .prolist .proitem image {
+    width: 345rpx;
+    height: 345rpx;
+}
+
+#tpl .prolist .proitem .protitle {
+    font-size: 30rpx;
+}
+
+#tpl .prolist .proitem .proprice {
+    font-size: 34rpx;
+    color: brown;
+}
+
+#tpl .weui-tab__content {
+    text-align: center;
+}
+
+#tpl .newlist {
+    border-top:1rpx solid #e5e5e5;
+}
+
+#tpl .newlist .proitem {
+    width: 690rpx;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 30rpx 30rpx;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 1px 1px #ddd;
+    -moz-box-shadow: 1px 1px 1px 1px #ddd;
+    box-shadow: 1px 1px 1px 1px #ddd;
+}
+
+#tpl .newlist .proitem .sjimg {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tpl .newlist .proitem .top {
+    max-width: 650rpx;
+    display: block;
+    text-align: left;
+    padding: 0 20rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    font-size: 32rpx;
+}
+
+#tpl .newlist .proitem .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+}
+
+#tpl .newlist .proitem image {
+    width: 100%;
+    height: 460rpx;
+}
+
+#tpl .newlist .proitem .proprice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff322f;
+    font-size: 36rpx;
+}
+
+
+#tpl .newlist .proitem .proprice .delprice {
+    color: #aaaaaa;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    position: relative;
+}
+
+#tpl .newlist .proitem .proprice .delprice::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #aaa;
+}
+
+#tpl .newlist .proitem .buybnt {
+    margin: 0;
+    background: linear-gradient(to right, #ff6a3e, #ff3932)!important;
+    color: #fff;
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 156rpx;
+    border-radius: 40rpx;
+    font-size: 30rpx;
+}
+
+#tpl .newlist .proitem .buybnt::after {
+    border: none;
+}
+
+#tpl .nolist {
+    margin-bottom: 32rpx;
+}

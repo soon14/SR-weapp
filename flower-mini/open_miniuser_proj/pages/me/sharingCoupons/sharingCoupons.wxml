@@ -1,0 +1,32 @@
+<!-- 分享优惠券 -->
+<view class="contnet">
+    <view class="redbox">
+        <image src="/images/redbox.png" class="redboximg"></image>
+        <view class="shopimg">
+            <image src="{{cdnhost+mysharecoupon.shopinfo.logo}}"></image>
+        </view>
+        <view class="redboxtext">{{mysharecoupon.promotioninfo.title}}</view>
+        <view class="redboxnum">共{{mysharecoupon.share_num}}份</view>
+        <button open-type="share" class="renbtn" bindtap="onShareAppMessage">邀请好友一起领取</button>
+    </view>
+    <view class="expaln">邀请好友领券，你和好友都将获得以下优惠券</view>
+    <view class="quanbox">
+        <view class="quan">
+            <view class="topline"></view>
+            <view class="yuan yuan_left"></view>
+            <view class="yuan yuan_right"></view>
+            <view class="quancontent">
+                <view class="quancontent_top">
+                    <view>主题：{{mysharecoupon.couponinfo.title}}</view>
+                    <view class="quan_money">
+                        <text>¥</text>
+                        <text>{{mysharecoupon.couponinfo.value}}</text>
+                    </view>
+                </view>
+                <view class="quancontent_bottom" wx:if="{{mysharecoupon.couponinfo.uselimit==0}}">无门槛使用</view>
+                <view class="quancontent_bottom" wx:if="{{mysharecoupon.couponinfo.uselimit==1}}">满{{mysharecoupon.couponinfo.min_consumption}}可用</view>
+            </view>
+            <view class="quantime">时间：{{mysharecoupon.couponinfo.start_time}}至{{mysharecoupon.couponinfo.end_time}}</view>
+        </view>
+    </view>
+</view>

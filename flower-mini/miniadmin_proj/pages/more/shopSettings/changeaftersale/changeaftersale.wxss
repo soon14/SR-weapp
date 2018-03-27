@@ -1,0 +1,29 @@
+/*addlabel.wxss*/
+
+page {
+    background-color: #f7f7f7;
+}
+
+textarea {
+    width: 690rpx;
+    min-height: 200rpx;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #ffffff;
+    font-size: 30rpx;
+    padding:30rpx;
+}
+
+.custom-placeholder-class {
+    color: #bdbdbd;
+}
+
+.addbtn {
+    width: 690rpx;
+    height: 100rpx;
+    background-color: #4f9dd0;
+    text-align: center;
+    color: #fff;
+    border-radius: 50rpx;
+    line-height: 100rpx;
+    margin: 60rpx auto;
+}

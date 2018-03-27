@@ -1,0 +1,53 @@
+<!-- 我的优惠券 -->
+<view class="content">
+    <block wx:if="{{list.validlist}}" wx:for="{{list.validlist}}">
+        <navigator url="/pages/me/showCoupon/showCoupon?scene={{item.promotion_id}}">
+            <view class="couponsbox">
+                <view class="yuan yuan_left"></view>
+                <view class="yuan yuan_right"></view>
+                <view class="coupon">
+                    <view class="topline"></view>
+                    <view class="couponcontent">
+                        <view class="couponcontent_left">
+                            <view>{{item.proinfo.title}}</view>
+                            <text>时间：{{item.proinfo.start_time_text}}至{{item.proinfo.end_time_text}}</text>
+                        </view>
+                        <view class="couponcontent_right">
+                            <view class="coupon_money">
+                                <text>¥</text>
+                                <text>{{item.value}}</text>
+                            </view>
+                            <text class="guoqi" wx:if="{{item.proinfo.uselimit==0}}">无门槛使用</text>
+                            <text class="guoqi" wx:if="{{item.proinfo.uselimit==1}}">满{{item.min_consumption}}可用</text>
+                        </view>
+                    </view>
+                    <view class="couponbottom">{{item.statustext}}</view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:if="{{list.invalidlist}}" wx:for="{{list.invalidlist}}">
+        <view class="couponsbox">
+            <view class="yuan yuan_left"></view>
+            <view class="yuan yuan_right"></view>
+            <view class="coupon">
+                <view class="topline_guoqi"></view>
+                <view class="couponcontent">
+                    <view class="couponcontent_left">
+                        <view class="guoqi">{{item.proinfo.title}}</view>
+                        <text class="guoqi">时间：{{item.proinfo.start_time_text}}至{{item.proinfo.end_time_text}}</text>
+                    </view>
+                    <view class="couponcontent_right">
+                        <view class="coupon_money">
+                            <text class="guoqi">¥</text>
+                            <text class="guoqi">{{item.value}}</text>
+                        </view>
+                        <text class="guoqi" wx:if="{{item.proinfo.uselimit==0}}">无门槛使用</text>
+                        <text class="guoqi" wx:if="{{item.proinfo.uselimit==1}}">满{{item.min_consumption}}可用</text>
+                    </view>
+                </view>
+                <view class="couponbottom guoqi">{{item.statustext}}</view>
+            </view>
+        </view>
+    </block>
+</view>

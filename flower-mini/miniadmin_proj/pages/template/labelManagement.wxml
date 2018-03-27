@@ -1,0 +1,24 @@
+<!-- labelManagement.wxml（标签管理） -->
+<view class="labelmanagementbox">
+    <view class="labeltoptext">
+        {{customerpageData.labeltoptext}}
+        <navigator url="/pages/customer/systemTagQuery/systemTagQuery" hover-class="navigator-hover">
+            <text>{{customerpageData.labeltoptext1}}</text>
+        </navigator>
+    </view>
+    <view class="labelcontent">
+        <block wx:for="{{labelmanagementData}}" wx:key="labelkey">
+            <view>
+                <text class="">{{item.name}}</text>
+                <text class="dellabel" data-labelid="{{item.id}}<" bindtap="dellabel">{{customerpageData.labelmanagementDeltext}}</text>
+            </view>
+        </block>
+    </view>
+    <!-- 跳转新增标签页面 -->
+    <navigator url="/pages/customer/addlabel/addlabel" hover-class="navigator-hover">
+        <view class="goaddpage">
+            <text>+</text>
+            <view>{{customerpageData.labelmanagementAddtext}}</view>
+        </view>
+    </navigator>
+</view>

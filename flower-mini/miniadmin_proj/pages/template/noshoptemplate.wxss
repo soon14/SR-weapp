@@ -1,0 +1,23 @@
+/*noshoptemplate.wxml*/
+
+.noshop {
+    text-align: center;
+    padding-top: 220rpx;
+}
+
+.noshop image {
+    width: 206rpx;
+    height: 182rpx;
+}
+
+.noshop text {
+    color: #bbb;
+    font-size: 30rpx;
+    display: block;
+    padding: 40rpx 0;
+}
+
+.noshop button {
+    width: 40%;
+    font-size: 32rpx;
+}

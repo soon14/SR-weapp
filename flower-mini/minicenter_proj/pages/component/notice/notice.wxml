@@ -1,0 +1,2 @@
+<!-- 乐墨协议 -->
+<web-view src="{{webViewUrl}}"></web-view>

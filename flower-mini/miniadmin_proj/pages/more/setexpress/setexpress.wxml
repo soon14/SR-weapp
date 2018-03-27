@@ -1,0 +1,20 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <checkbox-group bindchange="checkboxChange">
+      <view class="weui-cells weui-cells_after-title" style="margin-bottom:80px;">
+        <block wx:for="{{list}}">
+          <view class="weui-cell weui-cell_access">
+            
+            <view class="weui-cell__ft">
+              <checkbox name="selexpress" checked="{{item.is}}" value="{{item.id}}" />
+            </view>
+            <view class="weui-cell__bd" bindtap="click1" data-id="{{idx}}">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </checkbox-group>
+    <view class="weui-btn-area">
+      <button class="weui-btn" formType="submit" type="primary">确定</button>
+    </view>
+  </form>
+</view>

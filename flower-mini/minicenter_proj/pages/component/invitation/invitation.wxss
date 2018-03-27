@@ -1,0 +1,369 @@
+page {
+    background-color: #3583db;
+}
+
+.contentbox {
+    margin: 0 auto;
+    margin-top: 32rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 690rpx;
+    overflow-x: hidden;
+    border-radius: 20rpx;
+    background-color: #fff;
+    position: relative;
+}
+
+.help {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 28rpx;
+    top: 28rpx;
+}
+
+.content {
+    width: 630rpx;
+    overflow-x: hidden;
+    padding-bottom: 60rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.yxhyyq {
+    margin: 0 auto;
+    margin-top: 60rpx;
+    color: #daaa67;
+    width: 300rpx;
+    height: 50rpx;
+    font-size: 28rpx;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yxhyyq .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 23rpx;
+    border-top: 1px solid #daaa67;
+}
+
+.yxhyyq wx-view {
+    position: absolute;
+    left: 72rpx;
+    right: 72rpx;
+    top: 0;
+    background-color: #fff;
+    padding: 0 10rpx;
+}
+
+.yqtext {
+    font-size: 40rpx;
+    margin-top: 20rpx;
+    color: #daaa67;
+    text-align: center;
+}
+
+
+
+.redbox {
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 530rpx;
+    height: 270rpx;
+    overflow: hidden;
+}
+
+.redbox wx-image {
+    width: 530rpx;
+    height: 270rpx;
+}
+
+.redboxcontent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 270rpx;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redboxprice {
+    line-height: 270rpx;
+    font-size: 114rpx;
+    color: #d49c4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fhnum {
+    font-size: 114rpx;
+}
+
+.fh {
+    font-size: 91rpx;
+}
+
+.textbox {
+    margin-top: 56rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24rpx;
+    color: #888888;
+    line-height: 36rpx;
+}
+
+.textbox text {
+    color: #ff6b31;
+}
+
+
+.yqhy {
+    width: 420rpx;
+    height: 80rpx;
+    margin-top: 40rpx;
+    border-radius: 40rpx;
+    line-height: 80rpx;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6a3e, #ff3932);
+}
+
+
+.fengebox {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    height: 50rpx;
+    background-color: #fff;
+}
+
+.fengebox wx-view {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background-color: #3583db;
+}
+
+.fengebox wx-view:nth-of-type(1) {
+    left: -25rpx;
+}
+
+.fengebox wx-view:nth-of-type(2) {
+    right: -25rpx;
+}
+
+.fengex {
+    height: 0;
+    position: absolute;
+    left: 40rpx;
+    right: 40rpx;
+    top: 24rpx;
+    border-top: 3rpx dashed #e2e2e2;
+}
+
+
+
+
+
+
+/*uselist*/
+
+.uselist {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding-bottom: 30rpx;
+    min-height: 266rpx;
+}
+
+.uselisttitle {
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    margin: 22rpx auto;
+}
+
+.uselisttitle wx-text {
+    color: #ff5f3b;
+}
+
+.userinfobox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.usercolume {
+    width: 590rpx;
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.telphone {
+    font-size: 24rpx;
+    color: #888888;
+}
+
+.usestatus {
+    font-size: 24rpx;
+    color: #888888;
+}
+
+.tix {
+    font-size: 24rpx;
+    color: #888888;
+}
+
+.tix wx-text {
+    color: #ff5f3b;
+}
+
+.tixbtn {
+    width: 130rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border: 1px solid #39a1db;
+    color: #fff;
+    font-size: 24rpx;
+    color: #39a1db;
+    border-radius: 25rpx;
+}
+
+
+
+
+
+
+
+/*remindbox*/
+
+.remindbox,
+.jbzybox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remindcontent,
+.jbzy {
+    width: 620rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f9f7fa;
+    border-radius: 10rpx;
+}
+
+.tishi {
+    margin-top: 62rpx;
+    font-size: 36rpx;
+    color: #000;
+    text-align: center;
+}
+
+.remindinput {
+    width: 500rpx;
+    height: 80rpx;
+    border: 1px solid #e5e5e5;
+    font-size: 28rpx;
+    color: #667494;
+    line-height: 80rpx;
+    padding: 0 30rpx;
+    border-radius: 4rpx;
+    margin-top: 30rpx;
+}
+
+.remidtext {
+    margin: 0 auto;
+    margin-top: 50rpx;
+    font-size: 28rpx;
+    color: #888888;
+}
+
+.remidtext wx-text {
+    color: #667494;
+}
+
+.wangzhi {
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    color: #667494;
+    text-align: center;
+}
+
+.btnbox {
+    margin-top: 50rpx;
+    border-top: 1px solid #d2d3d5;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 36rpx;
+    color: #4287d4;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnbox wx-view {
+    flex: 1;
+}
+
+.btnbox wx-view:nth-of-type(1) {
+    color: #19191a;
+    border-right: 1px solid #d2d3d5;
+}
+
+
+
+/*jbzybox*/
+
+.jbzybox .jbzy {
+    width: 500rpx;
+    align-items: flex-start;
+    padding: 30rpx;
+    font-size: 28rpx;
+    color: #888888;
+    text-align: left;
+}

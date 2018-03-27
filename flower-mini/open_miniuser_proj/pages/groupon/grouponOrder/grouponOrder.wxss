@@ -1,0 +1,372 @@
+/*拼团确认订单*/
+
+.container {
+    padding-bottom: 120rpx;
+}
+
+.topexplain {
+    width: 690rpx;
+    padding: 25rpx 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffecc0;
+}
+
+.topexplain-left {
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 50%;
+    border: 2rpx solid #d68c34;
+    color: #d68c34;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 28rpx;
+}
+
+.topexplain-right {
+    flex: 1;
+    margin-left: 15rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 26rpx;
+    color: #d68c34
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 750rpx;
+}
+
+.info-colume {
+    width: 690rpx;
+    height: 90rpx;
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1rpx solid #e5e5e5;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.info-colume:nth-of-type(1) {
+    border-top: 0 solid #e5e5e5;
+}
+
+.info-colume input {
+    flex: 1;
+    margin-left: 43rpx;
+}
+
+
+
+
+
+/*contentbox*/
+
+.contentbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 750rpx;
+    background-color: #ffffff;
+    margin-top: 20rpx;
+}
+
+.contentbox-top {
+    width: 690rpx;
+    padding: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentbox-top-image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.contentbox-top-text {
+    flex: 1;
+    margin-left: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contentbox-top-text-title {
+    color: #666666;
+    font-size: 28rpx;
+}
+
+.contentbox-top-text-numbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentbox-top-text-num {
+    color: #666666;
+    font-size: 30rpx;
+}
+
+.contentbox-top-text-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentbox-top-text-active wx-view ,.contentbox-top-text-active-middle{
+    width: 60rpx;
+    height: 60rpx;
+    background-color: #f4f4f4;
+    line-height: 60rpx;
+    text-align: center;
+    color: #adadad;
+    font-size: 34rpx;
+}
+
+.contentbox-top-text-active-left {
+    border-radius: 8rpx 0 0 8rpx;
+}
+
+.contentbox-top-text-active-right {
+    border-radius: 0 8rpx 8rpx 0;
+}
+
+.contentbox-top-text-active .contentbox-top-text-active-middle {
+    width: 80rpx;
+    margin: 0 4rpx;
+    color: #333333;
+}
+
+
+
+
+
+/*proinfo*/
+
+.proinfo {
+    width: 750rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.proinfo-colume {
+    width: 690rpx;
+    padding: 0 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1rpx solid #e5e5e5;
+}
+
+.heji {
+    font-size: 30rpx;
+    color: #ff322f;
+}
+
+.remarks {
+    width: 750rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.remarks-title {
+    margin-left: 30rpx;
+}
+
+.remarks input {
+    flex: 1;
+    margin-left: 70rpx;
+    margin-right: 30rpx;
+}
+
+
+
+
+
+/*btnbox*/
+
+.btnbox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.btnbox-pay {
+    width: 280rpx;
+    height: 100rpx;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg, #ff6a3e, #ff3932);
+    color: #ffffff;
+    font-size: 34rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.btnbox-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.btnbox-left view {
+    color: #ff3a32;
+    margin-right: 20rpx;
+}
+
+
+
+
+/*quhuoren*/
+
+.address {
+    width: 750rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20rpx auto;
+}
+
+.address-line {
+    width: 100%;
+    height: 4rpx;
+}
+
+.addressbox {
+    width: 690rpx;
+    padding: 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.addressbox-img {
+    width: 26rpx;
+    height: 29rpx;
+}
+
+.addressbox-right {
+    flex: 1;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    color: #333333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.select-line {
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #c7c7cc;
+    border-right: 4rpx solid #c7c7cc;
+    transform: rotate(45deg);
+}
+
+
+
+/*paytypebox*/
+
+.paytypebox {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paytypebox-title {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: left;
+    width: 690rpx;
+    padding: 0 30rpx;
+    background-color: #f8f8f8;
+    font-size: 28rpx;
+    color: #888888;
+}
+
+.paytypebox-type {
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.peytypeList {
+    width: 690rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30rpx;
+    width: 690rpx;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.peytypeList wx-label {
+    flex: 1;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.peytypeList wx-label:nth-of-type(1) {
+    border: 0;
+}
+
+.recharge {
+    width: 110rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border: 1px solid #ff5238;
+    color: #ff5238;
+}
+
+.maxtitle {
+    height: 80rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+}
