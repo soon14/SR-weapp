@@ -1,5 +1,0 @@
-<!--addlabel.wxml-->
-<view class="container">
-    <input placeholder="请输入标签名称" value="{{inputValue}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindchange="" bindinput="bindKeyInput"/>
-    <button class="addbtn" bindtap="addlabelRequest" hover-class="custom-button-hover-class">添加</button>
-</view>

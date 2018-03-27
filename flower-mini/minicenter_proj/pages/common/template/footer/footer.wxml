@@ -1,7 +1,0 @@
-<!-- footer.wxml -->
-<view class="footerbox">
-    <view class="footer">
-        <image src="/images/logo.png"></image>
-        <text>乐墨花时光 技术支持</text>
-    </view>
-</view>

@@ -1,7 +1,0 @@
-<!--successfulOpening.wxml 信息提示页(开通成功)-->
-<view class="group" style="height: {{windowHeight}}">
-    <icon type="success" size="50" />
-    <block wx:for="{{ textData }}">
-        <text> {{item.text}} </text>
-    </block>
-</view>

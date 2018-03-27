@@ -1,5 +1,0 @@
-<!--mobicarte.wxml-->
-<view class="container">
-    <input placeholder="请输入兑换码" value="{{inputValue}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="bindKeyInput" />
-    <view class="btn" bindtap="request">{{btntext}}</view>
-</view>

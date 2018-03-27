@@ -1,2 +1,0 @@
-<!-- 乐墨公告 -->
-<web-view src="{{webViewUrl}}"></web-view>

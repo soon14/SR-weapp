@@ -1,7 +1,0 @@
-<!-- footer.wxml -->
-<view class="weui-footer footer">
-    <view class="weui-footer__links">
-        <view class="weui-footer__link">
-            <image src="/images/logo.png"></image> 乐墨花时光 技术支持</view>
-    </view>
-</view>

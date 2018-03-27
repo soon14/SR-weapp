@@ -1,3 +1,0 @@
-/*products.wxss （商品管理统一样式引入）*/
-
-@import '/pages/index/products/products.wxss';

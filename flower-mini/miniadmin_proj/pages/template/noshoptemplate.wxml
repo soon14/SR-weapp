@@ -1,8 +1,0 @@
-<!-- 没有店铺的模版 -->
-<template name="noshop">
-    <view class="noshop weui-tab__content">
-        <image src='{{imgurl}}'></image>
-        <text>{{txt}}</text>
-        <button class="weui-btn" bindtap="Loginagain" type="primary">{{btntxt}}</button>
-    </view>
-</template>
