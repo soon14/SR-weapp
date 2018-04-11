@@ -5,10 +5,12 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const db = require('mongoskin').db('localhost:27017/animals');
 
 // 加载路由控制
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const testRouter = require('./routes/test');
 
 // 创建项目实例
 const app = express();
@@ -36,6 +38,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 匹配路径和路由
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/a', testRouter);
+
+db.collection('mamals').find().toArray(function(err, result) {
+  if (err) throw err;
+  console.log(result);
+});
 
 // catch 404 and forward to error handler 404错误处理
 app.use(function(req, res, next) {
