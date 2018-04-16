@@ -1,0 +1,13 @@
+logs/
+npm-debug.log
+node_modules/
+coverage/
+.idea/
+run/
+.DS_Store
+*.swp
+package-lock.json
+yarn.lock
+.vscode/
+config/env_config.js
+
