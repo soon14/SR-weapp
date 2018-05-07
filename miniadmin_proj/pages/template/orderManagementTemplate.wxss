@@ -1,0 +1,171 @@
+/*@import '/pages/template/orderManagementTemplate.wxss';*/
+/*内容模版*/
+
+.contentemplate {
+    height: 332rpx;
+    width: 750rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.contenttop {
+    padding: 0 30rpx;
+    height: 100rpx;
+    display: flex;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenttop wx-view {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contenttop .contenttop_left {
+    text-align: left;
+    height: 64rpx;
+}
+
+.contenttop .contenttop_left .contenttop_left_user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contenttop .contenttop_left .contenttop_left_user wx-image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+
+.contenttop .contenttop_left wx-view:nth-of-type(1),
+.contenttop .contenttop_right wx-view:nth-of-type(1) {
+    color: #333;
+    font-size: 26rpx;
+    line-height: 26rpx;
+}
+
+.contenttop .contenttop_left wx-view:nth-of-type(2),
+.contenttop .contenttop_right wx-view:nth-of-type(2) {
+    color: #999;
+    font-size: 22rpx;
+    line-height: 22rpx;
+}
+
+.contenttop .contenttop_right {
+    text-align: right;
+    height: 64rpx;
+}
+
+.contenttop .contenttop_right wx-view:nth-of-type(1) {
+    color: #4f9dd0;
+}
+
+.contentcenter {
+    flex: 1;
+    display: flex;
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.contentcenter .contentcenter1 {
+    flex: 1;
+    padding: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentcenter .contenimg {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.contentcenter .contentcenterRight {
+    flex: 1;
+    height: 90rpx;
+    margin-left: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contentcenterRight .contentcenterRight_top {
+    flex: 1;
+    font-size: 28rpx;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contentcenterRight .contentcenterRight_top wx-text {
+    max-width: 570rpx;
+    max-height:40rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contentcenterRight .contentcenterRight_bottom {
+    flex: 1;
+    font-size: 24rpx;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentcenterRight .contentcenterRight_bottom wx-view:nth-of-type(2) {
+    flex: 1;
+    margin-left: 20rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contentcenterRight .contentcenterRight_bottom wx-view wx-text:nth-of-type(2) {
+    color: #f06f48;
+}
+
+.contentbottom {
+    height: 80rpx;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    line-height: 80rpx;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.contentbottom wx-view {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentbottom wx-view:nth-of-type(1) {
+    border-right: 1px solid #ebebeb;
+}
+
+.contentbottom wx-view:nth-of-type(2) {
+    color: #4f9dd0;
+}
+
+.contentbottom wx-image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+
+.completed_color {
+    color: #e96565!important;
+}

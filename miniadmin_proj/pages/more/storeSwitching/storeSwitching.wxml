@@ -1,0 +1,22 @@
+<view class="weui-cells weui-cells_after-title" wx:for="{{list}}">
+    <block wx:if="{{isshow}}">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-shopid="{{item.id}}" bindtap="switch">
+            <view class="weui-cell__bd">
+                <image mode="aspectFit" src="https://ilearnmore.net{{item.logo}}" class="jian"></image>
+                <text>{{item.name}}</text>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{item.id == nowshopid}}">
+                <view class="current">当前</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{item.id != nowshopid}}">
+                切换
+            </view>
+        </view>
+    </block>
+</view>
+<block wx:if="{{!isshow}}">
+    <view class="goCenter">
+        <view class="goCenter-text">你还没有已开通的乐墨花时光店铺</view>
+        <view class="goCenter-btn" bindtap="goMinicenterAppId">去乐墨商家中心</view>
+    </view>
+</block>

@@ -1,0 +1,101 @@
+.reg-top image{
+  width: 100%;
+  vertical-align: top;
+  height: 180rpx;
+}
+.reg-main{
+  padding: 0 60rpx;
+}
+.reg-main .title{
+  font-size: 30rpx;
+  color:#666;
+  padding:26rpx 0 20rpx 0;
+}
+.reg-main .title navigator{
+  float: right;
+}
+.reg-main .title image{
+  float: right;
+  width: 32rpx;
+  height:32rpx;
+}
+.reg-main .row{
+  border-bottom: 2rpx solid #E2E2E2;
+  padding: 18rpx 0;
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.reg-main .row image{
+  float: left;
+  width:30rpx;
+  height: 32rpx;
+  margin-right: 30rpx;
+}
+.reg-main .row .wenhao{
+  width: 32rpx;
+}
+.reg-main .row .wenhao image{
+  width:32rpx;
+  height:32rpx;
+}
+.reg-main .row image.yqrIcon{
+  width: 30rpx;
+  height: 26rpx;
+}
+.reg-main .row image.pIcon{
+  width: 24rpx;
+  height: 32rpx;
+  margin-right: 36rpx;
+}
+.reg-main .row image.yzmIcon{
+  width: 31rpx;
+  height: 34rpx;
+  margin-right: 29rpx;
+}
+.reg-main .row input{
+  flex: 1;
+  height:42rpx;
+  line-height:42rpx;
+  font-size:30rpx;
+  color:#666;
+}
+.reg-main .row .getCode{
+  font-size: 30rpx;
+  color:#3583db;
+  border:0;
+}
+.reg-main .bindWx{
+  display: block;
+  width: 360rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border:2rpx solid #3583db;
+  color:#3583db;
+  font-size: 30rpx;
+  margin: 40rpx auto 0 auto;
+}
+.row-protocol{
+  font-size:26rpx;
+  color:#858c96;
+  line-height: 32rpx;
+  margin-top:60rpx; 
+}
+.row-protocol .check{
+  float: left;
+  margin-right: 10rpx;
+}
+.row-protocol .check image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.row-btn button{
+  width: 100%;
+  background-image: linear-gradient(0deg, rgba(168, 217, 255, 1) 0%, rgba(146, 207, 255, 1) 100%);
+	border-radius: 10rpx 10rpx 10rpx 10rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 60rpx 0;
+  color:#fff;
+  font-size: 32rpx;
+}

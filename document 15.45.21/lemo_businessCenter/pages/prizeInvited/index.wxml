@@ -1,0 +1,63 @@
+<view class="prizeInvited">
+    <view class="topMsg">
+      <image src="../../images/prize.jpg" class='topImg'></image>
+      <view class="prizeCase">
+          <text class="item">137****获得400乐墨币，</text>
+          <text class="item">138****获得800积分</text>
+      </view>
+    </view>
+    <view class="prizeStatus">
+        <view class="hd">
+            <view class="col">
+                <view class="num">28</view>
+                <view class="p">已邀请商家</view>
+            </view>
+            <view class="col">
+                <view class="num">1298</view>
+                <view class="p">累计奖励（积分）</view>
+            </view>
+        </view>
+        <navigator src="" class="become">成为代理商，邀请奖励现金</navigator>
+    </view> 
+    <view class="flow">
+        <view class="title comTitle">
+            <image src="../../images/yqhy_left.png"></image>
+            <text>邀请流程</text>
+            <image src="../../images/yqhy_right.png"></image>
+        </view>
+        <view class="flow-step">
+            <view class="col">
+                <image src='../../images/yqhy_fenxiang.png' class="icon"></image>
+                <view class="p">分享本页面\r\n</view>
+                <view class="p">给好友</view>
+            </view>
+            <image src='../../images/yqhy_turn.png' class="arrow"></image>
+            <view class="col">
+                <image src='../../images/yqhy_fenxiang.png' class="icon"></image>
+                <view class="p">好友在小程序</view>
+                <view class="p">完成注册</view>
+            </view>
+            <image src='../../images/yqhy_turn.png'  class="arrow"></image>
+            <view class="col">
+                <image src='../../images/yqhy_fenxiang.png' class="icon"></image>
+                <view class="p">好友消费</view>
+                <view class="p">双方有礼</view>
+            </view>
+        </view>
+    </view>
+    <navigator src="" class="invited">
+        立即邀请好友
+    </navigator>
+    <view class="record">
+        <view class="title comTitle">
+            <image src="../../images/yqhy_left.png"></image>
+            <text>奖励纪录</text>
+            <image src="../../images/yqhy_right.png"></image>
+        </view>
+        <view class="recordMsg">
+            <view>邀请136****8765使用积分奖励10</view>
+            <view>被邀请的139****2365消费奖励积分20</view>
+            <view>购买插件奖励积分20</view>
+        </view>
+    </view>
+</view>

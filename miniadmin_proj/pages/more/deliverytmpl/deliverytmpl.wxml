@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="weui-navbar" style="background-color:#F8F8F8;">
+    <view class="weui-navbar__item" bindtap="tabClick">
+      <view class="weui-navbar__title">运费模板</view>
+    </view>
+    <view class="weui-navbar__item weui-bar__item_on">
+      <view class="weui-navbar__title">配送方式</view>
+    </view>
+    <view class="weui-navbar__slider" style="left:375rpx;"></view>
+  </view>
+  <view class="weui-tab__panel11" style="padding-top:50px;">
+    <block wx:for="{{list}}">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view url="" class="weui-media-box weui-media-box_appmsg">
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.title}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-panel__ft">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view style="float:left;">
+                <view class="weui-media-box__desc">已被{{item.num}}个运费模板使用</view>
+              </view>
+              <view style="float:right;">
+                <navigator url="/pages/input/input?title=编辑配送方式&desc=配送方式名称&value={{item.title}}&key=editdelivery&id={{item.id}}">
+                  <text>编辑</text>
+                </navigator> |
+                <text class="del" data-id="{{item.id}}" bindtap="delitem">删除</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="addnew">新增配送方式</button>
+  </view>
+</view>

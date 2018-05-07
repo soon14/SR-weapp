@@ -1,0 +1,8 @@
+/* (拼团订单管理)*/
+@import '/pages/index/orderManagement/orderManagement.wxss';
+
+@import '/pages/template/header_navbar.wxss';
+
+.contentemplate{
+	height: auto;
+}

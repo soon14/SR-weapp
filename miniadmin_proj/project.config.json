@@ -1,0 +1,96 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.90",
+	"appid": "wx4ad35d3a6b70926a",
+	"projectname": "%E5%8D%96%E5%AE%B6%E7%89%88",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "拼团设置",
+					"pathName": "pages/promotion/groupon/groupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "时间选择",
+					"pathName": "pages/getTime/getTime",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "插件",
+					"pathName": "pages/promotion/plugIns/plugIns",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "营销",
+					"pathName": "pages/promotion/promotion",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "插件购买",
+					"pathName": "pages/promotion/plugIns/plugInsDetail/plugInsDetail",
+					"query": "id=1"
+				},
+				{
+					"id": 5,
+					"name": "切换店铺",
+					"pathName": "pages/more/storeSwitching/storeSwitching",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "引导页",
+					"pathName": "pages/bootPage/bootPage",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "登陆",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "pages/more/accountSettings/accountSettings",
+					"pathName": "pages/more/accountSettings/accountSettings",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "pages/index/addcolumn/addcolumn",
+					"pathName": "pages/index/orderManagement/orderdetails/orderdetails",
+					"query": ""
+				}
+			]
+		}
+	}
+}

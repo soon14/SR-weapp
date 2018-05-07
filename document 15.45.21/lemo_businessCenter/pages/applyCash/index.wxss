@@ -1,0 +1,75 @@
+page{
+  background: #edeef0;
+}
+.applyCash .hd{
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+}
+.applyCash .hd .row{
+    overflow: hidden;
+    padding: 20rpx 0;
+    line-height: 60rpx;
+}
+.applyCash .hd .row .tit{
+  float: left;
+  font-size: 32rpx;
+  color:#333;
+}
+.applyCash .hd .row .set{
+  float: right;
+  font-size: 30rpx;
+  color:#aaa;
+}
+.applyCash .hd .row .haveSet{
+  color:#333;
+}
+.applyCash .hd .row .set image{
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 18rpx;
+}
+.applyCash .hd .tips{
+  font-size:26rpx;
+  color:#c3a17a;
+  line-height:80rpx;
+}
+.applyCash .amount{
+  background: #fff;
+  margin-bottom: 80rpx;
+  padding: 30rpx 30rpx 0;
+}
+.applyCash .amount .tit{
+  font-size: 30rpx;
+  color:#666;
+}
+.applyCash .inpMoney{
+  font-size: 70rpx;
+  color:#333;
+  display: flex;
+  padding: 30rpx 0 40rpx 0;
+  border-bottom: 2rpx solid #EEE;
+  align-items: center;
+  line-height: 70rpx;
+}
+.applyCash .inpMoney input{
+  flex: 1;
+  height: 70rpx;
+}
+.applyCash .amount .total{
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color:#666;
+}
+.applyCash button{
+  width: 690rpx;
+	height: 90rpx;
+	background: linear-gradient(0deg, rgba(168, 217, 255, 1) 0%, rgba(146, 207, 255, 1) 100%);
+	border-radius: 10rpx;
+  margin: 0 auto;
+  font-size: 32rpx;
+  color:#fff;
+}
+.applyCash button::after{
+  border:none;
+}

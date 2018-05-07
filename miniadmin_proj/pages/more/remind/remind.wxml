@@ -1,0 +1,7 @@
+<!-- 订单提醒手机号 -->
+<form bindsubmit="formSubmit" report-submit>
+    <view class="container">
+        <input placeholder="请输入订单提醒手机号" value="{{telphone}}" type="number" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="getTelphone" />
+        <button class="addbtn" formType="submit" hover-class="custom-button-hover-class">保存</button>
+    </view>
+</form>

@@ -1,0 +1,200 @@
+/*门店设置*/
+
+page {
+    background-color: #f7f7f7;
+}
+
+.contentbox {
+    width: 750rpx;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shopimagebox {
+    background-color: #f7f7f7;
+    padding: 30rpx;
+    width: 690rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+.shopimagetoptext {
+    color: #666666;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    text-align: left;
+}
+
+.shopimage {
+    width: 690rpx;
+    height: 360rpx;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopimage1 {
+    background-color: #f7f7f7;
+}
+
+.morenshopimg {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.shopimage .changeback2,
+.shopimage .shopvideo {
+    width: 640rpx;
+    height: 360rpx;
+}
+
+.shopimagebottomtext {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    padding-top: 30rpx;
+    color: #4f9dd0;
+    text-align: center;
+}
+
+.shopimagebottomtextjy {
+    font-size: 24rpx;
+    color: #999999;
+    text-align: center;
+    margin: 10rpx auto;
+}
+
+.sj {
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #acacac;
+    border-right: 4rpx solid #acacac;
+    transform: rotate(45deg);
+}
+
+.shopinfobox {
+    width: 750rpx;
+    font-size: 30rpx;
+    color: #333333;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.shopinfobox .address {
+    height: 100rpx;
+    padding: 0 30rpx;
+    width: 690rpx;
+    line-height: 100rpx;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address wx-view:nth-of-type(2) {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.address wx-view:nth-of-type(2) .ad {
+    text-align: left;
+    line-height: 100rpx;
+    max-width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999999;
+    font-size: 26rpx;
+}
+
+
+
+
+
+
+/**/
+
+.mdfwbox {
+    margin-top: 30rpx;
+    max-width: 750rpx;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.mdfwbox .mdfwtitle {
+    width: 690rpx;
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    color: #333333;
+    line-height: 46rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.mdfwtitle wx-navigator {
+    color: #4f9dd0;
+}
+
+.mdfwbox .mdfw {
+    width: 690rpx;
+    padding: 0 30rpx;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 26rpx;
+    color: #333333;
+    line-height: 122rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fwcolume {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fwcolume wx-view {
+    margin: 20rpx 0;
+    margin-right: 40rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fwcolume wx-view wx-image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-bottom: 10rpx;
+}
+
+.fwcolume wx-view wx-text {
+    color: #999999;
+    font-size: 26rpx;
+    line-height: 46rpx;
+}
+
+.logo {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    margin-right: 15px;
+}

@@ -1,0 +1,118 @@
+/*推广(客户充值设置)*/
+
+page {
+    background-color: #f7f7f7;
+    color: #999999;
+    font-size: 30rpx;
+    line-height: 100rpx;
+}
+
+.section {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.sectionbb {
+    position: relative;
+}
+
+.section .section__title {
+    margin-right: 18rpx;
+    color:#333333;
+}
+
+.section wx-input {
+    flex: 1;
+    padding: 0 30rpx;
+    color: #333;
+}
+
+.section_nom {
+    border-top: 0;
+    margin-top: 0;
+}
+
+.save {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4f9dd0;
+    color: #f9f9f9;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 32rpx;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    z-index: 100;
+}
+
+.add {
+    color: #39a2dc;
+    font-size: 30rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background: #fff;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add wx-text {
+    font-size: 50rpx;
+    padding-bottom: 12rpx;
+}
+
+.delbtnbox {
+    height: 206rpx;
+    width: 100rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.delbtnbox_null {
+    display: none;
+}
+
+.delbtn {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+
+
+
+
+/*说名*/
+
+.explainbox {
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 46rpx;
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+    color: #333333;
+    padding-bottom: 100rpx;
+}
+
+.explainbox view:nth-of-type(1) {
+    font-size: 30rpx
+}

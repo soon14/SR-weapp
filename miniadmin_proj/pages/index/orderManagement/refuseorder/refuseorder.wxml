@@ -1,0 +1,82 @@
+<view class="container">
+    <form bindsubmit="formSubmit" report-submit>
+        <view class="weui-cells weui-cells_after-title">
+            <!-- 实物订单 -->
+            <block wx:if="{{type!=2}}">
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd" data-stype="1" bindtap="seltype">商家无法提供时令花材</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 1}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd" data-stype="2" bindtap="seltype">商家不方便接单</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 2}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access" bindtap="seltype">
+                    <view class="weui-cell__bd" data-stype="3" bindtap="seltype">无法满足定制鲜花要求（价格、花材等）</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 3}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access" bindtap="seltype">
+                    <view class="weui-cell__bd" data-stype="4" bindtap="seltype">订单要求制作时间过短，不接急单
+                    </view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 4}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access" bindtap="seltype">
+                    <view class="weui-cell__bd" data-stype="5" bindtap="seltype">顾客预算与定制需求不匹配
+                    </view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 5}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access" bindtap="seltype">
+                    <view class="weui-cell__bd" data-stype="6" bindtap="seltype">超出配送范围</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 6}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access" bindtap="seltype">
+                    <view class="weui-cell__bd" data-stype="7" bindtap="seltype">其他原因</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 7}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+            </block>
+            <!-- 活动订单 -->
+            <block wx:if="{{type==2}}">
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd" data-stype="8" bindtap="seltype">课程报名人数不足</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 8}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd" data-stype="9" bindtap="seltype">商家取消活动</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 9}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_access">
+                    <view class="weui-cell__bd" data-stype="10" bindtap="seltype">其他</view>
+                    <view class="weui-cell__ft">
+                        <icon wx:if="{{stype == 10}}" type="success_no_circle" size="20" color="green" />
+                    </view>
+                </view>
+            </block>
+        </view>
+        <block wx:if="{{stype == 7||stype == 10}}">
+            <view style="margin:10px 0;">
+                <textarea class="weui-textarea" focus="true" placeholder="请填写谢绝接单的原因" name="inputtext"></textarea>
+            </view>
+        </block>
+        <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">确定</button>
+        </view>
+    </form>
+</view>

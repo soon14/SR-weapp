@@ -1,0 +1,76 @@
+<view class="idxCenter">
+    <view class="idxCenter-top">
+        <image class="bgImg" src='../../images/test.jpg'></image>
+        <navigator class="edit">编辑</navigator>
+        <view class="avater">
+            <image src='http://temp.im/140x140 '></image>
+        </view>  
+        <view class="name">
+            <text>花花兽</text><image src='../../images/renzheng.png'></image>
+        </view>  
+        <view class="txt">
+            <text>代理商</text>
+            <text>|</text>
+            <text>有效期至2019-03-01</text>
+            <navigator>续费</navigator>
+        </view>
+        <view class="txt">
+            <text>ID：80123</text>
+            <text>|</text>
+            <text>乐墨币：5800</text>
+            <text>|</text>
+            <text>积分：688</text>
+        </view>
+    </view>
+    <view class="idxCenter-menu">
+        <view class="item">
+            <navigator>
+              <image src='../../images/yqyj.png'></image>
+              <view class="tit1">有奖邀请</view>
+              <view class="tit2">邀请成功，双方有礼</view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+              <image src='../../images/wdzh.png'></image>
+              <view class="tit1">我的账户</view>
+              <view class="tit2">随机奖励，最高500元</view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+              <image src='../../images/wdsr.png'></image>
+              <view class="tit1">我的收入</view>
+              <view class="tit2">赚现金</view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+              <image src='../../images/lmhsg.png'></image>
+              <view class="tit1">乐墨花时光</view>
+              <view class="tit2">邀请成功，双方有礼</view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+              <image src='../../images/lmxt.png'></image>
+              <view class="tit1">乐墨学堂</view>
+              <view class="tit2">在线学习花艺和营销</view>
+             </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+              <image src='../../images/hyds.png'></image>
+              <view class="tit1">花艺大师</view>
+              <view class="tit2">共享花艺，提升效率</view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+            <image src='../../images/dls.png'></image>
+            <view class="tit1">代理商</view>
+            <view class="tit2">事业合伙人</view>
+            </navigator>
+        </view>
+    </view>
+</view>

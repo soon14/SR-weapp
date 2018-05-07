@@ -1,0 +1,58 @@
+/*财务管理*/
+
+
+/*financialOperation.wxss*/
+
+
+/*客户资料卡*/
+
+@import '../../template/customerDataCardtemplate.wxss';
+
+
+
+/*content*/
+
+.content {
+    padding: 80rpx 30rpx;
+}
+
+.title {
+    text-align: center;
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.czbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40rpx 0;
+}
+
+.czbox wx-view {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.czbox wx-view wx-navigator {
+    border-radius: 50rpx;
+    text-align: center;
+    margin: 0 auto;
+    width: 690rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: #f9f9f9;
+}
+
+.czbox wx-view wx-navigator.xxcz {
+    background-color: #4f9dd0;
+}
+
+.czbox wx-view wx-navigator.xfdk {
+    background-color: #3c5769;
+}

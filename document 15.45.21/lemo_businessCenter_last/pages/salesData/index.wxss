@@ -1,0 +1,89 @@
+page{
+  background: #EDEEF0;
+}
+.saleData .hd{
+  padding: 17rpx 30rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.saleData .hd .pick{
+  flex: 1;
+  padding:0 34rpx 0 20rpx;
+  position: relative; 
+  height: 66rpx;
+  line-height: 33rpx;
+  font-size: 22rpx;
+  color:#666;
+  display: block;
+}
+.saleData .hd .pick .down{
+  position: absolute;
+  width: 16rpx;
+  height: 9rpx;
+  right: 0;
+  top:28rpx;
+}
+.saleData .hd .search{
+  width: 420rpx;
+  height:66rpx;
+  padding-left: 50rpx;
+  position:relative;
+  margin-left: 60rpx;
+}
+.saleData .hd .search image{
+  width: 27rpx;
+  height: 26rpx;
+  position: absolute;
+  left: 0;
+  top:20rpx;
+}
+.saleData .hd .search input{
+  width: 100%;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 28rpx;
+}
+.saleData .list .item{
+  display: flex;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  position: relative;
+  background: #fff;
+  border-top: 2rpx solid #E5E5E5;
+}
+.saleData .list .item .tags{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: 2;
+}
+.saleData .list .item .avater{
+  width: 110rpx;
+}
+.saleData .list .item .avater image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.saleData .list .item .txt{
+  flex: 1;
+  padding-left: 30rpx;
+}
+.saleData .list .item .txt .name{
+  font-size: 32rpx;
+  color:#000;
+  padding-bottom: 16rpx;
+  line-height: 1;
+}
+.saleData .list .item .txt .name text{
+  color: #3583db;
+  padding-right: 10rpx;
+}
+.saleData .list .item .txt .p{
+  font-size: 28rpx;
+  color:#666;
+  line-height: 48rpx;
+}

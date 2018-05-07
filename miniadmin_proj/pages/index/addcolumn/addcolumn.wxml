@@ -1,0 +1,7 @@
+<!--addlabel.wxml-->
+<form bindsubmit="formSubmit" report-submit>
+    <view class="container">
+        <input placeholder="请输入栏目名称" value="{{inputValue}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindchange="" bindinput="bindKeyInput" />
+        <button class="addbtn" formType="submit" hover-class="custom-button-hover-class">{{btntext}}</button>
+    </view>
+</form>

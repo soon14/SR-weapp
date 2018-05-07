@@ -1,0 +1,84 @@
+<!-- 推广 -->
+<view class="topbox">
+    <block wx:if="{{pluginList}}" wx:for="{{pluginList}}">
+        <view data-key="{{item.en_key}}" data-id="{{item.id}}" data-canuse="{{item.canuse}}" data-enkey="{{item.en_key}}" bindtap="{{item.id?'usePlugin':item.en_key}}">
+            <view class="navco">
+                <view class="images">
+                    <image mode="aspectFit" src="{{cdnhost+item.icon}}" />
+                    <view class="wktbox" wx:if="{{item.mark.length>0}}">{{item.mark}}</view>
+                </view>
+            </view>
+            <text>{{item.title}}</text>
+        </view>
+    </block>
+</view>
+<!-- 活动 -->
+<view class="activebox">
+    <view class="activebox-titlebox {{state==1?'activebox-active':''}}" data-state="1" bindtap="changeState">
+        <view class="activebox-title">进行中的活动</view>
+        <view class="activebox-active-line" hidden="{{state!=1}}"></view>
+    </view>
+    <view class="activebox-titlebox {{state==2?'activebox-active':''}}" data-state="2" bindtap="changeState">
+        <view class="activebox-title">已过期的活动</view>
+        <view class="activebox-active-line" hidden="{{state!=2}}"></view>
+    </view>
+</view>
+<!-- 进行中的活动 -->
+<view class="contentbox" hidden="{{state!=1}}">
+    <block wx:for="{{recharge}}" wx:if="{{recharge}}">
+        <navigator url="/pages/promotion/customerRecharge/customerRecharge?promotionid={{recharge[0].id}}" class="content">
+            <view class="textbox">
+                <view class="khcz">客户充值：{{recharge[0].title}}</view>
+                <view>
+                    活动内容：{{recharge[0].saleinfo[0]}} {{recharge[0].saleinfo[1]}} {{recharge[0].saleinfo.length>2?'...':''}}
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:for="{{sharecoupon}}" wx:if="{{sharecoupon}}">
+        <navigator url="/pages/promotion/socialDeductible/socialDeductible?promotionid={{sharecoupon[0].id}}" class="content">
+            <view class="textbox">
+                <view class="sjljj">社交立减金：{{sharecoupon[0].title}}</view>
+                <view>活动时间：{{sharecoupon[0].start_time}}至{{sharecoupon[0].end_time}}</view>
+                <view>活动内容：{{sharecoupon[0].saleinfo}}</view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:if="{{coupon}}" wx:for="{{coupon}}">
+        <navigator url="/pages/promotion/coupon/coupon?type=1&promotion_id={{item.id}}" class="content" data-promotion_id="{{item.id}}">
+            <view class="textbox">
+                <view class="yhq">优惠券：{{item.title}}</view>
+                <view>活动时间：{{item.start_time}}至{{item.end_time}}</view>
+                <view>活动内容：{{item.saleinfo}}</view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:if="{{groupSetList}}" wx:for="{{groupSetList}}">
+        <navigator url="/pages/promotion/groupon/groupon?groupon_id={{item.id}}" class="content">
+            <view class="textbox">
+                <view class="collage">拼团：{{item.title}}</view>
+                <view>活动时间：{{item.time_duration}}</view>
+            </view>
+        </navigator>
+    </block>
+</view>
+<!-- 失效的活动 -->
+<view class="contentbox color_ccc" hidden="{{state==1}}">
+    <block wx:if="{{coupon}}" wx:for="{{coupon}}">
+        <view class="content" data-promotion_id="{{item.id}}">
+            <view class="textbox">
+                <view class="yhq color_ccc">优惠券：{{item.title}}</view>
+                <view>活动时间：{{item.start_time}}至{{item.end_time}}</view>
+                <view>活动内容：{{item.saleinfo}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{groupSetList}}" wx:for="{{groupSetList}}">
+        <view class="content">
+            <view class="textbox">
+                <view class="collage color_ccc">拼团：{{item.title}}</view>
+                <view>活动时间：{{item.start_time_txt}}</view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,146 @@
+/*分类管理*/
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.fenleicontent {
+    padding: 0 30rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+
+.fenlei {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120rpx;
+    color: #333333;
+}
+
+.fenlei .fenlei_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 32rpx;
+    line-height: 32rpx;
+}
+
+.fenlei .fenlei_left wx-image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+}
+
+.fenlei .fenlei_left .fenlei_left_title {
+    max-width: 400rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fenlei .fenlei_right {
+    font-size: 26rpx;
+    max-width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fenlei_bottomcontent {
+    color: #ddd;
+    text-align: center;
+    font-size: 15px;
+    border-top: 1rpx solid #ebebeb;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fenlei_bottomcontent view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fenlei_bottomcontent view image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.fenlei_bottomcontent view wx-text {
+    display: inline-block;
+    color: #333333;
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+
+
+
+
+
+/*没有分类*/
+
+.noContent {
+    flex: 1;
+    margin: 30rpx;
+    color: #ccc;
+    text-align: center;
+}
+
+
+
+
+
+
+/*btn*/
+
+.btnbox {
+    margin: 60rpx 30rpx;
+}
+
+.btnbox wx-view {
+    width: 690rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    border: 1px solid #4f9dd0;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.btnbox .addbtn {
+    background: #4f9dd0;
+    color: #f9f9f9;
+}
+
+.btnbox .backbtn {
+    background: #fff;
+    color: #4f9dd0;
+    margin-top: 20rpx;
+}
+
+
+
+
+
+
+/*底部说明*/
+
+.explainbox {
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 46rpx;
+    margin-top: 20rpx;
+    margin-bottom: 110rpx;
+}
+
+.explainbox view:nth-of-type(1) {
+    font-size: 30rpx
+}

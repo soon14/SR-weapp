@@ -1,0 +1,32 @@
+<view class="reg-top">
+    <image src='../../images/banner.png'></image>
+</view>
+<view class="reg-main">
+    <view class="title">
+        <text>陈志哲 邀请您（ID:80123）</text>
+        <navigator>
+              <image src='../../images/wenhao.png'></image>
+        </navigator>
+    </view>
+    <form bindsubmit="formSubmit">
+        <view class='row'>
+            <image src='../../images/mingzi.png'></image>
+            <input type='text' placeholder='请输入您的名字'></input>
+        </view>
+        <view class='row'>
+            <image src='../../images/shouji.png' class='pIcon'></image>
+            <input type='text' placeholder='请输入您的手机号码'></input>
+            <view class="getCode">更换</view>
+        </view>
+        <view class='row-protocol'>
+            <view class="check">
+              <!-- 不同意为此 图标<image src='../../images/tongyi_normal.png'></image> -->
+               <image src='../../images/tongyi_press.png' class="yzmIcon"></image>
+            </view>
+            <navigator>同意《乐墨商家中心服务协议》</navigator>
+        </view>
+         <view class='row-btn'>
+            <button formType="submit">完成</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,125 @@
+page{
+  background: #ff5646;
+}
+.prizeInvited .topImg{
+  width: 100%;
+  height: 934rpx;
+  vertical-align: top;
+}
+.prizeInvited .topMsg{
+  position: relative;
+  height: 934rpx;
+}
+.prizeCase{
+  background:#FEEDCF;
+  width:654rpx;
+  height:80rpx;
+  border-radius:10rpx;
+  position: absolute;
+  bottom:36rpx;
+  left: 30rpx;
+  padding: 0 18rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color:#98581a;
+}
+.prizeStatus{
+  margin:0 30rpx;
+  background: #fff8e8;
+  text-align: center;
+  border-radius: 10rpx;
+  padding-bottom: 60rpx;
+}
+.prizeStatus .hd{
+  display: flex;
+}
+.prizeStatus .hd .col{
+  flex: 1;
+}
+.prizeStatus .hd .col .num{
+  font-size: 100rpx;
+  color:#ff4816;
+  font-weight:500;
+  line-height:1;
+  padding: 50rpx 0 10rpx 0;
+}
+.prizeStatus .hd .col .p{
+  font-size:28rpx;
+  color:#98581a;
+}
+.prizeStatus .become{
+  margin: 36rpx 88rpx 0 88rpx;
+  width: 520rpx;
+	height: 80rpx;
+  line-height: 80rpx;
+	border-radius: 40rpx;
+	border: solid 2px #ff4816;
+  color:#ff4816;
+  font-size: 30rpx;
+  overflow: hidden;
+  font-weight: 500;
+}
+.flow{
+  margin:20rpx 30rpx 0 30rpx;
+  background: #fff8e8;
+  text-align: center;
+  border-radius: 10rpx;
+  padding-bottom: 32rpx;
+}
+.comTitle{
+  text-align: center;
+  font-size: 30rpx;
+  color:#98581a;
+  padding: 46rpx 0 36rpx 0;
+}
+.comTitle image{
+  width: 124rpx;
+  height: 18rpx;
+}
+.comTitle text{
+  padding: 0 24rpx;
+}
+.flow-step{
+  display: flex;
+  font-size: 26rpx;
+  color:#98581a;
+}
+.flow-step .col{
+  flex: 1;
+}
+.flow-step .icon{
+  width: 80rpx;
+  height:80rpx;
+  vertical-align: top;
+  margin-bottom: 18rpx;
+}
+.flow-step .arrow{
+  width: 17rpx;
+  height: 29rpx;
+  margin:  24rpx 20rpx 0 20rpx;
+}
+.prizeInvited .invited{
+  width: 690rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #FEDC00;
+	border-radius: 10rpx;
+  font-size: 36rpx;
+  color: #f5392d;
+  margin: 30rpx 30rpx 0 30rpx;
+  border-bottom: 10rpx solid #D73827;
+}
+.prizeInvited .record{
+  margin:32rpx 30rpx;
+  padding: 0 30rpx 36rpx 30rpx;
+  background: #fff8e8;
+  border-radius: 10rpx;
+}
+.prizeInvited .recordMsg{
+  padding:20rpx 30rpx;
+  font-size: 24rpx;
+  color:#98581a;
+  line-height: 48rpx;
+  background: #feedcf;
+}

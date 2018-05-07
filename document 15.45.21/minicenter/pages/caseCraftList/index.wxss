@@ -1,0 +1,25 @@
+page{
+  background: #EDEEF0;
+  padding-bottom: 120rpx;
+}
+.craftList{
+  background: #fff;
+  padding: 0 26rpx;
+}
+.craftList navigator{
+  border-bottom: 2rpx solid #E5E5E5;
+  padding:32rpx 0; 
+}
+.craftList navigator:last-child{
+  border-bottom: 0;
+}
+.craftList navigator .hdTit{
+  font-size: 34rpx;
+  color:#333;
+  line-height: 1.5;
+}
+.craftList navigator .msg{
+  font-size: 26rpx;
+  color:#999;
+  padding-top: 10rpx;
+}

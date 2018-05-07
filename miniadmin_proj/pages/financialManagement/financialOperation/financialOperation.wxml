@@ -1,0 +1,19 @@
+<!--财务管理-->
+<!-- 客户资料卡 -->
+<import src="../../template/customerDataCardtemplate.wxml" />
+<template is="customerDataCardtemplate" data="{{...userInfo}}" />
+<!-- content -->
+<view class="content">
+    <view class="title">请选择要进行的操作</view>
+    <view class="czbox">
+        <!-- <view>
+            <navigator url="/pages/financialManagement/orderRefund/orderRefund?userInfo={{userInfo}}"" class="xfdk">订单退款</navigator>
+        </view> -->
+        <view>
+            <navigator url="/pages/financialManagement/offlineRecharge/offlineRecharge?userInfo={{userInfo}}" class="xxcz">线下充值</navigator>
+        </view>
+        <view>
+            <navigator url="/pages/financialManagement/consumptionWithholding/consumptionWithholding?userInfo={{userInfo}}" class="xfdk">消费代扣</navigator>
+        </view>
+    </view>
+</view>

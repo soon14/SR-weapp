@@ -1,0 +1,17 @@
+.weui-navbar__slider {
+  width: 375rpx;
+}
+.weui-cell__ft{
+    font-size:14px;
+    color:#ddd;
+}
+.weui-cell__ft text{
+    padding:0 10px;
+    color:#000;
+}
+.weui-cell__ft text.del{
+    color:darkred;
+}
+navigator{
+    display: inline-block;
+}

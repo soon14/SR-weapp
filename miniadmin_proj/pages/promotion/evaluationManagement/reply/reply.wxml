@@ -1,0 +1,7 @@
+<!--addlabel.wxml-->
+<form bindsubmit="formSubmit" report-submit>
+    <view class="container">
+        <textarea placeholder="请输入回复内容" value="{{replytxt}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindinput="bindKeyInput" />
+        <button class="addbtn" formType="submit" hover-class="custom-button-hover-class">{{btntext}}</button>
+    </view>
+</form>

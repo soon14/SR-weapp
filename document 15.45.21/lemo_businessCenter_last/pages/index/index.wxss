@@ -1,0 +1,82 @@
+page{
+  background:#edeef0;
+}
+.agentIdx-top{
+  position:relative;
+  height:304rpx;
+  overflow: hidden;
+}
+.agentIdx-top .bgImg{
+  width:100%;
+  height: 304rpx;
+  vertical-align: top;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.agentIdx-top .txt{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  line-height: 1;
+}
+.agentIdx-top .txt .earn{
+  font-size: 80rpx;
+  color:#fff;
+  
+  padding: 90rpx 0 24rpx 0;
+}
+.agentIdx-top .txt .row{
+  padding-top:18rpx;
+  font-size: 26rpx;
+  color:#fff5dc;
+}
+.agentIdx-top .txt .row text{
+  padding: 0 10rpx;
+}
+.agentIdx-menu{
+  overflow: hidden;
+  /* display: flex; */
+}
+.agentIdx-menu .item{
+  /* flex: 1; */
+  float: left;
+  width: 33.333%;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 2rpx solid #E5E5E5;
+  border-bottom: 2rpx solid #E5E5E5;
+  padding-top: 46rpx;
+  height: 220rpx;
+}
+.agentIdx-menu .item image{
+  vertical-align: top;
+}
+.agentIdx-menu .item .menuName{
+  font-size: 28rpx;
+  color:#333;
+  padding: 36rpx 0 66rpx 0;
+  line-height: 1;
+}
+.agentIdx-menu .item1 image{
+  width: 38rpx;
+  height: 46rpx;
+}
+.agentIdx-menu .item2 image{
+  width: 43rpx;
+  height: 43rpx;
+  margin: 1rpx 0 2rpx 0;
+}
+.agentIdx-menu .item3 image{
+  width: 46rpx;
+  height: 39rpx;
+  margin: 3rpx 0 4rpx 0;
+}
+.agentIdx-menu .item4 image{
+  width: 42rpx;
+  height: 46rpx;
+}
+.agentIdx-menu .item5 image{
+  width: 46rpx;
+  height: 46rpx;
+}

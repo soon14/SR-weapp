@@ -1,0 +1,55 @@
+page{
+  background: #EDEEF0;
+  padding-bottom: 120rpx;
+}
+.publicList{
+  background: #fff;
+  padding: 0 26rpx;
+}
+.publicList navigator{
+  border-bottom: 2rpx solid #E5E5E5;
+  padding:32rpx 60rpx 32rpx 0; 
+  position: relative;
+}
+.publicList navigator:last-child{
+  border-bottom: 0;
+}
+.publicList navigator .hdTit{
+  font-size: 34rpx;
+  color:#333;
+  line-height: 1.5;
+}
+.publicList navigator .msg{
+  font-size:26rpx;
+  color:#717882;
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+.publicList navigator .msg .col{
+  float: left;
+  margin-right: 40rpx;
+}
+.publicList navigator .msg image{
+  vertical-align: -4rpx;
+  margin-right: 12rpx;
+}
+.publicList navigator .msg .look{
+  width: 36rpx;
+  height:26rpx;
+}
+.publicList navigator .msg .share{
+  width: 26rpx;
+  height:26rpx;
+}
+.publicList navigator .msg .shouru{
+  width: 28rpx;
+  height:28rpx;
+}
+.publicList navigator .rArrow{
+  position: absolute;
+  width: 14rpx;
+  height: 24rpx;
+  right: 0rpx;
+  top:50%;
+  margin-top: -12rpx;
+}

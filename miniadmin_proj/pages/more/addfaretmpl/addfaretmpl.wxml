@@ -1,0 +1,77 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <view class="weui-cells">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="title" value="{{title}}" placeholder="请填写模板名称" />
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">
+            配送地区
+        </view>
+        <block wx:for="{{list}}">
+            <view class="weui-cells {{index == 0 ? 'weui-cells_after-title' : ''}}">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd cll12">
+                        <view class="weui-cell__bd cll1">
+                            <view class="weui-input myinput {{item.distitles==''   || item.distitles == null ? 'myplacehold' : ''}}" name="areaname{{item.index}}" data-index="{{item.index}}" data-ids="{{item.ids}}" data-titles="{{item.titles}}" bindtap="tapAreaname">{{item.distitles == '' || item.distitles == null ? '请选择配送地区' : item.distitles}}</view>
+                        </view>
+                        <view class="weui-cell__bd cll2">
+                            <view class="weui-label mylabel">配送费用(元):</view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" name="money{{item.index}}" bindinput="bindMoney" type="digit" data-index="{{item.index}}" value="{{item.money}}" placeholder="费用" />
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cell__bd cll4">
+                        <view class="weui-badge delicon" data-index="{{item.index}}" data-ids="{{item.ids}}" bindtap="delitem">-</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="addview" bindtap="addnew" wx:if="{{list.length < 10}}">
+            <view class="weui-badge addicon">+</view> 添加指定地区/指定配送方式运费</view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">确定</button>
+        </view>
+    </form>
+    <view class="container2" wx:if="{{showsel}}">
+        <view class="weui-cells weui-cells_after-title" style="padding-bottom:80px;">
+            <checkbox-group bindchange="checkboxChange">
+                <block wx:for="{{list2['0']}}" wx:for-index="idx" wx:for-item="item">
+                    <view class="weui-cell weui-cell_access">
+                        <view class="weui-cell__bd" bindtap="click1" data-id="{{idx}}">
+                            <image src="{{level1[idx] == 1 ? '/images/more1.png' : '/images/more0.png'}}" class="img"></image>{{item}}</view>
+                        <view class="weui-cell__ft">
+                            <checkbox disabled wx:if="{{allchecked['0_'+idx]}}" name="selproducts" checked="{{checked['0_'+idx]}}" data-mid="{{'0_'+idx}}" value="{{'0_'+idx}}" />
+                            <checkbox wx:if="{{!allchecked['0_'+idx]}}" name="selproducts" checked="{{checked['0_'+idx]}}" data-mid="{{'0_'+idx}}" value="{{'0_'+idx}}" />
+                        </view>
+                    </view>
+                    <block wx:for="{{list2['0_'+idx]}}" wx:for-index="idx2" wx:for-item="item2">
+                        <view class="weui-cell weui-cell_access" wx:if="{{level1[idx] == 1}}">
+                            <view class="weui-cell__bd level2" bindtap="click2" data-id="{{idx+'_'+idx2}}">
+                                <image src="{{level2[idx+'_'+idx2] == 1 ? '/images/more1.png' : '/images/more0.png'}}" class="img"></image>{{item2}}</view>
+                            <view class="weui-cell__ft">
+                                <checkbox disabled wx:if="{{allchecked['0_'+idx+'_'+idx2]}}" name="selproducts" checked="{{checked['0_'+idx+'_'+idx2]}}" data-mid="{{'0_'+idx+'_'+idx2}}" value="{{'0_'+idx+'_'+idx2}}" />
+                                <checkbox wx:if="{{!allchecked['0_'+idx+'_'+idx2]}}" name="selproducts" checked="{{checked['0_'+idx+'_'+idx2]}}" data-mid="{{'0_'+idx+'_'+idx2}}" value="{{'0_'+idx+'_'+idx2}}" />
+                            </view>
+                        </view>
+                        <block wx:for="{{list2['0_'+idx+'_'+idx2]}}" wx:for-index="idx3" wx:for-item="item3">
+                            <view class="weui-cell weui-cell_access" wx:if="{{level2[idx+'_'+idx2] == 1 && level1[idx] == 1}}">
+                                <view class="weui-cell__bd level3">{{item3}}</view>
+                                <view class="weui-cell__ft">
+                                    <checkbox disabled wx:if="{{allchecked['0_'+idx+'_'+idx2+'_'+idx3]}}" name="selproducts" checked="{{checked['0_'+idx+'_'+idx2+'_'+idx3]}}" data-mid="{{'0_'+idx+'_'+idx2+'_'+idx3}}" value="{{'0_'+idx+'_'+idx2+'_'+idx3}}" />
+                                    <checkbox wx:if="{{!allchecked['0_'+idx+'_'+idx2+'_'+idx3]}}" name="selproducts" checked="{{checked['0_'+idx+'_'+idx2+'_'+idx3]}}" data-mid="{{'0_'+idx+'_'+idx2+'_'+idx3}}" value="{{'0_'+idx+'_'+idx2+'_'+idx3}}" />
+                                </view>
+                            </view>
+                        </block>
+                    </block>
+                </block>
+            </checkbox-group>
+        </view>
+        <view class="weui-btn-area2">
+            <button class="weui-btn" type="primary" bindtap="confirmsel">确定选择</button>
+        </view>
+    </view>
+</view>

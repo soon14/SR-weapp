@@ -1,0 +1,14 @@
+<view class="weui-cells weui-cells_after-title">
+    <view class="main">
+        <text class="headText"> 乐墨花时光是一款专为花店设计的小程序商城，零成本获得门店周边5公里的微信客户，为线下实体花店打造属于自己的小程序店铺。</text>
+        <view bindtap="savepic" class="qr_code">
+            <image src="/images/1.jpeg"></image>
+        </view>
+        <text class="center">微信加乐墨机器人2号为好友</text>
+        <text class="center">申请开通花店小程序</text>
+        <text class="remind">
+            提醒：请用另一部手机扫以上二维码，或是退出搜索微信号：<text bindtap="copywxnum">bit817</text> 并添加为好友。
+        </text>
+        <button type="primary" bindtap="back" class="back"> {{backBtnTxt}} </button>
+    </view>
+</view>

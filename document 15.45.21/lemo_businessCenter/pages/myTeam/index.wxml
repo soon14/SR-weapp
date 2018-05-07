@@ -1,0 +1,35 @@
+<view class='myTeam'>
+    <view class="tips">您的商家升级为代理人或合伙人时，您可享受成本差额佣金</view>
+    <view class="list">
+        <view class="item">
+            <navigator src="" class='edit'>修改</navigator>
+            <view class="avater">
+                <image src='http://temp.im/110x110'></image>
+            </view>
+            <view class="txt">
+                <view class="name">先政</view>
+                <view class="p">
+                    ID：80123  享受业绩：<text>232300元</text>
+                </view>
+                <view class="p">6折代理商  (2019-02-05到期)</view>
+                <view class="p">王娟 15818245698</view>
+                <view class="p">备注：2018-05-01到期前提醒续签</view>
+            </view>
+        </view>
+        <view class="item">
+            <navigator src="" class='edit'>修改</navigator>
+            <view class="avater">
+                <image src='http://temp.im/110x110'></image>
+            </view>
+            <view class="txt">
+                <view class="name">先政</view>
+                <view class="p">
+                    ID：80123  享受业绩：<text>232300元</text>
+                </view>
+                <view class="p">6折代理商  (2019-02-05到期)</view>
+                <view class="p">王娟 15818245698</view>
+                <view class="p">备注：2018-05-01到期前提醒续签01到期前提醒续签</view>
+            </view>
+        </view>
+    </view>
+</view>

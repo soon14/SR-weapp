@@ -1,0 +1,37 @@
+<view class="packetRecord">
+    <view class="tips">
+        这里暂时发展的红包记录，24小时未领取被退回
+    </view>
+    <view class="list">
+        <view class="item">
+            <view class="row row1">
+                <view class="lTxt">恭喜发财</view>
+                <view class="rTxt">6乐墨点</view>
+            </view>
+            <view class="row row2">
+                <view class="lTxt">2018-03-07</view>
+                <view class="rTxt">0/1个</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="row row1">
+                <view class="lTxt">恭喜发财</view>
+                <view class="rTxt">6乐墨点</view>
+            </view>
+            <view class="row row2">
+                <view class="lTxt">2018-03-07</view>
+                <view class="rTxt">已领完 1/1个</view>
+            </view>
+        </view>
+        <view class="item">
+            <view class="row row1">
+                <view class="lTxt">恭喜发财</view>
+                <view class="rTxt">6乐墨点</view>
+            </view>
+            <view class="row row2">
+                <view class="lTxt">2018-03-07</view>
+                <view class="rTxt">已过期 3/12个</view>
+            </view>
+        </view>
+    </view>
+</view>

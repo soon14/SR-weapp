@@ -1,0 +1,29 @@
+<view class="lemobiRecord">
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                提现中
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num">￥499</view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                提现成功
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num">￥300</view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                提现成功
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num">￥100</view>
+    </view>
+</view>

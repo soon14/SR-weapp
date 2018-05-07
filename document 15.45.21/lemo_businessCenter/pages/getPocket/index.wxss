@@ -1,0 +1,20 @@
+.getPocket{
+  text-align: center;
+}
+.getPocket icon{
+  margin: 100rpx 0 60rpx 0;
+}
+.getPocket .num{
+  font-size: 40rpx;
+  color:#333;
+  padding-bottom: 80rpx;
+  font-weight: 500;
+}
+.getPocket button{
+  width: 570rpx;
+	height: 90rpx;
+	background-image: linear-gradient(0deg, rgba(232, 86, 86, 1) 0%, rgba(231, 72, 72, 1) 100%);
+	border-radius: 10rpx;
+  color:#fff;
+  font-size: 32rpx;
+}

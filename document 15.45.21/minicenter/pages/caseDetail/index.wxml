@@ -1,0 +1,74 @@
+<view class="caseDetail">
+    <view class="banner">
+        
+         <image src='http://temp.im/750x750'></image> 
+        <!--显示图片  or 显示视频  video的样式可以设置在style中 -->
+        <!-- <video style="height:400rpx" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></video> -->
+    </view>
+    <view class="hd">
+        <view class="hdLeft">
+            <view class="tit">相爱Love每周一花小幸福相爱Love每周一花小幸福</view>
+            <view class="name">设计者：周周</view>
+        </view>
+        <view class="hdMenu">
+            <view class="col share">
+                <view class="tags">赚88元</view>
+                <image src='../../images/share.png'></image>
+                <text>分享</text>
+            </view>
+            <view class="col send">
+                <image src='../../images/liwu.png'></image>
+                <text>赠好友</text>
+            </view>
+            <view class="col inform">
+                <image src='../../images/jubao.png'></image>
+                <text>举报</text>
+            </view>
+        </view>
+    </view>
+    <view class="shopMsg">
+        <view class='rows'>
+            <view class="shopName">店铺：三色景</view>
+            <navigator>切换店铺<image src='../../images/rArrow.png'></image></navigator>
+        </view>
+        <view class="tips">注：为其他店铺购买请选择切换</view>
+    </view>
+    <view class="detail">
+        <view class="item">
+            <view class='tit'>简介</view>
+            <view class="info">
+                这里显示的是简介，购买人在购买前就可以看到这里的具体内容介绍。用来介绍这个方案，以及描述方案使用的场景。
+            </view>
+        </view>
+        <view class='item'> 
+          <view class='tit'>教程</view>
+          <!--非空时  -->
+          <view class="info">这里显示的教程购买后的学员才可以看到这里的内容</view>
+          <view class="courseImg">
+              <image src='http://temp.im/690x200'></image>
+          </view>
+          <!--非空时  -->
+          <!--为空时显示此处  -->
+          <image src='../../images/weijiesuo.png' class="suo"></image>
+          <!--为空时显示此处  -->
+        </view>
+    </view>
+    <view class='fix-nav'>
+        <!--保存到手机  -->
+        <view class="save">
+            <image src='../../images/save.png'></image>
+            <text>保存到手机</text>
+        </view>
+        <navigator class="prevBtn">方案预览</navigator>
+        <navigator class="buy2">购买：99乐墨币</navigator> 
+        <!-- <navigator class="buy1">不足99乐墨币，去购买</navigator> -->
+    </view>
+</view>
+<!--预览水印   关闭预览  即影藏  .preview -->
+<view class='preview'>
+    <view class="watermark">
+        <view class="title">乐墨花艺方案</view>
+        <view class="mark">先政截图保存 周周设计方案</view>
+    </view>
+    <view class="clsPreview">关闭预览</view>
+</view>

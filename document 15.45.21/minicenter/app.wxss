@@ -1,0 +1,105 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clr:after{clear: both;content:'\0020';display: block;visibility:hidden;height:0;}
+.clr{zoom:1;}
+/*编辑方案公共样式  */
+.editCase-nav{
+  height: 100rpx;
+  background: #3583DB;
+  display: flex;
+}
+.editCase-nav navigator{
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: 28rpx;
+  color:#fff;
+  line-height: 100rpx;
+}
+.editCase-nav navigator{
+  position: relative;
+  display: inline-block;
+}
+.editCase-nav navigator.cur:before{
+  content: "";
+  position: absolute;
+  width: 112rpx;
+	height: 4rpx;
+	background: #fff;
+	border-radius: 2px;
+  bottom: 10rpx;
+  left: 50%;
+  margin-left: -56rpx;
+}
+.editCase-fix{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom:0;
+  height: 100rpx;
+  display: flex;
+  letter-spacing: 2rpx;
+}
+.editCase-fix navigator{
+  flex: 1;
+  line-height: 100rpx;
+  font-size:32rpx;
+  color:#fff;
+  text-align: center;
+  background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+.editCase-fix .pcPublic{
+  background-image: linear-gradient(0deg, rgba(76, 105, 124, 1) 0%, rgba(60, 87, 105, 1) 100%);
+}
+.editCase-fix button{
+  flex: 1;
+  font-size: 32rpx;
+  color:#fff;
+  line-height: 100rpx;
+  border-radius: 0;
+}
+.editCase-fix .submitBtn{
+  background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+.editCase-fix button::after{
+  border:none;
+}
+/*编辑方案公共样式  */
+/*花艺方案固定导航栏*/
+.navFixed{
+  position: fixed;
+  width: 100%;
+  height:88rpx;
+  left: 0;
+  bottom:0;
+  background: #fff;
+  border-top:2rpx solid #E6E6E6;
+  display: flex;
+  text-align: center;
+  padding-top:10rpx;
+  z-index: 9;
+}
+.navFixed .items{
+  flex: 1;
+  align-items: center;
+}
+.navFixed .items .txt{
+  line-height: 1;
+  padding-top: 0.08rem;
+  font-size: 20rpx;
+  color:#717882;
+  font-weight:500;
+}
+.navFixed .items image{
+  vertical-align: top;
+  width: 48rpx;
+  height:48rpx;
+}
+.navFixed .items.cur .txt{
+  color:#3583db;
+}
+/*花艺方案固定导航栏*/

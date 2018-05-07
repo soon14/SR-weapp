@@ -1,0 +1,16 @@
+<!-- 门店设置 -->
+<form bindsubmit="formSubmit" report-submit>
+    <view class="contentbox">
+        <text class="mdfwtitle">门店服务</text>
+        <checkbox-group bindchange="checkboxChange" class="mdfwbox">
+            <label class="checkbox" wx:for="{{list}}">
+                <view class="fwcolume">
+                    <image src="{{host+item.pic}}"></image>
+                    <text>{{item.title}}</text>
+                    <checkbox value="{{item.id}}" checked="{{item.isuse == 1?true:false}}" color="#41e38d" />
+                </view>
+            </label>
+        </checkbox-group>
+        <view class="savebtn" formType="submit">保存</view>
+    </view>
+</form>    

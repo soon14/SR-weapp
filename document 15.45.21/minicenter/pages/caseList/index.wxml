@@ -1,0 +1,54 @@
+<view class="caseList">
+    <view class="item">
+        <view class="name">
+            <image src='http://temp.im/60x60'></image>
+            <text>周周花艺师</text>
+        </view>
+        <navigator class='title'>
+            相恋LOVE每周一花的小幸福
+        </navigator>
+        <view class="picVideo">
+            <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></video>
+        </view>
+        <view class="msg">
+            <view  class='attenPeople'>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+            </view>
+            <view class="pariseBtn">
+                <image src='../../images/press.png'></image>
+                <text>645</text>
+            </view>
+            <view class="saleNum">已售258</view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="name">
+            <image src='http://temp.im/60x60'></image>
+            <text>周周花艺师</text>
+        </view>
+        <navigator class='title'>
+            相恋LOVE每周一花的小幸福
+        </navigator>
+        <view class="picVideo">
+            <image src='http://temp.im/690x690'></image>
+        </view>
+        <view class="msg">
+            <view  class='attenPeople'>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+                <image src='http://temp.im/44x44'></image>
+            </view>
+            <view class="pariseBtn">
+                <image src='../../images/press.png'></image>
+                <text>645</text>
+            </view>
+            <view class="saleNum">已售258</view>
+        </view>
+    </view>
+</view>

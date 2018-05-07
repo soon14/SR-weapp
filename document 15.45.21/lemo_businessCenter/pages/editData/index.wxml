@@ -1,0 +1,66 @@
+<view class="editData-top">
+    <image class="bgImg" src='../../images/wo_bg.png'></image>
+    <view class="referrer">
+        <image src='../../images/tuijianren.png' class="icon"></image>
+        <view class="txt">
+            <view class="name">我的推荐人名字</view>
+            <view class="idNum">ID：80100</view>
+        </view>
+        <image src="../../images/dianhua.png" class="phone"></image>
+    </view>
+    <!--状态显示其中一种，通过类名来区分 verified -->
+    <!--未认证  -->
+    <view class="msg">
+        <view class="avater">
+            <image src='http://temp.im/132x132'></image>
+        </view>
+        <view class="name">花花兽</view>  
+        <navigator src="" class="status">去认证</navigator>
+        <view class="tips">请准备好本人身份证后开始认证</view>
+    </view>
+    <!-- 未认证  -->
+    <!-- 已认证  -->
+    <view class="msg verified">
+        <view class="avater">
+            <image src='http://temp.im/132x132'></image>
+        </view>
+        <view class="name">花花兽</view>  
+        <navigator src="" class="status"><image src='../../images/renzheng.png'></image>已认证</navigator>
+        <view class="tips">王先政 （231454*32431）</view>
+    </view>
+    <!-- 已认证  -->
+</view>
+<view class="editData-item">
+    <navigator src="" class='item'>
+        <image src='../../images/nicheng.png' class="icon icon1"></image>
+        <text>昵称</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+    <navigator src="" class='item'>
+        <image src='../../images/shouji.png' class="icon icon2"></image>
+        <text>13800138000</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+    <navigator src="" class='item'>
+        <image src='../../images/dingwei.png' class="icon icon3"></image>
+        <text>广东省深圳市南山区南山大道亿利达</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+</view>
+<view class="editData-item">
+    <navigator src="" class='item'>
+        <image src='../../images/set.png' class="icon icon4"></image>
+        <text>设置</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+    <navigator src="" class='item'>
+        <image src='../../images/yijianfankui.png' class="icon icon5"></image>
+        <text>意见反馈</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+    <navigator src="" class='item'>
+        <image src='../../images/guanyu.png' class="icon icon6"></image>
+        <text>关于乐墨商家中心</text>
+        <image src='../../images/rArrow.png' class="rArrow"></image>
+    </navigator>
+</view>

@@ -1,0 +1,27 @@
+/*collectionAccount.wxml 信息提示页(收款账户)*/
+
+page {
+    background-color: #f7f7f7;
+    color: #666666;
+    font-size: 32rpx;
+    line-height: 46rpx;
+}
+
+.group {
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #383838;
+    font-size: 38rpx;
+    margin-top: 30rpx;
+    margin-bottom: 58rpx;
+}
+
+.urlcolor {
+    color: #4287d4;
+}

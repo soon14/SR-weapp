@@ -1,0 +1,12 @@
+<view class="upload">
+    <form>
+        <view class="tit">上传身份证正反面</view>
+        <view class="photoArea">
+            <image src='../../images/shenfenzheng1.png'></image>
+        </view>
+        <view class="photoArea">
+            <image src='../../images/shenfenzheng2.png'></image>
+        </view>
+        <button form-type='submit'>确定</button>
+    </form>
+</view>

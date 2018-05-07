@@ -1,0 +1,204 @@
+.top {
+    width: 750rpx;
+    height: 410px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.top swiper {
+    width: 100%;
+    height: 330px;
+}
+
+.top swiper image {
+    width: 100%;
+    height: 330px;
+}
+
+.top .top-title {
+    font-size: 18px;
+    padding: 8px;
+}
+
+.top .top-price {
+    color: #ff322f;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.main {
+    width: 750rpx;
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.title {
+    padding: 0 0 10px 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.main .huacai,
+.main .huayi,
+.main .intro,
+.main .shouhou {
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    padding-left: 20px;
+}
+
+.main .huacai image,
+.main .huayi image,
+.main .intro image,
+.main .shouhou image {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.main .intro image {
+    width: 13px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+.main .huacai-content,
+.main .huayi-content,
+.main .intro-content,
+.main .shouhou-content {
+    font-size: 15px;
+    line-height: 20px;
+    padding-left: 23px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main .video {
+    line-height: 30px;
+    padding: 10px;
+}
+
+.main .video video {
+    width: 100%;
+}
+
+.main .piclist {
+    padding: 10px;
+}
+
+.main .piclist image {
+    width: 100%;
+}
+
+.buy {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 49px;
+    background-color: #fff;
+
+    z-index: 99999999;
+}
+
+.buy button {
+    border-radius: 0px;
+    height: 49px;
+    line-height: 49px;
+    background-color: #ff4a36;
+}
+
+.buy button:hover {
+    background-color: #ff4a36;
+}
+
+.buy .left {
+    width: 30%;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.buy .left image {
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+}
+
+.buy .left text {
+    color: #333;
+    display: block;
+    font-size: 11px;
+    line-height: 10px;
+}
+
+.buy .right {
+    width: 70%;
+    float: right;
+    border-top: 1px solid #ff4a36;
+}
+
+.weui-footer__link {
+    color: #cccccc;
+}
+
+.weui-footer__link image {
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    padding-bottom: 4px;
+}
+
+.specifications {
+    width: 690rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 30rpx;
+    background-color: #fff;
+    margin: 20rpx auto;
+    font-size: 30rpx;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.rightsj {
+    position: absolute;
+    right: 30rpx;
+    top: 34rpx;
+    height: 20rpx;
+    width: 20rpx;
+    border-top: 4rpx solid #bdbdbd;
+    border-right: 4rpx solid #bdbdbd;
+    transform: rotate(45deg);
+}
+
+.specifications .specificationscontent {
+    text-align: right;
+    color: #999;
+    margin-right: 30rpx;
+}
+
+.specificationscontent1 {
+    color: #333;
+}
+
+.alerttextbox {
+    border-top: 1px solid #d9d9d9;
+    padding: 20rpx 0;
+    margin: 0 30rpx;
+}
+
+.alerttext {
+    width: 690rpx;
+    font-size: 26rpx;
+    color: #999999;
+    text-align: left;
+}

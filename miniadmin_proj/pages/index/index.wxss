@@ -1,0 +1,127 @@
+/*noshoptemplate.wxss*/
+
+@import '../template/noshoptemplate.wxss';
+
+
+
+
+
+
+
+
+/*columntemplate.wxss*/
+
+@import '../template/columntemplate.wxss';
+
+
+
+
+
+
+
+
+/*index.wxss*/
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+}
+
+#head {
+    max-width: 100%;
+    width: 750rpx;
+    text-align: center;
+    color: #ffffff;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(#3583db, #3d8ee1, #4599e7);
+}
+
+#head .headtop {
+    padding: 0 30rpx;
+    overflow: hidden;
+}
+
+#head .byljje {
+    color: #99c9ff;
+    padding-top: 30rpx;
+    padding-bottom: 25rpx;
+}
+
+#head .cumulativemoney {
+    font-size: 80rpx;
+    color: #ffffff;
+    line-height: 80rpx;
+    max-width: 700rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#head .headbottom {
+    width: 100%;
+    height: 118rpx;
+    border-top: 1rpx solid #4e9aee;
+    margin-top: 50rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#head .headbottom .headbottomcolumn {
+    flex: 1;
+    height: 72rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#head .headbottom .headbottomcolumn .headbottomtitle {
+    color: #99c9ff;
+}
+
+#head .headbottom .headbottomcolumn .headbottommoney {
+    font-size: 32rpx;
+    line-height: 32rpx;
+    color: #ffffff;
+    max-width: 248rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#head .headbottom .headbottomcolumn:nth-of-type(2) {
+    border-left: 1rpx solid #4e9aee;
+    border-right: 1rpx solid #4e9aee;
+}
+
+#bulletin {
+    width: 690rpx;
+    padding: 0 30rpx;
+    overflow: hidden;
+    height: 58rpx;
+    line-height: 58rpx;
+    font-size: 26rpx;
+    color: #b3924b;
+    background-color: #fbf7e4;
+    border-bottom: 1rpx solid #ede8d2;
+}
+
+#bulletin image {
+    height: 25rpx;
+    width: 33rpx;
+    margin-right: 16rpx;
+}
+
+.contenbox {
+    margin-top: 330rpx;
+    width: 750rpx;
+}

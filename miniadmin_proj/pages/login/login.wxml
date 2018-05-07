@@ -1,0 +1,24 @@
+<view class="content">
+    <!-- 背景图     -->
+    <view class="logo">
+        <view class="lemo">
+            <view>专为花店设计的小程序商城</view>
+        </view>
+        <image mode="aspectFit" src="../../images/lemo_logo.png"></image>
+    </view>
+    <!-- 验证 -->
+    <view class="apply">
+        <form bindsubmit="formSubmit" bindreset="foo">
+            <view class="input-area">
+                <view class="telphoneNumber">
+                    <input name="telphone" maxlength='11' type="number" placeholder="请输入已绑定过店铺的手机号" bindinput="getPhoneNum" class="username {{PhoneActive}}" placeholder-class="telphone" placeholder-style="color:#d4d4d4;" cursor-spacing="172" />
+                </view>
+                <view class="smsCode {{codeActive}}" style="border-bottom:{{smsCodeBorderBottom}}">
+                    <input id="Code" name="code" maxlength='6' type="number" placeholder="请输入验证码" placeholder-class="telphone" placeholder-style="color:#d4d4d4;" cursor-spacing="100" />
+                    <view bindtap="getSmsCode" disabled="{{smsCodeDisabled}}" style="color:{{getSmsCodeBtnColor}}" class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</view>
+                </view>
+            </view>
+            <button type="primary" formType="submit" class="loginBtn"> {{loginBtnTxt}} </button>
+        </form>
+    </view>
+</view>

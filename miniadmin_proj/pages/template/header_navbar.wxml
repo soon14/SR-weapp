@@ -1,0 +1,6 @@
+<!-- header_navbar.wxml -->
+<view class="header_navbar">
+    <navigator url="{{type!=1?'/pages/index/orderManagement/orderManagement?state=1&type=1':''}}" redirect class="header_navbar-item {{type==1?'hd_active':''}}">普通订单</navigator>
+    <navigator url="{{type!=2?'/pages/index/orderManagement/orderManagement?state=3&type=2':''}}" redirect class="header_navbar-item {{type==2?'hd_active':''}}">活动订单</navigator>
+    <navigator url="{{type!=3?'/pages/promotion/groupon/grouponOrder/grouponOrder?type=3':''}}" redirect class="header_navbar-item {{type==3?'hd_active':''}}" wx:if="{{isShowGroup}}">拼团订单</navigator>
+</view>

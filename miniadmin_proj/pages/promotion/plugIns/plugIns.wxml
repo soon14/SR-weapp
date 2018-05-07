@@ -1,0 +1,30 @@
+<!-- 插件购买 -->
+<view class="contentbox">
+    <view class="contentbox-title">
+        <view class="contentbox-title-top">
+            <view class="contentbox-title-top-left">
+                <image mode="widthFix" src="{{cdnhost+plugininfo.icon}}"></image>
+            </view>
+            <view class="contentbox-title-top-right">
+                <view class="contentbox-title-top-right-top">{{plugininfo.title}}</view>
+                <view class="contentbox-title-top-right-bottom">{{plugininfo.summary}}</view>
+            </view>
+        </view>
+        <view class="contentbox-title-bottom">
+            服务价格
+            <text>{{plugininfo.items.default.price}}乐墨点/{{plugininfo.items.default.size}}</text>
+        </view>
+    </view>
+    <view class="scroll">
+        <block wx:for="{{imgslist}}">
+            <view class="scroll-colume">
+                <image mode="aspectFill" src="{{cdnhost+item}}"></image>
+            </view>
+        </block>
+    </view>
+    <view class="explain">
+        <view class="explain-title">功能介绍</view>
+        <view class="explain-content">{{plugininfo.desc}}</view>
+    </view>
+    <view class="btnbox" data-id="{{plugininfo.id}}" bindtap="goUrl">立即订购</view>
+</view>

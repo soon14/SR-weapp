@@ -1,0 +1,38 @@
+<view class="myIncome">
+    <view class="income">
+        ￥35,888
+    </view>
+    <view class="menu">
+        <navigator src="" class="link">申请提现</navigator>
+        <navigator src="" class="link">提取纪录</navigator>
+    </view>
+</view>
+<view class="lemobiRecord">
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                购买拼团插件
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num">￥499</view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                发营销红包
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num add">￥300</view>
+    </view>
+    <view class="item">
+        <view class="item-left">
+            <view class='type'>
+                新商家赠送
+            </view>
+            <view class="time">2018-02-10 16:00</view>
+        </view>
+        <view class="num add">￥100</view>
+    </view>
+</view>

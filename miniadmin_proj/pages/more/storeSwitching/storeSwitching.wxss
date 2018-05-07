@@ -1,0 +1,64 @@
+.weui-cell__bd {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.weui-cell__bd wx-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.weui-cell__bd wx-text {
+  margin-left: 102rpx;
+  line-height: 70rpx;
+  color: #292426;
+  font-size: 30rpx;
+}
+
+.jian {
+  height: 310rpx;
+}
+
+.current {
+  background-color: #1aad19;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  text-align: center;
+  height: 44rpx;
+  line-height: 44rpx;
+  padding: 0 10rpx;
+}
+
+.goCenter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #292426;
+  font-size: 30rpx;
+}
+
+.goCenter-text {
+  margin-top: 200rpx;
+}
+
+.goCenter-btn {
+  margin-top: 100rpx;
+  border: 1rpx solid #39a1db;
+  font-size: 28rpx;
+  color: #39a1db;
+  background-color: #fff;
+  text-align: center;
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+}

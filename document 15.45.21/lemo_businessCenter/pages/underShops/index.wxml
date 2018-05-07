@@ -1,0 +1,33 @@
+<view class='myTeam'>
+    <view class="tips">所有被邀请或主动绑定您邀请码的商家均属于您的直属商家，享受提成</view>
+    <view class="list">
+        <view class="item">
+            <navigator src="" class='edit'>修改</navigator>
+            <view class="avater">
+                <image src='http://temp.im/110x110'></image>
+            </view>
+            <view class="txt">
+                <view class="name">先政</view>
+                <view class="p">
+                    ID：80123  享受业绩：<text>232300元</text>
+                </view>
+                <view class="p">王娟 15818245698</view>
+                <view class="p">加入时间：2017-12-25 20:30</view>
+            </view>
+        </view>
+        <view class="item">
+            <navigator src="" class='edit'>修改</navigator>
+            <view class="avater">
+                <image src='http://temp.im/110x110'></image>
+            </view>
+            <view class="txt">
+                <view class="name">先政</view>
+                <view class="p">
+                    ID：80123  享受业绩：<text>232300元</text>
+                </view>
+                <view class="p">王娟 15818245698</view>
+                <view class="p">加入时间：2017-12-25 20:30</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<form>
+<view class="applyCash">
+    <view class="hd">
+        <view class="row">
+            <view class="tit">微信钱包</view>
+            <!--未设置和已设置两种状态  已设置加入 haveSet -->
+            <!-- <navigator class="set" src="">未设置<image src="../../images/rArrow.png"></image></navigator> -->
+            <navigator class="set haveSet" src="">陈志哲<image src="../../images/rArrow.png"></image></navigator>
+        </view>
+        <view class="tips">提现需要审核，约3-5个工作日，每月不超过2次提现。</view>
+    </view>
+    <view class="amount">
+        <view class='tit'>提现金额</view>
+        <view class="inpMoney">
+            <text>￥</text><input type="text"></input>
+        </view>
+        <view class="total">可提现金额：35838元</view>
+    </view>
+    <button form-type='submit'>提交申请</button>
+</view>
+</form>

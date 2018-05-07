@@ -1,0 +1,50 @@
+<view class="editCase-nav">
+    <navigator>草稿 (5)</navigator>
+    <navigator class="cur">已发布 (10)</navigator>
+    <navigator>已结束 (18)</navigator>
+</view>
+<view class="publicList">
+    <navigator>
+        <view class="hdTit">相爱Love每周一花小幸福相爱Love每周一花小幸福相爱Love每周一花小幸福</view>
+        <view class="msg">
+            <view class="col">
+                <image src="../../images/yulan.png" class="look"></image>
+                <text>189</text>
+            </view>
+            <view class="col">
+                <image src="../../images/zhuanfa.png" class="share"></image>
+                <text>6</text>
+            </view>
+            <view class="col">
+                <image src="../../images/shouru.png" class='shouru'></image>
+                <text>19</text>
+            </view>
+        </view>
+        <image src="../../images/rArrow.png" class="rArrow"></image>
+    </navigator>
+    <navigator>
+        <view class="hdTit">相爱Love每周一花小幸福相爱</view>
+        <view class="msg">
+            <view class="col">
+                <image src="../../images/yulan.png" class="look"></image>
+                <text>189</text>
+            </view>
+            <view class="col">
+                <image src="../../images/zhuanfa.png" class="share"></image>
+                <text>6</text>
+            </view>
+            <view class="col">
+                <image src="../../images/shouru.png" class='shouru'></image>
+                <text>19</text>
+            </view>
+        </view>
+        <image src="../../images/rArrow.png" class="rArrow"></image>
+    </navigator>
+</view>
+<view class="editCase-fix">
+    <!--另一种状态去掉此处即可，样式已写好  -->
+    <navigator class="pcPublic">电脑端发布</navigator>
+    <!--另一种状态去掉此处即可，样式已写好  -->
+    <navigator class="newPublic">新方案发布</navigator>
+</view>
+

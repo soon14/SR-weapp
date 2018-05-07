@@ -1,0 +1,13 @@
+<view class="sharePocket">
+    <view class="hd">
+        <image src="../../images/zbhhb_bg.png" class="bg"></image>
+        <view class="avator">
+            <image src='http://temp.im/130x130'></image>
+        </view>
+        <view class="name">先政的红包</view>
+        <view class="msg">
+            这里是留言内容这里是留言内容
+        </view>
+    </view>
+    <button form-type='submit'>转发到好友或是群聊</button>
+</view>

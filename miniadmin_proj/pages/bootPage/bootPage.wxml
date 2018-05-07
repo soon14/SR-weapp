@@ -1,0 +1,11 @@
+<view id="navigationImgs">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindChange">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image mode="scaleToFill" src="{{item}}" class="swiper-image">
+                    <view class="tiaoguo" bindtap="start">{{index+1==imgUrls.length?'开始使用':'跳过'}}</view>
+                </image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

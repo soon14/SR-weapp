@@ -1,0 +1,64 @@
+<view class="myCount">
+    <view class="total">
+        <text>5888</text>乐墨币
+    </view>
+    <view class="link">
+        <navigator src="">乐墨币纪录</navigator>
+        <navigator src="">积分纪录</navigator>
+    </view>
+    <view class="title">
+        <image src='../../images/goumai.png'></image>
+        <text>购买乐墨币</text>
+    </view>
+    <view class="priceList">
+        <view class="item cur">
+            <view class="lemo">18乐墨币</view>
+            <view class="money">18元</view>
+        </view>
+        <view class="item">
+            <view class="lemo">188乐墨币</view>
+            <view class="money">188元</view>
+        </view>
+        <view class="item">
+            <view class="lemo">368乐墨币</view>
+            <view class="money">368元</view>
+        </view>
+        <view class="item">
+            <view class="lemo">588乐墨币</view>
+            <view class="money">588元</view>
+        </view>
+        <view class="item">
+            <view class="lemo">988乐墨币</view>
+            <view class="money">988元</view>
+        </view>
+        <view class="item other">
+            其他金额
+        </view>
+    </view>
+    <button form-type='sumit' class='btn'>确认支付</button>
+    <view class='rule'>
+        <view class="title">
+            <image src='../../images/guizhe.png'></image>
+            <text>使用规则</text>
+        </view>
+        <view class="p">
+            1.乐墨币可用于兑换虚拟服务（不含实物产品，线下课程等）
+        </view>
+        <view class="p">
+            2.乐墨币玮虚拟产品，购买后不会过期，但无法退款。
+        </view>
+    </view>
+</view>
+<!--赠送乐墨币  -->
+<view class="giveMask"></view>
+<view class="givePop">
+    <image src='../../images/give.png'></image>
+    <view class='txt'>
+        <view class="p1">恭喜您，获得</view>
+        <view class="gift">1800乐墨币</view>
+        <navigator class='getGift' src="">点击领取</navigator>
+        <view class="tips">
+            首次购买乐墨币，充值越多送越多封顶500乐墨币
+        </view>
+    </view>
+</view>

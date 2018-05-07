@@ -1,0 +1,7 @@
+<view class="getPocket">
+    <view class="success">
+        <icon type='success' size='80'></icon>
+    </view>
+    <view class="num">28乐墨币</view>
+    <button form-type='submit'>完成</button>
+</view>

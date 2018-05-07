@@ -1,0 +1,39 @@
+<!-- 商品管理(售罄选项卡) -->
+<view class="topnavbar {{topNavbarData.currentTab == 2}}:'topnavbar_2':''">
+    <navigator url="/pages/index/products/products" open-type="redirect" class="item">上架中({{allsalecount || 0}})</navigator>
+    <text class="item active" bindtap="Refresh">售罄({{saleoutcount || 0}})</text>
+    <navigator url="/pages/index/products/goodsDown/goodsDown" open-type="redirect" class="item">下架中({{unsalecount || 0}})</navigator>
+</view>
+<!--售罄-->
+<view class="navbarContent">
+    <view class="container">
+        <view class="content">
+            <block wx:for="{{list}}">
+                <view class="productsBox">
+                    <view class="productscontent">
+                        <navigator url="/pages/index/products/addproduct/addproduct?id={{item.id}}" class="products">
+                            <view class="products_left" data-id="{{item.id}}">
+                                <image mode="aspectFill" src="{{host+item.mainpic}}" data-id="{{item.id}}" />
+                                <block wx:if="{{item.is_useticket == '2'}}">
+                                    <view class="tejia"></view>
+                                    <text class="tejia_text">特</text>
+                                </block>
+                            </view>
+                            <view class="products_right" data-id="{{item.id}}">
+                                <view class="products_right_title" data-id="{{item.id}}">{{item.title}}
+                                </view>
+                                <view class="products_right_desc price" data-id="{{item.id}}">￥{{item.price}}</view>
+                                <view class="products_right_bottom">
+                                    <text data-id="{{item.id}}">库存：{{item.num}}</text>
+                                    <text data-id="{{item.id}}">销量：{{item.salenum}}</text>
+                                </view>
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </block>
+            <text wx:if="{{list.length<1}}" class="noContent">还没有售罄商品哦</text>
+        </view>
+        <view class="addbtnbox" bindtap="addnew">新增商品</view>
+    </view>
+</view>

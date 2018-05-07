@@ -1,0 +1,139 @@
+{
+    "pages": [
+
+        "pages/index/index",
+        "pages/bootPage/bootPage",
+        "pages/index/notice/notice",
+        "pages/index/shopColumn/shopColumn",
+        "pages/index/shopDecoration/shopDecoration",
+        "pages/index/orderManagement/orderManagement",
+        "pages/index/orderManagement/refuseorder/refuseorder",
+        "pages/index/orderManagement/writeRemark/writeRemark",
+        "pages/index/orderManagement/orderdetails/orderdetails",
+        "pages/index/orderManagement/sendgoods/sendgoods",
+        "pages/index/orderManagement/expressinfo/expressinfo",
+        "pages/index/products/products",
+        "pages/index/products/addproduct/addproduct",
+        "pages/index/products/details/details",
+        "pages/index/products/addproduct/productDetails/productDetails",
+        "pages/index/products/classifiedManagement/classifiedManagement",
+        "pages/index/products/addClassified/addClassified",
+        "pages/index/products/sellOut/sellOut",
+        "pages/index/products/mprocates/mprocates",
+        "pages/index/products/goodsDown/goodsDown",
+        "pages/index/revenueDetails/revenueDetails",
+        "pages/index/operatingReport/operatingReport",
+        "pages/index/shopPosters/shopPosters",
+        "pages/index/carouselFigurUpload/carouselFigurUpload",
+        "pages/index/carouselFigureSet/carouselFigureSet",
+        "pages/index/addcolumn/addcolumn",
+        "pages/index/chooseGoods/chooseGoods",
+        "pages/index/qrcodeproduct/qrcodeproduct",
+        "pages/index/classifiedPoster/classifiedPoster",
+        "pages/index/shopColumn/columnStyle/columnStyle",
+
+        "pages/customer/customer",
+        "pages/customer/addlabel/addlabel",
+        "pages/customer/customerCoupons/customerCoupons",
+        "pages/customer/giftCoupons/giftCoupons",
+        "pages/customer/customerdetails/customerdetails",
+        "pages/customer/systemTagQuery/systemTagQuery",
+
+        "pages/promotion/promotion",
+        "pages/promotion/groupon/groupon",
+        "pages/promotion/groupon/grouponDetail/grouponDetail",
+        "pages/promotion/groupon/grouponOrder/grouponOrder",
+        "pages/promotion/groupon/chooseGrouponGoods/chooseGrouponGoods",
+        "pages/promotion/plugIns/plugIns",
+        "pages/promotion/plugIns/plugInsDetail/plugInsDetail",
+        "pages/promotion/evaluationManagement/evaluationManagement",
+        "pages/promotion/evaluationManagement/reply/reply",
+        "pages/promotion/coupon/coupon",
+        "pages/promotion/socialDeductible/socialDeductible",
+        "pages/promotion/deductible/deductible",
+        "pages/promotion/sechargeSettings/sechargeSettings",
+        "pages/promotion/customerRecharge/customerRecharge",
+
+        "pages/more/more",
+        "pages/more/faretmpl/faretmpl",
+        "pages/more/remind/remind",
+        "pages/more/addrangefaretmpl/addrangefaretmpl",
+        "pages/more/helpdetails/helpdetails",
+        "pages/more/helplist/helplist",
+        "pages/more/addfaretmpl/addfaretmpl",
+        "pages/more/deliverytmpl/deliverytmpl",
+        "pages/more/setexpress/setexpress",
+        "pages/more/bindphone/bindphone",
+        "pages/more/changebindphone/changebindphone",
+        "pages/more/invitingAwards/invitingAwards",
+        "pages/more/shopSettings/shopSettings",
+        "pages/more/shopSettings/setWeChatQRcode/setWeChatQRcode",
+
+        "pages/more/shopSettings/changeaftersale/changeaftersale",
+        "pages/more/shopSettings/changeshopname/changeshopname",
+        "pages/more/shopSettings/storeService/storeService",
+        "pages/more/accountSettings/accountSettings",
+        "pages/more/storeStaff/storeStaff",
+        "pages/more/paymentSettings/paymentSettings",
+        "pages/more/storeSwitching/storeSwitching",
+
+        "pages/input/input",
+
+        "pages/login/login",
+
+        "pages/financialManagement/financialManagement",
+        "pages/financialManagement/consumptionWithholding/consumptionWithholding",
+        "pages/financialManagement/offlineRecharge/offlineRecharge",
+        "pages/financialManagement/orderRefund/orderRefund",
+        "pages/financialManagement/financialOperation/financialOperation",
+
+        "pages/promptPages/collectionQRcode/collectionQRcode",
+        "pages/promptPages/addQRcode/addQRcode",
+        "pages/promptPages/successfulOpening/successfulOpening",
+        "pages/promptPages/auditFailure/auditFailure",
+        "pages/promptPages/collectionAccount/collectionAccount"
+
+    ],
+    "window":
+    {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#3583db",
+        "navigationBarTitleText": "乐墨花时光",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#f7f7f7",
+        "enablePullDownRefresh": false
+    },
+    "tabBar":
+    {
+        "color": "#72767a",
+        "selectedColor": "#246cbf",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "店铺",
+            "iconPath": "images/dp.png",
+            "selectedIconPath": "images/dp_c.png"
+        },
+        {
+            "pagePath": "pages/customer/customer",
+            "text": "客户",
+            "iconPath": "images/kh.png",
+            "selectedIconPath": "images/kh_c.png"
+        },
+        {
+            "pagePath": "pages/promotion/promotion",
+            "text": "营销",
+            "iconPath": "images/tg.png",
+            "selectedIconPath": "images/tg_c.png"
+        },
+        {
+            "pagePath": "pages/more/more",
+            "text": "更多",
+            "iconPath": "images/gd.png",
+            "selectedIconPath": "images/gd_c.png"
+        }]
+    },
+    "debug": false
+}

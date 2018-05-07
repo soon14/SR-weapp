@@ -1,0 +1,17 @@
+page{
+  padding-bottom: 30rpx;
+}
+.menu{
+  padding: 50rpx 30rpx 0 30rpx;
+}
+.menu .tit{
+  text-align: center;
+  padding-bottom: 40rpx;
+  font-size: 32rpx;
+}
+.menu navigator{
+  font-size: 28rpx;
+  color:#333;
+  padding: 20rpx 0;
+  border-bottom: 2rpx dashed;
+}

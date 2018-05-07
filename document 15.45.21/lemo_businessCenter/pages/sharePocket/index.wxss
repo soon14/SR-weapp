@@ -1,0 +1,39 @@
+.sharePocket {
+  text-align: center;
+}
+.sharePocket .hd{
+  position: relative;
+}
+.sharePocket .bg{
+  width: 100%;
+  height: 138rpx;
+}
+.sharePocket .hd .avator{
+  margin-top: -66rpx;
+}
+.sharePocket .hd .avator image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border: solid 4rpx rgba(255, 255, 255, 0.3);
+  vertical-align: top;
+}
+.sharePocket .name{
+  font-size: 34rpx;
+  color:#666;
+  font-weight: 500;
+  padding: 30rpx 0 20rpx 0;
+}
+.sharePocket .msg{
+  font-size: 26rpx;
+  color:#666;
+}
+.sharePocket button{
+  width: 570rpx;
+	height: 90rpx;
+	background-image: linear-gradient(0deg, rgba(232, 86, 86, 1) 0%, rgba(231, 72, 72, 1) 100%);
+	border-radius: 10rpx;
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  color:#fff;
+}

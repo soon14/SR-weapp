@@ -1,0 +1,151 @@
+/*经营报表*/
+
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+/*选项卡内容*/
+
+.navbarContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/*选项卡*/
+
+.topnavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 750rpx;
+    max-width: 100%;
+    height: 110rpx;
+    line-height: 110rpx;
+    background: #3583db;
+    color: #ffffff;
+    font-size: 30rpx;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topnavbar_2 {
+    position: relative;
+}
+
+.topnavbar .item {
+    position: relative;
+    width: 96rpx;
+}
+
+.topnavbar .item.active {
+    color: #ffffff;
+}
+
+.topnavbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10rpx;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4rpx;
+    border-radius: 2rpx;
+    background: #ffffff;
+}
+
+
+
+/*内容模版*/
+
+.content {
+    flex: 1;
+    width: 690rpx;
+    height: 260rpx;
+    overflow: hidden;
+    padding: 30rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenttime {
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    color: #999999;
+}
+
+.contentmoney {
+    height: 165rpx;
+    color: #f06f48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentmoney wx-text:nth-of-type(1) {
+    font-size: 36rpx;
+    line-height: 36rpx;
+}
+
+.contentmoney wx-text:nth-of-type(2) {
+    font-size: 66rpx;
+    line-height: 66rpx;
+}
+
+.contentbottom {
+    width: 750rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.contentbottom wx-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.contentbottom wx-view wx-text:nth-of-type(1) {
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #999;
+}
+
+.contentbottom wx-view wx-text:nth-of-type(2) {
+    margin-top: 20rpx;
+    font-size: 32rpx;
+    line-height: 32rpx;
+    color: #666;
+}

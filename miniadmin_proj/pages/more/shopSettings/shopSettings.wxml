@@ -1,0 +1,81 @@
+<!-- 门店设置 -->
+<view class="contentbox">
+    <view class="shopimagebox">
+        <text class="shopimagetoptext">门店展示</text>
+        <view class="shopimage {{background2?'':'shopimage1'}}" bindtap="changeback2" hidden="{{showimg==2}}">
+            <image mode="aspectFill" src="/images/morenshopimg.png" class="morenshopimg" wx:if="{{!background2}}"></image>
+            <image mode="aspectFill" src="{{host+background2}}" class="changeback2" wx:if="{{background2}}"></image>
+        </view>
+        <view class="shopimage" hidden="{{showimg!=2}}">
+            <video src="{{host}}/{{video.fkey}}" controls class="shopvideo"></video>
+        </view>
+        <picker bindchange="binduploadPickerChange" value="{{uploadindex}}" range="{{uploadarray}}">
+            <view class="shopimagebottomtext">
+                点击可更换门店照片/视频
+            </view>
+            <view class="shopimagebottomtextjy">建议尺寸750*420 （宽高比 16:9）</view>
+        </picker>
+    </view>
+    <view class="shopinfobox">
+        <view class="address" bindtap="changelogo">
+            <view>店铺LOGO</view>
+            <view>
+                <image src="{{host+logo}}" class="logo"></image>
+                <text class="sj"></text>
+            </view>
+        </view>
+        <view class="address" bindtap="goshopname">
+            <view>店铺名称</view>
+            <view>
+                <text class="ad">{{list.name}}</text>
+                <text class="sj"></text>
+            </view>
+        </view>
+        <view class="address" bindtap="authSetting">
+            <view>门店地址</view>
+            <view>
+                <text class="ad">{{address}}</text>
+                <text class="sj"></text>
+            </view>
+        </view>
+        <view class="address" bindtap="goUrl">
+            <view>客服电话</view>
+            <view>
+                <text class="ad">{{telphone}}</text>
+                <text class="sj"></text>
+            </view>
+        </view>
+        <view class="address" bindtap="changeWeimg">
+            <view>客服微信二维码</view>
+            <view>
+                <image src="{{host+weimg}}" class="logo" wx:if="{{weimg}}"></image>
+                <text class="ad" wx:if="{{!weimg}}">未设置</text>
+                <text class="sj"></text>
+            </view>
+        </view>
+        <view class="address" bindtap="aftersale">
+            <view>售后服务</view>
+            <view>
+                <text class="ad"></text>
+                <text class="sj"></text>
+            </view>
+        </view>
+    </view>
+    <view class="mdfwbox">
+        <view class="mdfwtitle">
+            <text>门店服务</text>
+            <navigator url="/pages/more/shopSettings/storeService/storeService">修改</navigator>
+        </view>
+        <navigator url="/pages/more/shopSettings/storeService/storeService" class="mdfw">
+            <view class="fwcolume">
+                <block wx:for="{{shoplists}}">
+                    <view>
+                        <image src="{{host+item.pic}}"></image>
+                        <text>{{item.title}}</text>
+                    </view>
+                </block>
+            </view>
+            <!-- <text class="sj"></text> -->
+        </navigator>
+    </view>
+</view>

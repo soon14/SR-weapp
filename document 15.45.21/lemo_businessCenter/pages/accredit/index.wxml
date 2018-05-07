@@ -1,0 +1,27 @@
+<view class="accredit">
+    <view class='row hd'>
+        <view class='lable'>微信号</view>
+        <view class='cnt'>
+            <input type='text' value='面带微笑'/>
+        </view>
+    </view>
+    <view class="inpBox">
+        <view class="row">
+            <view class='lable'>手机号</view>
+            <view class='cnt'>
+                <input type='text' placeholder='请输入手机号码'/>
+            </view>
+            <view class="getCode">获取验证码</view>
+        </view>
+        <view class="row">
+            <view class='lable'>验证码</view>
+            <view class='cnt'>
+                <input type='text' placeholder='请输入短信中的验证码'/>
+            </view>
+            <view class='del'>
+                <image src="../../images/clear.png"></image>
+            </view>
+        </view>
+    </view>
+    <button form-type='submit'>完成</button>
+</view>

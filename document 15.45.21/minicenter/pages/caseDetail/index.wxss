@@ -1,0 +1,230 @@
+page{
+  background-color: rgba(237, 238, 240, 1);
+}
+.caseDetail{
+  padding-bottom: 140rpx;
+}
+.caseDetail .banner image,
+.caseDetail .banner video{
+  width: 100%;
+  height: 750rpx;
+  vertical-align: top;
+}
+.caseDetail .hd{
+  background: #fff;
+  padding: 30rpx;
+  overflow: hidden;
+}
+.caseDetail .hd .hdLeft{
+  float: left;
+  width: 60%;
+}
+.caseDetail .hd .hdLeft .tit{
+  font-size: 32rpx;
+  color:#333;
+  line-height: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.caseDetail .hd .hdLeft .name{
+  font-size: 24rpx;
+  color:#999;
+  padding-top: 10rpx;
+}
+.hdMenu{
+  float: right;
+  margin-top: 4rpx;
+}
+.hdMenu .col{
+  float: left;
+  position: relative;
+  margin-left:30rpx;
+}
+hdMenu .col:first-last{
+  margin-left: 0;
+}
+.hdMenu .col image{
+  display: block;
+  width: 39rpx;
+  height: 39rpx;
+  margin: 0 auto;
+}
+.hdMenu .send{
+  margin-left: 60rpx;
+}
+.hdMenu .send image{
+  width: 42rpx;
+  height: 39rpx;
+}
+.hdMenu .inform image{
+  width: 39rpx;
+  height: 39rpx;
+}
+.hdMenu .col text{
+  display: block;
+  color:#666;
+  font-size: 22rpx;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.hdMenu .col .tags{
+  position: absolute;
+  top:-14rpx;
+  left: 36rpx;
+  color:#fff;
+  font-size: 18rpx;
+  padding: 0 14rpx;
+	height: 28rpx;
+	background-image: linear-gradient(0deg, rgba(254, 102, 56, 1) 0%, rgba(243, 14, 68, 1) 100%);
+	border-radius: 14px;
+  white-space: nowrap;
+}
+.shopMsg{
+  background: #fff;
+  padding: 0 30rpx;
+  margin-top: 20rpx;
+}
+.shopMsg .rows{
+  overflow: hidden;
+  padding: 30rpx 0 20rpx 0pc;
+}
+.shopMsg .shopName{
+  font-size: 32rpx;
+  color:#333;
+  float: left;
+}
+.shopMsg .rows navigator{
+  float: right;
+  font-size: 28rpx;
+  color:#666;
+}
+.shopMsg .rows navigator image{
+  width: 14rpx;
+  height:24rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.shopMsg .tips{
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color:#c3a17a;
+}
+.caseDetail .detail{
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 20rpx 30rpx;
+}
+.caseDetail .detail .tit{
+  font-size: 30rpx;
+  color:#333;
+  padding: 12rpx 0;
+}
+.caseDetail .detail .info{
+  font-size: 28rpx;
+  color:#666;
+  line-height: 48rpx;
+  border-bottom: 2rpx solid #E5E5E5;
+  padding-bottom: 16rpx;
+}
+.caseDetail .detail .item:last-child .info{
+  border-bottom: 0;
+}
+.caseDetail .detail image{
+  width: 100%;
+  display: block;
+  
+}
+.caseDetail .detail .suo{
+  width: 300rpx;
+  height:281rpx;
+  margin: 0 auto;
+  display: block;
+}
+.fix-nav{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #fff;
+}
+.fix-nav navigator{
+  flex: 1;
+  text-align: center;
+  color:#fff;
+  font-size: 32rpx;
+}
+.fix-nav .prevBtn{
+  background-image: linear-gradient(0deg, rgba(76, 105, 124, 1) 0%, rgba(60, 87, 105, 1) 100%);
+}
+.fix-nav .buy1{
+  background-image: linear-gradient(0deg, rgba(168, 217, 255, 1) 0%, rgba(146, 207, 255, 1) 100%);
+}
+.fix-nav .buy2{
+  background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+.fix-nav .save{
+  width: 150rpx;
+  height: 100rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #717882;
+}
+.fix-nav .save image{
+  display: block;
+  width: 40rpx;
+  height:40rpx;
+  margin: 18rpx auto 10rpx auto;
+}
+.fix-nav .save text{
+  line-height: 1;
+  display: block;
+}
+/*蒙版 */
+.preview{
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background:rgba(255, 255, 255, 0);
+  display: none; 
+}
+.preview .watermark{
+  width: 500rpx;
+  padding: 20rpx 50rpx;
+  border:8rpx solid #FF8C6F;
+  color:#ff8c6e;
+  text-align: center;
+  position: absolute;
+  top:50%;
+  margin-top:-70rpx;
+  left: 50%;
+  margin-left: -308rpx;
+  transform: rotate(-15deg);
+}
+.preview .watermark .title{
+   font-size: 60rpx;
+}
+.preview .watermark .mark{
+   font-size: 40rpx;
+}
+.preview .clsPreview{
+  width: 300rpx;
+	height: 90rpx;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+  font-size: 32rpx;
+  color:#fff;
+  line-height: 90rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+  margin-left: -150rpx;
+  text-align: center;
+}

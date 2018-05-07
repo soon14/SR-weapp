@@ -1,0 +1,43 @@
+<!-- 推广(客户充值设置) -->
+<form bindsubmit="formSubmit">
+    <view class="section">
+        <view class="section__title">主题名称</view>
+        <input name="title" data-name="title" placeholder="请输入主题名称" value="{{title}}" type="text" bindchange="" bindinput="" />
+    </view>
+    <view class="section">
+        <view class="section__title">限制金额</view>
+        <input name="xzje" data-name="xzje" placeholder="无限制可不填写" value="{{max_money}}" type="digit" bindchange="" bindinput="" />
+    </view>
+    <input name="promotion_id" data-name="id" value="{{promotion_id}}" hidden/>
+    <view class="sectionbox">
+        <block wx:for="{{addColumnData}}">
+            <view class="sectionbb">
+                <input name="id{{index}}" data-name="id" value="{{item.id}}" hidden/>
+                <view class="delbtnbox {{index !== 0 ? '' : 'delbtnbox_null'}}">
+                    <image mode="aspectFit" src="/images/del11.png" class="delbtn" data-id="{{item.id}}" wx-if="{{index>0}}" data-index="{{index}}" bindtap="{{item.id>0?'delete':'delete1'}}"></image>
+                </view>
+                <view class="section">
+                    <view class="section__title">付款金额</view>
+                    <input name="money{{index}}" data-name="money" placeholder="请输入付款金额，如1000" value="{{item.money}}" type="digit" data-index="{{index}}" bindchange="" bindinput="bindinputmoney" />
+                </view>
+                <view class="section section_nom">
+                    <view class="section__title">赠送金额</view>
+                    <input name="gift_money{{index}}" data-name="gift_money" placeholder="请输入赠送金额，如2000" value="{{item.gift_money}}" type="digit" bindchange="" bindinput="bindinputgift_money" data-index="{{index}}" />
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- 添加 -->
+    <view class="add" bindtap="addColumn">
+        <text>+</text>
+        <view>添加快捷充值金额</view>
+    </view>
+    <!-- 按钮 -->
+    <button formType="submit" class="save">保存</button>
+</form>
+<view class="explainbox">
+    <view>{{explainTitle}}</view>
+    <block wx:for="{{explainText}}">
+        <view>{{item.text}}</view>
+    </block>
+</view>

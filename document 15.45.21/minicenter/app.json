@@ -1,0 +1,29 @@
+{
+    "pages": [
+        "pages/editCraft/index",
+       "pages/buyedCase/index",
+        "pages/register/index",
+        "pages/register2/index",
+
+        "pages/index/index",
+        
+        "pages/caseDetail/index",
+        "pages/caseList/index",
+        
+
+        "pages/editCourse/index",
+
+        "pages/caseEndList/index",
+        "pages/casePublicList/index",
+        "pages/caseCraftList/index"
+
+    ],
+    "window":
+    {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3583db",
+        "navigationBarTitleText": "乐墨",
+        "navigationBarTextStyle": "#fff",
+        "enablePullDownRefresh": true
+    }
+}

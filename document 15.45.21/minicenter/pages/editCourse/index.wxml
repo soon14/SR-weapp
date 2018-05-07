@@ -1,0 +1,79 @@
+<form>
+    <view class="editCourse">
+        <view class="title">教程<text>其他人购买方案后才可以查看</text></view>
+        <!--文本区域  -->
+        <view class="txtArea">
+            <textarea placeholder='请输入内容...'></textarea>
+            <view class="tools clr">
+                <!--粗体  -->
+                <view class="bold fl">
+                    <image src="../../images/jiacu_press.png" class="basicT"></image>
+                </view>
+                <!-- 居中  -->
+                <view class="txtStyle fl">
+                     <!--点击图片。 txtStyle-tool 设为 display:block -->
+                    <view class='box'>
+                        <image src="../../images/duiqi_normal.png" class="basicT"></image>
+                    </view>
+                    <view class="txtStyle-tool">
+                        <!-- 这块的状态是更换image的src  -->
+                        <!-- left_normal.png     left_press.png    -->
+                        <!-- middle_normal.png   middle_press.png  -->
+                        <!-- right_normal.png    right_press.png  -->
+                        <image src="../../images/left_press.png" class="lAlign"></image>
+                        <image src="../../images/middle_normal.png" class="cAlign"></image>
+                        <image src="../../images/right_normal.png" class="rAlign"></image>
+                    </view>
+                </view>
+                <!--色值  -->
+                <view class="colorStyle fl">
+                    <!--点击图片。 colorStyle-tool 设为 display:block -->
+                    <image src="../../images/colour_normal.png" class="basicT"></image>
+                    <view class="colorStyle-tool">
+                        <view class="cItem c1"></view>
+                        <view class="cItem c2"></view>
+                        <view class="cItem c3"></view>
+                        <view class="cItem c4"></view>
+                        <view class="cItem c5"></view>
+                        <view class="cItem c6"></view>
+                    </view>
+                </view>
+                <view class="rOpeBtn fr">
+                    <image src='../../images/up.png' class="up"></image>
+                    <image src='../../images/down.png' class="down"></image>
+                    <image src='../../images/close.png' class="del"></image>
+                </view>
+            </view>
+        </view>
+        <!--文本区域  -->
+        <!--分割线区域 -->
+        <view class="lineArea">
+            <!-- solid , dashed , onePound , halfPound -->
+            <view class="lineStatus"></view>
+            <view class="tools clr">
+                <view class="lineTool">
+                    <view>实线</view>
+                    <view>虚线</view>
+                    <view>1磅</view>
+                    <view>0.5磅</view>
+                </view>
+                <view class="rOpeBtn fr">
+                    <image src='../../images/up.png' class="up"></image>
+                    <image src='../../images/down.png' class="down"></image>
+                    <image src='../../images/close.png' class="del"></image>
+                </view>
+            </view>
+        </view>
+        <!--分割线区域  -->
+        <view class="operate-btn clr">  
+             <button>新增分割线</button>
+             <button>新增文字</button>
+             <button>新增图片</button>
+        </view>
+        
+    </view>
+    <view class='editCase-fix'>
+        <button class="pcPublic">预览</button>
+        <button form-type='submit' class="submitBtn">保存</button>
+    </view>
+</form>

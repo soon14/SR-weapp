@@ -1,0 +1,86 @@
+.swiper-tab {
+    border: 1px solid #1aad19;
+    text-align: center;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: center;
+    color: #1aad19;
+}
+
+.swiper-tab-list {
+    width: 100%;
+    flex: 1;
+    font-size: 30rpx;
+    color: #1aad19;
+}
+
+.on {
+    color: #ffffff;
+    background-color: #1aad19;
+}
+
+.swiper-box {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-box #wxPay {
+    padding: 40rpx;
+    text-align: left;
+}
+
+.swiper-box #lmPay {
+    padding: 40rpx;
+    text-align: center;
+}
+
+#wxPay wx-input {
+    border: 1px solid #ccc;
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    margin: 30rpx auto;
+    text-align: left;
+}
+
+#wxPay wx-button {
+    width: 750rpx;
+}
+
+page {
+    padding: 30rpx;
+}
+
+.btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #f9f9f9;
+    border-radius: 0;
+    border: none;
+    border: 0;
+    background-color: #4f9dd0!important;
+}
+
+
+/**/
+
+.radio-group {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content {
+    width: 690rpx;
+    margin-top: 30rpx;
+}

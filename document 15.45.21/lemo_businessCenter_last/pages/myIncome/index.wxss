@@ -1,0 +1,24 @@
+.myIncome .income{
+  background: #3583db;
+  font-size: 80rpx;
+  color:#fff;
+  line-height:1;
+  padding: 110rpx 0 75rpx 0;
+  text-align:center;
+}
+.myIncome .menu{
+  display: flex;
+  padding: 20rpx 0;
+  background: #398dde;
+}
+.myIncome .menu .link{
+  flex: 1;
+  text-align: center;
+  font-size:30rpx;
+  color:#fff;
+  line-height: 60rpx;
+  border-left: 2rpx solid #4D99E1;
+}
+.myIncome .menu .link:first-child{
+  border-left:0;
+}

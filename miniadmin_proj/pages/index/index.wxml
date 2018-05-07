@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- head -->
+    <navigator url="{{indexpageData.goUrl}}" class="header">
+        <view id="head">
+            <view class="headtop">
+                <view class="byljje">{{indexpageData.cumulativeMonth}}</view>
+                <view class="cumulativemoney">{{total}}</view>
+            </view>
+            <view class="headbottom">
+                <view class="headbottomcolumn">
+                    <view class="headbottomtitle">{{indexpageData.orderAmount}}</view>
+                    <view class="headbottommoney">{{month}}</view>
+                </view>
+                <view class="headbottomcolumn">
+                    <view class="headbottomtitle">{{indexpageData.qrsReceivables}}</view>
+                    <view class="headbottommoney">{{code}}</view>
+                </view>
+                <view class="headbottomcolumn">
+                    <view class="headbottomtitle">{{indexpageData.rechargeAmount}}</view>
+                    <view class="headbottommoney">{{recharge}}</view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+    <view class="contenbox">
+        <!-- 公告栏 -->
+        <navigator url="{{indexpageData.bulletinData.bulletinGoUrl}}" id="bulletin" wx:if="{{noticetitle}}">
+            <image mode="aspectFit" src="{{indexpageData.bulletinData.bulletinimgUrl}}">
+            </image>
+            <text>{{noticetitle}}</text>
+        </navigator>
+        <!-- 栏目区 -->
+        <view class="content">
+            <!-- 引入栏目模版以及样式 -->
+            <import src="../template/columntemplate.wxml" />
+            <block wx:for="{{columnData}}" wx:key="key">
+                <template is="column" data="{{...item}}" />
+            </block>
+        </view>
+    </view>
+</view>

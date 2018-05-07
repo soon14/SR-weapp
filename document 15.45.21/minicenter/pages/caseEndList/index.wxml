@@ -1,0 +1,24 @@
+<view class="editCase-nav">
+    <navigator>草稿 (5)</navigator>
+    <navigator>已发布 (10)</navigator>
+    <navigator class="cur">已结束 (18)</navigator>
+</view>
+<view class="craftList">
+      <navigator>
+          <view class='hdTit'>相爱Love每周一花小幸福</view>
+          <view class="msg">
+              创建时间：2018年2月22日 07:27
+          </view>
+      </navigator>
+</view>
+<view class="caseEnd-tips">
+    <view class='tit'>说明</view>
+    <view class="pTxt">1.方案在线时间，最长为3个月。超过时间自动结束，并不可购买，但不影响已购用户继续使用</view>
+    <view class='pTxt'>2.超过时间需要重新上架，需新增方案</view>
+</view>
+<view class="editCase-fix">
+    <!--另一种状态去掉此处即可，样式已写好  -->
+    <navigator class="pcPublic">电脑端发布</navigator>
+    <!--另一种状态去掉此处即可，样式已写好  -->
+    <navigator class="newPublic">新方案发布</navigator>
+</view>

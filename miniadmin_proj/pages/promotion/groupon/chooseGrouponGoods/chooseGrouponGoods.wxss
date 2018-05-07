@@ -1,0 +1,178 @@
+/*chooseGoods.wxss (选择商品)*/
+
+page {
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: auto;
+    height: 100%;
+    position: relative;
+    margin: 0 30rpx;
+    color: #333;
+}
+
+
+
+
+
+/*搜索栏*/
+
+.searchlabel {
+    padding: 0 30rpx;
+    margin-top: 40rpx;
+    border: 0;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchlabel .weui-search-bar__label,
+.searchlabel .weui-search-bar__form {
+    background: #fff;
+    border-radius: 34rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border: 0;
+}
+
+.searchlabel .weui-search-bar__input,
+.searchlabel .weui-search-bar__cancel-btn {
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.searchlabel .searchbar-result {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.searchlabel .searchbar-result:before {
+    display: none;
+}
+
+.weui-search-bar__cancel-btn {
+    color: #4f9dd0;
+    font-size: 26rpx;
+}
+
+
+
+
+
+/*内容区*/
+
+.content {
+    background-color: #fff;
+    margin: 0 -30rpx;
+    margin-bottom: 20rpx;
+    padding: 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 30rpx;
+    position: relative;
+}
+
+.content .shopinfo {
+    flex: 1;
+    font-size: 28rpx;
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .shopinfo .title {
+    font-size: 32rpx;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .shopinfo .money text {
+    color: #f06f48;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .shopinfo .num {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.content .shopinfo .num view {
+    max-width: 210rpx;
+    margin-right: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content .tuan {
+    width: 0;
+    height: 0;
+    border-top: 50rpx solid #f06f48;
+    border-right: 50rpx solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content .tuan_text {
+    position: absolute;
+    left: 2rpx;
+    top: 2rpx;
+    font-size: 20rpx;
+    line-height: 20rpx;
+    text-align: left;
+    color: #ffffff;
+}
+
+
+
+
+/*底部说明*/
+
+.explainbox {
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 46rpx;
+    margin-top: 20rpx;
+    margin-bottom: 100rpx;
+}
+
+.explainbox view:nth-of-type(1) {
+    font-size: 30rpx
+}
+
+
+
+/*btn*/
+
+.savebtn {
+    background-color: #39a2dc;
+    color: #fff;
+    font-size: 29rpx;
+    line-height: 90rpx;
+    height: 90rpx;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.savebtn wx-text {
+    margin-left: 20rpx;
+}

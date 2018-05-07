@@ -1,0 +1,33 @@
+.upload .tit{
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color:#333;
+  text-align: center;
+}
+.upload .photoArea{
+  padding: 0 40rpx;
+  margin-bottom: 20rpx;
+}
+.upload .photoArea image{
+  width: 100%;
+  height:360rpx;
+  vertical-align: top;
+}
+.upload .txt{
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  color:#666;
+  line-height: 48rpx;
+}
+.upload button{
+  margin: 60rpx auto;
+  width: 690rpx;
+	height: 90rrpx;
+	background-image: linear-gradient(0deg, rgba(168, 217, 255, 1) 0%, rgba(146, 207, 255, 1) 100%);
+	border-radius: 10rpx;
+  font-size: 32rpx;
+  color:#fff;
+}
+.upload button:after{
+  border:none;
+}

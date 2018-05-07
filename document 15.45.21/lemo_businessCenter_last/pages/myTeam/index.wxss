@@ -1,0 +1,60 @@
+page{
+  background:#edeef0;
+}
+.myTeam .tips{
+  background: #fffcf5;
+  padding: 20rpx 30rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color:#c3a17a;
+}
+.myTeam .list .item{
+  display: flex;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  position: relative;
+  background: #fff;
+  border-bottom: 2rpx solid #E5E5E5;
+}
+.myTeam .list .item:last-child{
+  border-bottom: 0;
+}
+.myTeam .list .item .edit{
+  position: absolute;
+  right: 30rpx;
+  top:20rpx;
+  width: 100rpx;
+	height: 50rpx;
+	border-radius: 4rpx;
+	border: solid 1px rgba(53, 131, 219, 1);
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color:#3583db;
+}
+.myTeam .list .item .avater{
+  width: 110rpx;
+}
+.myTeam .list .item .avater image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.myTeam .list .item .txt{
+  flex: 1;
+  padding-left: 30rpx;
+}
+.myTeam .list .item .txt .name{
+  font-size: 34rpx;
+  color:#000;
+  padding-bottom: 16rpx;
+  line-height: 1;
+}
+.myTeam .list .item .txt .p{
+  font-size: 26rpx;
+  color:#888;
+  line-height: 40rpx;
+}
+.myTeam .list .item .txt .p text{
+  color:#3583db;
+}

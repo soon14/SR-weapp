@@ -1,0 +1,9 @@
+.couponsbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+@import '../../template/coupon.wxss';

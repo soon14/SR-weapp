@@ -1,0 +1,106 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clr:after{clear: both;content:'\0020';display: block;visibility:hidden;height:0;}
+.clr{zoom:1;}
+/*编辑方案公共样式  */
+.editCase-nav{
+  height: 100rpx;
+  background: #3583DB;
+  display: flex;
+}
+.editCase-nav navigator{
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: 28rpx;
+  color:#fff;
+  line-height: 100rpx;
+}
+.editCase-nav navigator{
+  position: relative;
+  display: inline-block;
+}
+.editCase-nav navigator.cur:before{
+  content: "";
+  position: absolute;
+  width: 112rpx;
+	height: 4rpx;
+	background: #fff;
+	border-radius: 2px;
+  bottom: 10rpx;
+  left: 50%;
+  margin-left: -56rpx;
+}
+.editCase-fix{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom:0;
+  height: 100rpx;
+  display: flex;
+  letter-spacing: 2rpx;
+}
+.editCase-fix navigator{
+  flex: 1;
+  line-height: 100rpx;
+  font-size:32rpx;
+  color:#fff;
+  text-align: center;
+  background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+.editCase-fix .pcPublic{
+  background-image: linear-gradient(0deg, rgba(76, 105, 124, 1) 0%, rgba(60, 87, 105, 1) 100%);
+}
+.editCase-fix button{
+  flex: 1;
+  font-size: 32rpx;
+  color:#fff;
+  line-height: 100rpx;
+  border-radius: 0;
+}
+.editCase-fix .submitBtn{
+  background-image: linear-gradient(0deg, rgba(87, 176, 245, 1) 0%, rgba(41, 155, 245, 1) 100%);
+}
+.editCase-fix button::after{
+  border:none;
+}
+/*编辑方案公共样式  */
+/*乐墨币消费纪录 */
+.lemobiRecord{
+  padding: 0 30rpx;
+}
+.lemobiRecord .item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26rpx 0;
+  border-bottom: 2rpx solid #E5E5E5;
+}
+.lemobiRecord .item .item-left {
+  flex: 3;
+}
+.lemobiRecord .item .item-left .type{
+  font-size: 32rpx;
+  color:#333;
+  font-weight: 500;
+}
+.lemobiRecord .item .item-left .time{
+  font-size: 26rpx;
+  color:#999;
+  padding-top: 8rpx;
+}
+.lemobiRecord .item .num{
+  flex: 1;
+  font-size: 32rpx; 
+  color:#333;
+  text-align: right;
+  font-weight: 500;
+}
+.lemobiRecord .item .num.add{
+  color:#3583db;
+}
+/*乐墨币消费纪录 */

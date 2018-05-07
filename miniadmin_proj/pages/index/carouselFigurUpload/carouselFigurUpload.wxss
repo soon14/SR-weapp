@@ -1,0 +1,199 @@
+/*carouselFigurUpload.wxss (新增轮播图)*/
+
+page {
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: auto;
+    height: 100%;
+    position: relative;
+    color: #333;
+}
+
+
+
+
+
+
+
+/*内容区*/
+
+.contentbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30rpx;
+    background-color: #fff;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.contentbox .title,
+.title2 {
+    flex: 1;
+    text-align: center;
+    font-size: 32rpx;
+    color: #f06f48;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.title2 {
+    background: #fff;
+    margin-bottom: 30rpx;
+}
+
+.uploadimg {
+    position: relative;
+}
+
+.uploadimg,
+.uploadimg image {
+    width: 690rpx;
+    height: 276rpx;
+    background-color: #4d4d4d;
+}
+
+.uploadimg button {
+    background-color: #4f9dd0;
+    border-radius: 35rpx;
+    width: 330rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin: 0 auto;
+    font-size: 32rpx;
+    color: #f9f9f9;
+    position: absolute;
+    bottom: 34rpx;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+/*搜索栏*/
+
+.searchlabel {
+    padding: 0 30rpx;
+    margin-top: 40rpx;
+    border: 0;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchlabel .weui-search-bar__label,
+.searchlabel .weui-search-bar__form {
+    background: #fff;
+    border-radius: 34rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border: 0;
+}
+
+.searchlabel .weui-search-bar__input,
+.searchlabel .weui-search-bar__cancel-btn {
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.searchlabel .searchbar-result {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.searchlabel .searchbar-result:before {
+    display: none;
+}
+
+.weui-search-bar__cancel-btn {
+    color: #4f9dd0;
+    font-size: 26rpx;
+}
+
+
+
+
+/*内容区*/
+
+.contentbox11 {
+    padding-bottom: 100rpx;
+}
+
+.contentbox11 .content {
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    padding: 30rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contentbox11 .content image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 30rpx;
+}
+
+.contentbox11 .content .shopinfo {
+    flex: 1;
+    font-size: 28rpx;
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contentbox11 .content .shopinfo .title {
+    font-size: 32rpx;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contentbox11 .content .shopinfo .money text {
+    color: #f06f48;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contentbox11 .content .shopinfo .num {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.contentbox11 .content .shopinfo .num view {
+    max-width: 210rpx;
+    margin-right: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+/*bottom*/
+
+.bottombtn {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #39a2dc;
+    color: #fff;
+    text-align: center;
+}

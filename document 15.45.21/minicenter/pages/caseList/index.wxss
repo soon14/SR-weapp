@@ -1,0 +1,76 @@
+page{
+  background: #EDEEF0;
+}
+.caseList .item{
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.caseList .item .name{
+  font-size: 26rpx;
+  color:#999;
+  display: flex;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+}
+.caseList .item .name image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  vertical-align: top;
+  margin-right: 20rpx;
+}
+.caseList .item .title{
+  color:#333;
+  font-size: 30rpx;
+}
+.caseList .item  .picVideo{
+  margin-top: 18rpx;
+}
+.caseList .item .picVideo image,
+.caseList .item .picVideo video{
+  width: 100%;
+  height: 690rpx;
+  vertical-align: top;
+}
+.caseList .item .msg{
+  padding: 18rpx 0;
+  overflow: hidden;
+}
+.caseList .item .attenPeople{
+  float: left;
+}
+.caseList .item .attenPeople image{
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  float: left;
+  margin-right: 8rpx;
+}
+.caseList .item .pariseBtn{
+  float: left;
+  margin-left: 8rpx;
+  padding: 0 15rpx 0 24rpx;
+  height: 40rpx;
+  border:2rpx solid #ddd;
+  line-height: 40rpx;
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  color:#999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.caseList .item .pariseBtn image{
+  width: 26rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+.caseList .item .saleNum{
+  float: right;
+  font-size: 24rpx;
+  color:#999;
+  line-height: 44rpx;
+}

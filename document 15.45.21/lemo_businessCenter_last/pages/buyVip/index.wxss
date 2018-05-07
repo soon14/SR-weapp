@@ -1,0 +1,129 @@
+.buyVip .card{
+  padding: 30rpx 55rpx;
+}
+.buyVip .card image{
+  width: 640rpx;
+  height: 360rpx;
+  vertical-align: top;
+}
+.buyVip .title{
+  position: relative;
+  height: 2rpx;
+  background:#E5E5E5;
+  margin: 40rpx 0;
+}
+.buyVip .title text{
+  position: absolute;
+  width: 150rpx;
+  left: 50%;
+  margin-left: -75rpx;
+  background: #fff;
+  color:#af8741;
+  font-size: 28rpx;
+  line-height:40rpx;
+  margin-top: -19rpx; 
+  text-align: center;
+}
+.buyVip .explain,
+.buyVip .discountTable{
+  padding: 0 46rpx;
+}
+.buyVip .explain .row{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.buyVip .explain .row image{
+  width: 56rpx;
+  height: 56rpx;
+  margin: 0 26rpx 0 18rpx;
+}
+.buyVip .explain .row text{
+  font-size: 30rpx;
+  color:#333;
+}
+.buyVip .discountTable .title{
+  margin: 60rpx 0 70rpx 0;
+}
+.buyVip .discountTable .table{
+  margin: 0 20rpx;
+  border-left:2rpx solid #F0EEF0;
+  border-top:2rpx solid #F0EEF0;
+}
+.buyVip .discountTable .table .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.buyVip .discountTable .table .td {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    border-right:2rpx solid #F0EEF0;
+    border-bottom:2rpx solid #F0EEF0;
+    padding: 24rpx 0;
+    color:#666;
+    font-size: 28rpx;
+}
+.buyVip .discountTable .table .tdColor{
+  color:#222;
+  font-weight: 500;
+}
+.buyVip .agree{
+  padding: 40rpx 60rpx;
+  display: flex;
+  align-items: center;
+}
+.buyVip .agree .circle{
+  width: 24rpx;
+  height: 24rpx;
+  border:4rpx solid #9ca3ac;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 18rpx;
+}
+.buyVip .agree  text{
+   font-size: 28rpx;
+   color:#858c96;
+}
+.buyVip .agree .circle image{
+  position: absolute;
+  left: 2rpx;
+  top:4rpx;
+  width: 20rpx;
+  height: 16rpx;
+}
+.buyVip .price{
+  padding: 0 60rpx;
+  overflow: hidden;
+  line-height: 60rpx;
+}
+.buyVip .price .disPri{
+  font-size: 28rpx;
+  color:#333;
+  vertical-align: bottom;
+  float: left;
+}
+.buyVip .price .disPri text{
+  color:#c39c5f;
+  font-size: 60rpx;
+  padding-left: 18rpx;
+}
+.buyVip .price .oPri{
+  font-size: 24rpx;
+  color:#999;
+  vertical-align: bottom;
+  float: left;
+  padding-left: 50rpx;
+}
+.buyVip button{
+  width: 630rpx;
+	height: 90rpx;
+	background-image: linear-gradient(0deg, rgba(218, 182, 120, 1) 0%, rgba(194, 154, 94, 1) 100%);
+	border-radius: 10rpx;
+  margin:26rpx auto;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  color:#fff;
+}

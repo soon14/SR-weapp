@@ -1,0 +1,107 @@
+<view class="grouponbox">
+    <view class="topbox">
+        <view class="topbox-top">
+            <view>待成团</view>
+            <view wx:if="{{status!=6}}">已成团，待发货</view>
+            <view wx:if="{{status!=6}}">交易完成</view>
+            <view wx:if="{{status==6}}">已关闭</view>
+        </view>
+        <view class="topbox-bottom">
+            <view class="topbox-bottom-yuan {{status==2?'active':''}} {{status>2?'active1':''}}">
+                <image src="/images/v2.3.0/jywc.png" wx:if="{{status==2}}"></image>
+            </view>
+            <view class="topbox-bottom-line {{status>=3?'active_line':''}}" wx:if="{{status!=6}}"></view>
+            <view class="topbox-bottom-yuan {{status==3||status==4?'active':''}} {{status>4?'active1':''}}" wx:if="{{status!=6}}">
+                <image src="/images/v2.3.0/jywc.png" wx:if="{{status==3||status==4}}"></image>
+            </view>
+            <view class="topbox-bottom-line {{status==5?'active_line':''}}" wx:if="{{status!=6}}"></view>
+            <view class="topbox-bottom-yuan {{status==5?'active':''}} {{status>5?'active1':''}}" wx:if="{{status!=6}}">
+                <image src="/images/v2.3.0/jywc.png" wx:if="{{status==5}}"></image>
+            </view>
+            <view class="topbox-bottom-line1 {{status==6?'active_line':''}}" wx:if="{{status==6}}"></view>
+            <view class="topbox-bottom-yuan {{status==6?'active':''}}" wx:if="{{status==6}}">
+                <image src="/images/v2.3.0/jywc.png"></image>
+            </view>
+        </view>
+    </view>
+    <image src="/images/v2.3.0/xian.png" class="line-img"></image>
+    <view class="addressbox">
+        <image src="/images/v2.3.0/dingwei.png" class="dingwei-img"></image>
+        <view class="addressbox-right">
+            <view class="addressbox-right-top">
+                <view class="addressbox-right-top-name">收货人: {{list.leaderinfo.fusername}}</view>
+                <view class="addressbox-right-top-telphone">{{list.leaderinfo.ftelphone}}</view>
+            </view>
+            <view class="addressbox-right-bottom">收货地址:{{list.leaderinfo.faddress}}</view>
+        </view>
+    </view>
+    <view class="pinpersonbox">
+        <view class="pinpersonnum">
+            <view class="pinpersonnum-left">
+                <image src="/images/v2.3.0/pingtuan.png"></image>
+                <view>拼团成员</view>
+            </view>
+            <view class="pinpersonnum-right">
+                进度
+                <text>{{list.member.num}}/{{list.group.max_num}}</text>
+            </view>
+        </view>
+        <view class="pinperson">
+            <view class="pinperson-title">
+                <view>取货人</view>
+                <view>数量</view>
+                <view>联系电话</view>
+            </view>
+            <view class="pinperson-content">
+                <block wx:for="{{list.member.list}}">
+                    <view class="pinperson-content-colume">
+                        <view class="pinperson-content-colume-name">
+                            <view>{{item.fusername}}</view>
+                            <view class="leader" wx:if="{{item.is_leader}}">团长</view>
+                        </view>
+                        <view class="pinperson-content-colume-num">{{item.productnum}}</view>
+                        <view class="pinperson-content-colume-tel">{{item.ftelphone}}</view>
+                    </view>
+                    <view wx:if="{{item.note}}" class="pinperson-content-colume-note">
+                        备注：{{item.note}}
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="proinfo">
+        <view class="proinfo-title">
+            <image src="/images/v2.3.0/dianpu.png" class="proinfo-title-img"></image>
+            <view>{{list.shop.name}}</view>
+        </view>
+        <navigator url="/pages/index/products/addproduct/addproduct?id={{productId}}">
+            <view class="proinfo-content">
+                <view class="proinfo-content-left">
+                    <image mode="aspectFill" src="{{cdnhost+list.product.mainpic}}"></image>
+                </view>
+                <view class="proinfo-content-right">
+                    <view class="proinfo-content-right-title">{{list.product.title}}</view>
+                    <view class="proinfo-content-right-info">
+                        <view class="proinfo-content-right-info-pic">¥{{list.productprice}}</view>
+                        <view class="proinfo-content-right-info-num">x{{list.member.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="proinfo-bottom">
+            <view class="proinfo-bottom-colume">
+                <view class="proinfo-bottom-colume-left">商品金额</view>
+                <view class="proinfo-bottom-colume-right">¥{{list.member.totalmoney}}</view>
+            </view>
+            <view class="proinfo-bottom-colume">
+                <view class="proinfo-bottom-colume-left">运费</view>
+                <view class="proinfo-bottom-colume-right">¥{{list.member.totalpostage}}</view>
+            </view>
+            <view class="proinfo-bottom-colume">
+                <view class="proinfo-bottom-colume-left">合计</view>
+                <view class="proinfo-bottom-colume-right heji">¥{{list.member.alltotal}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="btnbox" wx:if="{{status==3}}" bindtap="sendGoods">发货</view>
+</view>

@@ -1,0 +1,88 @@
+/*shopColumn.wxss (店铺栏目)*/
+
+.container {
+    width: 666rpx;
+    height: 100%;
+    position: relative;
+    margin: 0 42rpx;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    line-height:40rpx;
+    text-align:left;
+    font-size:28rpx;
+    color:#838383;
+    margin:40rpx auto;
+}
+
+.shopColumnbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 80rpx;
+}
+
+.column {
+    margin-bottom: 42rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.column wx-image {
+    width: 312rpx;
+    height: 480rpx;
+}
+
+.column .text {
+    width: 100%;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #5e5e5e;
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkedbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 312rpx;
+    height: 480rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkedbox .check {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: 16rpx solid #3583db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkedbox .check .gou {
+    width: 30rpx;
+    height: 50rpx;
+    border-bottom: 12rpx solid #3583db;
+    border-right: 12rpx solid #3583db;
+    transform: rotate(40deg);
+    margin-bottom: 8rpx;
+}

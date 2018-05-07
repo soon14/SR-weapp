@@ -1,0 +1,41 @@
+<!-- coupon.wxml -->
+<!-- 优惠券模版 -->
+<template name="coupon">
+    <view class="coupon" data-id="{{proinfo.id}}">
+        <view class="cpleft">
+            <view class="leftborder">
+                <view class="leftyuanbox">
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                    <view class="leftyuan"></view>
+                </view>
+            </view>
+            <view class="lefttext">
+                <view class="pricebox">
+                    <view class="fh">¥</view>
+                    <view class="price">{{proinfo.value}}</view>
+                </view>
+                <view class="manj">满{{proinfo.min_consumption}}元可用</view>
+            </view>
+        </view>
+        <view class="cpright">
+            <view class="cprighttitle">{{proinfo.title}}</view>
+            <view class="cprighttime">{{proinfo.start_time_text}}至{{proinfo.end_time_text}}</view>
+            <view class="cprightuse">{{statustext}}</view>
+        </view>
+    </view>
+</template>

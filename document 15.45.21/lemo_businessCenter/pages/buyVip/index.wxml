@@ -1,0 +1,74 @@
+<view class="buyVip">
+    <view class="card">
+        <image src="../../images/hyqy.png"></image>
+    </view>
+    <view class="explain">
+        <view class="title"><text>特权说明</text></view>
+        <view class="row">
+            <image src='../../images/erweima.png'></image>
+            <text>专属二维码</text>
+        </view>
+        <view class="row">
+            <image src='../../images/glmk.png'></image>
+            <text>会员管理模块</text>
+        </view>
+        <view class="row">
+            <image src='../../images/zxj.png'></image>
+            <text>拥有会员专享价（详见下表）</text>
+        </view>
+        <view class="row">
+            <image src='../../images/xhtc.png'></image>
+            <text>可获得直属商家消费提成</text>
+        </view>
+        <view class="row">
+            <image src='../../images/yongjin.png'></image>
+            <text>可获得邀请会员佣金</text>
+        </view>
+        <view class="row">
+            <image src='../../images/zssjyj.png'></image>
+            <text>查看直属商家业绩</text>
+        </view>
+        <view class="row">
+            <image src='../../images/hyyj.png'></image>
+            <text>查看邀请会员业绩</text>
+        </view>
+        <view class="row">
+            <image src='../../images/xshb.png'></image>
+            <text>邀请的商家及会员销售额合并</text>
+        </view>
+    </view>
+    <view class="discountTable">
+        <view class="title"><text>优惠专享</text></view>
+        <view class="table">
+            <view class="tr">
+                <view class="td tdColor">团队累计销售额</view>
+                <view class="td tdColor">会员</view>
+            </view>
+            <view class="tr">
+                <view class="td">0.5元以内</view>
+                <view class="td">8.0折</view>
+            </view>
+            <view class="tr">
+                <view class="td">0.5~3万元以内</view>
+                <view class="td">6.0折</view>
+            </view>
+            <view class="tr">
+                <view class="td">3~5万元以内</view>
+                <view class="td">5.0折</view>
+            </view>
+            <view class="tr">
+                <view class="td">5万元以内</view>
+                <view class="td">4.0折</view>
+            </view>
+        </view>
+    </view>
+    <view class="agree">
+        <view class="circle"><image src='../../images/gou.png'></image></view>
+        <text>同意《会员服务协议》</text>
+    </view>
+    <view class="price">
+        <view class="disPri">内测价<text>365元</text>/元</view>
+        <view class="oPri">原价：599/年</view>
+    </view>
+    <button form-type='submit'>立即支付</button>
+</view>

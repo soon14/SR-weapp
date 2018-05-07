@@ -1,0 +1,75 @@
+<!-- 插件购买 -->
+<form report-submit bindsubmit="formSubmit">
+    <view class="formbox">
+        <view class="form-title">
+            <view>确认订购信息</view>
+        </view>
+        <view class="form-content">
+            <view class="form-content-colume">
+                <view class="form-content-colume-title">订购店铺</view>
+                <view class="form-content-colume-info">{{plugininfo.shopname}}</view>
+            </view>
+            <view class="form-content-colume">
+                <view class="form-content-colume-title">订购插件</view>
+                <picker mode="selector" bindchange="bindPickerChange" value="{{checkIndex}}" range="{{checkArray}}" range-key="size" class="form-content-colume-info">
+                    <view class="picker">{{checkArray[checkIndex].size}}</view>
+                </picker>
+            </view>
+            <view class="form-content-colume">
+                <view class="form-content-colume-title">生效时间</view>
+                <view class="form-content-colume-info">订购成功后立即生效</view>
+            </view>
+            <view class="form-content-colume">
+                <view class="form-content-colume-title">服务价格</view>
+                <view class="form-content-colume-info">{{checkArray[checkIndex].price}}乐墨点</view>
+            </view>
+            <view class="form-content-colume" wx:if="{{balanceinfo.gold_equal>0}}">
+                <view class="form-content-colume-title">{{use_gold?'':'不'}}使用积分抵扣</view>
+                <switch bindchange="switchChange" class="form-content-colume-info" />
+            </view>
+            <block wx:if="{{use_gold&&balanceinfo.gold_equal>0}}">
+                <view class="form-infobox border_bottom">
+                    <view class="form-infobox-colume">
+                        <view>积分可抵扣</view>
+                        <view>{{checkArray[checkIndex].gold_equal}}乐墨点</view>
+                    </view>
+                    <view class="form-infobox-colume">
+                        <view>当前积分</view>
+                        <view>{{balanceinfo.user_gold}}分</view>
+                    </view>
+                    <view class="form-infobox-colume">
+                        <view>抵扣乐墨点</view>
+                        <view>{{balanceinfo.gold_equal}}乐墨点</view>
+                    </view>
+                    <view class="form-infobox-colume">
+                        <view>剩余积分</view>
+                        <view>{{balanceinfo.new_user_gold}}分</view>
+                    </view>
+                </view>
+            </block>
+            <view class="form-content-colume">
+                <view class="form-content-colume-title">合计</view>
+                <view class="form-content-colume-info heji">{{balanceinfo.price}}乐墨点</view>
+            </view>
+        </view>
+        <view class="form-infobox">
+            <view class="form-infobox-colume">
+                <view>账户余额</view>
+                <view>{{balanceinfo.balance}}乐墨点</view>
+            </view>
+            <view class="form-infobox-colume" wx:if="{{can_buy}}">
+                <view>本次消耗</view>
+                <view>{{balanceinfo.price}}乐墨点</view>
+            </view>
+            <view class="form-infobox-colume" wx:if="{{can_buy}}">
+                <view>支付后余额剩余</view>
+                <view>{{balanceinfo.new_balance}}乐墨点</view>
+            </view>
+            <view class="form-infobox-colume" wx:if="{{!can_buy}}">
+                <view></view>
+                <view class="recharge" bindtap="recharge">余额不足，去充值</view>
+            </view>
+        </view>
+    </view>
+    <button formType="submit" class="savebtn">确定</button>
+</form>

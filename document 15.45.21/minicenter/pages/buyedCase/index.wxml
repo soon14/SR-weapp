@@ -1,0 +1,67 @@
+<view class="buyedCase">
+    <view class="title">
+        <text>店铺</text>
+        <navigator>全部商店<image src='../../images/rArrow.png'></image></navigator>
+    </view>
+    <view class="list clr">
+        <view class="item">
+            <navigator>
+                <view class="box">
+                    <video  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"></video>
+                </view>
+                <view class="hdTit">
+                    相恋Love每周一花小世界相恋Love每周一花小世界
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+                <view class="box">
+                    <image src='http://temp.im/360x360'></image>
+                </view>
+                <view class="hdTit">
+                    相恋Love每周一花小世界
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+                <view class="box">
+                    <image src='http://temp.im/360x360'></image>
+                </view>
+                <view class="hdTit">
+                    相恋Love每周一花小世界
+                </view>
+            </navigator>
+        </view>
+        <view class="item">
+            <navigator>
+                <view class="box">
+                    <image src='http://temp.im/360x360'></image>
+                </view>
+                <view class="hdTit">
+                    相恋Love每周一花小世界
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<!--底部固定导航栏  -->
+<view class="navFixed">
+    <navigator class="items item1">
+        <image src='../../images/hot-normal.png'></image>
+        <view class="txt">热门方案</view>
+    </navigator>
+    <navigator class="items item2 cur">
+        <image src='../../images/yigou_press.png'></image>
+        <view class="txt">已购方案</view>
+    </navigator>
+    <navigator class="items item3">
+        <image src='../../images/fabu_normal.png'></image>
+        <view class="txt">发布方案</view>
+    </navigator>
+    <navigator class="items item4">
+        <image src='../../images/bangzhu_normal.png'></image>
+        <view class="txt">帮助信息</view>
+    </navigator>
+</view>

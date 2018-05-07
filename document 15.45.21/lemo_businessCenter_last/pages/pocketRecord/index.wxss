@@ -1,0 +1,41 @@
+page{
+  background: #edeef0;
+}
+.packetRecord .tips{
+	line-height: 40rpx;
+	background-color: #fff;
+  font-size: 28rpx;
+  color:#999;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.packetRecord .list{
+  background: #fff;
+}
+.packetRecord  .list .item{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.packetRecord  .list .item:last-child{
+  border-bottom: 0;
+}
+.packetRecord  .list .item .row{
+  display: flex;
+}
+.packetRecord  .list .item .row .lTxt{
+  flex: 1;
+}
+.packetRecord  .list .item .row .rTxt{
+  text-align: right;
+  flex: 1;
+}
+.packetRecord  .list .item .row1{
+  color:#333;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.packetRecord  .list .item .row2{
+  color:#999;
+  font-size: 26rpx;
+  padding-top: 8rpx;
+}

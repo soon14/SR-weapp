@@ -1,0 +1,87 @@
+  <view class='saleData'>
+      <view class="hd">
+          <view class='pick'>
+              <!-- <picker-view>
+                  <picker-view-column>
+                      <view>始 02-10</view>
+                  </picker-view-column>
+                  <picker-view-column>
+                      <view>至 02-17</view>
+                  </picker-view-column>
+              </picker-view> -->
+              <view class="pickerView">
+                  始 02-10
+              </view>
+              <view class="pickerView">
+                  末 02-17
+              </view>
+              <image src='../../images/xssj_turn.png' class="down"></image>
+          </view>
+          <view class="search">
+              <image src="../../images/xssj_find.png"></image>
+              <input type='text' placeholder='请输入名字或编码'/>
+          </view>
+      </view>
+      <view class="list">
+          <view class="item">
+              <image src="../../images/tuanduishangjia.png" class='tags'></image>
+              <view class="avater">
+                  <image src='http://temp.im/110x110'></image>
+              </view>
+              <view class="txt">
+                  <view class="name"><text>先政</text>在2-10 16:00消费</view>
+                  <view class="p">
+                     订单号：2045457456
+                  </view>
+                  <view class="p">
+                      商品类型：第三方提供
+                  </view>
+                  <view class="p">
+                      消费金额：200元
+                  </view>
+                  <view class="p">
+                    服务佣金：40元
+                  </view>
+                  <view class="p">
+                    下级成本：20元
+                  </view>
+                  <view class="p">
+                    获得销售利润：12元
+                  </view>
+                  <view class="p">
+                    获得销售累计：200元
+                  </view>
+              </view>
+          </view>
+          <view class="item">
+              <image src="../../images/zishushangjia.png" class='tags'></image>
+              <view class="avater">
+                  <image src='http://temp.im/110x110'></image>
+              </view>
+              <view class="txt">
+                  <view class="name"><text>先政</text>在2-10 16:00消费</view>
+                  <view class="p">
+                     订单号：2045457456
+                  </view>
+                  <view class="p">
+                      商品类型：第三方提供
+                  </view>
+                  <view class="p">
+                      消费金额：200元
+                  </view>
+                  <view class="p">
+                    服务佣金：40元
+                  </view>
+                  <view class="p">
+                    下级成本：20元
+                  </view>
+                  <view class="p">
+                    获得销售利润：12元
+                  </view>
+                  <view class="p">
+                    获得销售累计：200元
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>

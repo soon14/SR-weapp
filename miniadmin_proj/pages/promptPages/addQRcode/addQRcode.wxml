@@ -1,0 +1,6 @@
+<!--addQRcode.wxml 信息提示页(添加二维码)-->
+<view class="container">
+    <view class="toptext"> {{ toptext }} </view>
+    <input placeholder="请输入来源名称" value="{{inputValue}}" type="text" placeholder-style="custom-placeholder-style" placeholder-class="custom-placeholder-class" bindchange="" bindinput="bindKeyInput" />
+    <button class="addbtn" bindtap="addQRrequest" hover-class="custom-button-hover-class">添加</button>
+</view>

@@ -1,0 +1,173 @@
+page{
+  background: #EDEEF0;
+  font-size: 30rpx;
+  color:#333;
+  padding-bottom: 140rpx;
+}
+.editCourse .title{
+  line-height: 90rpx;
+  padding: 0 30rpx;
+}
+.editCourse .title text{
+  color:#999;
+  font-size: 28rpx;
+  padding-left: 12rpx;
+}
+.editCourse .txtArea{
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.editCourse .txtArea textarea{
+  min-height: 280rpx;
+  line-height: 40rpx;
+  width: 100%;
+}
+.editCourse .txtArea .tools .basicT{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+  border-radius: 14rpx;
+}
+.editCourse .txtArea .txtStyle{
+  position:relative;
+}
+.editCourse .txtArea .txtStyle-tool{
+  position: absolute;
+  top:-80rpx;
+  width: 552rpx;
+  left: -80rpx;
+  z-index: 2;
+  display: none;
+}
+.editCourse .txtArea .txtStyle-tool image{
+  height:80rpx;
+  float: left;
+  vertical-align:middle;
+}
+.editCourse .txtArea .txtStyle-tool .lAlign,
+.editCourse .txtArea .txtStyle-tool .rAlign{
+  width: 120rpx;
+}
+.editCourse .txtArea .txtStyle-tool .cAlign{
+  width: 114rpx;
+}
+.editCourse .txtArea .colorStyle{
+  position:relative;
+}
+.editCourse .txtArea .colorStyle-tool{
+  position: absolute;
+  top:-80rpx;
+  left: 50%;
+  margin-left: -208rpx;
+  width: 408rpx;
+  z-index: 2;
+  border:2rpx solid #DCDCDC;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10rpx;
+  height:40rpx;
+  padding: 15rpx 14rpx;
+  display:none;
+}
+.editCourse .txtArea .colorStyle-tool .cItem{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin: 0 14rpx;
+  border-radius: 6rpx;
+}
+.editCourse .txtArea .colorStyle-tool .c1{
+  background: #333;
+}
+.editCourse .txtArea .colorStyle-tool .c2{
+   background:#808080;
+}
+.editCourse .txtArea .colorStyle-tool .c3{
+   background:#ED2308;
+}
+.editCourse .txtArea .colorStyle-tool .c4{
+   background:#FF8A00;
+}
+.editCourse .txtArea .colorStyle-tool .c5{
+   background:#39B54A;
+}
+.editCourse .txtArea .colorStyle-tool .c6{
+   background:#1564FA;
+}
+.editCourse .rOpeBtn{
+  float: right;
+  padding-top: 16rpx;
+}
+.editCourse .rOpeBtn image{
+  float: left;
+  margin-left: 44rpx;
+}
+.editCourse .rOpeBtn .up,
+.editCourse .rOpeBtn .down{
+  width: 24rpx;
+  height:14rpx;
+  margin-top: 10rpx;
+}
+.editCourse .rOpeBtn .del{
+  width: 34rpx;
+  height: 34rpx;
+}
+.lineArea{
+  margin-bottom: 20rpx;
+  padding:40rpx 30rpx 20rpx 30rpx;
+  background: #fff;
+}
+.lineArea .lineStatus{
+  height: 0rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+/*solid dotted  onePound halfPound  */
+.lineArea .lineStatus.solid{
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.lineArea .lineStatus.dashed{
+  border-bottom-style: dashed;
+}
+.lineArea .lineStatus.onePound{
+  border-bottom-width: 4rpx;
+}
+.lineArea .lineStatus.halfPound{
+  border-bottom-width: 2rpx;
+}
+.lineArea .tools{
+  padding-top: 40rpx;
+}
+.lineArea .lineTool{
+  float: left;
+}
+.lineArea .lineTool view{
+  float: left;
+  width: 90rpx;
+  height: 50rpx;
+  border:2rpx solid #CBCED7;
+  color:#717882;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 50rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+.operate-btn{
+  text-align: center;
+  font-size: 0;
+  padding-top: 20rpx;
+}
+.operate-btn button{
+  display: inline-block;
+  width: 164rpx;
+	height: 56rpx;
+  line-height: 56rpx;
+	border-radius: 10rpx;
+  font-size: 24rpx;
+  color:#3583db;
+  border:2rpx solid #3583db;
+  background: transparent;
+  margin: 0 14rpx;
+}

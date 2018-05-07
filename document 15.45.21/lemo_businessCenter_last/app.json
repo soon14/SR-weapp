@@ -1,0 +1,36 @@
+{
+  "pages": [
+
+    "pages/menu/index", 
+    "pages/salesData/index",
+    "pages/sharePocket/index",
+    "pages/getPocket/index",
+    "pages/pocketRecord/index",
+    "pages/sendRedPocket/index",
+    "pages/accredit/index",
+    "pages/applyCashRecord/index",
+    "pages/applyCash/index",
+    "pages/myIncome/index",
+    "pages/lemobiRecord/index",
+    "pages/integralRecord/index",
+    "pages/myCount/index",
+    "pages/prizeInvited/index",
+    "pages/buyVip/index",
+    "pages/identifySuccess/index",
+    "pages/uploadIdentify/index",
+    "pages/editData/index",
+    "pages/underShops/index",
+    "pages/myTeam/index",
+    "pages/index/index"
+   
+    
+     
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3583db",
+    "navigationBarTitleText": "乐墨",
+    "navigationBarTextStyle": "#fff"
+  }
+}

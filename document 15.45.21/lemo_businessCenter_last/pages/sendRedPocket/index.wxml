@@ -1,0 +1,28 @@
+<view class="sendRedPocket">
+    <form>
+      <view class="hd">
+          <view class="row">
+              <view class="lable">乐墨币数量</view>
+              <view class="cnt">
+                  <input type="text" placeholder='0' value='' />
+              </view>
+              <view class="unit">个</view>
+          </view>
+          <view class="row">
+              <view class="lable">红包个数</view>
+              <view class="cnt">
+                  <input type="text" placeholder='填写个数' />
+              </view>
+              <view class="unit">个</view>
+          </view>
+      </view>
+      <view class="msg">
+          <textarea placeholder='恭喜发财'></textarea>
+      </view>
+      <view class="total">28</view>
+      <button form-type='sumit'>塞乐墨币进红包</button>
+    </form>
+</view>
+<view class="fix-ft">
+    <navigator src="">红包发送记录</navigator>
+</view>

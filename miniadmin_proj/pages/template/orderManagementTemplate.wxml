@@ -1,0 +1,408 @@
+<!-- <import src="/pages/template/orderManagementTemplate.wxml" /> -->
+<!-- 模版 -->
+<template name="pendingPayment">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view bindtap="closeorder" data-id="{{id}}">
+                <image mode="widthFix" src="/images/dcl_gb.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">关闭</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="waitingList">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="refuseorder">
+                <image mode="widthFix" src="/images/dsk_tk.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">拒单</text>
+            </view>
+            <view data-id="{{id}}" bindtap="takeOrder">
+                <image mode="widthFix" src="/images/djd_cl.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">接单</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="pendingShipment">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="writeRemark">
+                <image mode="widthFix" src="{{remark.length>0?'/images/wc_bz.png':'/images/djd_bz.png'}}" data-id="{{id}}"></image>
+                <text class="{{remark.length>0?'completed_color':''}}" data-id="{{id}}">备注</text>
+            </view>
+            <view>
+                <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+                    <image mode="widthFix" src="/images/djd_cl.png"></image>
+                    <text>处理</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="closed">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="writeRemark">
+                <image mode="widthFix" src="{{remark.length>0?'/images/wc_bz.png':'/images/djd_bz.png'}}" data-id="{{id}}"></image>
+                <text class="{{remark.length>0?'completed_color':''}}" data-id="{{id}}">备注</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="goodsReceived">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="writeRemark">
+                <image mode="widthFix" src="{{remark.length>0?'/images/wc_bz.png':'/images/djd_bz.png'}}" data-id="{{id}}"></image>
+                <text class="{{remark.length>0?'completed_color':''}}" data-id="{{id}}">备注</text>
+            </view>
+            <view data-id="{{id}}" bindtap="doneOrder">
+                <image mode="widthFix" src="/images/dsh_wc.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">已完成</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="pendingRefund">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="writeRemark">
+                <image mode="widthFix" src="{{remark.length>0?'/images/wc_bz.png':'/images/djd_bz.png'}}" data-id="{{id}}"></image>
+                <text class="{{remark.length>0?'completed_color':''}}" data-id="{{id}}">备注</text>
+            </view>
+            <view data-id="{{id}}" wx:if="{{state == 8 && paytype == 2}}">
+                <image mode="widthFix" src="/images/dtk_tk.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}" style="color: #bdbdbd;">退款中</text>
+            </view>
+            <view data-id="{{id}}" wx:if="{{state == 8 && paytype == 1}}" bindtap="wxRefund">
+                <image mode="widthFix" src="/images/dtk_bjtk.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">标记退款</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="waitingForClass">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="refuseorder">
+                <image mode="widthFix" src="/images/dsk_tk.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}" style="color: #bdbdbd">退款</text>
+            </view>
+            <view data-id="{{id}}" bindtap="doneOrder">
+                <image mode="widthFix" src="/images/dsk_ysk.png" data-id="{{id}}"></image>
+                <text data-id="{{id}}">完成</text>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="completed">
+    <view class="contentemplate">
+        <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+            <view class="contenttop">
+                <view class="contenttop_left">
+                    <view class="contenttop_left_user">
+                        <image mode="widthFix" src="/images/dakh.png"></image>
+                        <text>{{userinfo.name}}</text>
+                    </view>
+                    <view>下单时间：{{addtime}}</view>
+                </view>
+                <view class="contenttop_right">
+                    <view>{{statetext}}</view>
+                    <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+                </view>
+            </view>
+            <view class="contentcenter">
+                <view class="contentcenter1">
+                    <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                    <view class="contentcenterRight">
+                        <view class="contentcenterRight_top">
+                            <text>{{proinfo.title}}</text>
+                        </view>
+                        <view class="contentcenterRight_bottom">
+                            <view> 数量：{{productnum}}</view>
+                            <view>
+                                <text>总金额：</text>
+                                <text>￥{{trueprice}}</text>
+                            </view>
+                            <view>{{proinfo.protype}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+        <view class="contentbottom">
+            <view data-id="{{id}}" bindtap="writeRemark">
+                <image mode="widthFix" src="{{remark.length>0?'/images/wc_bz.png':'/images/djd_bz.png'}}" data-id="{{id}}"></image>
+                <text class="{{remark.length>0?'completed_color':''}}" data-id="{{id}}">备注</text>
+            </view>
+        </view>
+    </view>
+</template>
+<!-- 其他情况模版 4 6 9-->
+<template name="closePayment">
+    <navigator url="/pages/index/orderManagement/orderdetails/orderdetails?id={{id}}">
+        <view class="contenttop">
+            <view class="contenttop_left">
+                <view class="contenttop_left_user">
+                    <image mode="widthFix" src="/images/dakh.png"></image>
+                    <text>{{userinfo.name}}</text>
+                </view>
+                <view>下单时间：{{addtime}}</view>
+            </view>
+            <view class="contenttop_right">
+                <view>{{statetext}}</view>
+                <view wx:if="{{needsendtime.length>0}}">配送时间：{{needsendtime}}</view>
+            </view>
+        </view>
+        <view class="contentcenter">
+            <view class="contentcenter1">
+                <image mode="aspectFill" src="{{host+proinfo.mainpic}}" class="contenimg"></image>
+                <view class="contentcenterRight">
+                    <view class="contentcenterRight_top">
+                        <text>{{proinfo.title}}</text>
+                    </view>
+                    <view class="contentcenterRight_bottom">
+                        <view> 数量：{{productnum}}</view>
+                        <view>
+                            <text>总金额：</text>
+                            <text>￥{{trueprice}}</text>
+                        </view>
+                        <view>{{proinfo.protype}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</template>

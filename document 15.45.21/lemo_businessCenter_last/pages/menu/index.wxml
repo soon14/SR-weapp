@@ -1,0 +1,25 @@
+
+<view class='menu'>
+    <view class="tit">目录链接</view>
+    <navigator url="../prizeInvited/index" >2_有奖邀请  （prizeInvited/index）</navigator>
+    <navigator url="../myCount/index" >3_我的账户，3-1_我的账户赠送乐墨币  （myCount/index）</navigator>
+    <navigator url="../lemobiRecord/index" >3-2_乐墨币记录  （lemobiRecord/index）</navigator>
+    <navigator url="../integralRecord/index" >3-3_积分记录  （integralRecord/index）</navigator>
+    <navigator url="../editData/index" >4_编辑资料未认证，4-1_编辑资料已认证  （editData/index）</navigator>
+    <navigator url="../uploadIdentify/index" >4-2_编辑资料认证过程  （uploadIdentify/index）</navigator>
+    <navigator url="../myIncome/index" >5_我的收入  （myIncome/index）</navigator>
+    <navigator url="../applyCash/index" >5-1_申请提现，5-3_申请提现已授权  （applyCash/index）</navigator>
+    <navigator url="../accredit/index" >5-2_申请提现授权  （accredit/index）</navigator>
+    <navigator url="../applyCashRecord/index" >5-4_提现记录  （applyCashRecord/index）</navigator>
+    <navigator url="../buyVip/index" >7-1_购买代理商资格  （buyVip/index）</navigator>
+    <navigator url="../index/index" >7-2_代理商首页  （index/index）</navigator>
+    <navigator url="../sendRedPocket/index" >7-2-1_发红包1  （sendRedPocket/index）</navigator>
+    <navigator url="../pocketRecord/index" >7-2-2_发红包-领取记录  （/pocketRecord/index）</navigator>
+    <navigator url="../getPocket/index" >7-2-3_发红包-领取结果  （getPocket/index）</navigator>
+    <navigator url="../sharePocket/index" >7-2-4_发红包-分享到群或者朋友  （sharePocket/index）</navigator>
+    <navigator url="../underShops/index" >7-2-5_直属商家  （underShops/index）</navigator>
+    <navigator url="../myTeam/index" >7-2-6_我的团队  （myTeam/index）</navigator>
+    <navigator url="../salesData/index" >7-2-7_销售数据  （salesData/index）</navigator>
+   
+    
+</view>

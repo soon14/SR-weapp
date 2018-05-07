@@ -1,0 +1,17 @@
+<view class="upload">
+    <form>
+        <view class="tit">上传身份证正反面</view>
+        <view class="photoArea">
+            <image src='http://temp.im/670x360'></image>
+        </view>
+        <view class="photoArea">
+            <image src='http://temp.im/670x360'></image>
+        </view>
+        <view class="txt">
+            <view class="name">姓名：王先政</view>
+            <view class="nums">身份证号：397264199102281234</view>
+        </view>
+        <button form-type='submit'>确定</button>
+    </form>
+</view>
+

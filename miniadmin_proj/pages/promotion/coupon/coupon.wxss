@@ -1,0 +1,201 @@
+/*推广(优惠券)*/
+
+page {
+    background-color: #f7f7f7;
+    color: #999999;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    padding-bottom: 120rpx;
+}
+
+.section {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.section_top_text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 26rpx;
+    color: #666666;
+    line-height: 26rpx;
+    margin: 20rpx 30rpx;
+    background-color: #f7f7f7;
+}
+
+.margin_top_0 {
+    margin-top: 0!important;
+    border-top: 0!important;
+}
+
+
+/**/
+
+.pickerbox {
+    height: 100rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ebebeb;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    color: #333333;
+    padding: 0 30rpx;
+}
+
+.pickerbox_right {
+    /*flex: 1;*/
+    height: 100rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pickerbox_right wx-picker {
+    /*flex: 1;*/
+}
+
+.pickerbox_o {
+    border-top: 0;
+    margin-top: 0;
+}
+
+.pickerbox_right_select {
+    position: relative;
+    text-align: right;
+    padding-left: 30rpx;
+    padding-right: 60rpx;
+}
+
+.pickerbox_right_select_0 {
+    color: #999999;
+}
+
+.pickerbox_right_select:before {
+    content: " ";
+    display: inline-block;
+    height: 12rpx;
+    width: 12rpx;
+    border-width: 4rpx 4rpx 0 0;
+    border-color: #999999;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -4rpx;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8rpx;
+}
+
+
+/**/
+
+.savebtn,
+.btnbox {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    color: #f9f9f9;
+    border-radius: 0;
+    border: none;
+    border: 0;
+    background-color: #4f9dd0;
+}
+
+.btnbox {
+    justify-content: space-between;
+}
+
+.btnbox wx-button {
+    flex: 1;
+    font-size: 32rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #f9f9f9;
+    border-radius: 0;
+    border-radius: none;
+    border: none;
+    border: 0;
+}
+
+.btnbox wx-button:nth-of-type(1) {
+    background-color: #4f9dd0;
+}
+
+.btnbox wx-button:nth-of-type(2) {
+    background-color: #fd6538;
+}
+
+
+/**/
+
+.section_explan {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    color: #333333;
+    font-size: 30rpx;
+    line-height: 46rpx;
+    min-height: 140rpx;
+}
+
+.section_explan wx-textarea {
+    min-height: 100rpx;
+}
+
+
+/**/
+
+.sectionbb {
+    position: relative;
+}
+
+.section .section__title {
+    margin-right: 18rpx;
+    color:#333333;
+}
+
+.section wx-input {
+    flex: 1;
+    padding: 0 30rpx;
+    color: #333;
+}
+
+
+/*底部说明*/
+
+.explainbox {
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 46rpx;
+    color: #333333;
+    margin: 40rpx 30rpx;
+}
+
+.explainbox view:nth-of-type(1) {
+    font-size: 30rpx
+}
