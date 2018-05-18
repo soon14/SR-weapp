@@ -1,0 +1,13 @@
+{
+  "description": "微信小程序框架初使用",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "wx-wepy",
+  "miniprogramRoot": "./dist"
+}

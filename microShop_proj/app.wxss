@@ -1,0 +1,20 @@
+/**app.wxss**/
+page {
+  line-height: 1.6;
+  font-family: PingFang-SC-Regular, -apple-system-font, "Helvetica Neue",
+    sans-serif;
+  width: 750rpx;
+  max-width: 750rpx;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+}
+/* 取消所有 navigator 点击效果*/
+.navigator-hover {
+  background: rgba(0, 0, 0, 0);
+}
