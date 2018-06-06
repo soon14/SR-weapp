@@ -1,0 +1,72 @@
+<!-- btn -->
+<view class='topBtnbg flex-wrp' style="justify-content: space-between;">
+    <navigator url="/pages/user/user" hover-class='none'>
+        <view class='flex-item topBtn btn1'>个人中心</view>
+    </navigator>
+
+    <navigator url='/pages/city/city' hover-class='none'>
+        <view class='flex-item topBtn btn2'>{{city}}</view>
+    </navigator>
+</view>
+
+<!-- banner -->
+<swiper class='banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+    indicator-color="#fff">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+    </block>
+</swiper>
+
+<!-- send -->
+<view class='send'>
+    <!-- <navigator url='/pages/address/address?pos=0' hover-class='none'> -->
+    <view class='sendLi flex-wrp' style="flex-direction:row;">
+
+        <view class='icon' bindtap='congna'>
+            <image src="/images/icon1.png" mode='widthFix' />
+        </view>
+        <input placeholder="从哪里寄" value='{{jiAddress}}' placeholder-class="placeholder" bindtap='congna' />
+        <input value='{{jipostion}}' placeholder-class="placeholder" hidden/>
+
+        <view class="address" catchtap="goAddress" data-type='1'>地址簿</view>
+    </view>
+    <!-- </navigator> -->
+    <view class='line'></view>
+    <!-- <navigator url='/pages/address/address?pos=1' hover-class='none'> -->
+    <view class='sendLi flex-wrp' style="flex-direction:row;">
+
+        <view class='icon' bindtap='songna'>
+            <image src="/images/icon2.png" mode='widthFix' />
+        </view>
+        <input placeholder="送到哪里" value='{{shouAddress}}' placeholder-class="placeholder" bindtap='songna' />
+        <input value='{{shoupostion}}' placeholder-class="placeholder" hidden/>
+
+        <view class="address" catchtap="goAddress" data-type='2'>地址簿</view>
+    </view>
+    <!-- </view> -->
+</view>
+
+<!-- weight -->
+<view class='weight  flex-wrp' style="flex-direction:row;">
+    <view class='icon'>
+        <image src="/images/icon3.png" mode='widthFix' />
+    </view>
+    <text>物品重量：</text>
+    <view class='weightNum flex-wrp' style="flex-direction:row;">
+        <view class='cut' bindtap='cutNum'>—</view>
+        <input disabled="0" class='num' bindchange='CountNum' value='{{num}}{{unit}}' />
+        <view class='add' bindtap='addNum'>+</view>
+    </view>
+</view>
+
+<view class='bottom flex-wrp' style="flex-direction:row;">
+    <view class='money'>￥{{payprice}}</view>
+    <view class='bottomNum'>【{{lucheng}}公里 |{{num}}公斤】</view>
+    <view class='nextBtn' bindtap='nextBtn'>下一步</view>
+</view>
+
+<!-- <form bindsubmit="nextBtnss" report-submit='true'>
+    <button form-type="submit" type="default" class='btn' size="mini">快捷支付</button>
+  </form> -->

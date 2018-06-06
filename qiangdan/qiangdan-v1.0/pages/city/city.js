@@ -42,7 +42,7 @@ Page({
     wx.setStorageSync('lon', e.currentTarget.dataset.lon)
 
     wx.navigateTo({
-      url: "/pages/index1/index1"
+      url: "/pages/index/index"
     })  
   },
 

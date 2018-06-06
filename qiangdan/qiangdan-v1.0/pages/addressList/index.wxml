@@ -1,0 +1,2 @@
+<!--pages/addressList/index.wxml-->
+<view bindtap="goBack">pages/addressList/index.wxml</view>

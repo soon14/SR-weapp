@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index1/index1",
+    "pages/index/index",
     "pages/orderDetail/orderDetail",
     "pages/user/user",
     "pages/address/address",
@@ -11,7 +11,8 @@
     "pages/sender/sender",
     "pages/city/city",
     "pages/shenhezhong/shenhezhong",
-    "pages/peisongyuan/peisongyuan"
+    "pages/peisongyuan/peisongyuan",
+    "pages/addressList/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
