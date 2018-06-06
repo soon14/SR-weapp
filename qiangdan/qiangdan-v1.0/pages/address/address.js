@@ -124,7 +124,7 @@ Page({
         wx.navigateBack({
 
             // url: '/pages/index/index?address=' + this.data.name + this.data.detailAddresss + '&lon=' +lon + '&lat=' + lat + '&pos=' + pos,
-            url: '/pages/index/index',
+            url: '/pages/index/index'
         })
     }
 })

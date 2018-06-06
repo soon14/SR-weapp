@@ -3,7 +3,7 @@
  * @email: 37780012@qq.com 
  * @Date: 2018-06-06 19:55:03 
  * @Last Modified by: yangshirui
- * @Last Modified time: 2018-06-06 22:36:06
+ * @Last Modified time: 2018-06-06 23:33:00
  * 地址簿
  */
 const api = require('../../utils/api.js');
@@ -61,7 +61,7 @@ Page({
     },
     addAddress() {
         let type = this.data.type;
-        wx.navigateTo({
+        wx.redirectTo({
             url: `/pages/address/address?pos=${type}`
         })
     },
