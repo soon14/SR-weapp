@@ -1,14 +1,14 @@
 /**index.wxss**/
 
 .topBtnbg {
-    background-color: #ffa426;
+    background-color: #81D8D0;
     padding: 20rpx 30rpx;
 }
 
 .topBtnbg .topBtn {
     color: #fff;
     border-radius: 10rpx;
-    border: 2rpx solid #f58613;
+    border: 2rpx solid #fff;
     font-size: 26rpx;
     height: 44rpx;
     line-height: 44rpx;
@@ -108,7 +108,7 @@
 .nextBtn {
     width: 204rpx;
     height: 106rpx;
-    background-color: #f3830e;
+    background-color: #81D8D0;
     color: #fff;
     text-align: center;
     line-height: 106rpx;
@@ -129,7 +129,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #F58613;
-    min-width: 100rpx;
+    color: #81D8D0;
     font-size: 28rpx;
+}
+
+.address view {
+    flex: 1;
+    min-width: 100rpx;
+    padding-left: 20rpx;
+    line-height: 50rpx;
+    border-left: 1rpx solid #ccc;
 }

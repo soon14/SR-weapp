@@ -30,7 +30,9 @@
         <input placeholder="从哪里寄" value='{{jiAddress}}' placeholder-class="placeholder" bindtap='congna' />
         <input value='{{jipostion}}' placeholder-class="placeholder" hidden/>
 
-        <view class="address" catchtap="goAddress" data-type='1'>地址簿</view>
+        <view class="address" catchtap="goAddress" data-type='0'>
+            <view>地址簿</view>
+        </view>
     </view>
     <!-- </navigator> -->
     <view class='line'></view>
@@ -43,7 +45,9 @@
         <input placeholder="送到哪里" value='{{shouAddress}}' placeholder-class="placeholder" bindtap='songna' />
         <input value='{{shoupostion}}' placeholder-class="placeholder" hidden/>
 
-        <view class="address" catchtap="goAddress" data-type='2'>地址簿</view>
+        <view class="address" catchtap="goAddress" data-type='1'>
+            <view>地址簿</view>
+        </view>
     </view>
     <!-- </view> -->
 </view>

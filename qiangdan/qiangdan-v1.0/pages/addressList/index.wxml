@@ -1,2 +1,17 @@
 <!--pages/addressList/index.wxml-->
-<view bindtap="goBack">pages/addressList/index.wxml</view>
+<view class="container">
+    <block wx:for="{{list}}">
+        <view class="content" data-address="{{type=='1'?item.shou_address:item.ji_address}}" data-name="{{type=='1'?item.shou_name:item.ji_name}}"
+            data-postion="{{type=='1'?item.shou_lon+','+item.shou_lat:item.ji_lon+','+item.ji_lat}}" catchtap="goBack">
+            <view class="content-top">
+                <view class="content-name">{{type==1?item.shou_name:item.ji_name}}</view>
+                <view class="content-tel">{{type==1?item.shou_tel:item.ji_tel}}</view>
+            </view>
+            <view class="content-bottom">{{type==1?item.shou_address:item.ji_address}}</view>
+        </view>
+    </block>
+    <view wx:if="{{!list||list.length<1}}" class="blanks" bindtap="goBack">
+        <text>暂无历史地址记录</text>
+    </view>
+    <view class="addAddress" bindtap="addAddress">新增地址</view>
+</view>
