@@ -69,7 +69,7 @@
 }
 
 .weightNum .add {
-    color: #d3b23d;
+    color: #81D8D0;
     font-size: 50rpx;
 }
 

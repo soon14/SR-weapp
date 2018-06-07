@@ -17,7 +17,7 @@ page {
     text-align: center;
     border-radius: 10rpx;
     color: #fff;
-    background-color: #5bc26e;
+    background-color: #81D8D0;
     font-size: 22rpx;
 }
 

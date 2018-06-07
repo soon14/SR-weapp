@@ -2,7 +2,7 @@
 .item{background-color: #fff; margin-top: 20rpx;padding:0 0 10rpx 0;}
 .itemTop{height: 80rpx;line-height: 80rpx; border-bottom: 1rpx solid #e5e5e5; padding: 0 30rpx; font-size: 28rpx;color: #333; margin-bottom: 20rpx;}
 .stateBtn{width: 90rpx;height: 40rpx; line-height: 40rpx; text-align: center; border-radius: 10rpx;color: #fff;  font-size: 22rpx; margin-top: 20rpx;}
-.stateBtn1{background-color: #5bc26e;}
+.stateBtn1{background-color: #81D8D0;}
 .stateBtn2{background-color: #f66081;}
 .itemLi{padding: 0 30rpx;font-size: 24rpx;color: #333;  margin-bottom: 20rpx;}
 .itemLi text{line-height: 36rpx;}

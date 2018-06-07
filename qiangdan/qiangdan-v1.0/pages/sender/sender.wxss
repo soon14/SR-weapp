@@ -1,7 +1,35 @@
-.senderLi{background-color: #fff;padding: 35rpx 30rpx; font-size: 28rpx;color: #333;}
+.senderLi {
+  background-color: #fff;
+  padding: 35rpx 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}
 
-.idCard {width: 400rpx;margin: 0 auto;}
-.idCard image{width: 155rpx;height: 155rpx;}
-.idCard text{display: block; text-align: center;}
-.cardLi{margin-right: 70rpx; margin-top: 30rpx;}
-.sureBtn{ position: absolute;bottom: 30rpx;right: 30rpx;left: 30rpx;z-index: 999}
+.idCard {
+  width: 400rpx;
+  margin: 0 auto;
+}
+
+.idCard image {
+  width: 155rpx;
+  height: 155rpx;
+}
+
+.idCard text {
+  display: block;
+  text-align: center;
+}
+
+.cardLi {
+  margin-right: 70rpx;
+  margin-top: 30rpx;
+}
+
+.sureBtn {
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+  left: 30rpx;
+  z-index: 999;
+  background-color: #81D8D0!important;
+}
