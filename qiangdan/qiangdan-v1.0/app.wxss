@@ -16,7 +16,7 @@ page{background-color: #f2f2f2;font-size: 28rpx;}
 .bottom{position: fixed;bottom: 0;height: 106rpx;padding-left: 50rpx;border-top:1px solid #ebebeb; background-color: #fff;}
 .money{font-size: 40rpx; color: #ff664e; margin-top:30rpx;}
 .bottomNum{font-size: 26rpx; color: #666;margin-top:40rpx;}
-.nextBtn{width: 204rpx;height: 106rpx;background-color: #f3830e;color: #fff;text-align: center;line-height: 106rpx; font-size: 40rpx;position: absolute;right:0}
+.nextBtn{width: 204rpx;height: 106rpx;background-color: #81D8D0;color: #fff;text-align: center;line-height: 106rpx; font-size: 40rpx;position: absolute;right:0}
 
 
 

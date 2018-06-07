@@ -73,7 +73,7 @@
 .bottom button.nextBtn {
   width: 220rpx;
   height: 106rpx;
-  background-color: #f3830e;
+  background-color: #81D8D0;
   color: #fff;
   text-align: center;
   line-height: 106rpx;
