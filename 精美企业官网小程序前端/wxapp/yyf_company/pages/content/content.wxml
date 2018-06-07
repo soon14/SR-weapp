@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="title" wx:if="{{hide_title=='0'}}">
+        {{article.title}}
+    </view>
+    <view class="date" wx:if="{{hide_time=='0'}}">
+       {{article.addtime}}
+    </view>
+
+    <view class="content">
+    <import src="../../../wxParse/wxParse.wxml"/>
+      <view class="wxParse">
+<template is="wxParse" data="{{wxParseData:article1.nodes}}"/>
+</view>
+    
+    </view>
+
+     
+     
+
+    <view class="copyright mt40">{{copyright}}</view>
+</view>
+
+<import src="../public/foot.wxml" />
+<template is="foot" data="{{blist}}" /> 

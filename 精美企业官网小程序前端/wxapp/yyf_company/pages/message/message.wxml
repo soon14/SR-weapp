@@ -1,0 +1,14 @@
+<block wx:if="{{form.templet=='0'}}">
+  <import src="tem0.wxml" />
+  <template is="form" data="{{form}}" /> 
+</block>
+<block wx:if="{{form.templet=='1'}}">
+  <import src="tem1.wxml" />
+  <template is="form" data="{{form}}" /> 
+</block>
+
+<button class="fb-btn" bindtap="submitClick" style='background-color:{{tcolor}}'>提交</button>
+<!--这里是底部菜单  -->
+<import src="../public/foot.wxml" />
+<template is="foot" data="{{blist}}" /> 
+
