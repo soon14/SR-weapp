@@ -3,7 +3,7 @@
  * @email: 37780012@qq.com 
  * @Date: 2018-06-06 19:55:03 
  * @Last Modified by: yangshirui
- * @Last Modified time: 2018-06-06 23:33:00
+ * @Last Modified time: 2018-06-07 18:25:35
  * 地址簿
  */
 const api = require('../../utils/api.js');
@@ -82,12 +82,12 @@ Page({
 
         if (this.data.type == 0) {
             prevPage.setData({
-                jiAddress: name + address,
+                jiAddress: address,
                 jipostion: postion,
             })
         } else {
             prevPage.setData({
-                shouAddress: name + address,
+                shouAddress: address,
                 shoupostion: postion,
 
             })
