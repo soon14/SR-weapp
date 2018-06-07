@@ -32,7 +32,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         console.log(options.orderid);
         this.setData({
             orderid: options.orderid
@@ -40,7 +40,7 @@ Page({
 
         this.getOrderDetail(options.orderid);
     },
-    querenQJ: function() {
+    querenQJ: function () {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'Order/getQRSH',
@@ -48,8 +48,10 @@ Page({
                 orderId: that.data.orderId,
             },
             method: 'post',
-            header: { 'content-type': 'application/json' },
-            success: function(res) {
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function (res) {
                 console.log(res.data)
                 console.log(res)
                 that.getOrderDetail(that.data.orderId);
@@ -66,12 +68,12 @@ Page({
 
             },
 
-            fail: function() {
+            fail: function () {
                 console.log('数据加载失败')
             }
         })
     },
-    querenSH: function() {
+    querenSH: function () {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'Order/getQRSD',
@@ -79,8 +81,10 @@ Page({
                 orderId: that.data.orderId,
             },
             method: 'post',
-            header: { 'content-type': 'application/json' },
-            success: function(res) {
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function (res) {
                 console.log(res.data)
                 console.log(res)
                 that.getOrderDetail(that.data.orderId);
@@ -92,13 +96,13 @@ Page({
                 }
             },
 
-            fail: function() {
+            fail: function () {
                 console.log('数据加载失败')
             }
         })
     },
 
-    getOrderDetail: function(orderid) {
+    getOrderDetail: function (orderid) {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'order/getOrderDetailById',
@@ -107,8 +111,10 @@ Page({
                 orderId: orderid,
             },
             method: 'post',
-            header: { 'content-type': 'application/json' },
-            success: function(res) {
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function (res) {
                 console.log('getOrderDetailById')
                 console.log(res.data)
 
@@ -128,6 +134,7 @@ Page({
                         shou_lat: res.data.data.shou_lat,
                         shou_lon: res.data.data.shou_lon,
                         goodsname: res.data.data.goodsname,
+                        get_phone: res.data.data.get_phone || '',
                         remark: res.data.data.remark,
                         isjia: res.data.data.isjia,
                         jia_price: res.data.data.jia_price,
@@ -140,12 +147,12 @@ Page({
                 }
             },
 
-            fail: function() {
+            fail: function () {
                 console.log('数据加载失败')
             }
         })
     },
-    peisongPos: function() {
+    peisongPos: function () {
         wx.navigateTo({
             url: '/pages/peisongyuan/peisongyuan',
         })
@@ -183,7 +190,7 @@ Page({
                 cancelColor: '#5c5c5c',
                 confirmText: '确定取消',
                 confirmColor: '#f58515',
-                success: function(res) {
+                success: function (res) {
                     if (res.confirm) {
 
                         that.closeOrder();
@@ -203,7 +210,7 @@ Page({
                 cancelColor: '#5c5c5c',
                 confirmText: '确定取消',
                 confirmColor: '#f58515',
-                success: function(res) {
+                success: function (res) {
                     if (res.confirm) {
 
                         that.getOrderDetail(orderid);
@@ -225,7 +232,7 @@ Page({
                                 cancelColor: '#5c5c5c',
                                 confirmText: '确定取消',
                                 confirmColor: '#f58515',
-                                success: function(res) {
+                                success: function (res) {
                                     if (res.confirm) {
 
                                         that.closeOrder();
@@ -251,7 +258,7 @@ Page({
 
 
     },
-    closeOrder: function() {
+    closeOrder: function () {
         /**
          * 取消订单
          */
@@ -259,14 +266,17 @@ Page({
         let _openid = wx.getStorageSync('openid');
         let _orderId = that.data.orderId;
 
-        let params = { openId: _openid, orderId: that.data.orderId };
+        let params = {
+            openId: _openid,
+            orderId: that.data.orderId
+        };
 
         wx.request({
             url: app.globalData.baseURL + 'Order/cancel',
             data: params,
             method: 'post',
-            success: function(res) {
-                console.log('Order/cancel',res)
+            success: function (res) {
+                console.log('Order/cancel', res)
                 if (res.data.code == 1) {
 
                     that.setData({
@@ -275,7 +285,7 @@ Page({
 
                     that.getOrderDetail(_orderId);
 
-                    setTimeout(function() {
+                    setTimeout(function () {
                         that.setData({
                             showSuccess: !that.data.showSuccess
                         })
@@ -286,16 +296,16 @@ Page({
                         title: '提示',
                         showCancel: false,
                         content: res.data.msg,
-                        success: function(res) {}
+                        success: function (res) {}
                     })
                 }
             },
-            fail: function(res) {
+            fail: function (res) {
                 console.log(res)
             }
         })
     },
-    noclose: function() {
+    noclose: function () {
         this.setData({
             noclose: !this.data.noclose
         })
