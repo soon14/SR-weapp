@@ -32,7 +32,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad(options) {
         console.log(options.orderid);
         this.setData({
             orderid: options.orderid
@@ -40,7 +40,7 @@ Page({
 
         this.getOrderDetail(options.orderid);
     },
-    querenQJ: function () {
+    querenQJ() {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'Order/getQRSH',
@@ -51,7 +51,7 @@ Page({
             header: {
                 'content-type': 'application/json'
             },
-            success: function (res) {
+            success(res) {
                 console.log(res.data)
                 console.log(res)
                 that.getOrderDetail(that.data.orderId);
@@ -68,12 +68,12 @@ Page({
 
             },
 
-            fail: function () {
+            fail() {
                 console.log('数据加载失败')
             }
         })
     },
-    querenSH: function () {
+    querenSH() {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'Order/getQRSD',
@@ -84,7 +84,7 @@ Page({
             header: {
                 'content-type': 'application/json'
             },
-            success: function (res) {
+            success(res) {
                 console.log(res.data)
                 console.log(res)
                 that.getOrderDetail(that.data.orderId);
@@ -96,13 +96,13 @@ Page({
                 }
             },
 
-            fail: function () {
+            fail() {
                 console.log('数据加载失败')
             }
         })
     },
 
-    getOrderDetail: function (orderid) {
+    getOrderDetail(orderid) {
         var that = this;
         wx.request({
             url: getApp().globalData.baseURL + 'order/getOrderDetailById',
@@ -114,7 +114,7 @@ Page({
             header: {
                 'content-type': 'application/json'
             },
-            success: function (res) {
+            success(res) {
                 console.log('getOrderDetailById')
                 console.log(res.data)
 
@@ -147,12 +147,12 @@ Page({
                 }
             },
 
-            fail: function () {
+            fail() {
                 console.log('数据加载失败')
             }
         })
     },
-    peisongPos: function () {
+    peisongPos() {
         wx.navigateTo({
             url: '/pages/peisongyuan/peisongyuan',
         })
@@ -190,7 +190,7 @@ Page({
                 cancelColor: '#5c5c5c',
                 confirmText: '确定取消',
                 confirmColor: '#f58515',
-                success: function (res) {
+                success(res) {
                     if (res.confirm) {
 
                         that.closeOrder();
@@ -210,7 +210,7 @@ Page({
                 cancelColor: '#5c5c5c',
                 confirmText: '确定取消',
                 confirmColor: '#f58515',
-                success: function (res) {
+                success(res) {
                     if (res.confirm) {
 
                         that.getOrderDetail(orderid);
@@ -232,7 +232,7 @@ Page({
                                 cancelColor: '#5c5c5c',
                                 confirmText: '确定取消',
                                 confirmColor: '#f58515',
-                                success: function (res) {
+                                success(res) {
                                     if (res.confirm) {
 
                                         that.closeOrder();
@@ -258,7 +258,7 @@ Page({
 
 
     },
-    closeOrder: function () {
+    closeOrder() {
         /**
          * 取消订单
          */
@@ -275,7 +275,7 @@ Page({
             url: app.globalData.baseURL + 'Order/cancel',
             data: params,
             method: 'post',
-            success: function (res) {
+            success(res) {
                 console.log('Order/cancel', res)
                 if (res.data.code == 1) {
 
@@ -296,20 +296,24 @@ Page({
                         title: '提示',
                         showCancel: false,
                         content: res.data.msg,
-                        success: function (res) {}
+                        success(res) {}
                     })
                 }
             },
-            fail: function (res) {
+            fail(res) {
                 console.log(res)
             }
         })
     },
-    noclose: function () {
+    noclose() {
         this.setData({
             noclose: !this.data.noclose
         })
     },
-
-
+    makePhoneCall(e) {
+        let tel = e.currentTarget.dataset.telphone;
+        wx.makePhoneCall({
+            phoneNumber: tel
+        })
+    },
 })

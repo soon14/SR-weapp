@@ -15,7 +15,7 @@
     </view>
 </view>
 <view class='orderLi mgTop20'> 物品名称：{{goodsname}}</view>
-<view class='orderLi' wx:if="{{get_phone}}"> 配送员电话：{{get_phone}}</view>
+<view class='orderLi' wx:if="{{get_phone}}" data-telphone="{{get_phone}}" bindtap="makePhoneCall"> 配送员电话：{{get_phone}}</view>
 <view class='orderLi'>备注信息：{{remark}}</view>
 <view wx:if="{{isjia ==1}}">
     <view class='orderLi mgTop20'>加价：
