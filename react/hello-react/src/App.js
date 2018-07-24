@@ -18,4 +18,26 @@ class App extends Component {
   }
 }
 
+
+
+// class App extends Component {
+
+//   returninfo (N) {
+//     let hinfo =<span>有({N})条未读消息</span>
+//     let ninfo =<span>没有未读消息</span>
+//     return N>0 ? hinfo : ninfo
+//   }
+
+//   render () {
+//     // TODO
+//     const num = 0;
+    
+//     return(
+//       <div>
+//         <span>{this.returninfo(num)}</span>
+//       </div>
+//     )
+//   }
+// }
+
 export default App;
