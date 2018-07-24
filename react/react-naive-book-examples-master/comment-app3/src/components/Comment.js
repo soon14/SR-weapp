@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, PropTypes } from 'react'
 
-class Comment extends Component {
-  
+export default class Comment extends Component {
   static propTypes = {
     comment: PropTypes.object.isRequired,
     onDeleteComment: PropTypes.func,
@@ -47,32 +45,32 @@ class Comment extends Component {
   }
 
   handleDeleteComment () {
-    const {onDeleteComment,index} = this.props
-    if (onDeleteComment) {
-      onDeleteComment(index)
+    if (this.props.onDeleteComment) {
+      this.props.onDeleteComment(this.props.index)
     }
   }
 
   render () {
-    const { comment } = this.props
+    const comment = this.props.comment
     return (
       <div className='comment'>
         <div className='comment-user'>
-          <span>{comment.username} </span>：
+          <span className='comment-username'>
+            {comment.username}
+          </span>：
         </div>
-        {/* <p>{comment.content}</p> */}
         <p dangerouslySetInnerHTML={{
           __html: this._getProcessedContent(comment.content)
         }} />
         <span className='comment-createdtime'>
           {this.state.timeString}
         </span>
-        <span className='comment-delete' onClick={this.handleDeleteComment.bind(this)}>
+        <span
+          onClick={this.handleDeleteComment.bind(this)}
+          className='comment-delete'>
           删除
         </span>
       </div>
     )
   }
 }
-
-export default Comment
